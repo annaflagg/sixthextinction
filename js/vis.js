@@ -278,7 +278,7 @@ var focusgraphwidth = graphwidth+(2*scrollbuttonspace)
 //var focusgraphtopmargin = 34
 var focusgraphtopmargin = 200
 var focusxspace, focusmaxorders = 4, orderoffsetspace = 5, numfocus, focuswidth;
-var focusy0 = 648;
+var focusy0 = 620;
 var focusgraphheight = focusy0-focusgraphtopmargin;
 var focusyspeciesspace = 0;
 var focusdata, focusorderdata, focusgenusdata, focusorderendpoints;
