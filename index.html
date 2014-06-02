@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A Disappearing Planet</title>
+<meta name="description" content="Visualization of species extinction">
+<meta name="author" content="Anna Flagg | www.annaflagg.com @annaflagg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/base.css">
+
+<link rel="stylesheet" href="css/main.css">
+<script>
+	function incrementProgress() {return;}
+</script>
+<!--<script type="text/javascript" src="//use.typekit.net/rws3een.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+
+</head>
+<body id="bodyid">
+
+<div class="container">
+  <div class="container-inner">
+    <div id="content">
+    
+    		
+    
+     		
+    
+    
+    		<div id="whitebackground">
+    		
+    		</div>
+        <div id="chart">
+    
+	</div>	
+    
+    <section id="intro" class="wrapper">
+		<div class="copy" id="copyid">
+		<!--<p class="date">June 15, 2014</p>-->
+		<p class="h1">A DISAPPEARING PLANET</p>
+		<p class="byline">by <strong>Jane Goodall</strong>, <strong>Isaac Newton</strong>, and <strong>Nermeen Shaikh</strong></p>
+	
+		<p class="guff">A long time ago, before humans became the primary contributor to animal extinctions, 
+		no more than a handful of species would go extinct per century. Today, Earth’s species are dying out en masse, 
+		at rates anywhere from 100 to 1,000 times their natural extinction rates. A product of a variety of human effects including 
+		climate change, habitat destruction, and species displacement, these rates rival those that occurred 65 million 
+		years ago, during the dinosaur extinction.  </p>
+		</div>
+
+
+<!--
+      <div class="stats" id="statsid">
+   	  	<div id="statdiv0" class="statdiv">
+   			<p class="number" id="stat0number">41%</p>
+   			<p class="group" id="stat0group">AMPHIBIANS</p>
+   		</div>
+   		<div id="statdiv1" class="statdiv">
+			<p class="number" id="stat1number">25%</p>
+   			<p class="group" id="stat1group">MAMMALS</p>
+		</div>
+		<div id="statdiv2" class="statdiv">
+			<p class="number" id="stat2number">22%</p>
+   			<p class="group" id="stat2group">REPTILES</p>
+   		</div>
+   		<div id="statdiv3" class="statdiv">
+			<p class="number" id="stat3number">13%</p>
+   			<p class="group" id="stat3group">BIRDS</p>
+   		</div>
+   	  </div>-->
+   	  	<script src="js/jquery-2.0.2.min.js"></script>
+<script src="//vjs.zencdn.net/4.5/video.js"></script>
+
+   	  <div id="froggydiv">
+			<video id="frogvideo" class="video-js vjs-default-skin" preload="auto" width="1000" height="562" poster="images/frog-final-orangetext-preview.jpg">
+			
+			
+			<source src="http://www.annaflagg.com/disappearingplanet-may27/images/frog-final-.6-blackstatictext.mp4" type='video/mp4' />
+    		<!--<source src="http://www.annaflagg.com/disappearingplanet-april29/images/frog-faster-1.mp4" type='video/mp4' />-->
+    	<!--	<source src="http://www.annaflagg.com/disappearingplanet-april29/images/frog-ilikethat.webmhd.webm" type='video/webm' />-->
+			</video>
+	</div>
+
+    </section>
+   
+   
+   <section id="vis" class="wrapper">
+   
+   
+   
+   
+  	 <div class="viscopy" id="viscopyid">
+		<!--<p class="date">June 15, 2014</p>-->
+		<p class="vistitle">MAMMALS</p>
+		<p class="visstat">25% of mammal species headed to extinction</p>
+	
+		<p class="visguff">According to the natural extinction rate, we should not see more than one mammal extinction per century. 
+		Notice the red cluster around primates, especially the lemur family. Hippos and rhinos, elephants, bears, and big cats are also 
+		in serious trouble.</p>
+		<img class="legendimg" src="images/legend.png" alt="label" width="349" height="26"</img>
+		</div>
+   
+   </section>
+ 
+    <div id="header">
+		<!--<img id="headerimg" src="images/header.png" alt="label" width="1004" height="22"</img>-->
+		
+		<div class="buttons">
+			<a class="sectionButton" href="http://www.propublica.org" target="_blank" id="propublicabutton"'>ProPublica</a>
+			<a class="sectionButton" id="titlebutton"'>A Disappearing Planet</a>
+			<a class="sectionButton" id="mammalsbutton"'>Mammals</a>
+			<a class="sectionButton" id="reptilesbutton"'>Reptiles</a>
+			<a class="sectionButton" id="amphibiansbutton"'>Amphibians</a>
+			<a class="sectionButton" id="birdsbutton"'>Birds</a>
+			<a class="sectionButton" id="donatebutton"'>DONATE</a>
+			<a class="socialButton" id="socialbuttonplaceholder"'>.</a>
+			
+		</div>
+	</div>
+	
+	<!--<a onClick="a();" style="cursor: pointer; cursor: hand; top: 100px">*CLICK HERE*</a>-->
+	
+
+			<div id="amphibiansviddiv">
+				<video id="frogvideo2" class="video-js vjs-default-skin" preload="auto" width="178" height="100" poster="images/frog-.2-.5-preview.jpg">
+				
+				<source src="images/frog-may28-.2-.5-100px.mp4" type='video/mp4' />
+				<!--<source src="images/frog-.2-.5.mp4" type='video/mp4' />
+    			<source src="images/frog-.2-.5.webmhd.webm" type='video/webm' />-->
+			</div>
+			
+			<!--
+			<div id="mammalsstaticdiv">
+			<img id="mammalsstatic" src="images/lioness-short2-120px-preview.jpg" />
+			</div>-->
+			<div id="mammalsviddiv">
+			<video id="lionvideo" class="video-js vjs-default-skin" preload="auto" width="208" height="120" poster="images/lioness10-preview.jpg">
+				<source src="images/lioness10.mp4.mp4" type='video/mp4' />
+    			<source src="images/lioness10.webmhd.webm" type='video/webm' />
+			
+			
+			</div>
+			
+			<!--
+			<div id="reptilesstaticdiv">
+			<img id="reptilesstatic" src="images/turtle-.2-.5-preview.jpg"  />
+			</div>-->
+			
+			<div id="reptilesviddiv">
+			<!--<img id="reptilesgif" rel:animated_src="images/turtle-170px.gif" rel:auto_play="0" auto_play="0" />-->
+			<video id="turtlevideo" class="video-js vjs-default-skin" preload="auto" width="302" height="170" poster="images/turtle-may28-scurry-.2-.5-170px-preview.jpg">
+			<!--<source src="http://www.annaflagg.com/disappearingplanet/images/turtle-.2-.5.mp4" type='video/mp4' />-->
+			
+			
+			<source src="images/turtle-may28-scurry-.2-.5-170px.mp4" type='video/mp4' />
+    		<!--<source src="images/turtle-.2-.5.mp4" type='video/mp4' />
+    		<source src="images/turtle-.2-.5.webmhd.webm" type='video/webm' />-->
+			</div>	
+			<!--
+			<div id="birdsstaticdiv">
+			<img id="birdsstatic" src="images/owl-170px-preview.jpg"  />
+			</div>-->
+			<div id="birdsviddiv">
+			<video id="owlvideo" class="video-js vjs-default-skin" preload="auto" width="82" height="120" poster="images/owl-may28-.2-.5-6s-120px-sharpened-preview.jpg">
+			
+			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.mp4" type='video/mp4' />
+			<!--<source src="images/owl-.2-.5.mp4" type='video/mp4' />-->
+    		<!--<source src="images/owl-.2-.5.webmhd.webm" type='video/webm' />-->
+		
+			<!--<img id="birdsgif" rel:animated_src="images/owl-170px.gif" rel:auto_play="0" auto_play="0" />-->
+			</div>
+
+      
+	
+
+	
+	<script> 
+	/**
+	frogplayer = videojs("frogvideo");
+	frogplayer.on('loadeddata', function(){ 
+      	playerready=true;
+      	//player.play();
+      	//setTimeout(function() {frogplayer.pause()}, 100)
+      	frogplayer.currentTime(0)
+      	//frogplayer.play()
+      	console.log("frog loaded")
+		frogplayer.play();
+      });**/
+	</script>
+	
+	
+	
+    
+    </div>
+  </div>
+</div>
+
+
+<!--<script src="js/video.js"></script>-->
+<!--<script src="js/picasso.js"></script>-->
+
+
+<script src="js/scrollhandler.js"></script>
+
+
+
+<script src="js/bootstrap-typeahead-ext.js"></script>
+<script src="js/queue.v1.min.js"></script>
+
+<script src="js/d3.min.js"></script>
+<script src="js/vis.js"></script>
+
+<script src="js/amphibians.min.js"></script>
+<script src="js/mammals.min.js"></script>
+<script src="js/birds.min.js"></script>
+</body>
+</html>
