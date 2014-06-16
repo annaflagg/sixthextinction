@@ -25,14 +25,15 @@ var buttonx = {"amphibians": 742, "mammals": 546, "reptiles": 353, "birds": 165}
 
 var buttoncolors = {"healthy":"#E7E8E9", "threatened":"#EDC3C2", "background":"#BCBEC0"};
 //var classdatacolors = {"healthy":"#D1D2D4", "threatened":"#FF0000", "background":"#3A3A3C", "threatenedunhighlight":"#6D6E71", "threatenedunhighlight":"#D1D2D4"};
-var classdatacolors = {"healthy":"#C1D9A3", "threatened":"#FF0000", "background":"#3A3A3C", "threatenedunhighlight":"#6D6E71", "threatenedunhighlight":"#D1D2D4"};
+var classdatacolors = {"healthy":"#CCCCCC", "threatened":"#FF0000", "dd":"white", "background":"#3A3A3C", "threatenedunhighlight":"#6D6E71", "threatenedunhighlight":"#D1D2D4"};
 
 
 
 
 var bodycopytext = [{"class":"amphibians", "copy":"According to the natural extinction rate, we should not see more than one amphibian extinction per century. Frogs have been particularly hard hit, with families like the <a onClick='showMe(\"waterfrogs\");' style='cursor: pointer; cursor: hand; top: 100px'>water frog</a>, <a onClick='showMe(\"shrubfrogs\");' style='cursor: pointer; cursor: hand; top: 100px'>shrub frog</a>, and <a onClick='showMe(\"dancingfrogs\");' style='cursor: pointer; cursor: hand; top: 100px'>dancing frog</a> in great danger."},
-{"class":"mammals", "copy":"According to the natural extinction rate, we should not see more than one mammal extinction per century. Notice the red cluster around <a onClick='showMe(\"primates\");' style='cursor: pointer; cursor: hand; top: 100px'>primates</a>, especially the <a onClick='showMe(\"lemurs\");' style='cursor: pointer; cursor: hand; top: 100px'>lemur family</a>. <a onClick='showMe(\"hippos\");' style='cursor: pointer; cursor: hand; top: 100px'>Hippos</a> and <a onClick='showMe(\"rhinos\");' style='cursor: pointer; cursor: hand; top: 100px'>rhinos</a>, <a onClick='showMe(\"elephants\");' style='cursor: pointer; cursor: hand; top: 100px'>elephants</a>, <a onClick='showMe(\"bears\");' style='cursor: pointer; cursor: hand; top: 100px'>bears</a>, and <a onClick='showMe(\"cats\");' style='cursor: pointer; cursor: hand; top: 100px'>big cats</a> are also in serious trouble."},
-{"class":"reptiles", "copy": "According to the natural extinction rate, we should not see more than one reptile extinction per century. There is a striking red cluster around the order of <a onClick='showMe(\"turtles\");' style='cursor: pointer; cursor: hand; top: 100px'>turtles</a>, 81% of which are in trouble. The <a onClick='showMe(\"chameleons\");' style='cursor: pointer; cursor: hand; top: 100px'>chameleon</a> and <a onClick='showMe(\"iguanas\");' style='cursor: pointer; cursor: hand; top: 100px'>iguana</a> families are also highly at risk."},
+{"class":"mammals", "copy":
+"According to the natural extinction rate, we should not see more than one mammal species go extinct per century. However, 1,469 are currently at risk for extinction. Notice the red cluster around <a onClick='showMe(\"primates\");' style='cursor: pointer; cursor: hand; top: 100px'>primates</a>, especially <a onClick='showMe(\"lemurs\");' style='cursor: pointer; cursor: hand; top: 100px'>lemurs</a>. <a onClick='showMe(\"rhinos\");' style='cursor: pointer; cursor: hand; top: 100px'>Rhinos</a>, <a onClick='showMe(\"elephants\");' style='cursor: pointer; cursor: hand; top: 100px'>elephants</a>, <a onClick='showMe(\"bears\");' style='cursor: pointer; cursor: hand; top: 100px'>bears</a> and <a onClick='showMe(\"cats\");' style='cursor: pointer; cursor: hand; top: 100px'>big cats</a> are also in trouble."},
+{"class":"reptiles", "copy": "According to the natural extinction rate, we should not see more than one reptile extinction per century. However, 1,163 are currently at risk for extinction. There is a striking red cluster around the order of <a onClick='showMe(\"turtles\");' style='cursor: pointer; cursor: hand; top: 100px'>turtles</a>, as well as the <a onClick='showMe(\"chameleons\");' style='cursor: pointer; cursor: hand; top: 100px'>chameleon</a> and <a onClick='showMe(\"iguanas\");' style='cursor: pointer; cursor: hand; top: 100px'>iguana</a> families."},
 {"class":"birds", "copy":"According to the natural extinction rate, we should not see more than one bird extinction per century. Though proportionally less threatened than other classes, there's a comparable number of total species in trouble, including <a onClick='showMe(\"albatrosses\");' style='cursor: pointer; cursor: hand; top: 100px'>albatrosses</a>, <a onClick='showMe(\"penguins\");' style='cursor: pointer; cursor: hand; top: 100px'>penguins</a>, and <a onClick='showMe(\"parrots\");' style='cursor: pointer; cursor: hand; top: 100px'>parrots</a>."}
 ]
 
@@ -160,39 +161,59 @@ var amphibians, reptiles, mammals, birds, data, alldata = [amphibians, reptiles,
 var classdata = [{"class":"amphibians", "value": 41, "vid": aplayer,
 "maxspecies": 292,
 "numgenuses": 500, 
+"numatrisk":"2,341",
 "classchartxoffset": 465,
+"data": [{"class":"amphibians", "type": "threatened", "value": 2341, "text":"2,341"},
+{"class":"amphibians", "type": "healthy", "value": 2405, "text": "2,405"},
+{"class":"amphibians", "type": "dd", "value": 1629, "text": "1,629"}]},
+/**
 "data": [{"class":"amphibians", "type": "healthy", "value": 2405, "classorder":0, "order": 0, "text":"2,405"}, 
 {"class":"amphibians", "type": "threatened", "value": 2341, "classorder":0, "order": 1, "text":"2,341"},
 {"class":"amphibians", "type": "background", "value": 1, "classorder":0, "order": 2, "text":"less than 1"}]}, 
-
+**/
 // 1: MAMMALS
 {"class": "mammals", "value":25, "vid": mplayer, 
 "maxspecies": 137,
 "numgenuses": 1157,
+"numatrisk":"1,469",
 "classchartxoffset": 480,
+"data": [{"class":"mammals", "type": "threatened", "value": 1469, "text":"1,469"},
+{"class":"mammals", "type": "healthy", "value": 3125, "text": "3,125"},
+{"class":"mammals", "type": "dd", "value":835, "text": "835"}]},
+/**
 "data": [{"class":"mammals", "type": "healthy", "value": 3125, "classorder":1, "order": 0, "text": "3,125"},
 {"class":"mammals", "type": "threatened", "value": 1469, "classorder":1, "order": 1, "text":"1,469"},
 {"class":"mammals", "type": "background", "value": 1, "classorder":1, "order": 2, "text":"less than 1"}]},
-
+**/
 
 // 2: REPTILES
 {"class":"reptiles", "value": 22, "vid": rplayer, 
 "maxspecies": 79,
 "numgenuses": 818, 
+"numatrisk":"1,163",
 "classchartxoffset": 475,
+"data": [{"class":"reptiles", "type": "threatened", "value": 1163, "text":"1,163"},
+{"class":"reptiles", "type": "healthy", "value": 2244, "text": "2,244"},
+{"class":"reptiles", "type": "dd", "value": 775, "text": "775"}]},
+/**
 "data": [{"class":"reptiles", "type": "healthy", "value": 2244, "classorder":2, "order": 0, "text":"2,244"},
 {"class":"reptiles", "type": "threatened", "value": 1163, "classorder":2, "order": 1, "text":"1,163"},
-{"class":"reptiles", "type": "background", "value": 1, "classorder":2, "order": 2, "text":"less than 1"}]},
+{"class":"reptiles", "type": "background", "value": 1, "classorder":2, "order": 2, "text":"less than 1"}]},**/
 
 
 // 3: BIRDS
 {"class":"birds", "value": 13, "vid": bplayer, 
 "maxspecies": 79,
 "numgenuses": 2094, 
+"numatrisk":"2,200",
 "classchartxoffset": 450,
+"data": [{"class":"birds", "type": "threatened", "value": 2200, "text":"2,200"},
+{"class":"birds", "type": "healthy", "value": 7675, "text": "7,675"},
+{"class":"birds", "type": "dd", "value": 60, "text": "60"}]}];
+/**
 "data": [{"class":"birds", "type": "healthy", "value": 7675, "classorder":3, "order": 0, "text":"7,675"},
 {"class":"birds", "type": "threatened", "value": 2200, "classorder":3, "order": 1, "text": "2,200"},
-{"class":"birds", "type": "background", "value": 1, "classorder":3, "order": 2, "text":"1 or fewer"}]}];
+{"class":"birds", "type": "background", "value": 1, "classorder":3, "order": 2, "text":"1 or fewer"}]}];**/
 
 incrementProgress();
 classdata[2].commonnames=["American Alligator","Chinese Alligator","Common Caiman","Broad-snouted Caiman","Yacar�","Black Caiman","Dwarf Caiman","Smooth-fronted Caiman","American Crocodile","Orinoco Crocodile","Australian Freshwater Crocodile","Philippines Crocodile","Morelet's Crocodile","Nile Crocodile","New Guinea Crocodile","Mugger","Salt-water Crocodile","Cuban Crocodile","Siamese Crocodile","African Dwarf Crocodile","False Gharial","Gharial","Brothers Island Tuatara","Beak-head","Arafura File Snake","Wart Snake","Elephant Trunk Snake","Anderson's Rock Agama","Eritrean Rock Agama","Black-necked Agama","Black-necked Tree Agama","","Brown Pricklenape","","","Bouet's Agama","Boulenger's Agama","Insular Agama","Common Spiny Agama","Bibron's Agama","Insular Agama","Mwanza Flat-headed Rock Agama","","Spiny Agama","","Gambia Agama","Mallee Heath Lashtail","Dusky Earless Agama","Great Crested Canopy Lizard","Gunther's Bloodsucker","","Elliot's Forest Lizard","Large-scaled Forest Lizard","Spineless Forest Lizard","Nilgiri Forest Lizard","Roux's Forest Calotes","Rough Nose Horned Lizard","Leaf-nosed Lizard","Frilled Lizard","","Lake Eyre Dragon","Central Netted Dragon","Ornate Crevice-dragon","Ochre Dragon","Yinnietharra Rock Dragon","White-lipped Two-line Dragon","Lally's Two-line Dragon","Pink Two-line Dragon","Two-spotted Flying Lizard","","Southern Flying Lizard","","Red-barbed Flying Dragon","","Lined Flying Dragon","Asian Gliding Lizard","","White Spotted Flying Lizard","Quadras' Flying Lizard","","Barred Flying Dragon","Giant Forest Dragon","Crested Lizard","Two-marked Forest Dragon","","Solomons Tree Dragon","Vogt's Forest Dragon","Banded Japalure","","Cloud-forest Japalure","East Himalayan Mountain Lizard","Gilbert's Dragon","Hump Snout Lizard","Indian Kangaroo Lizard","Redbelly Agama","Turkestan Rock Agama","Small-scaled Rock Agama","Arabian Toad-headed Agama","","","Sunwatcher","","Yellow-speckled Toad Agama","Saissan Toad-headed Agama","Striped Toad Agama","Persian Toad Agame","Przewalski's Toadhead Agama","Strauch's Toad Agama","Theobald's Toad-headed Agama","","","Eastern Bearded Dragon","Blanford's Rock Agama","South Indian Rock Agama","Vietnam False Bloodsucker","Mountain Dragon","Iraqi Mastigure","Anaimalai Spiny Lizard","Horsfield's Spiny Lizard","Fan Throated Lizard","Starred Agama","","","","","Horny-scaled Agama","Savigny's Agama","Erg Agama","Grassland Earless Dragon","Egyptian Mastigure","Schmidt's Mastigure","Yemeni Spiny-tailed Lizard","Eyed Dabb Lizard","Ornate Mastigure","","Omani Spiny-tailed Lizard","South Arabian Spiny-tailed Lizard","Red Worm Lizard","Puerto Rican Dusky Amphisbaena ","Bahia Worm Lizard","Rio Grande Worm Lizard","Ridley's Worm Lizard","Puerto Rican Dusky Amphisbaena","Iberian Worm Lizard","Moroccan Worm Lizard","Anatolian Worm Lizard","","French Congo Worm Lizard","Ugly Worm Lizard","","","Los Archipelago Worm Lizard","Liberia Worm Lizard","","Cassine River Worm Lizard","Liwale Round-snouted Worm Lizard","Angolan Spade-snouted Worm Lizard","","Cope's Arboreal Alligator Lizard ","Campbell's Alligator Lizard","Chiszar's Arboreal Alligator Lizard","","Frost's Arboreal Alligator Lizard","Mount Zempoaltepec Alligator Lizard","Terrestrial Arboreal Alligator Lizard","Red-lipped Arboreal Alligator Lizard","","Matuda's Arboreal Alligator Lizard","","Mixtecan Arboreal Alligator Lizard","MonteCristo Arboreal Alligator Lizard","Oaxaca Arboreal Alligator Lizard","Salvador Arboreal Alligator Lizard","Smith's Arboreal Alligator Lizard","Bromeliad Arboreal Alligator Lizard","","Peloponnese Slow Worm","","","","Giant Hispaniolan Galliwasp","","Jamaican Galliwasp","Hispaniolan Khaki Galliwasp ","","Huaxteca Lesser Galliwasp","","","Rozella's Lesser Galliwasp","","Hispaniolan Four-toed Galliwasp ","Giant Hispaniolan Galliwasp","O'Shaughnessy's Galliwasp","Brazilian Galliwasp","Montserrat Galliwasp","","Northern Alligator Lizard","Madrean Alligator Lizard","Southern Alligator Lizard","Los Coronados Alligator Lizard","Panamint Alligator Lizard","","","Texas Alligator Lizard","","","","","Koelliker's Glass Lizard","","","","Morelet's Alligator Lizard","","Slender Glass Lizard","","Island Glass Lizard","","Hart's Glass Lizard","Mimic Glass Lizard","Eastern Glass Lizard","","Black Legless Lizard","","","Malayan Giant Blind Snake","Natal Purple-glossed Snake","Eastern Purple-glossed Snake","Black Headed Snake","Cape Centipede Eater","Lined Centipede-eater","","Arabian Small-Scaled Burrowing Asp","Mole Viper","Mole Viper","Mole Viper","Small-Scaled Burrowing Asp","Sahelian Burrowing Asp","Striped Harlequin Snake","Kenya Two-headed Snake","Muller's Snake","Reinhardt's Snake-eater","Guinea Snake-eater","Ivory Coast Snake-eater","","","","Dumeril's Boa","Malagasy Ground Boa","Fiji Island Boa","Palau Bevel-nosed Boa","Rubber Boa","Cropan's Boa","Cuban Boa","Puerto Rican Boa","Mona Island Boa","Jamaican Boa","Arabian Sand Boa","","Rosy Boa","Madagascar Tree Boa","Round Island Keel-scaled Boa","White-bellied Reed Snake","Bicoloured Reed Snake","Banded Worm Snake","Bornean Reed Snake","Everett's Reed Snake","Gervais' Worm Snake","Gimlett's Reed Snake","Grabowsky's Reed Snake","Lined Reed Snake","","","Collared Reed Snake","Linnaeus's Reed Snake","Low's Reed Snake","Variable Reed Snake","Kapuas Reed Snake","","Mueller's Reed Snake","Narrow-headed Reed Snake","Brown Reed Snake","Prakke's Reed Snake","Red-headed Reed Snake","Schmidt's Reed Snake","Hong Kong Dwarf Snake","Yellow-bellied Reed Snake","Sumatran Reed Snake","Short-tailed Reed Snake","Yunnan Reed Snake","Mountain Dwarf Snake","Chan-ard Mountain Reed Snake","Genting Highlands Reed Snake","Jason's Reed Snake","Malayan Mountain Reed Snake","Schulz's Reed Snake","Tweedie's Reed Snake","Vogel's Reed Snake","White-collared Reed Snake","Zamboanga Burrowing Snake","Mocquard's Reed Snake","Eiselt's Dwarf Reed Snake","Dwarf Reed Snake","Mcnamara's Burrowing Snake","Mountain Burrowing Snake","Negros Light-scaled Burrowing Snake","","","","Common Knob-tailed Lizard","Southern Knob-tailed Gecko","Banded Knob-tail","","","Leaf-tailed Gecko","Border Thick-tailed Gecko","Tiger Chameleon","Pondo Dwarf Chamel","Drakensberg Dwarf Chameleon","Qudeni Dwarf Chameleon","Setaro's Dwarf Chameleon","Elandsberg Dwarf Chamaeleon","Natal Midlands Dwarf Chamaeleon","Wolkberg Dwarf Chameleon","Eastern Cape Dwarf Chameleon","Amber Mountain Leaf Chameleon","Antakarana Leaf Chameleon","","Marojejy Leaf Chameleon","Namoroka Leaf Chameleon","Brygoo's Leaf Chameleon","Decary's Leaf Chameleon","","Northern Leaf Chameleon","","Marojejy Leaf Chameleon","","Lined Leaf Chameleon","","","","Antsingy Leaf Chameleon","","","Plated Leaf Chameleon","Brown Leaf Chameleon","Perinet Leaf Chameleon","","Mount d'Ambre Leaf Chameleon","","","Amber Mountain Chameleon","","","","Short-horned Chameleon","","Cryptic Chameleon","","","","Short-nosed Chameleon","","","","","Bizarre-nosed Chameleon","","Marojejy Peak Chameleon","","","Nose-horned Chameleon","O'Shaughnessy's Chameleon","Parson's Chameleon","Peltier's Chameleon","","","Tsaratanana Chameleon","Blunt-nosed Chameleon","Vences' Chameleon","Arabian Chameleon","Veiled Chameleon","Mediterranean Chameleon","Common African Flap-necked Chameleon","Socotran Chameleon","Namaqua Chameleon","Senegal Chameleon","Angel's Chameleon","Antimena Chameleon","Two-banded Chameleon","Belalanda Chameleon","","","","Laborde's Chameleon","Jeweled Chameleon","Lesser Chameleon","","Oustalet's Chameleon","Panther Chameleon","Petter's Chameleon","","","","Warty Chameleon","","Marshall's Pygmy Chameleon","Western Pygmy Chameleon","Usambara Spiny Pygmy Chameleon","Chapin's Chameleon","Sail Backed Chameleon","Bioko Montane Chameleon","Kenyan High-casqued Chameleon","Ukinga Hornless Chameleon","Ituri Forest Chameleon","Spiny-sided Chameleon","Cameroon Two-horned Mountain Chameleo","G�nther's Vine Snake","Speckle-headed Vine Snake","River Vine Snake","Malayan Vine Snake","Perrotet's Vine Snake","Asian Vine Snake","Brown Vine Snake","Glossy Snake","","","Baja California Ratsnake","Trans-pecos Ratsnake","Philippine Blunt-headed Tree Snake","Bourret's Cat Snake","Dog-toothed Cat Snake","White-spotted Cat Snake","Forsten's Cat Snake","Guangxi Cat Snake","Jasper Cat Snake","Square-headed Cat Snake","Black-headed Cat Snake","Philippine Cat Snake","Banded Green Cat Snake","Schultz' Blunt-headed Tree Snake","Common Cat Snake","Wall's Cat Snake","Scarletsnake","","Sand Snake","Western Shovel-nosed Snake","Sonoran Shovel-nosed Snake","St Vincent Blacksnake","Banded Flying Snake","Yellow-striped Trinket Snake","Andreas' Racer","Eastern Racer","","","","","","Indian Smooth Snake","Southern Smooth Snake","Northern Triangle-spotted Snake","Southern Triangle-spotted Snake","Many-banded Green Snake","Central African Egg-eating Snake","","","Common Egg Eater","","Boulenger's Bronzeback","Coconut Tree Snake","Wall's Bronzeback","Beautiful Bronzeback Tree Snake","Giri's Bronzeback Tree Snake","Eastern Himalayan Bronze-brown Snake","Southern Bronzeback","Haas's Bronzeback Tree Snake","Kopstein's Bronzeback Tree Snake","Lorentz River Tree Snake","Nganson Bronzeback Tree Snake","Black Treesnake","Solomons Tree Snake","Striated Bronzeback Tree Snake","Mountain Bronzeback Tree Snake","","Cope's Forest Racer","Barred Forest Racer","","Large Whip Snake","Red-Bellied Racer","","Eastern Indigo Snake","Central American Indigo Snake","","Black Forest Racer","Esmarald Racer","Blanford's Bridal Snake","","Half-Banded Bridled Snake","Three-Banded Bridled Snake","Philippine Dryophiops","Brown Whip Snake","","","Collared Dwarf Snake","Crowned Dwarf Snake","","Narrow-striped Dwarf Snake","","","","Dark Head Dwarf-racer","","Ring-Headed Dwarf Snake","Dotted Dwarf Snake","Roth's Dwarf Snake","Indian Egg-eater","Chinese Leopard Snake","Four-lined Snake","Dark-Grey Ground Snake","Mandarin Trinket Snake","Sichuan Rat Snake","","","Mexican Hooknose Snake","Orange-bellied Snake","Striped Ground Snake","Pulau Tioman Ground Snake","Common Ring-neck","Royal Tree Snake","Red-Tailed Racer","Chihuahuan Hook-nosed Snake","Desert Hooknose Snake","Socotran Racer","Algerian Whip Snake","Horseshoe Whip Snake","Cyprus Whip Snake","Balkan Whip Snake","Green Whip Snake","Gray-banded Kingsnake","Prairie Kingsnake","Common Kingsnake","","","Sonoran Mountain Kingsnake","","California Mountain Kingsnake","Striped Lowland Snake","Pacific Coast Parrot Snake","Mexican Parrot Snake","Cloud Forest Parrot Snake","Oliver's Parrot Snake","Dusky Wolf Snake","Smooth Greensnake","Stripe-Necked Snake","Sakashima Green Snake","","Stolickza's Ringneck","Tricoloured Ringneck","","","Butler's Wolf Snake","Indian Wolf Snake","Ross' Wolf Snake","","Brown Wolf Snake","Yellow-spotted Wolf Snake","Yellow Large-toothed Snake","","Twin-spotted Wolf Snake","Laos Wolf Snake","Vietnamese Large-toothed Snake","Muller's Wolf Snake","Snake-Eater Wolf Snake","Colombo Wolf Snake","Rendahl's Wolf Snake","White-Banded Wolf Snake","Travancore Wolf Snake","Zaw's Wolf Snake","Common Leaf-nosed Snake","Maynard's Longnose Sand Snake","Derafshi Snake","False Smooth Snake","False Smooth Snake","Bella Rat Snake","","","Sonoran Whipsnake","San Joaquin Coachwhip","Almeda Striped Racer","Schott's Whipsnake","","Striped Whipsnake","","Striped Lizard Eater","Heath's Tropical Racer","Salmon-bellied racer","Black-headed Smooth Snake","Western Kukri Snake","Northern Short-headed Snake","Spotted Kukri Snake","Barron's Kukri Snake","Javanese Mountain Kukri Snake","Boo-Liat's Kukri Snake","Short-tailed Kukri Snake","Chinese Kukri Snake","Ashy Kukri Snake","Pegu Kukri Snake","Cantor's Kukri Snake","","Eberhardt's Kukri Snake","Jewelled Kukri Snake","Small-banded Kukri Snake","Forbes' Kukri Snake","Inornate Kukri Snake","Grey Kukri Snake","Walnut Kukri Snake","Lacroix Kukri Snake","","Barred Short-headed Snake","Arakan Kukri Snake","Sulu Short-headed Snake","Spotted-bellied Short-headed Snake","Cambodian Kukri Snake","Eyed Kukri Snake","Eight-lined Kukri Snake","Ornate Kukri Snake","Perkin's Short-headed Snake","","False Striped Kukri Snake","","Purple Kukri Snake","Half-Keeled Kukri Snake","Splendid Kukri Snake","Dum�ril's Kukri Snake","Striped Kukri Snake","Streaked Kukri Snake","Mandalay Kukri Snake","Three-lined Kukri Snake","","Jerdon's Kukri Snake","Chinese Garter Snake","Greensnake","Mountain Reed Snake","Moellendorff's Trinket Snake","","Baird's Ratsnake","Great Plains Ratsnake","Eastern Foxsnake","Corn Snake","Western Ratsnake","Eastern Foxsnake","Common Bush Snake","","Spotted Leaf-nosed Snake","Bullsnake","","","","Pinesnake","Louisiana Pinesnake","","Collared Dwarf Racer","Elegant Racer","Flower's Racer","Dahl's Whip Snake","Rogers' Racer","Sinai Banded Racer","Variable Racer","Yellow-red Rat Snake","","","Keeled Rat Snake","White-bellied Rat Snake","Smooth-scaled Mountain Rat Snake","Olive Forest Snake","Green Trinket Snake","Ladder Snake","False Tree Coral","Long-nosed Snake","Black-Headed Rhynchocalamus","Rhinoceros Snake","","Eastern Patch-nosed Snake","Western Patch-nosed Snake","","","","Guatemala Neckband Snake","Green Rat Snake","White-striped Snake","Collared Black-headed Snake","Striped Black-headed Snake","White-lipped Black-headed Snake","","","","","Groundsnake","Zebra Snake","Bornean Black Snake","Bismark Ground Snake","Muller's Wolf Snake","","Short-tailed Snake","","","","Mexican Black-headed Snake","Bocourt's Black-headed Snake","","Mertens' Centipede Snake","Pacific Coast Centipede Snake","Guerreran Centipede Snake","Southeastern Crowned Snake","Big Bend Blackhead Snake","Peten Centipede Snake","Deppe's Centipede Snake","Yellow-lined Centipede Snake","Flathead Snake","Smith's Black-headed Snake","","Mena's Centipede Snake","Blackbelly Centipede Snake","Plains Black-headed Snake","Rim Rock Crowned Snake","Western Black-headed Snake","","Florida Crowned Snake","Big Bend Black-headed Snake","","Red Earth Centipede Snake","Potos� Centipede Snake","Central American Centipede Snake","Hallowell's Centipede Snake","Chihuahuan Black-headed Snake","Yaqui Black-headed Snake","","","","Cat Snake","","Black Headed Snake","Desert Cat Snake","Soosan Viper","Variable Cat Snake","Fruhstorfer's Mountain Snake","Bird Snake","Black Tree Snake","Coral-bellied Wormsnake","Central American Lyre Snake","Mexican Lyre Snake","Chihuahuan Lyre Snake","Ornate Brown Snake","Malayan Brown Snake","Caucasian Rat Snake","Aesculapean Snake","European Ratsnake","Dwarf Karoo Girdled Lizard","Armadillo Girdled Lizard","Giant Girdled Lizard","Lang's Crag Lizard","Lawrence's Girdled Lizard","Mclachlan's Girdled Lizard","Mecula Girdled Lizard","Dwarf Crag Lizard","Ethiopian Girdled Lizard","Spiny Crag Lizard","Tasman's Girlded Lizard","Emperor Flat Lizard","Common Flat Lizard","Pungwe Flat Lizard","Soutpansberg Flat Lizard","Collared Flat Lizard","Green Basiisk","","Keeled Helmeted Basilisk","","","","Great Basin Collared Lizard","Eastern Collared Lizard","Tiburon Collared Lizard","","","Sonoran Collared Lizard","Reticulate Collared Lizard","Baja California Collared Lizard","Long-nosed Leopard Lizard","Blunt-nosed Leopard Lizard","Long-nosed Leopard Lizard","Common Pipe Snake","","Ahl's Anole","Bueycito Anole","High Anole","Barahona Grass Anole","","","Armour's Anole","","Panther Anole","","Green Anole","Carpenter Anole","Central Anole","Hill Anole","","","","","Good Anole","Veronica's  Anole","Fitch's Anole","Fraser's Anole","","O'Shaughnessy's Anole","Graham's Anole","Granular Anole","Cabo Cruz Banded Anole","Tiburon Stout Anole","","Jacare Anole","Finca Ceres Anole","Brown Red-bellied Anole ","Striped Anole","","","Navassa Anole","Honduran Giant Anole","Lvnch's Anole","","Rueda's Anole","Jacmel Gracile Anole","","","Foothill Anole","","","","","Jacmel Gracile Anole ","Dwarf Anole","Dominican Anole","Olsson's Anole","","Thick Anole","","Crab Cay Anole","","Proboscis Anole","","","Culebra Giant Anole","","","Half-lined Hispaniolan Grass Anole","Ghost Anole","Baoruco Cliff Anole","","Jamaican Twig Anole","Speckled Anole","Pallid Stout Anole","","New Guinea Blind Earless Skink","Sclerophyll Bavayia","Gracile Bavayia","","High Elevation Bavayia","Ornate Bavayia","Pretty Bavayia","Robust Forest Bavayia","Pale-stripe Bavayia","Western Stone Gecko","Ornate Stone Gecko","Bauer's Chameleon Gecko","","Large-scaled chamaeleon gecko","Vieillard's Chamaeleon Gecko","Gold-striped Gecko","Duvaucel's Gecko","Black-eyed Gecko","Harlequin Gecko","Stephen's Island Gecko","Jewelled Gecko","Rough Gecko","Knob-headed Giant Gecko","Bavay's Giant Gecko","Crested Gecko","New Caledonia Giant Gecko","Sarasin's Giant Gecko","Rough-snouted Giant Gecko","Northern Spiny-tailed Gecko","Southern Phasmid Gecko","Robust Striped Gecko","Golden Spiny-tailed Gecko","Dary's Burrowing Snake","","Burrowing Snake","Middle American Burrowing Snake","","","Antiguan Racer","Anguila Racer","Orange-bellied Racer","Terre-De-Haut Racer","","Rustyhead Snake","","","G�nther's Island Racer","Albuquerque Ground Snake","Bocourt's Ground Snake","Thickhead Ground Snake","Duida Ground Snake","Limitan Ground Snake","Big Ground Snake","Modest Ground Snake","Northern Ground Snake","Basin Ground Snake","Roule's Ground Snake","","Tropical Forest Snake","","Cuban Lesser Racer","Eastern Wormsnake","","","","","Mexican Snake Eater","Peters' Running Snake","Black-striped Snake","","","Five-striped Snake","","","","Sharp-tailed Snake","Dunn's Road Guarder","Ring-necked Snake","American Snail-eater ","Two-colored Snail-eater","Snail-eating Thirst Snake","Catesby's Snail-eater","","Gaige's Thirst Snail-eater","","Northern Snail-eater","Peruvian Thirst Snake","Bocourt's Snail-eater","","","","Double-banded Coral Snake Mimic","Mimic False Coral Snake","Mud Snake","Rainbow Snake","Sierra Mije Earth Snake","Colombian Earth Snake","Chiapas Earth Snake","Keeled Earth Snake","","Mesa del Sur Earth Snake","Sierra Juarez Earth Snake","Dug�s' Earth Snake","Godman's Earth Snake","Downs' Earth Snake","","Mesa Central Earth Snake","Highland Earth Snake","Coffee Earth Snake","Guerreran Earth Snake","Rosebelly Earth Snake","Ruthven's Earth Snake","Coral Earth Snake","","","","Hoge's Keelback","Equatorial Keelback","Western Hog-nosed Snake","Eastern Hog-nosed Snake","Southern Hog-nosed Snake","Costa Rica Water Snake","","Amazon Water Snake","Nightsnake","Black Racer","Plain Tree Snake","","Rainforest Cat-eyed Snake","Southwestern Cat-eyed Snake","Black-banded Cat-eyed Snake","Western Cat-eyed Snake","","","Splendid Cat-eyed Snake","Uribe's False Cat-eyed Snake","","","Lac�p�de's Ground Snake","Jaeger's Ground Snake","","Long Ground Snake","Shaw's Dark Ground Snake","Ornate Ground Snake","Barbados Racer","Crown Ground Snake","Williams' Ground Snake","Lema's Ground Snake","","Jan's Hognose Snake","Ringed Hognose Snake","","Two-colored Mussurana","Ringneck Coffee Snake","Espinal's Coffee Snake","Spotted Coffee Snake","","Redback Coffee Snake","Rough Coffee Snake","","","Werner's False Coral Snake","Tschudi's False Coral Snake","","Dumeril's Diadem Snake","","Diurnal Vine Snake","","G�nther's Green Racer","Schmidt's Green Racer","Jan's Green Racer","","","Black Halloween Snake","","Paran� False Boa","South American Pond Snake","False Cat-eyed Snake","Wide Ground Snake","Brazilian Bird Snake","Thick Graceful Brown Snake","Pine Woods Littersnake","Ribbon Graceful Brown Snake","Western Graceful Brown Snake","Crowned Graceful Brown Snake","Marcella's Graceful Brown Snake","Nuevo Leon Graceful Brown Snake","Sargent's Graceful Brown Snake","Stadelman's Graceful Brown Snake","Pine-Oak Snake","Vermiculate Graceful Brown Snake","","Godman's Graceful Brown Snake","Kinkelin Graceful Brown Snake","Tearful Pine-Oak Snake","Brokencollar Graceful Brown Snake","","","Ringed Snail Sucker","Cope's Snail Sucker","Slender Snail Sucker","","","Boulenger's Tree Snake","Tropical Flat Snake","Common Spotted Night Snake","Guanabara Spotted Night Snake","Worontzow's Spotted Night Snake","Chilean Slender Snake","","","","","Amazon Coastal House Snake","Coastal House Snake","","G�nther's Tropical Ground Snake","Cope's Tropical Ground Snake","Dunn's Tropical Ground Snake","Slevin's Tropical Ground Snake","Viquez's Tropical Ground Snake","Western Snail-Eating Snake","Fischer's Snail-Eating Snake","Philippi's Snail-Eating Snake","Terrestrial Snail Sucker","Serra Snake","","Neuwied's False Fer-de-lance","Wucherer's Ground Snake","Horned Sea Snake","Rough-scaled Death Adder","Sahul Reef Snake","Dubois' Sea Snake","Eydoux' Sea Snake","Leaf-scaled Sea Snake","Dusky Sea Snake","Olive-brown Sea Snake","M�ller's Crowned Snake","Stokes' Sea Snake","Pygmy Copperhead","Andaman's Krait","Malayan Krait","Banded Krait","Red-headed Krait","Splendid Krait","Many-banded Krait","Red River Krait","Wanghaoting's Krait","Bibron's Coral Snake","Blue Coral Snake","Banded Malaysian Coral Snake","Speckled Coral Snake","Striped Coral Snake","Western Carpentaria Snake","Black Mamba","Western Green Mamba","Ornamental Snake","Master's Snake","Mustard-bellied Snake","Lake Cronin Snake","Bardick","Short-nosed Snake","Somali Garter Snake","Black Garter Snake","","Egg-eating Sea Snake","Ijima's Sea Snake","Beaked Sea Snake","North-western Mangrove Sea Snake","Dunmall's Snake","Ringhals","","Broad-headed Snake","Stephen's Banded Snake","Black-ringed Sea Snake","Blackheaded Banded Sea Snake","","Dwarf Sea Snake","Cogger's Sea Snake","Annulated Sea Snake","Bar-bellied Sea Snake","Striped Sea Snake","Graceful Small Headed Seasnake","King's Sea Snake","Lambert's Sea Snake","Arabian Gulf Sea Snake","Mcdowell's Sea Snake","Greater Sea Snake","Russell's Sea Snake","Spotted Sea Snake","Ornate Reef Sea Snake","Large-headed Seasnake","Lake Taal Snake","Yellow Sea Snake","Jerdon's Sea Snake","Shaw's Sea Snake","Columbrine Sea Krait","Crocker's Sea Snake","Yellow-lipped Sea Snake","","Blackbanded Sea Krait","","Flat-tail Sea Snake","Chinese Sea Snake","Solomons Black-banded krait","Sonoran Coralsnake","Allen's Coral Snake","","","","Pygmy Coral Snake","","","","Eastern Coral Snake","Mayan Coral Snake","Equal-banded Coral Snake","Langsdorff's Coral Snake","","","","","Many-banded Coral Snake","Par� Coral Snake","","Argentinian Coral Snake","Roatan Coral Snake","Panamenian Coral Snake","Stuart's Coral Snake","Texas Coralsnake","","Monocled Cobra","Mali Cobra","Mandalay Cobra","Philippine Common Cobra","Samar Cobra","","Black And White Spitting Cobra","Equatorial Spitting Cobra","Sumatran Cobra","Mainland Island Snake","Fiji Snake","King Cobra","Pelagic Sea Snake","Black Tree Cobra","Muller's Snake","Solomons Red Krait","Australian Coral Snake","Black-striped Snake","Unbanded Shovel-nosed Snake","Coastal Burrowing Snake","Japanese Coral Snake","Kellog's Coral Snake","","Little Whip Snakes","Mallee Black-backed Snake","Viperine Sea Snake","Pilbara Bandy Bandy","Desert Cobra","Texas Banded Gecko","Yucatan Banded Gecko","Black Banded Gecko","","Central American Banded Gecko","Reticulate Banded Gecko","Barefoot Banded Gecko","Western Banded Gecko","Western Indian Leopard Gecko","Eastern Indian Leopard Gecko","Turkmenistan Eyelid Gecko","Tokashiki Gecko","Fat-tail Gecko","Hawequa Flat Gecko","Drakensberg Flat Gecko","Persian Spider Gecko","Seychelles Bronze Gecko","Dwarf Bronze Gecko","Giant Bronze Gecko","Even-fingered Gecko","Xinjiang Even-fingered Gecko","Frontier Bow-fingered Gecko","Kirghizia Even-fingered Gecko","Low Lying Gecko","Leviton's Gecko","","","","","Baiuch Rock Gecko","Indian Golden Gecko","Common Giant Ground Gecko","","","Goan Day Gecko","Graceful Day Gecko","Gund Day Gecko","Nilgiri Dwarf Gecko","Das's Day Gecko","Jerdon's Day Gecko","Kandyan Day Gecko","Koehler's Gecko","","Mysore Day Gecko","Ponmudi Day Gecko","Western Gecko","Ornate Day Gecko","Vellore Day Gecko","Deraniyagala's Gecko","Sispara Day Gecko","Wynad Day Gecko","Yercaud Day Gecko","","Agusan Bent-toed Gecko","Small Bent-toed Gecko","Guadalcanal Bow-fingered Gecko","Niah Cave Gecko","Sikkimese Bent-toed Gecko","Ring-tailed Gecko","Clouded Indian Gecko","Philippine Bent-toed Gecko","Palawan Bent-toed Gecko","","Nikolsky's Spider Gecko","Blanford's Short-toed Gecko","Fort Munro Sandstone Gecko","Kerman Bent-toed Gecko","Sulaiman Range Gecko","Potwar Gecko","Rough Bent-toed Gecko","","","Islands Striped Gecko","Kaala Striped Gecko","Koniambo Striped Gecko","Striped Gekko","Poum Striped Gecko","Taom Striped Gecko","Bold-striped Gecko","Vietanamese Leaf-toed Gecko","Madagascar Clawless Gecko","","Tete Thick-toed Gecko","Warty Thick-toed Gecko","Boulenger's Indian Gecko","Forest Spotted Gecko","Gunther's Indian Gecko","Jeypore Ground Gecko","Spotted Bowfinger Gecko","Fish-scale Gecko","Grandidier's Gecko","House Gecko","Banda Island Dtella","Borroloola Dtella","Palau Island Dtella","Dubious Dtella","Pilbara Dtella","Smooth-scaled Narrow-disked Gecko","Gray's Chinese Gecko","","Gigante Narrow-disked Gecko","Hokou Gecko","Mindoro Narrow-disked Gecko","Palawan Narrow-disked Gecko","Batan Narrow-disked Gecko","Romblon Narrow-disked Gecko","Large Forest Gecko","Peking Gecko","Tawa Gecko","Essex's Pygmy Gecko","Cederberg Pygmy Gecko","Small-scaled Gecko","","White-striped Viper Gecko","Anamalai Hill Gecko","","Boavista Leaf-toed Gecko","Bouvier's Leaf-toed Gecko","Kandyan Gecko","","Socotra Leaf-toed Gecko","","Common House Gecko","Giant Gecko","Graceful Leaf-toed Gecko","","Grant's Leaf-toed Gecko","","","Carrot-tail Viper Gecko","Socotran Rock Gecko","","Spotted Leaf-toed Gecko","Togo Leaf-toed Gecko","","","Sharpnose Leaf-toed Gecko","Antilles Leaf-toed Gecko","Bombay Leaf-toed Gecko","Pygmy Leaf-toed Gecko","Reticulate Leaf-toed Gecko","Satara Gecko","","Turkish Gecko","","Southern Ghats Slender Gecko","Palau Slender Gecko","Muller's Velvet Gecko","Wahlberg's Velvet Gecko","Yellow-lined Smooth-scaled Gecko","Batan Scaly-toed Gecko","Christian Scaly-toed Gecko","'Eua Forest Gecko","Rotuma Forest Gecko","Guppy's gecko","White-lined Smooth-scaled Gecko","","Viti Forest Gecko","","Small Broad-tailed Smooth-scaled Gecko","","Byrne's Gecko","Jolo Flapped-legged Gecko","Mcgregor's Flapped-legged Gecko","","Tiny Scaled Gecko","Blanc's Dwarf Gecko","Blanc's Dwarf Gecko","Chobe Dwarf Gecko","","Usambara Dwarf Gecko","","","","Malagasy Dwarf Gecko","Madagascar Dwarf Gecko","Methuen's Dwarf Gecko","","","","Black-spotted Dwarf Gecko","","Painted Dwarf Gecko","Robust Dwarf Gecko","","","Grandidier's Dwarf Gecko","","","Turquoise Dwarf Gecko","","","Asia Minor Thin-toed Gecko","Kotschy's Gecko","Caucasian Gecko","Kopet Dagh Bent-toed Gecko","Chitral Gecko","Lesser Night Gecko","Solomons Slender-toed Gecko","Pacific Slender-toed Gecko","Serpent Island Night Gecko","Marbled Gecko","Banded Thick-toed Gecko","Western Cape Gecko","Spotted Gecko","Tsodilo Thick-toed Gecko","Van Son's Gecko","","Angel's Petite Gecko","Grandidier's Madagascar Ground Gecko","Mocquard's Madagascar Ground Gecko","Graceful Madagascar Ground Gecko","Northern Madagascar Ground Gecko","","","","","","NosyBe Ground Gecko","Panther Gecko","Comoro Ground Gecko","","","","","Micronesia Saw-tailed Gecko","Atoll Giant Gecko","Abbott's Day Gecko","Andaman Day Gecko","","Seychelles Small Day Gecko","","","","Bluetail Day Gecko","Comoros Day Gecko","","Yellow-throated Day Gecko","Giant Madagascar Day Gecko","Round Island Day Gecko","","","","","Broad-tailed Day Gecko","Lined Day Gecko","Madagascar Day Gecko","","","","Thick Tail Gecko","Island Day Gecko","","Pasteur's Day Gecko","","","Peacock Day Gecko","","Mertens' Day Gecko","R�sler's Day Gecko","","","Standing's Day Gecko","La Digue Day Gecko","","Boettger's Day Gecko","Gulf Short-fingered Gecko","Orange-spotted Smooth-scaled Gecko","Cylindrical-bodied Smooth-scaled Gecko","Dark-spotted Smooth-scaled Gecko","Green Smooth-scaled Gecko","Interdune Barking Gecko","Philippine Flying Gecko","Burmese Flying Gecko","Misonne's Spider Gecko","Namaqua Day Gecko","Iranian Short-fingered Gecko","Arabian Short-fingered Gecko","Middle Eastern Short-fingered Gecko","Jordan Short-fingered Gecko","","Slevin's Short-fingered Gecko","Yemen Short-fingered Gecko","Caspian Bent-toed Gecko","Yangihissar Gecko","Latifi's Dwarf Gecko","Natterers Gecko","","Northern Sand Gecko","Seychelles Sucker-tailed Gecko","","","Common Flat-tail Gecko","","","","","Lined Flat-tail Gecko","","","","","","","Blue-black Plated Sand Lizard","Desert Plated Lizard","Namaqua Plated Lizard","African Long-tailed Seps","Breyer's Long-tailed Seps","Madagascar Girdled Lizard","","Bronze Girdled Lizard","","","","","Green Madagascar Girdled Lizard","Karsten's Girdled Lizard","Western Girdled Lizard","Madagascar Girdled Lizard","","Ornate Girdled Lizard","Four-lined Girdled Lizard","Red-legged Girdled Lizard","","","","Northern Teiid","Spotted Anadia","Ruthven's Anadia","","Donneisy's Arthrosaura","Bresslau's Bachia","","","","Elegant Eyed Lizard","Schreibers' Many-fingered Teiid","","G�nther's Sun Tegus","","Rough-scaled Worm Lizard ","Underwood's Spectacled Tegu","","Muller's Tegu","","Parker's Pholidobolus","Ruthven's Macropholidus","Tate's Neusticurus","","Uzzell's Neusticurus","Cochran's Neusticurus","","Werner's Largescale Lizard","","","Tropical Lightbulb Lizard","","","Beaded Lizard","Gila Monster","The Bitia","Cantor's Mangrove Snake","Australian Bokadam","","Asian Bockadam","Bocourt's Water Snake","Chinese Mud Snake","Blotched-lipped Mud Snake","Dussumier's Water Snake","Rainbow Mud Snake","Longhead Water Snake","Sind River Mud Snake","Boie's Mud Snake","Macleay's Mud Snake","Siebold's Mud Snake","Mekong Mud Snake","","Tentacled Snake","Crab-eating Snake","Gerard's Water Snake","Banded Swamp Snake","Deuve's Water Snake","Gray's Water Snake","Fernandina Marine Iguana","Fiji Banded Iguana","Lau Banded Iguana","Fiji Crested Iguana","Gal�pagos Pink Land Iguana","Santa Fe Land Iguana","Common Land Iguana","Campeche Spiny-tailed Iguana","Utila Spiny-tailed Iguana","Balsas Spiny-tailed Iguana","Yucat�n Spiny-tailed Iguana","Yellow-backed Spiny-tailed Iguana","Black-chested Spiny-tailed Iguana","Nolasco Spiny-tailed Iguana","Oaxaca Spiny-tailed Iguana","Roat�n Spiny-tailed Iguana","Motagua Spiny-tailed Iguana","Five-keeled Spiny-tailed Iguana","Common Spiny-tailed Iguana","Turks and Caicos Rock Iguana","Jamaican Iguana","Rhinoceros Iguana","Northern Bahamian Rock Iguana","Grand Cayman Blue Iguana","Clouded Rock Iguana","Anegada Rock Iguana","Ricord's Ground Iguana","Central Bahamian Rock Iguana","Mona Rhinoceros Iguana","Common Desert Iguana","Lesser Antillean Green Iguana","Common Chuckwalla","Spiny Chuckwalla","","Arabian Fringe-fingered Lizard","Bedriaga's Fringe-fingered Lizard","Be'er Sheva Fringe-fingered Lizard","Blanc's Fringe-toed Lizard","Busack's Fringe-fingered Lizard","Spiny-footed Lizard","","Giant Fringe-toed Lizard","Haas' Fringe-fingered Lizard","","Spotted Fringe-fingered Lizard","","Arnold's Fringe-fingered Lizard","","Leopard Fringe-fingered Lizard","Robust Fringe-fingered Lizard","Savigny's Fringe-fingered Lizard","Schmidt's Fringe-toed Lizard","Schreiber's Fringe-fingered Lizard","Doumergue's Fringe-fingered Lizard","","Lebanon Fringe-fingered Lizard","Yemen Fringe-fingered Lizard","Alpine Meadow Lizard","Fitzinger's Algyroides","Spanish Algyroides","Greek Algyroides","Blue-throated Keeled Lizard","Anatolian Rock Lizard","Danford's Lizard","","Anatolian Lizard","","Bedriaga's Rock Lizard","Atlas Dwarf Lizard","Southern Rock Lizard","Soutpansberg Rock Lizard","Sparse-scaled Forest Lizard","Sharp-snouted Rock Lizard","","Armenian Lizard","Bendimahi Lizard","Brauner's Rock Lizard","Caucasian lizard","Green-bellied Lizard","Clarks' Lizard","Dagestan Lizard","","Alborz Lizard","Derjugin's Lizard","Charnali Lizard","Ajarian lizard","Georgian Lizard","River Kura Lizard","Meadow Lizard","Radde's Lizard","Rostombekov's Lizard","Spiny-Tailed Lizard","Van Lizard","Rock Lizard","Unisexual Lizard","Uzzell's Lizard","Valentin's Lizard","Prokletije Rock Lizard","Mosor Rock Lizard","Pointed-snouted Racerunner","Anderson's Racerunner","","Lalehzar Racerunner","","Black-sided Racerunner","Pleske's Racerunner","Strauch's Racerunner","Suphan Racerunner","Atlantic Lizard","La Palma Giant Lizard","La Gomera Giant Lizard","Boettger's Lizard","Tenerife Lizard","Tenerife Speckled Lizard","El Hierro Giant Lizard","Gran Canaria Giant Lizard","Greek Rock Lizard","Aran Rock Lizard","Aurelio's Rock Lizard","Pyrenean Rock Lizard","","","Horvath's Rock Lizard","","Iberian Rock Lizard","Zagros Mountain Lacerta","Sand Lizard","Western Green Lizard","Medium Lizard","","Iberian Emerald Lizard","Caspian Green Lizard","Balkan Green Lizard","Green Lizard","","","","","Blanford's Short-nosed Desert Lizard","","Pasteur's Lizard","Simon's Desert Racer","","","Jerdon's Snake-eye","","Western Snake-eyed Lizard","Fraas' Lizard","Dwarf Lizard","Kaokoveld Sand Lizard","Karoo Sand Lizard","","","","","Lebanon Lizard","","Bocage's Wall Lizard","","","Erhard's Wall Lizard","Filfola Lizard","Skyros Wall Lizard","Iberian Wall Lizard","","Lilford's Wall Lizard","Dalmatian Wall Lizard","Miles Wall Lizard","Common Wall Lizard","Peloponnese Wall Lizard","Ibiza Wall Lizard","Aeolian Wall Lizard","Italian Wall Lizard","Balkan Wall Lizard","Tyrrhenian Wall Lizard","","Sicilian Wall Lizard","Algerian Psammodromus","Blanc's Sand Racer","Spanish Psammodromus","","","Small-fingered Psammodromus","Moroccan Rock Lizard","Kuhne's Grass Lizard","Asian Grass Lizard","Miyako Grass Lizard","Madeira Lizard","Ocellated Lizard","North African Ocellated Lizard","Siirt Lizard","","Cottrell's Mountain Lizard","Common Lizard","Cape File Snake","Savanna Lesser File Snake","Matschie's African Ground Snake","Black File Snake","Swaziland House Snake","Aurora House Snake","Yellow-bellied House Snake","Seychelles House Snake","Tanganyika Water Snake","Black House Snake","Lined Water Snake","Whyte's Water Snake","Eastern Wolf Snake","","Dwarf Wolf Snake","","Forest Wolf Snake","","Boulenger's Tree Lizard","Wiegmann's Tree Lizard","Darwin's Iguana","","","","","","Collared Blind Snake","Rose Blind Snake","Three-colored Blind Snake","","White-bellied Worm Snake","","Bouet's Worm Snake","","Roux-Est�ve's Worm Snake","New Mexico Bland Snake","Texas Blind Snake","Western Blind Snake","Giant Blind Snake","","Villiers' Blind Snake","Two-colored Blind Snake","Joshua's Blind Snake","","African Brown Water Snake","Nilgiri Keelback","Two-striped Keelback","Boulenger's Keelback","Deschaunsee's Keelback","Sabah Keelback","Gunung Inas Keelback","White-lipped Keelback","Wa Shan Keelback","Maki's Keelback","G�nther's Keelback","Hill Keelback","Peters's Keelback","Pope's Keelback","Red Mountain Keelback","Sarawak Keelback","Sauter's Keelback","Taron Keelback","Venning's Keelback","White-eyed Keelback","Olive Keelback Water Snake","Yunnan Olive Keelback","Blossom Krait","Kirtland's Snake","","Philippine Cylindrical Snake","Yellow-spotted Water Snake","Seychelles Wolf Snake","Orange-lipped Keelback","Blue-necked Keelback","Red Keelback","Collared Marsh-Snake","Olive Marsh Snake","Viperine Snake","Colkhis Water Snake","Grass Snake","Dice Snake","Atlantic Saltmarsh Snake","Mississippi Green Watersnake","Plain-bellied Watersnake","Southern Watersnake","Florida Green Watersnake","Brazos River Watersnake","Concho Watersnake","Diamond-backed Watersnake","Lake Erie Water Snake","Brown Watersnake","Gary's Mountain Keelback","Anderson's Stream Snake","","Dao Van Tien's Stream Snake","Guanxi Mountain Keelback","Kikuzato's Brook Snake","Man-Son Mountain Stream Snake","Sichuan Mountain Keelback","Javanese Stream Snake","Corrugated Water Snake","Angel's Mountain Keelback","Striped Crayfish Snake","Graham's Crayfish Snake","Glossy Crayfish Snake","Queen Snake","","White-lined Water Snake","Speckle-bellied Keelback","Red-belled Keelback","Leonard's Keelback","Zigzag-lined Water Snake","Gunung Murud Keelback","Black-banded Keelback","Groove-necked Keel-back","","","Red-necked Keelback","Taiwan Keelback","Black Swampsnake","Asiatic Water Snake","Chinese Keelback Water Snake","Yunnan Keelback Water Snake","Brownsnake","","Red-bellied Snake","","Aquatic Gartersnake","Short-headed Gartersnake","Butler's Gartersnake","","Sierra Gartersnake","Black-necked Gartersnake","Terrestrial Gartersnake","Mexican Gartersnake","","","","Giant Gartersnake","","Two-striped Gartersnake","Checkered Gartersnake","","","Northwestern Gartersnake","","Western Ribbonsnake","","Plains Gartersnake","","Eastern Ribbonsnake","","","San Francisco Garter Snake","","","Lined Snake","New Britain Keelback","Spotted Water Snake","Bismark Keelback","Common Keelback","","Highland Keelback","Papua New Guinea Montane Keelback","Rough Earthsnake","Smooth Earth Snake","Yellow-spotted Keelback Water Snake","Malayan Spotted Keelback Water Snake","Javan Keelback Water Snake","Spotted Keelback Water Snake","Red-sided Keelback Water Snake","Striped Keelback Water Snake","","Cuvier's Madagascar Swift","Merrem's Madagascar Swift","","","Dum�ril's Madagascar Swift","","Blunthead Slug Snake","Smooth Slug-eating Snake","Malayan Slug-eating Snake","Mountain Slug-eating Snake","Boulenger's Slug Snake","Keeled Slug-eating Snake","Formosa Slug Snake","Hampton's Slug-eating Snake","White-spotted Slug Snake","Barred Slug-eating Snake","Zebra-tailed Lizard","Greater Earless Lizard","Elegant Earless Lizard","Spot-tailed Earless Lizard","Lesser Earless Lizard","Keeled Earless Lizard","Banded Rock Lizard","","","","","","Texas Horned Lizard","Blainville Horned Lizard","Pygmy Horned Lizard","Greater Short-horned Lizard","Flat-tailed Horned Lizard","Round-tailed Horned Lizard","","Desert Horned Lizard","Regal Horned Lizard","","","","","","","Dunes Sagebrush Lizard","","","","","","","","Clark's Spiny Lizard","","","","","","","","","","","Common Sagebrush Lizard","Graphic Spiny Lizard","","","","","","","","Mountain Spiny Lizard","","","Luna's Spiny Lizard","Lundell's Spiny Lizard","","","Desert Spiny Lizard","Green Spiny Lizard","","","Canyon Lizard","","","","","Western Fence Lizard","","Texas Spiny Lizard","Granite Spiny Lizard","","","","Crevice Spiny Lizard","Chiapan Rough-scaled Lizard","","","","Blue Spiny Lizard","","","","","","","","","","","Eastern Fence Lizard","","","Rose-bellied Lizard","Striped Plateau Lizard","Florida Scrub Lizard","","","Coachella Valley Fringe-toed Lizard","Colorado Desert Fringe-toed Lizard","","Yuman Desert Fringe-toed Lizard","Mojave Fringe-toed Lizard","","","","","Long-tailed Brush Lizard","","Baja California Brush Lizard","Ornate Tree Lizard","","","","","","Common Side-blotched Lizard","","","Leaf-toed Gecko","Gallagher's Gecko","Gray-spotted Leaf-toed Gecko","Kermanshah Leaf-toed Gecko","","","","","","Pygmy Socotran Leaf-toed Gecko","South American Marked Gecko","","","","","","","Peru Leaf-toed Gecko","Andes Leaf-toed Gecko","","Chatham Leaf-toed Gecko","","","Peters' Leaf-toed Gecko","","","Leaf-toed Gecko","Oudri's Fan-footed Gecko","American Wall Gecko","East Canary Gecko","Boavista Wall Gecko","Bocage's Wall Gecko","B�hme's Gecko","Boettger's Wall Gecko","Santo Ant�o Wall Gecko","Helmethead Gecko","Darwin's Wall Gecko","Tenerife Gecko","Desert Wall Gecko","Fogo Wall Gecko","Giant Wall Gecko","Gomero Wall Gecko","Maio Wall Gecko","Common Wall Gecko","Qattara Gecko","Algerian Wall Gecko","S�o Nicolau Wall Gecko","","","","","S�o Vicente Wall Gecko","Angolan Shovel-snout","Angola Shovel-snout","Jan's Shoval-snout","Ghana Shovel-snout","Ornate Shovel-snout","Eastern Bark Snake","Montpellier Snake","","Condanarous Sandsnake","Indo-Chinese Sand Snake","Stout Sand Snake","Stripe-bellied Sand Snake","Striped Skaapsteker","Blakeway's Blotch-necked Snake","Assam Mountain Snake","Chinese Mountain Snake","Bamboo False Cobra","Dull Bamboo Snake","Large-eyed False Cobra","","","","","Boulenger's Forest Snake","","Lined Forest Snake","","","","G�nther's Racer","","","Common Slug Eater","Variegated Slug-eater","","","","","Forest Night Snake","Tiny Night Snake","","","","","","","Malagasy Giant Hognose Snake","Blonde Hognose Snake","","Peters' Bright Snake","","Gold-collared Snake","","","","","","Grandidier's Water Snake","","Six-lined Water Snake","","","","","","","","","","St. Johann's Tree Snake","Madagascar Night Snake","","","","Banded Philippine Burrowing Snake","","","","","","","","","Night Brook Snake","Plateau Brook Snake","","","","Striped Brook Snake","","","","","Lateral Water Snake","","","Yellow-striped Water Snake","Eared Worm-lizard","Flinders Ranges Worm-lizard","Hermite Island Worm-lizard","Fraser's Delma","Striped Legless Lizard","Single-striped Delma","Adorned Delma","Bronzeback Snake-lizard","Brigalow Scaly-foot","Ramsay's Python","Bismark Ringed Python","Brown Water Python","Amethyst Python","Carpet Python","Green Python","Anchieta's Dwarf Python","Burmese Python","Bornean Short-tailed Python","Brongersma's Short-tailed Python","","Asiatic Rock Python","Ball Python","Florida Worm Lizard","Two-streaked Snake-eyed Skink","","Chernov's Skink","Desert Lidless Skink","European Copper Skink","","Short-headed Legless Skink","Slendertail Lance Skink","Striped Blind Legless Skink","Lined Lance Skink","Percival's Legless Skink","Giant Lance Skink","Woodbush Legless Skink","Guinea Lidless Skink","Annobon Lidless Skink","","","Yellow Skink","","","Rock Skink","Boulenger's Tree Skink","Johanna's Skink","Black-striped Skink","","Spotted Skink","Gray Skink","","","Splendid Skink","","Tsaratanana Skink","","Short-necked Worm-skink","Speckled Worm-skink","Long-legged Worm-skink","Cool Skink","Elongate Short-legged Burrowing Skink","Stub-limbed Burrowing Skink","Boulenger's Short-legged Skink","Cebu Small Worm Skink","","","Two-digit Worm Skink","Schadenberg's Burrowing Skink","Dum�ril's Short-legged Skink","Negros Three-digit Worm Skink","Limbless Worm Skink","Northern Litter Skink","Speckled Litter Skink","Koumac Litter Skink","Common Litter Skink","","Chazeau's Litter Skink","Giant Litter Skink","Strand Litter Skink","Pani� Litter Skink","Renevier's Litter Skink","Mandj�lia litter skink","Lesser Saint Croix Skink","","Rainbow-skink","Digul River Rainbow Skink","Sandy Rainbow Skink","Slender Rainbow Skink","Northern Red-throated Skink","Southern Rainbow-skink","Southern pale-hipped skink","Northern Pale-hipped Skink","Armitage's Cylindrical Skink","Bedriaga's Skink","Italian Three-toed Skink","Riffian Skink","De l'Isle's Wedge-snouted Skink","Ebner's Skink","G�nther's Cylindrical Skink","","Manuel's Skink","Two-fingered Skink","Algerian Three-toed Skink","Small Three-toed Skink","Mionecton Skink","Mountain Skink","","Many-scaled Cylindrical Skink","Moroccan Three-toed Skink","Mocquard's Cylindrical Skink","Wedge-snouted Skink","Gran Canaria Skink","","Dum�ril's Wedge-snouted Skink","Western Three-toed Skink","Thierry's Cylindrical Skink","West Canary Skink","Delalande's Skink","Santo Ant�o Skink","S�o Nicolau Skink","","Stanger's Skink","Vaillant's Mabuya","Three-toed Snake-tooth Skink","Keeled Water Skink","","","Glorioso Snake Eyed Skink","Leschenault Snake Eyed Skink","New Guinea Snake-eyed Skink","New Caledonian Shore Skink","","Palau Snake Eyed Skink","Brown-blazed Wedgesnout Ctenotus","Plain-backed Kimberley Ctenotus","Kakadu Ctenotus","Jewelled South-west Ctenotus","Clay-soil Ctenotus","Bar-shouldered Ctenotus","Lancelin Island Skink","Leonhardi's Ctenotus","Hamelin Ctenotus","Western Slender Blue-tongue","Griffin's Keel-scaled Tree Skink","Olive Dasia","Boulenger's Dasia","King's Skink","Yakka Skink","Micronesian Skink","Anatom Emo Skink","Micronesia Black Skink","","Micronesia Forest Skink","Pacific Bluetail Skink","Vitilevu Mountain Treeskink","Viti Slender Treeskink","Teal Emo Skink","Erronan Treeskink","Yellow-throated Skink","Dark-bellied Copper-striped Skink","Bellona Skink","Olive Small-scaled Skink","Loveridge's Skink","Loyalty Islands Emoia","Spotted Blue-tailed Skink","Vanualevu Slender Treeskink","Christmas Island Whiptail-skink","Black Emo Skink","Vanuatu Silver Vineskink","Viti Copper-headed Skink","Ponape Skink","Solomons Blue-tailed Skink","Rennell Blue-tailed Skink","Samoa Skink","Sanford's tree skink","Schmidt's Skink","Mariana Skink","Madeay's Emo Skink","Taumako Skink","Polynesia Slender Treeskink","Viti Barred Treeskink","","Brown-sided Bar-lipped Skink","Southern Water Skink","Blue Mountain Water Skink","Orange-speckled Forest-skink","Stout Barsided Skink","Border Ranges Blue-spectacled Skink","Algerian Orange-tailed Skink","Poona Skink","Schmidt's Mabuya","Bibron's Skink","","Keeled Indian Mabuya","Inger's Mabuya","Sharma's Mabuya","Anderson's Mabuya","Three-banded Mabuya","Cogger's Island Skink","Solomon Minute Skink","Meiers Skink","Cape York Mulch-skink","Gracile burrowing skink","","Three-toed Earless Skink","Two-toed Earless Skink","Heyer's Isopachys","Brauer's Burrowing Skink","Vesey-fitzgerald's Burrowing Skink","Beddome's Ground Skink","Two-lined Ground Skink","","Barbour's Ground Skink","","","New Caledonian Leopard Skink","Nieuwenhuis' Skink","Deignan Tree Skink","Ceylon Tree Skink","Single Finger Larut Skink","Ono-i-Lau Ground Skink","Telfair's Skink","Uganda Five-toed Skink","Ruwenzori Four Toed Skink","Five-toed Skink","Allan's Lerista","Cape Range Slider","Blinking Broad-blazed Slider","Wide-striped Mulch Slider","Kennedy Range Broad-blazed Slider","Onslow Broad-blazed Slider","Arnhem Coast Fine-lined Slider","Ribbon Lerista","Slender Duneslider","Mount Cooper Striped Lerista","Coastal Kimberley Slider","Black Mountain Skink","Desert Egernia","Great Desert Skink","Night Skink","White's Rock-skink","Maruia Maquis Skink","Green-bellied Tree Skink","Blue-mouthed Skink","White-lipped Forest Skink","Tiller's Maquis Skink","","Bronze Slender Tree Skink","","Pandanus Skink","Yellow-striped Slender Tree Skink","Roux's Lipinia","Eastern Cape Litter-skink","Ashwamedh Writhing Skink","G�nther's Writhing Snake","Banded Supple Skink","Korat Supple Skink","Lined Supple Skink","","Redtail Skink","Rusty Skink","Common Madagascar Skink","","Morondava Skink","","Madagascar Coastal Skink","Stumpff's Skink","","","Roat�n Skink","","","Montane Marble-throated Skink","","Marble-throated Skink","Longtail Limbless Skink","Shark Bay Dwarf Skink","Managua Skink","","","Guinean Forest Skink ","Mafia Writhing Skink","Mocquard's Writhing Skink","Boulenger's Writhing Skink","Sundevall's Writhing Skink","Boulenger's Snake-eyed Skink","Northern Dwarf Skink","","Gracile Dwarf Skink","Greer's Dwarf Skink","Pindai Dwarf Skink","For�t Plate Dwarf Skink","","Earless Dwarf Skink","Rankin's Dwarf Skink","Slevin's Dwarf Skink","Florida Sand Skink","Pedra Branca Skink","Fiordland Skink","Robust Skink","Falla's Skink","Grand Skink","Chevron Skink","Speckled Skink","Lord Howe Island Skink","Macgregor's Skink","Small-scaled Skink","Marbled Skink","Otago Skink","Striped Skink","Egg-laying Skink","Scree Skink","Whitaker's Skink","Brown Skink","Plateau Snake Skink","Persian Snake Skink","Limbless Skink","Sandfish","Street's Snake Skink","Gardiner's Burrowing Skink","","Nimba Snake-eyed Skink","Togo Skink","Carvalho's Mabuya","","","","Hildebrand's Skink","Anzahamaru Skink","","","Rothschild's Skink","","Bocourt's Eyelid Skink","Garnier's Giant Skink","Coal Skink","","Mountain Skink","","Duges' Skink","Mole Skink","Common Five-lined Skink","Gilbert's Skink","Southeastern Five-lined Skink","Japanese Skink","","Broad-headed Skink","Bermuda Skink","Oak Forest Skink","Many-lined Skink","Great Plains Skink","Guerreran Skink","Northern Prairie Skink","Western Skink","Sumichrast's Skink","Four-lined Skink","Common Green Tree Skink","Prehensile Green Tree Skink","Spinifex Snake-eyed Snake","Southern Grass Tussock Skink","","","","","","Beddome's Cat Skink","Czechuras Litter-skink","Gronovi's Dwarf Burrowing Skink","G�nther's Burrowing Skink","Legless Burrowing Skink","Kasner's Dwarf Burrowing Skink","Mozambique Dwarf Burrowing Skink","","Ground Skink","Mountainous Dwarf Skink","","Tsushima Ground Skink","","Eastern Skink ","Sandy Limbless Skink","Albert's Skink","Deplanche's Shiny Skink","Red-tailed Shiny Skink","Orange-bellied Burrowing Skink","","","Pointed-headed Sphenomorphus","","Zamboanga Sphenomorphus","Beyer's Sphenomorphus","","Sulu Sphenomorphus","","Elegant Forest Skink","Cox's Sphenomorphus","Crane's Skink","Cuming's Sphenomorphus","","Black-sided Sphenomorphuseng","Dussumier's Forest Skink","Banded Sphenomorphus","Jagor's Sphenomorphus","","","White-spotted Sphenomorphus","Leyte Sphenomorphus","Highland Sphenomorphus","Mindanao Sphenomorphus","","Palau Ground Skink","Steere's Sphenomorphus","Aurora Mountain Skink","Tanner's Skink","","","Culebra Skink","Greater Saint Croix Skink","Mona Skink","Monito Skink","Puerto Rican Skink","Lesser Virgin Islands Skink","Virgin Islands Bronze Skink","Greater Virgin Islands Skink","Adelaide Pigmy Blue-tongue Skink","Levant Skink","Orange-throated Skink","Gold-spotted Mabuya","Benson's Mabuya","","Boettger's Mabuya","","","Elegant Mabuya","Gravenhorst's Mabuya","Bronze Rock Skink","","Malagasy Mabuya","Five-lined Skink","","","Montane Speckled Skink","Seychelles Skink","Socotra mabuya","","","","Boulder Mabuya","Bridled Mabuya","","Wright's Skink","Blanchard's Helmet Skink","Western Crocodile Skink","Schmidt's Crocodile Skink","Davao Waterside Skink","Spiny Waterside Skink","Laotian Keeled Skink","Misamis Waterside Skink","","Partello's Waterside Skink","Aubrey's Whiptailed Skink","Northern Whiptailed Skink","Southern Whiptailed Skink","Cuvier's Legless Skink","Lomi's Blind Legless Skink","Two-striped Mabuya","","","","","","Hispaniolan Giant Gecko","Ilha Marac� Gecko","European Leaf-toed Gecko","Shieldhead Gecko","Grenadines Clawed Gecko","Haseman's Gecko","","","Abdel Kuri Rock Gecko","Carter's Semaphore Gecko","","","Wadi Kharrar Rock Gecko","Guichard's Rock Gecko","Blanford's Rock Gecko","Haggier Massif Rock Gecko","","","Birdhead Rock Gecko","","Blandford's Semaphore Gecko","Yemen Rock Gecko","","","Socotra Rock Gecko","","Atlas Day Gecko","","Banded Toed Gecko","","Guantanamo Coastal Gecko","Rough-banded Sphaero","Central Bahamas Sphaero","Hispaniolan Eyespot Sphaero","Dunn's Least Gecko","","Jamaican Forest Sphaero","Costa Rica Least Gecko","Caribbean Least Gecko","Grenadines Sphaero","Puerto Rican Upland Sphaero","Monito Gecko","","Puerto Rican Crescent Sphaero ","Reef Gecko","Pacific Least Gecko","Cuban Pepper Sphaero","Zapata Big-scaled Sphaero ","Bay Island Least Gecko","Altagracia Speckled Sphaero ","Double-collared Sphaero ","Boulenger's Least Gecko","","Hispaniolan Small-eared Sphaero ","Barahona Limestone Sphaero ","Cuban Broad-banded Sphaero","Windward Sphaero","Haitian Striped Sphaero","Przewalski's Wonder Gecko","Common Ameiva","Censky's Ameiva","Sombrero Ameiva","Pigmy Blue-tailed Ameiva","Inagua Ameiva","St. Croix Ameiva","","","Arizona Striped Whiptail","","Canyon Spotted Whiptail","","","Carmen Island Whiptail","","","","","","","","Blackbelly Racerunner","Gray-checkered Whiptail","","Chihuahuan Spotted Whiptail","Gila Spotted Whiptail","","Common Spotted Whiptail","","Little White Whiptail","Orange-throated Race-runner","Little Striped Whiptail","","Laredo Striped Whiptail","","San Pedro Martir Whiptail","","","","New Mexico Whiptail","Colorado Checkered Whiptail","Pai Striped Whiptail","","","","","Mexican Plateau Spotted Whiptail","Six-lined Racerunner","Sonoran Spotted Whiptail","Common Checkered Whiptail","Tiger Whiptail","Desert Grassland Whiptail","Plateau Striped Whiptail","","Saint Lucian Whiptail","Crocodile Tegu","Four-lined Ameiva","Rainbow Ameiva","Green Kentropyx","Argentine Black And White Tegu","Zarudnyi's Worm Lizard","Checkerboard Worm Lizard","","Cuban Khaki Trope ","Spotted Brown Trope ","","Rodrigues' Lava Lizard","Northern Curly-tailed Lizard","East Plana Curlytail ","Tiburon Curlytail","Hispaniolan Khaki Curlytail ","","Main Tree Iguana","","Austromendocino Tree Iguana","Hulse's Tree Iguana","Constanze's Tree Iguana","","Fitzgerald's Tree Iguana","Fitzinger's Tree Iguana","","Hellmich's Tree Iguana","","","","","Many-spotted Tree Iguana","","","","Braided Tree Iguana","","","Zodiac Tree Iguana","Stolzmann's Lizard","","Peru Pacific Iguana","High Mountain Lizard","","","Spiny Whorltail Iguana","Peracca's Whorltail Iguana","Western Leaf Lizard","","Haensch's Whorltail Iguana","","","","","","","","Striped Lava Lizard","Amazon Lava Lizard","Bismarck Sharp-Nosed Blind Snake","Gierra's Blind Snake","Interior Blind Snake","Pale-headed Blind Snake","Kimberley Shallow-soil Blind Snake","","Proximus Blind Snake","Beaked Blind Snake","Beaked Worm Snake","Cross' Beaked Snake","St. Thomas' Beaked Snake","Lake Tanganyika Blind Snake","L�opoldville Beaked Snake","","","White-headed Blind Snake","","Melanesia Blindsnake","Christmas Island Blind Snake","Lined Blind Snake","","Sand Worm Snake","","","","Haitian Pale-Lipped Blindsnake","Brown-backed Blind Snake","Costa Rica Worm Snake","","Diard's Blindsnake","Tiburon Peninsula Blindsnake","Puerto Rican Coastal Blindsnake","Jamaica Worm Snake","","","Mona Blind Snake","M�ller's Blind Snake","South India Worm Snake","Reticulate Worm Snake","Samar Blind Snake","Schmutz's Worm Snake","Island Worm Snake","Barahona Peninsula Blindsnake","Grenada Bank Blindsnake","","","","Palni Mountain Burrowing Snake","Two-lined Black Earth Snake","Beddome's Black Earth Snake","Indian Black Earth Snake","Travancore Hills Thorntail Snake","Nilgiri Burrowing Snake","Drummond-hay's Earth Snake","Schneider's Earth Snake","Salty Earth Snake","Travancore Earth Snake","Purple-red Earth Snake","Madura Earth Snake","Bicatenate Uropeltis","Cuvier's Sheildtail","Elliot's Earth Snake","Bombay Earth Snake","Ocellated Earth Snake","Phipson's Earth Snake","Indian Earth Snake","Red-lined Earth Snake","Red-spotted Earth Snake","Smith's Earth Snake","Woodmason's Earth Snake","Bengal Monitor Lizard","","Savannah Monitor","Finsch's Monitor","Calcutta Oval-grain Lizard","Glauert's Monitor","Mangrove Monitor","Peach-throated Monitor","Rennell Island Monitor","Komodo Dragon","Panay Monitor Lizard","","","Gray's Monitor","Northern Blunt-spined Monitor","Heath Monitor","Common Water Monitor","Banded Tree Monitor","Isabel Monitor","","Northern Copperhead","Cottonmouth","Taylor's Cantil","Barbour's Short-headed Viper","Usambara Eyelash Viper","Green Bush Viper","Jumping Pit Viper","Olmecan Pit Viper","Fea's Viper","Berg Adder","Plain Mountain Adder","Dwarf Puff Adder","Rhinoceros Viper","Namaqua Dwarf Adder","Yellow-blotched Palm Pit Viper","Guatemala Palm Pit Viper","Rowley's Palm Pit Viper","Inca Forest Pit Viper","Chocoan Toadheaded Pitviper","Alcatrazes Lancehead","Caatinga Lancehead","Golden Lancehead","Cerrado Lancehead","Jararacussu","Lojan Lancehead","Piraja's Lancehead","Malayan Pit Viper","Arabian Horned Viper","Sahara Sand Viper","Tzotzil Montane Pit Viper","Eastern Diamond-backed Rattlesnake","","","Western Diamond-backed Rattlesnake","","","Santa Catalina Island Rattlesnake","Sidewinder","Cascabel Rattlesnake","","","Timber Rattlesnake","","Rock Rattlesnake","","Speckled Rattlesnake","Black-tailed Rattlesnake","","Western Rattlesnake","","Twin-spotted Rattlesnake","","","Red Diamond Rattlesnake","Mohave Rattlesnake","","Tiger Rattlesnake","","","","Aruba Island Rattlesnake","Prairie Rattlesnake","New Mexican Ridge-nosed Rattlesnake","White-lipped Pitviper","Cardamom Mountains Green Pitviper","Naga-hill Pit Viper","Hon Son Pit Viper","Sunda Island Pitviper","Kanburi Pit Viper","Large-eyed Pit Viper","Mangrove Pit Viper","Ruby-eyed Green Pitviper","Desert Viper","Moorish Viper","Palestine Viper","Eastern Russell's Viper","","","White-bellied Carpet Viper","Oman Saw-scaled Viper","Egyptian Saw-scaled Viper","Mount Kinabalu Pit Viper","Rock Mamushi","Shedao Island Pit Viper","Tibetan Pit Viper","Sri Lanka Humpnose Viper ","Cyclades Blunt-nosed Viper","Barbour's Montane Pit Viper","","","Mountain Viper","Lebanon Viper","Mount Bulgar Viper","Latifi's Viper","Armenian Viper","Wagner's Viper","Ottoman Viper","","Malayan Brown Pit Viper","Taiwan Mountain Pitviper","Chinese Mountain Pit Viper","Tonkin Pit Viper","Zayuan Mountain Pit Viper","Hagen's Green Pit Viper","Kinabalu Green Pit Viper","Sumatra Pit Viper","Large-scaled Pit Viper","Sumatran Green Pit Viper","Pulau Tioman Pit Viper","Siamese Peninsula Pitviper","Cameron Highlands Pit Viper","Pope's Pit Viper","Sabah Pit Viper","Dunn's Hognose Viper","Hognosed Pit Viper","Yucat�n Hognose Viper","Horned Pit Viper","Jerdon's Pitviper","Mangshan Pit Viper","Brown Spotted Pitviper","Three Horned-scaled Pitviper","Trungkhanh Pit Viper","Szechwan Pit Viper","Field's Horned Viper","Perisan Horned Viper","Sao Paulo Lancehead","Massasauga","Pygmy Rattlesnake","Sumatran Palm Pit Viper","Bornean Palm Pit Viper","Brongersma's Pit Viper","Philippine Pit Viper","Taiwan Pit Viper","Common Bamboo Viper","Malabar Pit Viper","Javanese Pit Viper","Schultze's Pit Viper","Horseshoe Pit-viper","Wirot's Pit Viper","Bornean Keeled Green Pit Viper","Wagler's Keeled Green Pit Viper","Nose-horned Viper","","Asp Viper","","Adder","Darevsky's Viper","Caucasus Subalpine Viper","Iranian Mountain Steppe Viper","Alburzi Viper","Caucasian (Caucasus) Viper","Lataste's Viper","Lotiev's Viper","Magnificent Viper","Atlas Dwarf Viper","Orlov's Viper","Black Sea Viper","Seoane's Viper","Transcaucasian Long-nosed Viper","Meadow Viper","Gumprecht's Pit Viper","Stejneger's Pit Viper","Truong Son Pit Viper","Vogel's Pit Viper","Yunnan Pit Viper","Yellow-spotted Night Lizard","Gaige's Tropical Night Lizard","Lipetz's Tropical Night Lizard","Mayan Tropical Night Lizard","Cave Tropical Night Lizard","Japlan Tropical Night Lizard","Pajapan Tropical Night Lizard","Costa Rican Tropical Night Lizard","Smith's Tropical Night Lizard","Madrean Tropical Night Lizard","Arizona Night Lizard","Bezy's Night Lizard","","Sandstone Night Lizard","Granite Night Lizard","Island Night Lizard","","Desert Night Lizard","Bourret's Odd-scaled Snake","Formosa Odd-scaled Snake","Sichuan Odd-scaled Snake","Black Odd-scaled Snake","Rufous burrowing snake","Grey Burrowing Snake","Amami Takachiho Snake","Kloss's Rough Water Snake","Stolickza's Stream Snake","Rough-backed Litter Snake","Captain's Wood Snake","Striped Narrow-headed Snake","Hainan Sunbeam Snake","Asian Sunbeam Snake","","","","","","Pig-nosed Turtle","Big-Headed Pantanal Swamp Turtle","Chaco Side-necked Turtle","Brazilian Radiolated Swamp Turtle","Black Spine-necked Swamp Turtle","Roti Island Snake-necked Turtle","New Guinea Snake-necked Turtle","Narrow-breasted Snake-necked Turtle","Parker's Snake-necked Turtle","Pritchard's Snake-necked Turtle","Reimann's Snake-necked Turtle","Bell's Turtle","","New Guinea Spotted Turtle","Mary River Turtle","Jardine River Turtle","Brazilian Snake-necked Turtle","Dahl's Toad-headed Turtle","Hoge's Side-necked Turtle","Vanderhaege's Toad-headed Turtle","Zulia Toad Headed Sideneck","Western Swamp Tortoise","Fitzroy River Turtle","Red-footed Sideneck Turtle","Loggerhead","Green Turtle","Hawksbill Turtle","Kemp's Ridley","Olive Ridley","Central American Snapping Turtle","Snapping Turtle","Alligator Snapping Turtle","Central American River Turtle","Leatherback","Pacific Pond Turtle","Painted Turtle","Spotted Turtle","Blanding's Turtle","European Pond Turtle","Wood Turtle","Bog Turtle","Barbour's Map Turtle","Cagle's Map Turtle","Escambia Map Turtle","Yellow Blotched Sawback","Northern Map Turtle","Pascagoula Map Turtle","Black-knobbed Sawback","Ringed Sawback","Ouachita Map Turtle","Pearl River Map Turtle","Mississippi Map Turtle","Alabama Map Turtle","Texas Map Turtle","Diamondback Terrapin","Alabama Red-bellied Cooter","Suwannee Cooter","Rio Grande Cooter","Florida Red-bellied Cooter","Peninsula Cooter","Northern Redbelly Turtle","Texas Cooter","Eastern Box Turtle","Coahuila Box Turtle","Ornate Box Turtle","Carvalho's Slider","Haitian Slider","Big Bend Slider","Ornate Slider","Yellow-bellied Slider Turtle","Hispaniolan Slider Turtle","Cuatro Cienegas Slider","Cat Island Freshwater Turtle","Yaqui Slider","Batagur","Painted Batagur","Three-striped Roofed Turtle","Bengal Roof Turtle","Burmese Roofed Turtle","South Asian Box Turtle","Yellow-headed Box Turtle","Yellow-margined Box Turtle","Indochinese Box Turtle","McCord's Box Turtle","Jagged-shelled Turtle","Pan's Box Turtle","Chinese Three-striped Box Turtle","Yunnan Box Turtle","Zhou's Box Turtle","Asian Leaf Turtle","Black Pond Turtle","Ryukyu Black-breasted Leaf Turtle","Black-breasted Hill Turtle","Crowned River Turtle","Yellow-headed Temple Turtle","Arakan Forest Turtle","Giant Asian Pond Turtle","Spiny Terrapin","Sulawesi Forest Turtle","","Annam Leaf Turtle","","","Red-necked Pond Turtle","Reeves' Turtle","Chinese Stripe-necked Turtle","Three-keeled Land Tortoise","Indian Black Turtle","Bengal Eyed Terrapin","Indian Eyed Turtle","Malayan Flat-shelled Turtle","Bornean River Turtle","Brown Roofed Turtle","Assam Roofed Turtle","Indian Roofed Turtle","Indian Tent Turtle","Brown Land Turtle","Furrowed Wood Turtle","Black River Turtle","Large-nosed Wood Turtle","Mexican Spotted Terrapin","Beal's-eyed Turtle","Four-eyed Turtle","","Philippine Pond Turtle","Cane Turtle","Narrow-bridged Musk Turtle","Tabasco Mud Turtle","Narrow-bridged Mud Turtle","Arizona Mud Turtle","Striped Mud Turtle","Jalisco Mud Turtle","Creaser's Mud Turtle","Dunn's Mud Turtle","Yellow Mud Turtle","Herrera's Mud Turtle","Rough-footed Mud Turtle","Mexican Mud Turtle","Sonora Mud Turtle","Eastern Mud Turtle","Giant Musk Turtle","Mexican Giant Musk Turtle","Razor-backed Musk Turtle","Flattened Musk Turtle","Loggerhead Musk Turtle","Eastern Musk Turtle","Lake Turkana Hinged Terrapin","Yellowbelly Mud Turtle","Mashona Hinged Terrapin","East African Black Mud Turtle","Big-headed Turtle","Madagascar Big-headed Turtle","Big-headed Amazon River Turtle","Red-headed Amazon River Turtle","South American River Turtle","Magdalena River Turtle","Six-tubercled Amazon River Turtle","Yellow-spotted River Turtle","Radiated Tortoise","Ploughshare Tortoise","African Spurred Tortoise","Chaco Tortoise","Yellow-footed Tortoise","Galapagos Giant Tortoise","Indian Star Tortoise","Aldabra Giant Tortoise","Burmese Starred Tortoise","Desert Tortoise","Berlandier's Tortoise","Bolson Tortoise","Gopher Tortoise","Speckled Cape Tortoise","Nama Padloper","Elongated Tortoise","Celebes Tortoise","Travancore Tortoise","Home's Hinge-back Tortoise","Natal Hinge-backed Tortoise","Crevice Tortoise","Asian Giant Tortoise","Impressed Tortoise","Geometric Tortoise","Spider Tortoise","Flat-tailed Tortoise","Common Tortoise","Hermann's Tortoise","Afghan Tortoise","Egyptian Tortoise","Marginated Tortoise","Asiatic Softshell Turtle","Florida Softshell Turtle","Smooth Softshell Turtle","Spiny Softshell Turtle","Southeast Asian Narrow-headed Softshell Turtle","Indian Narrow-headed Softshell Turtle","Nubian Flapshell Turtle","Senegal Flapshell Turtle","Zambezi Flapshell Turtle","Malayan Soft-shelled Turtle","Indian Flap-shelled Turtle","Burmese Peacock Softshell","Indian Softshell Turtle","Indian Peacock Softshell Turtle","Leith's Softshell Turtle","Black Soft-shell Turtle","Wattle-necked Softshell Turtle","Asian Giant Softshell Turtle","Cantor's Giant Softshell","","Euphrates Softshell Turtle","Yangtze Giant Softshell Turtle"];
@@ -264,7 +285,7 @@ var selectedfamily;
 var selectedorder;
 var selectedspecies;
 var scrollbuttonspace = 10;
-var typeaheady = 460;
+var typeaheady = 404;
 var instructionsy = typeaheady+67;
 var divwidth=1000;
 
@@ -276,12 +297,17 @@ var focusp1, focusp1, initfocusp1=0, initfocusp2=90;
 var focusx0 = x0 - scrollbuttonspace;
 var focusgraphwidth = graphwidth+(2*scrollbuttonspace)
 //var focusgraphtopmargin = 34
-var focusgraphtopmargin = 200
+var focusgraphtopmargin = 75
 var focusxspace, focusmaxorders = 4, orderoffsetspace = 5, numfocus, focuswidth;
-var focusy0 = 620;
+var focusy0 = 610;
 var focusgraphheight = focusy0-focusgraphtopmargin;
 var focusyspeciesspace = 0;
 var focusdata, focusorderdata, focusgenusdata, focusorderendpoints;
+// Variables for padding for tall genuses
+var tallgenusthresh = 100;
+var tallgenuspadding = 15;
+var tallgenustoppadding = 0;
+var focustallgenusdata;
 // Families
 var familyy = focusy0;
 var familyheight = 6;
@@ -292,7 +318,7 @@ var familytooltipy = familyy+familyheight+familyspeciesyspace;
 var familytooltip;
 var tooltip, ttspecieslabel, ttthreatlabel, ttsciname;
 // Orders
-var focusorderlineheight = 150;
+var focusorderlineheight = 168;
 var orderlabeldx = 3;
 var wordbuffer = 1;
 var orderlabely = familyy-focusorderlineheight+10;
@@ -356,15 +382,18 @@ var classlinespace = 15;
 var classgraphspace = 18;
 var hoveredclass;
 // Data bars 
-var classDataMaxWidth = 55;
+var classDataMaxWidth = 235;
 var classDataScale = d3.scale.linear().range([0, classDataMaxWidth]).domain([0, 3837.5])
-var classchartwidth = 800;
+var classchartwidth = 950;
 var classchartheight = 350;
 var classsvgx = classx - (classchartwidth/2);
 var classsvg; 
-var classdatabary0 = 75;
+var classdatabary0 = 137;
+var classdatabartextspace = 5;
 var classdatayspace = 3;
-var classdataheight = 15;
+var classdataheight = 7;
+var classdatabarsx = 218;
+var classdatabackgroundlinelength = 16;
 var minclassdatawidth = .5;
 var classdatalabelxspace = 3;
 // Legend
@@ -385,17 +414,17 @@ var transitiondelaytime = 0;
 incrementProgress();
 
 var windowoffset = (window.innerWidth-1000)/2.0;
-document.getElementById("amphibiansviddiv").style.left= windowoffset+(divwidth/2)-120+"px"
-document.getElementById("reptilesviddiv").style.left= windowoffset+(divwidth/2)-175+"px"
-document.getElementById("mammalsviddiv").style.left= windowoffset+(divwidth/2)-104+"px"
-document.getElementById("birdsviddiv").style.left= windowoffset+(divwidth/2)-40+"px"
+document.getElementById("amphibiansviddiv").style.left= windowoffset+40+"px";//windowoffset+(divwidth/2)-120+"px"
+document.getElementById("reptilesviddiv").style.left= windowoffset-20+"px";//windowoffset+(divwidth/2)-175+"px"
+document.getElementById("mammalsviddiv").style.left= windowoffset+40+"px";//windowoffset+(divwidth/2)-104+"px"
+document.getElementById("birdsviddiv").style.left= windowoffset+125+"px";//windowoffset+(divwidth/2)-40+"px"
 //104
 // Render typeahead stuff
 var searchdiv;
 searchdiv = d3.select("#chart").append("div");
 searchdiv.attr("id", "searchid");
 searchdiv
-	.style("left", windowoffset+focusx0+focusgraphwidth-190+"px")
+	.style("left", windowoffset+focusx0+focusgraphwidth-195+"px")
 	.style("top", typeaheady+"px")
 document.getElementById("searchid").innerHTML='<input type="text" id="search" autocomplete="off" data-provide="typeahead" >';
 
@@ -530,13 +559,15 @@ render();
 		 clickedspecies = undefined;
 	}, transitionduration)
 	
-	
-	
+
+  document.getElementById("legendimgid").style.display="block";
 	
 	//resetSearchInput();
 	
 	//switchingclass = false;
-	
+	if (init) {
+	staticClassChart();
+	}
 	init = false;
 		
 //	focusp1=200;
@@ -690,6 +721,15 @@ function animateSpeciesHighlights(show, delay, index) {
 
 function hideVis() {
 	document.getElementById("chart").style.display="none"
+	speciestext
+  			.style("opacity", 0).style("display", "none")
+  //	d3.select(".legendimage").attr("opacity", 0)
+  if (!init) {
+  document.getElementById("legendimgid").style.display="none";
+
+  }
+  	//document.getElementById("legendimgid").style("display", "none")
+  			
 	//document.getElementById(classdata[currclassindex].class+"viddiv").style.display="none"
 }
 
@@ -864,12 +904,23 @@ function initializeView() {
   	numfocus = focusp2-focusp1+1;
   	focusxspace = focusgraphwidth/numfocus;
   	focuswidth = focusxspace;
+  	/**
   	focusyspace = focusgraphheight/classdata[currclassindex].maxspecies;
   	if (currclassindex==0) {
   	focusheight = focusyspace;
   	} else {
   	focusheight = .8*focusyspace;
+  	}**/
+  	focusyspace = 1.83//focusgraphheight/classdata[currclassindex].maxspecies;
+  	if (currclassindex==0) {
+  	focusheight = focusyspace;
+  	focusyspace = 1.83
+  	} else {
+  	focusyspace = 1.83;
+  	focusheight = .8*focusyspace;
   	}
+//  	console.log(data[currclassindex].class)
+  //	console.log(focusyspace)
   	
   	xspace = graphwidth/classdata[currclassindex].numgenuses;
     contextyspace = contextgraphscale/classdata[currclassindex].maxspecies;	
@@ -880,12 +931,86 @@ function initializeView() {
 // Render the structure of the page
 // these usually only get called on load – they are then just updated, not re–rendered
 function render() {
+	renderLegend();
+	renderStaticView();
+renderClassChart();
 	//renderSpeciesText();
 	renderContext();
+
+	renderHelpButton();
 	//renderTooltip();
 	//renderButtons();
-	renderStaticView();
-	renderClassChart();
+	
+	
+}
+var helpbuttondiv;
+function renderHelpButton() {
+
+	helpbuttondiv = d3.select("#ttipdiv")
+    .append("div");
+    helpbuttondiv.attr("class", "helpbuttondiv")
+    	.attr("id", "helpbuttondivid")
+    	.style("margin-left", 76+"px")
+
+
+var img = document.createElement("img");
+img.src = "images/helpbutton.png";
+
+var src = document.getElementById("helpbuttondivid");
+src.appendChild(img);
+
+
+
+
+
+	var helpbuttonx = x0;
+	var helpbuttony = 387;
+	var helpbuttonr = 15;
+	
+	svg.append("svg:circle")
+		.attr("cx", helpbuttonx-(2*helpbuttonr)).attr("cy", helpbuttony).attr("r", helpbuttonr)
+		.attr("class", "helpbutton")
+		.on("mouseover", mouseoverhelpbutton)
+		.on("mouseout", mouseouthelpbutton);
+		
+		
+		
+	svg.append("svg:text")
+	.attr("class", "helpbuttonquestionmark")
+		.attr("x", helpbuttonx-(2*helpbuttonr)-7)
+		.attr("y", helpbuttony+9)
+		.text("?")
+		.on("mouseover", mouseoverhelpbutton)
+		.on("mouseout", mouseouthelpbutton);
+		
+		
+	
+
+}
+
+function mouseoverhelpbutton() {
+	d3.select('.helpbuttondiv').classed("visiblehelp", true)
+
+}
+function mouseouthelpbutton() {
+d3.select('.helpbuttondiv').classed("visiblehelp", false)
+
+}
+
+function renderLegend() {
+	var legenddiv = d3.select("#ttipdiv")
+    .append("div");
+    legenddiv.attr("class", "legendimg")
+    	.attr("id", "legendimgid")
+    	.style("margin-left", x0+graphwidth-260+"px")
+
+
+var img = document.createElement("img");
+img.src = "images/legend.png";
+img.id="legendimageid";
+
+var src = document.getElementById("legendimgid");
+src.appendChild(img);
 }
 
 // Update the focus view and its corresponding highlights on the context view when the brush is dragged
@@ -903,6 +1028,7 @@ function updateAll() {
 	//updateVid();
 	
 	//updateClassChart();
+	showClassChart();
 	updateText();
 	updateButtonHighlights();
 	
@@ -933,13 +1059,62 @@ function updateFocus() {
 }
 
 // Draw rectangles for each species in the focus view, positioned according to order>family>genus>threat level
+// Also, add a white "padding" rectangle on the background of each genus that is tall enough to run into the guff above
 function focusSpecies() {
+	// Put padding around tall genuses
+	focustallgenusdata = classdata[currclassindex].genusdata.slice(focusp1, focusp2+1)
+	.filter(function(d, i){return (d.lastspecies-d.firstspecies)>tallgenusthresh;});
+	//UPDATE
+	focusgenusbackgroundrects = svg.selectAll(".focusgenusbackgroundrects")
+	.data(focustallgenusdata, getBindingFieldGenus)
+		.attr("x", function(d, i) {
+		return Math.max(getFocusXFromGenus(d["genus-order"])-(tallgenuspadding/2), focusx0-(tallgenuspadding/2));});
+	//EXIT
+	focusgenusbackgroundrects.exit().remove();
+	//ENTER
+	var focusgenusbackgroundrectsenter = focusgenusbackgroundrects.enter().append("svg:rect");
+	focusgenusbackgroundrectsenter.attr("class", "focusgenusbackgroundrects")
+		.attr("x", function(d, i) {return Math.max(getFocusXFromGenus(d["genus-order"])-(tallgenuspadding/2), focusx0-(tallgenuspadding/2));})
+		
+		
+		
+
+	// Transition from y=0 is the data set is being switched	
+	if (switchingclass) {
+		focusgenusbackgroundrectsenter.attr("y", focusy0-familyspeciesyspace).attr("height", 0)
+			.transition()
+			.duration(transitionduration)
+			.attr("y", function(d, i) {
+			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
+			//console.log(ypos)
+			return ypos;})
+			//.attr("height", focusheight)
+			.attr("width", focuswidth+tallgenuspadding)
+			.attr("height", function(d, i) {
+			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
+			return focusy0-ypos;})
+	} else {
+	focusgenusbackgroundrectsenter.attr("y", function(d, i) {
+			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
+			//console.log(ypos)
+			return ypos;})
+		.attr("width", focuswidth+tallgenuspadding)
+		.attr("height", function(d, i) {
+			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
+			return focusy0-ypos;})
+	}
+	
+	
+
+
 	focusspeciesdata = data.slice(classdata[currclassindex].genusdata[focusp1].firstspecies, classdata[currclassindex].genusdata[focusp2].lastspecies+1); 
 
 	//UPDATE
 	focusrects = svg.selectAll(".focusrect")
 	.data(focusspeciesdata, getBindingField)
-		.attr("x", function(d, i) {return Math.max(getFocusXFromGenus(d["genus-order"]), focusx0);});
+		.attr("x", function(d, i) {
+		d3.select(this).moveToFront();
+		return Math.max(getFocusXFromGenus(d["genus-order"]), focusx0);});
 
 	// EXIT
 	focusrects.exit().remove();
@@ -949,6 +1124,7 @@ function focusSpecies() {
 	enter.attr("class", "focusrect")
 		.attr("fill", getSpeciesColor)
 		.attr("x", function(d, i) {
+			d3.select(this).moveToFront();
   			return Math.max(getFocusXFromGenus(d["genus-order"]), focusx0);
 			}).on("mouseover", mouseoverspecies).on("mouseout", mouseoutspecies).on("mousedown", clickspecies);
 			
@@ -1444,7 +1620,7 @@ function updateSpeciesTextContent(species) {
 	specieslabelthreat.text(threatdict[species["Red List status"]].toUpperCase());
 	
 	if (isThreatened(species)) {
-		specieslabelthreat.style("color", "#00AFF4");
+		specieslabelthreat.style("color", "#FF0203");
 	} else {
 		specieslabelthreat.style("color", "#BCBEC0");
 	}
@@ -1457,8 +1633,10 @@ function updateSpeciesTextContent(species) {
 	//specieslabelsciname.style("opacity", 1)
 	//}
 
-var ypos = getFocusYFromSpecies(species["species-order"])-9-focusyspace;//(y0-parseFloat(species["species-order"]));
-var xpos = getFocusXFromGenus(species["genus-order"])+focuswidth+6;
+var ypos = getFocusYFromSpecies(species["species-order"])-focusyspace-80;//-9-focusyspace;//(y0-parseFloat(species["species-order"]));
+var xpos = getFocusXFromGenus(species["genus-order"])-(document.getElementById("speciestextdivid").offsetWidth/2)+(focuswidth/2);//+focuswidth+6;
+
+console.log(document.getElementById("speciestextdivid").offsetWidth)
 //getFocusYFromSpecies(d["species-order"]
 //getFocusXFromGenus
 
@@ -1470,7 +1648,7 @@ var xpos = getFocusXFromGenus(species["genus-order"])+focuswidth+6;
 }
 var speciestext, specieslabelsciname, specieslabelname, specieslabelthreat;
 function renderSpeciesText() {
-	speciestext = d3.select("#chart")
+	speciestext = d3.select("#ttipdiv")
     .append("div");
     speciestext.attr("class", "ttip")
     	.attr("id", "speciestextdivid");
@@ -1594,7 +1772,7 @@ function contextCircles() {
 
 // Show the currently focus selection of species on the context view
 function updateContextHighlights(focusspeciesdata) {
-	//UPDATE - updating elements are in BLUE
+	//UPDATE 
 	contexthighlightcircles = svg.selectAll(".highlightedcontextspecies")
 	.data(focusspeciesdata, getBindingField)
 		.attr("cx", function(d, i) {return getContextXFromGenus(d["genus-order"]);});
@@ -1602,7 +1780,7 @@ function updateContextHighlights(focusspeciesdata) {
 	// EXIT
 	contexthighlightcircles.exit().remove();
 
-	// ENTER – entering elements are in YELLOW
+	// ENTER
 	contexthighlightcircles.enter().append("svg:circle")
   		.attr("class", "highlightedcontextspecies")
 		.attr("cx", function(d, i) {
@@ -1760,6 +1938,7 @@ function contextOrders() {
 function renderStaticView() {
 	// Text for class view
 	classViewText();
+	console.log("rendering class view")
 	// Rect for line under title
 	//classViewLine();
 	// ORDER LEVEL and FAMILY LEVEL label
@@ -1796,12 +1975,35 @@ function showClassChart() {
 	
 	classDataBars();
 	classDataLabels();
+	
 	incrementProgress();
 	showingclasschart = true;
 }
 
+function staticClassChart() {
+	var classdatabackgroundline = classsvg.append("line").attr("class", "classdatabackgroundline")
+		.attr("x1", classdatabarsx+2).attr("x2", classdatabarsx+2).attr("y1", classdatabary0)
+		.attr("y2", classdatabary0);
+		
+		
+	classdatabackgroundline.transition()
+		.duration(transitionduration)
+			.attr("y2", classdatabary0+classdatabackgroundlinelength);
+		
+	var classdatabackgroundlabel = classsvg.append("text").attr("opacity", 0)
+		.attr("class", "classdatabackgroundlabel").attr("x", classdatabarsx)
+		.attr("y", classdatabary0+classdataheight+classdatabackgroundlinelength+4)
+		.text("ONE OR LESS NATURAL EXTINCTION")
+		
+	classdatabackgroundlabel.transition()
+		.duration(transitionduration)
+			.attr("opacity", 1)
+		
+		
+}
+
 function hideClassChart() {
-	classsvg.selectAll(".classDataBar").transition().duration(transitionduration).attr("width", 0)
+	classsvg.selectAll(".classDataBar").transition().duration(transitionduration).attr("width", 0).attr("x", classdatabarsx)
 	classsvg.selectAll(".classDataLabel").transition()
 		.duration(transitionduration)
 		.attr("opacity", 0)
@@ -1813,8 +2015,8 @@ function hideClassChart() {
 function classHoverRect() {
 	classsvg.append("rect")
 	.attr("class", "classrect")
-    .attr("width", "100%")
-    .attr("height", "70%")
+    .attr("width", 215)
+    .attr("height", "50%").attr("y", 50)
     .on("mouseover", mouseoverClass)
     .on("mouseout", mouseoutClass);
 }
@@ -1822,7 +2024,7 @@ function classHoverRect() {
 
 function mouseoverClass(d, i) {
 	playCurrentVid(currclassindex);
-	showClassChart();
+	//showClassChart();
 /**
 	if (vids[currclassindex].vidloaded) {
 		vids[currclassindex].vid.play();
@@ -1835,7 +2037,7 @@ function mouseoverClass(d, i) {
 
 function mouseoutClass(d, i) {
 	pauseCurrentVid(currclassindex);
-	hideClassChart();
+	//hideClassChart();
 //	thisgif = classdata[currclassindex].gif;
 //	if (thisgif.get_playing()) {
 //		thisgif.pause();
@@ -1918,6 +2120,51 @@ function updateVid() {
 
 function classDataBars() {
 	var classdatabars = classsvg.selectAll(".classDataBar")
+		.data(classdata[currclassindex].data)
+
+
+	classdatabars.enter().append("rect")
+	.attr("class", "classDataBar");
+	
+	classdatabars
+		.attr("y", function(d, i) {if (d.type=="dd"){
+			return classdatabary0+1;
+		}
+		return classdatabary0;})
+		.attr("fill", function(d, i) {
+			return classdatacolors[d.type];
+		})
+		.attr("height", function(d, i) {
+			if (d.type=="dd"){
+				return classdataheight-2;
+			}
+		return classdataheight;});
+		
+	if (init) {
+		classdatabars.attr("x", classdatabarsx)
+		.attr("width", 0).classed("ddclassbar", function(d, i){return d.type=="dd";})
+		
+	}
+		
+	classdatabars.transition()
+		.duration(transitionduration)
+		.attr("width", function(d) {return classDataScale(d.value);})//{return Math.max(minclassdatawidth, classDataScale(d.value));});
+		.attr("x", function(d,i) {
+			var tmpi = 0;
+			var tmpx = 0;//classdatabarsx;
+			while (tmpi<i) {
+				tmpx=tmpx+classdata[currclassindex].data[tmpi].value;
+				tmpi++;
+			}
+	
+		return classdatabarsx+classDataScale(tmpx);
+		})
+	classdatabars.exit().remove();
+	
+
+
+/**
+	var classdatabars = classsvg.selectAll(".classDataBar")
 		.data(classdata[currclassindex].data, function(d, i) {
 		if (d.type=="healthy"&&d.order==1) {
 			return d.type+d.order;
@@ -1934,48 +2181,64 @@ function classDataBars() {
 			return classdatacolors[d.type]
 		})
 		.attr("height", classdataheight)
-		//.on("mouseover", mouseoverclassbar)
-		//.on("mouseout", mouseoutclassbar);
 
-	//if (init) {
-	//classdatabars.attr("width", 0);
+
 	classdatabars
-	.attr("width", 0);//function(d) {return Math.max(minclassdatawidth, classDataScale(d.value));});
-	//} else {
+	.attr("width", 0);
 	classdatabars.transition()
-		//.delay(transitiondelaytime)
 		.duration(transitionduration)
 		.attr("width", function(d) {return Math.max(minclassdatawidth, classDataScale(d.value));});
-	//}	
-	classdatabars.exit().remove();
+	classdatabars.exit().remove();**/
 	
-	/**
-	// Invisible class data bars to make interaction easier
-	var invisibleclassdatabars = classsvg.selectAll(".invisibleClassDataBar")
-		.data(classdata[currclassindex].data, function(d, i) {
-		if (d.type=="healthy"&&d.order==1) {
-			return d.type+d.order;
-		}
-		return d.type});
-		
-		
-	invisibleclassdatabars.enter().append("rect")
-	.attr("class", "invisibleClassDataBar");
-	invisibleclassdatabars.attr("x", classdata[currclassindex].classchartxoffset)
-		.attr("y", function(d, i) {
-		return classdatabary0+(d.order*(classdatayspace+classdataheight));
-		})
-		.attr("fill", "none")
-		.attr("height", classdataheight+classdatayspace)
-		.on("mouseover", mouseoverclassbar)
-		.on("mouseout", mouseoutclassbar)
-		.attr("width", 300);
-	
-	invisibleclassdatabars.exit().remove();**/
 	incrementProgress();
 }
 
 function classDataLabels() {
+	var classdatalabels = classsvg.selectAll(".classDataLabel")
+		.data(classdata[currclassindex].data);
+		
+	classdatalabels.enter().append("text");
+	classdatalabels.attr("class", "classDataLabel")
+	.text(function(d, i) {
+		if (d.type=="healthy") {
+		return d.text+ " HEALTHY";
+		}
+		if (d.type=="threatened"){
+			return d.text+" AT RISK";
+		}
+		if (d.type=="dd") {
+			return d.text + " DATA DEFICIENT"}
+		})
+	.attr("y", classdatabary0-classdatabartextspace).classed("atriskclasslabel", function(d, i) {return d.type=="threatened";})
+
+	if (init) {
+		classdatalabels.attr("x", classdatabarsx)
+		.attr("opacity", 0);
+		
+	}
+	
+	classdatalabels.transition()
+		.duration(transitionduration)
+		.attr("opacity", 1)
+		.attr("x", function(d,i) {
+			var tmpi = 0;
+			var tmpx = 0;//classdatabarsx;
+			var wordwidth = d3.select(this).node().getBBox().width;
+			while (tmpi<i) {
+				tmpx=tmpx+classdata[currclassindex].data[tmpi].value;
+				tmpi++;
+			}
+			
+			tmpx=tmpx;//+(d.value/2);
+		if ((d.class=="reptiles")&&(d.type=="healthy")) {
+			return classdatabarsx+classDataScale(tmpx+(d.value/2))-wordwidth/2;
+		}
+		return classdatabarsx+classDataScale(tmpx);//-wordwidth/2;
+		})
+	classdatalabels.exit().remove();
+
+
+/**
 	var classdatalabels = classsvg.selectAll(".classDataLabel")
 		.data(classdata[currclassindex].data);
 		
@@ -2004,7 +2267,7 @@ function classDataLabels() {
 		.duration(transitionduration)
 		.attr("opacity", 1)
 		.attr("x", function(d) {return classdata[currclassindex].classchartxoffset+classdatalabelxspace + Math.max(minclassdatawidth, classDataScale(d.value));})	
-
+**/
 //	classdatalabels
 //	.attr("x", function(d) {return classdata[currclassindex].classchartxoffset+classdatalabelxspace + Math.max(minclassdatawidth, classDataScale(d.value));})		
 
@@ -2073,7 +2336,7 @@ function updateText() {
 	//document.getElementById("searchid").innerHTML='<input type="text" placeholder="Search for an animal" id="search" autocomplete="off" data-provide="typeahead" >';
 
 	$('.vistitle').text(classdata[currclassindex].class.toUpperCase());
-	$('.visstat').text(classdata[currclassindex].value+"% of "+getSingularFormClassname()+" species headed to extinction");
+	$('.visstat').text(classdata[currclassindex].numatrisk+" "+getSingularFormClassname()+" species at risk");
 	$('.visguff').html(bodycopytext[currclassindex].copy)
 
 
@@ -2362,6 +2625,7 @@ function changeClass(i) {
 		
 	})**/
 	
+	
 }
 
 function printFamilies() {
@@ -2423,7 +2687,42 @@ brushgradient.append("svg:stop")
     .attr("stop-opacity", 1);
     
     
-
+var tallgenusgradient = svg.append("svg:defs")
+  .append("svg:linearGradient")
+    .attr("id", "tallgenus-gradient")
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "0%")
+    .attr("spreadMethod", "pad");
+ 
+tallgenusgradient.append("svg:stop")
+    .attr("offset", "0%")
+    .attr("stop-color", "white")
+    .attr("stop-opacity", 0);
+ 
+tallgenusgradient.append("svg:stop")
+    .attr("offset", "30%")
+    .attr("stop-color", "white")
+    .attr("stop-opacity", 1);
+    
+tallgenusgradient.append("svg:stop")
+    .attr("offset", "70%")
+    .attr("stop-color", "white")
+    .attr("stop-opacity", 1);
+    
+tallgenusgradient.append("svg:stop")
+    .attr("offset", "100%")
+    .attr("stop-color", "white")
+    .attr("stop-opacity", 0);
+    /**
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>**/
+    
+    
+/**
  var brushbackgroundgradient = svg.append("svg:defs")
   .append("svg:linearGradient")
     .attr("id", "brushbackground-gradient")
@@ -2443,7 +2742,7 @@ brushbackgroundgradient.append("svg:stop")
     .attr("stop-color", "#D1D2D4")
     .attr("stop-opacity", 1);
  
-  
+  **/
       
       
      // <stop offset="5%" stop-color="#F60" />
@@ -2456,7 +2755,7 @@ brushbackgroundgradient.append("svg:stop")
 function brush() {
 		
 	svg.append("rect").attr("class", "brushbackground")
-		.attr("x", x0).attr("y", contextfamilyy+contextfamilyspace).attr("width", graphwidth).attr("height",brushheight+2)
+		.attr("x", x0).attr("y", contextfamilyy+contextfamilyspace).attr("width", graphwidth).attr("height",brushheight+1)
 	
 	
 	svg.append("line").attr("class", "brushhelperline")
@@ -2638,6 +2937,7 @@ function getBrushedP1(brushx) {
 
 // Call this function when the brush is dragged
 function dragmove(d) {
+	event.preventDefault();
 	var move;
 	speciestext.style("display", "none");
 	d3.select(".brush").attr("transform", function() {
@@ -2688,6 +2988,7 @@ function loadInitClass(url, callback) {
 // Load remaining data sets
 function loadAllSpecies() {
 	alldata.forEach(function(d, i){
+		
 		//console.log("loading data for "+classdata[i].class)
 		 incrementProgress();
 		if (!(i==currclassindex)) {
@@ -2717,6 +3018,7 @@ function loadAllSpecies() {
 		}
 	})
 }
+
 
 
 // Data processing function that is normally not called during actual load, just as a preprocessing function
@@ -2913,6 +3215,10 @@ function getBindingField(d) {
 		return d["Genus"]+d["Species"];
 	//}
 	//return d["BirdLife Sequence"];
+}
+
+function getBindingFieldGenus(d) {
+	return d.genus;
 }
 
 function colorFamilyUnhighlight(d) {

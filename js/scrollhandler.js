@@ -94,32 +94,7 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }
             ]
-          } , {//1 – show the MAMMALS copy and the LION
-            'wrapper' : '#vis',
-            'duration' : '100%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : -25,
-                'opacity'    : [0,1]
-              },{
-               'selector'    : '#froggydiv',
-                'opacity'    : [0, 0]
-              },{
-               'selector'    : '#mammalsviddiv',
-               'translateY'  : -10,
-                'opacity'    : [0,1]
-              }, {
-               'selector'    : '#reptilesviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }
-            ]
-          } ,{//2 – show the vis
+          } ,{//1 – show the vis, with mammals data and LION
             'wrapper' : '#vis',
             'duration' : '100%',
             'animations' :  [{
@@ -129,7 +104,7 @@ $(window).scrollTop(0)}, 100)**/
               },{
                'selector'    : '#mammalsviddiv',
                'translateY'  : [-10,-10],
-                'opacity'    : [1,1]
+                'opacity'    : [0,10]
               }, {
                'selector'    : '#reptilesviddiv',
                 'opacity'    : [0,0]
@@ -140,7 +115,7 @@ $(window).scrollTop(0)}, 100)**/
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
               }]
-          },{//3 – continuing to show the vis w MAMMALS
+          },{//2 – continuing to show the vis w MAMMALS
             'wrapper' : '#vis',
             'duration' : '50%',
             'animations' :  [{
@@ -161,7 +136,7 @@ $(window).scrollTop(0)}, 100)**/
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
               }]
-          },{//4 – switching to REPTILES and showing the TURTLE
+          },{//3 – switching to REPTILES and showing the TURTLE
             'wrapper' : '#vis',
             'duration' : '100%',
             'animations' :  [{
@@ -174,7 +149,7 @@ $(window).scrollTop(0)}, 100)**/
               }, {
                'selector'    : '#reptilesviddiv',
                'translateY'  : -3,
-                'opacity'    : [0,3]
+                'opacity'    : [1,1]
               }, {
                'selector'    : '#amphibiansviddiv',
                 'opacity'    : [0,0]
@@ -182,7 +157,7 @@ $(window).scrollTop(0)}, 100)**/
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
               }]
-          },{// 5 – continuing to show the vis w REPTILES
+          },{// 4 – continuing to show the vis w REPTILES
             'wrapper' : '#vis',
             'duration' : '50%',
             'animations' :  [{
@@ -203,7 +178,7 @@ $(window).scrollTop(0)}, 100)**/
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
               }]
-          },{// 6 – switching to AMPHIBIANS and showing the FROG
+          },{// 5 – switching to AMPHIBIANS and showing the FROG
             'wrapper' : '#vis',
             'duration' : '100%',
             'animations' :  [{
@@ -217,7 +192,7 @@ $(window).scrollTop(0)}, 100)**/
               }, {
                'selector'    : '#amphibiansviddiv',
                'translateY'  : -8,
-                'opacity'    : [0,3]
+                'opacity'    : [1,1]
               },{
                'selector'    : '#mammalsviddiv',
                 'opacity'    : [0, 0]
@@ -225,7 +200,7 @@ $(window).scrollTop(0)}, 100)**/
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
               }]
-          },{// 7 – continuing to show the vis w AMPHIBIANS
+          },{// 6 – continuing to show the vis w AMPHIBIANS
             'wrapper' : '#vis',
             'duration' : '50%',
             'animations' :  [{
@@ -246,7 +221,7 @@ $(window).scrollTop(0)}, 100)**/
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
               }]
-          },{// 8 – switching to BIRDS and showing the OWL
+          },{// 7 – switching to BIRDS and showing the OWL
             'wrapper' : '#vis',
             'duration' : '100%',
             'animations' :  [{
@@ -260,7 +235,7 @@ $(window).scrollTop(0)}, 100)**/
               }, {
                'selector'    : '#birdsviddiv',
                'translateY'  : -10,
-                'opacity'    : [0,3]
+                'opacity'    : [1,1]
               },{
                'selector'    : '#mammalsviddiv',
                 'opacity'    : [0, 0]
@@ -336,7 +311,7 @@ var startagain = false;
     	updateButtons(d3.select(document.getElementById('titlebutton')));
     }
     
-    var buttonIndexToPagePercent = {0:'1%', 1:'201%', 2:'401%', 3:'601%', 4:'701%'}
+    var buttonIndexToPagePercent = {0:'1%', 1:'101%', 2:'301%', 3:'501%', 4:'601%'}
     
     clickButton = function(index, element) {
     	
@@ -348,7 +323,10 @@ var startagain = false;
     	//console.log(index)
     	if (index==0) {
     		startagain = true;
-    	} 
+    		document.getElementById("ttipdiv").style("display", "none")
+    	} else {
+    	document.getElementById("ttipdiv").style("display", "block")
+    	}
     	//console.log(convertPercentToPx(buttonIndexToPagePercent[index]))
     	$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[index], 'y'))
     	//document.getElementsByClassName('classButton').addClass("classButton .selectedbutton");//.classed(".classButton .selectedbutton", true);
@@ -492,23 +470,25 @@ convertPercentToPx = function(value, axis) {
 
  
 
-var keyframeToAnimalClassIndex = {2:1, 4:2, 6:0, 8:3};
-var keyframeToButtonId = {2:'mammalsbutton', 4:'reptilesbutton', 6:'amphibiansbutton', 8:'birdsbutton'}; 
+var keyframeToAnimalClassIndex = {1:1, 3:2, 5:0, 7:3};
+var keyframeToButtonId = {1:'mammalsbutton', 3:'reptilesbutton', 5:'amphibiansbutton', 7:'birdsbutton'}; 
 var vispos = 1000;
 //var vispos=0;
 var showingvis = false;
 var starting = true;
 vis = function(scrollpos) {
-	if (currentKeyframe<=1) {
+	if (currentKeyframe==0) {
 		hideVis();
 		showingvis=false;
+		updateButtons(d3.select(document.getElementById('titlebutton')));
+		/**
 		if (currentKeyframe==0) {
 			updateButtons(d3.select(document.getElementById('titlebutton')));
 		} else {
 			updateButtons(d3.select(document.getElementById('mammalsbutton')));
-		}
+		}**/
 	} else {
-	if ((currentKeyframe==2)&&(!showingvis)) {
+	if ((currentKeyframe==1)&&(!showingvis)) {
 		//console.log("SHOWING VIS")
 		showVis();
 		showingvis=true;

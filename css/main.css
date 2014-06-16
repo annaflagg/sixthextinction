@@ -1,5 +1,5 @@
 body {
-  background: #F3F3F4;
+  background: white;
   font-weight: 300;
   font-size: 13px;
   height: 100%;
@@ -13,6 +13,7 @@ body {
 
 .svgclass {
 	/*pointer-events: none;*/
+	z-index: 7;
 }
 
 .wrapper {
@@ -33,7 +34,7 @@ text-align: center;
 }
 #whitebackground {
 position: fixed;
-width:1000px;
+width:1000;
 height: 900px;
 background-color: white;
 opacity:.99;
@@ -49,30 +50,30 @@ margin: auto;
 left: 0;
 right: 0;	
 width: 100%;
-height:45px;
+height:63px;
 background-color:black;
 }
 
 
 .buttons {
-	margin-top: 11px;
+	margin-top: 87px;
 	height:20px;
 }
 .sectionButton {
 	font-weight: 600;
 	font-family: Open Sans;
-	color: #6D6E71;
-	padding: 10px;
-	font-size: 16px;
+	color: #B3B3B3;
+	padding: 39px;
+	font-size: 13px;
 	letter-spacing: 1px;
 	cursor: pointer;
 }
 .sectionButton:hover {
-	color: red;
+	color: black;
 	text-decoration:none;
 }
 .selectedSectionButton {
-	color: red;
+	color: black;
 }
 #titlebutton {
 	padding-right: 100px;
@@ -150,50 +151,78 @@ width:1000px;
 
 background-color: white;
 opacity:.99;
- margin: 0% auto;
+
   pointer-events: all;
-text-align: center;
+text-align: left;
+margin-left: 240px;
 }
 
 .viscopy {
 position: fixed;
-margin-top: 250px;
+margin-top: 165px;
 color:black;
 opacity:0;
-width:1000px;
-text-align: center;
 pointer-events: all;
 }
 .viscopy .vistitle {
 font-family: Open Sans;
-font-size: 40px;
+font-size: 32px;
 letter-spacing: 3px;
 font-weight: 600;
 pointer-events: all;
 }
 .viscopy .visstat {
 font-family: Georgia;
-font-size: 15px;
-font-weight: 800;
-font-style:oblique;
-letter-spacing: 1.6px;
+font-size: 18px;
 position: relative;
-margin-top: -20px;
+margin-top: -26px;
 pointer-events: all;
+opacity: 0;
 }
 .viscopy .visguff {
 font-family: Georgia;
-font-size: 18px;
-margin-top:-13px;
+font-size: 16px;
+margin-top:41px;
 position: relative;
-width:720px;
-margin-left:auto;
-margin-right:auto;
+width:670px;
 z-index: 5;
 pointer-events: all;
+line-height: 1.65em;
+letter-spacing: 0px;
 }
 .legendimg {
-	margin-top:5px;
+	position:fixed;
+	margin-top:380px;
+
+}
+.helpbuttondiv {
+	pointer-events:none;
+	position: fixed;
+	margin-top: 228px;
+	opacity:0;
+	-webkit-transition: opacity 0.2s ease;
+       -moz-transition: opacity 0.2s ease;
+        -ms-transition: opacity 0.2s ease;
+         -o-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
+    z-index: 15;
+}
+.helpbuttonquestionmark {
+	font-family: Helvetica;
+	font-size:24px;
+	fill:white;
+	font-weight: 800;
+}
+.visiblehelp {
+	opacity:1;
+}
+.helpbutton {
+	pointer-events: all;
+	cursor: pointer;
+	fill: #CCCCCC;
+}
+.helpbutton:hover {
+	fill:black;	
 }
 
 .copy {
@@ -401,6 +430,12 @@ position: fixed;
 z-index: 4;
     pointer-events: none;
 }
+#ttipdiv {
+	z-index: 12;
+	width: 2000px;
+
+	position:fixed;
+}
 
 #loading {
 position: fixed;
@@ -529,7 +564,7 @@ z-index:-10000000000000000000000000000;
 
 #amphibiansviddiv {
 position: fixed;
-top: 140px;
+top: 162px;
 opacity: 0;
 z-index:-1;
 pointer-events: none;
@@ -537,7 +572,7 @@ pointer-events: none;
 
 #mammalsviddiv {
 position: fixed;
-top: 140px;
+top: 162px;
 opacity: 0;
 z-index:-1;
 pointer-events: none;
@@ -546,14 +581,14 @@ display: 'block';
 
 #reptilesviddiv {
 position: fixed;
-top: 120px;
+top: 142px;
 opacity: 0;
 z-index:-1;
 pointer-events: none;
 }
 #birdsviddiv {
 position: fixed;
-top: 125px;
+top: 165px;
 opacity: 0;
 z-index:-1;
 pointer-events: none;
@@ -565,7 +600,7 @@ pointer-events: none;
    color: #939598;
 	font-style:italic;
 	
-font-size: 12px;
+font-size: 13px;
 pointer-events: none;
 -webkit-user-select: all;
 -khtml-user-select: all;
@@ -595,7 +630,7 @@ line-height: 1.1em;
 
 .specieslabel-threat {
    color: #3A3A3C;
-	margin-top: 4px;
+	margin-top: 5px;
 font-size: 11px;
 font-weight: 700;
 font-family: Open Sans;
@@ -615,14 +650,16 @@ display: block;
 pointer-events: none;
  position: absolute;
   top: 0;
-  width: 145px;
+  /*width: 145px;*/
   padding: 8px;
   z-index: 100;
-  background: #3A3A3C; 4px 8px no-repeat;
-  color: #3A3A3C;
-  /*height: 55px;*/
+  background: black; 4px 8px no-repeat;
+  color: black;
+  height: 50px;
   padding-left: 12px;
-  padding-top: 8px;
+  padding-right: 18px;
+  padding-top: 11px;
+  padding-bottom: 12px;
 	opacity: 0;
 	
 	-webkit-transition: opacity .2s ease;
@@ -630,6 +667,8 @@ pointer-events: none;
         -ms-transition: opacity .2s ease;
          -o-transition: opacity .2s ease;
             transition: opacity .2s ease;
+            
+ z-index: 14;
    	
 }
 
@@ -637,14 +676,13 @@ pointer-events: none;
 .ttip:before {
    content: '';
     display: block;
-    width: 0;
-    height: 0;
     position: absolute;
-    border-top: 9px solid transparent;
-    border-right: 6px solid #3A3A3C;
-    border-bottom: 9px solid transparent;
-    left: -5px;
-    top: 6px;
+    border-left: 9px solid transparent;
+    border-top: 6px solid black;
+    border-right: 9px solid transparent;
+    bottom: -5px;
+	left:50%;
+	margin-left:-9px;
     pointer-events: none;
 }
 
@@ -730,6 +768,7 @@ position: absolute;
 left: 0px;
 pointer-events: none;
 font-weight:500;
+z-index: -2;
 }
 
 .classtitle {
@@ -952,7 +991,7 @@ opacity: 0;
 }
 
 .healthyhighlighted {
-	fill: #81A178;
+	fill: #B3B3B3;
 	stroke: none;
 }
 
@@ -989,10 +1028,10 @@ opacity: 0;
 }
 
 .classDataLabel {
-	fill: #A7A9AC;
+	fill: #999999;
 	margin: 0;
 	position: absolute;
-	font-size: 12px;
+	font-size: 11px;
 	font-weight:600;
 	font-family: Open Sans, Georgia;
 	pointer-events: none;
@@ -1007,6 +1046,32 @@ opacity: 0;
 	margin-left:0px;
 	letter-spacing: 1px;
 	
+}
+.atriskclasslabel {
+	fill: #FF0000;
+}
+.classdatabackgroundlabel {
+	fill: black;
+	margin: 0;
+	position: absolute;
+	font-size: 11px;
+	font-weight:600;
+	font-family: Open Sans, Georgia;
+	pointer-events: none;
+	line-height: 1em;
+	-webkit-user-select: all;
+	-khtml-user-select: all;
+	-moz-user-select: all;
+	-o-user-select: all;
+	user-select: all;
+	margin-top: 0px;
+	z-index: 2;
+	margin-left:0px;
+	letter-spacing: .5px;
+}
+.classdatabackgroundline {
+	stroke-width: 1.5px;
+	stroke: black;
 }
 
 .highlightedClassDataLabel {
@@ -1045,6 +1110,9 @@ opacity: 0;
 
 .classDataBar {
 pointer-events: none;
+}
+.ddclassbar {
+	stroke: #E6E6E6;
 }
 
 .invisibleClassDataBar {
@@ -1102,7 +1170,7 @@ pointer-events: none;
 }
 /* THIS IS WHAT YOU ARE LOOKING FOR*/
 .highlightedcontextfamilyrect {
-	fill: #C1D9A3;
+	fill: #CCCCCC;
 }
 
 .highlightedthreatenedcontextfamilyrect {
@@ -1251,7 +1319,7 @@ font-weight: 600;
 }
 
 .highlightedcontextspeciesbars {
-	fill: #C1D9A3;
+	fill: #CCCCCC;
 }
 
 
@@ -1334,7 +1402,7 @@ opacity: .3;
 
 .brushbackground {
 
-    fill: url(#brushbackground-gradient);
+    fill: #E6E6E6;/*url(#brushbackground-gradient);*/
     stroke: white;/*#D1D3D4;*/
 stroke-width: .7;
 opacity:1;
@@ -1400,8 +1468,8 @@ input,
 .uneditable-input {
   display: inline-block;
   width: 172px;
-  height: 8px;
-  padding: 10px;
+  height: 12px;
+  padding: 12px;
   margin-bottom: 9px;
   font-size: 13px;
  /* line-height: 18px;*/
@@ -1543,8 +1611,14 @@ position:fixed;
         -ms-transition: fill .1s ease;
          -o-transition: fill .1s ease;
             transition: fill .1s ease;
-            
+   
     pointer-events: all;
+}
+
+.focusgenusbackgroundrects {
+	fill: url(#tallgenus-gradient);
+	opacity: 1;
+
 }
 
 
