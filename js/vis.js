@@ -30,11 +30,11 @@ var classdatacolors = {"healthy":"#CCCCCC", "threatened":"#FF0000", "dd":"white"
 
 
 
-var bodycopytext = [{"class":"amphibians", "copy":"According to the natural extinction rate, we should not see more than one amphibian extinction per century. Frogs have been particularly hard hit, with families like the <a onClick='showMe(\"waterfrogs\");' style='cursor: pointer; cursor: hand; top: 100px'>water frog</a>, <a onClick='showMe(\"shrubfrogs\");' style='cursor: pointer; cursor: hand; top: 100px'>shrub frog</a>, and <a onClick='showMe(\"dancingfrogs\");' style='cursor: pointer; cursor: hand; top: 100px'>dancing frog</a> in great danger."},
-{"class":"mammals", "copy":
-"According to the natural extinction rate, we should not see more than one mammal species go extinct per century. However, 1,469 are currently at risk for extinction. Notice the red cluster around <a onClick='showMe(\"primates\");' style='cursor: pointer; cursor: hand; top: 100px'>primates</a>, especially <a onClick='showMe(\"lemurs\");' style='cursor: pointer; cursor: hand; top: 100px'>lemurs</a>. <a onClick='showMe(\"rhinos\");' style='cursor: pointer; cursor: hand; top: 100px'>Rhinos</a>, <a onClick='showMe(\"elephants\");' style='cursor: pointer; cursor: hand; top: 100px'>elephants</a>, <a onClick='showMe(\"bears\");' style='cursor: pointer; cursor: hand; top: 100px'>bears</a> and <a onClick='showMe(\"cats\");' style='cursor: pointer; cursor: hand; top: 100px'>big cats</a> are also in trouble."},
-{"class":"reptiles", "copy": "According to the natural extinction rate, we should not see more than one reptile extinction per century. However, 1,163 are currently at risk for extinction. There is a striking red cluster around the order of <a onClick='showMe(\"turtles\");' style='cursor: pointer; cursor: hand; top: 100px'>turtles</a>, as well as the <a onClick='showMe(\"chameleons\");' style='cursor: pointer; cursor: hand; top: 100px'>chameleon</a> and <a onClick='showMe(\"iguanas\");' style='cursor: pointer; cursor: hand; top: 100px'>iguana</a> families."},
-{"class":"birds", "copy":"According to the natural extinction rate, we should not see more than one bird extinction per century. Though proportionally less threatened than other classes, there's a comparable number of total species in trouble, including <a onClick='showMe(\"albatrosses\");' style='cursor: pointer; cursor: hand; top: 100px'>albatrosses</a>, <a onClick='showMe(\"penguins\");' style='cursor: pointer; cursor: hand; top: 100px'>penguins</a>, and <a onClick='showMe(\"parrots\");' style='cursor: pointer; cursor: hand; top: 100px'>parrots</a>."}
+var bodycopytext = [{"class":"amphibians", "copy":
+"According to the natural extinction rate, we should not see more than one amphibian extinction per century. However, 2,341 are currently at risk for extinction. Frogs have been hit hard, with families like the <a onClick='showMe(\"waterfrogs\");' class='showmetext'><span class='showmebox'>water frog</span></a>, <a onClick='showMe(\"shrubfrogs\");' class='showmetext'><span class='showmebox'>shrub frog</span></a>, and <a onClick='showMe(\"dancingfrogs\");' class='showmetext'><span class='showmebox'>dancing frog</span></a> in great danger."},
+{"class":"mammals", "copy":"According to the natural extinction rate, we should not see more than one mammal species go extinct per century. However, 1,469 are currently at risk for extinction. Notice the red cluster around <a onClick='showMe(\"primates\");' class='showmetext'><span class='showmebox'>primates</span></a>, especially the <a onClick='showMe(\"lemurs\");' class='showmetext'><span class='showmebox'>lemur</span></a> family. <a onClick='showMe(\"rhinos\");' class='showmetext'><span class='showmebox'>Rhinos</span></a>, <a onClick='showMe(\"bears\");' class='showmetext'><span class='showmebox'>bears</span></a> and <a onClick='showMe(\"cats\");' class='showmetext'><span class='showmebox'>big cats</span></a> are also in trouble."},
+{"class":"reptiles", "copy": "According to the natural extinction rate, we should not see more than one reptile extinction per century. However, 1,163 are currently at risk for extinction. There is a striking red cluster around the order of <a onClick='showMe(\"turtles\");' class='showmetext'><span class='showmebox'>turtles</span></a>, as well as the <a onClick='showMe(\"chameleons\");' class='showmetext'><span class='showmebox'>chameleon</span></a> and <a onClick='showMe(\"iguanas\");' class='showmetext'><span class='showmebox'>iguana</span></a> families."},
+{"class":"birds", "copy":"According to the natural extinction rate, we should not see more than one bird extinction per century. However, 2,200 are currently at risk for extinction. <a onClick='showMe(\"albatrosses\");' class='showmetext'><span class='showmebox'>Albatrosses</span></a>, <a onClick='showMe(\"penguins\");' class='showmetext'><span class='showmebox'>penguins</span></a>, <a onClick='showMe(\"hornbills\");' class='showmetext'><span class='showmebox'>hornbills</span></a> and <a onClick='showMe(\"parrots\");' class='showmetext'><span class='showmebox'>parrots</span></a> are particularly at risk."}
 ]
 
 // <a onClick='showMe(\"giantsalamanders\");' style='cursor: pointer; cursor: hand; top: 100px'>Giant salamanders</a>, <a onClick='showMe(\"asiaticsalamanders\");' style='cursor: pointer; cursor: hand; top: 100px'>Asiatic salamanders</a>, and <a onClick='showMe(\"lunglesssalamanders\");' style='cursor: pointer; cursor: hand; top: 100px'>lungless salamanders</a> are also in serious danger."
@@ -51,7 +51,7 @@ var showMeExamples = {"turtles": [3300, false], "chameleons":[351, true],
 "parrots":[9422, false]}
 
 function showMe(str) {
-console.log("SHOWME example: "+str)
+//console.log("SHOWME example: "+str)
 speciestext
   	.style("display", "none")
 //	console.log(str)
@@ -76,6 +76,8 @@ fd.forEach(function(d, i) {
 	
 	}
 })
+} else {
+	selectedfamily = undefined;
 }
 updateHighlights();
 }
@@ -816,7 +818,7 @@ function transitionFocus(show, delay, index) {
         	firstloadtooltip=false;
         	clickedspecies = undefined;
         	} else {**/
-        	
+        
         	updateSpeciesText();
         	
         	//}
@@ -1384,30 +1386,17 @@ function updateHighlights() {
 	// Highlight the selected species, if any
 	if (!(selectedspecies==undefined)) {
 	svg.selectAll(".focusrect").classed("specieshighlighted", function(thisd){
-		//if (selectedspecies==null) {
-		//	return false;
-		//}
-		//if (currclassindex!=3) {
 		return (thisd["Genus"]+thisd["Species"]==selectedspecies["Genus"]+selectedspecies["Species"]);
-		//}
-		//return (thisd["BirdLife Sequence"]==selectedspecies["BirdLife Sequence"]);
 	});
 	}
 	if (!(clickedspecies==undefined)) {
 	// Highlight the clicked species, if any
 	svg.selectAll(".focusrect").classed("speciesclicked", function(thisd){
-		//if (clickedspecies==null) {
-		//	return false;
-		//}
-		//if (currclassindex!=3) {
 		if (thisd["Genus"]+thisd["Species"]==clickedspecies["Genus"]+clickedspecies["Species"]) {
 			d3.select(this).moveToFront();
 			return true;
 		}
 		return false;
-		//return (thisd["Genus"]+thisd["Species"]==clickedspecies["Genus"]+clickedspecies["Species"]);
-		//}
-		//return (thisd["BirdLife Sequence"]==clickedspecies["BirdLife Sequence"]);
 	});
 	}
 	
@@ -1612,6 +1601,7 @@ function updateSpeciesText() {
 }
 
 function updateSpeciesTextContent(species) {
+
 	var commonname = toTitleCase(species['Common names (Eng)'].split(',')[0]);
 	var sciname = toTitleCase(species.Genus+ " " +species.Species);
 
@@ -1632,17 +1622,18 @@ function updateSpeciesTextContent(species) {
 	}// else {
 	//specieslabelsciname.style("opacity", 1)
 	//}
-
+speciestext
+  	.style("opacity", 1)
+  	.style("display", "block")
+  	
 var ypos = getFocusYFromSpecies(species["species-order"])-focusyspace-80;//-9-focusyspace;//(y0-parseFloat(species["species-order"]));
 var xpos = getFocusXFromGenus(species["genus-order"])-(document.getElementById("speciestextdivid").offsetWidth/2)+(focuswidth/2);//+focuswidth+6;
-
-console.log(document.getElementById("speciestextdivid").offsetWidth)
+//console.log(document.getElementById("speciestextdivid").offsetWidth/2)
+//console.log(document.getElementById("speciestextdivid").offsetWidth)
 //getFocusYFromSpecies(d["species-order"]
 //getFocusXFromGenus
 
-  speciestext
-  	.style("opacity", 1)
-  	.style("display", "block")
+speciestext
   	.style("left", xpos+"px")
   	.style("top", ypos+"px")
 }
