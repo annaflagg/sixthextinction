@@ -1,5 +1,4 @@
 var playerready = false;
-
 frogplayer = videojs("frogvideo");
 	frogplayer.on('loadeddata', function(){ 
       	playerready=true;
@@ -11,28 +10,43 @@ frogplayer = videojs("frogvideo");
       	console.log("frog loaded")
 		//frogplayer.play();
 		
-		window.addEventListener("mousewheel", function(e) { 
+		
+		
+		
+		
+		var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel";
+		window.addEventListener(mousewheelevt, function(e) { 
       		mousewheel(e);
-      });
+      	});
+      	
+      	
       });
       
 var speed=.029;
 function mousewheel(e) {
+	var evt=window.event || e //equalize event object
+   // var a=evt.detail? evt.detail*(-1) : evt.wheelDelta
+	//console.log(a)
+
     scrollpos = Math.max(0,$(window).scrollTop());
-    var delta = Math.max(-1, Math.min(1, e.wheelDelta));
+    var delta = Math.max(-1, Math.min(1, evt.detail? evt.detail*(-1) : evt.wheelDelta));
      if (frogActive(scrollpos)) {
      	//document.getElementById('statsid').style.opacity = 0;
      	//document.getElementById('bodyid').style.overflow = 'hidden';
       	//document.getElementById('froggydiv').style.opacity = 1;
-      	e.preventDefault();
-      	
+      	evt.preventDefault();
+      	//console.log(delta)
       	frogplayer.currentTime(frogplayer.currentTime()+(-delta*speed))
+      } else {
+      	//console.log("done with frog")
       }
     }
     
 var frogscrollspan = 800;
 var froglength = 3.88
+//var froglength = 3.648
 function frogActive(scrollpos) {
+//console.log(frogplayer.currentTime())
 //scrollpos = Math.max(0,$(window).scrollTop());
 	if (frogplayer.currentTime() < froglength) {
 		return true;
@@ -70,6 +84,118 @@ $(window).scrollTop(0)}, 100)**/
         froggy = document.getElementById("froggydiv"),
   		frogspeed = .005,
 		player = videojs("frogvideo"),
+		keyframes = [{//0 – INTRO
+			'wrapper' : '#intro',
+            'duration' : '100%',
+            'animations' :  [{
+                'selector'    : '.copy',
+                'translateY'  : -25,
+                'opacity'    : [1, .2]
+              },{
+               'selector'    : '#froggydiv',
+                'opacity'    : [1, .2]
+              },{
+               'selector'    : '#mammalsviddiv',
+                'opacity'    : [0,0]
+              }]
+             },{//1 – show the vis, with mammals data and LION
+              'wrapper' : '#vis',
+            'duration' : '100%',
+            'animations' :  [{
+                'selector'    : '.copy',
+                'opacity'    : [0,0]
+              },{
+               'selector'    : '#froggydiv',
+                'opacity'    : [0, 0]
+              },{
+                'selector'    : '.viscopy',
+                'translateY'  : [-25,-25],
+                'opacity'    : [1,1]
+              },{
+               'selector'    : '#mammalsviddiv',
+               'translateY'  : -6,
+                'opacity'    : [1,1]
+              }]
+            },{//2 – continuing to show the vis w MAMMALS
+             'wrapper' : '#vis',
+            'duration' : '50%',
+            'animations' :  [{
+               'selector'    : '#mammalsviddiv',
+               'translateY'  : [-6,-6],
+                'opacity'    : [1,1]
+              }, {
+               'selector'    : '#reptilesviddiv',
+                'opacity'    : [0,0]
+              }]
+            },{//3 – switching to REPTILES and showing the TURTLE
+            'wrapper' : '#vis',
+            'duration' : '100%',
+            'animations' :  [{
+               'selector'    : '#mammalsviddiv',
+                'opacity'    : [0,0]
+              }, {
+               'selector'    : '#reptilesviddiv',
+               'translateY'  : -3,
+                'opacity'    : [1,1]
+              }]
+             },{// 4 – continuing to show the vis w REPTILES
+              'wrapper' : '#vis',
+            'duration' : '50%',
+            'animations' :  [{
+               'selector'    : '#reptilesviddiv',
+               'translateY'  : [-3,-3],
+                'opacity'    : [1,1]
+              }, {
+               'selector'    : '#amphibiansviddiv',
+                'opacity'    : [0,0]
+              }]
+            },{// 5 – switching to AMPHIBIANS and showing the FROG
+            'wrapper' : '#vis',
+            'duration' : '100%',
+            'animations' :  [{
+               'selector'    : '#reptilesviddiv',
+                'opacity'    : [0,0]
+              }, {
+               'selector'    : '#amphibiansviddiv',
+               'translateY'  : -8,
+                'opacity'    : [1,1]
+              }]
+            },{// 6 – continuing to show the vis w AMPHIBIANS
+            'wrapper' : '#vis',
+            'duration' : '50%',
+            'animations' :  [{
+               'selector'    : '#amphibiansviddiv',
+               'translateY'  : [-8,-8],
+                'opacity'    : [1,1]
+              }, {
+               'selector'    : '#birdsviddiv',
+                'opacity'    : [0,0]
+              }]
+             },{// 7 – switching to BIRDS and showing the OWL
+            'wrapper' : '#vis',
+            'duration' : '100%',
+            'animations' :  [{
+               'selector'    : '#amphibiansviddiv',
+                'opacity'    : [0,0]
+              }, {
+               'selector'    : '#birdsviddiv',
+               'translateY'  : -10,
+                'opacity'    : [1,1]
+              }]
+            } ,{
+            'duration' : '100%',
+            'animations' :  []
+          }
+        ]
+            
+            
+            
+            
+             
+             
+            
+            
+		/**
         keyframes = [{// 0
             'wrapper' : '#intro',
             'duration' : '100%',
@@ -104,7 +230,7 @@ $(window).scrollTop(0)}, 100)**/
               },{
                'selector'    : '#mammalsviddiv',
                'translateY'  : [-10,-10],
-                'opacity'    : [0,10]
+                'opacity'    : [1,1]
               }, {
                'selector'    : '#reptilesviddiv',
                 'opacity'    : [0,0]
@@ -248,14 +374,69 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '100%',
             'animations' :  []
           }
-        ]
+        ]**/
 
     /*  Construction
     -------------------------------------------------- */
+    
+    
+    
+    function checkRequestAnimationFrame() {
+    var lastTime = 0;
+  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+  }
+  if(!window.requestAnimationFrame)
+    window.requestAnimationFrame = function (callback, element) {
+      var currTime = new Date().getTime();
+      var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+      var id = window.setTimeout(function () {
+        callback(currTime + timeToCall);
+      },
+      timeToCall);
+      lastTime = currTime + timeToCall;
+      return id;
+  };
+  if(!window.cancelAnimationFrame)
+    window.cancelAnimationFrame = function (id) {
+      clearTimeout(id);
+  };
+    }
+    
+    
     init = function() {
+    /**
+    	(function () {
+  var lastTime = 0;
+  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+  }
+  if(!window.requestAnimationFrame)
+    window.requestAnimationFrame = function (callback, element) {
+      var currTime = new Date().getTime();
+      var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+      var id = window.setTimeout(function () {
+        callback(currTime + timeToCall);
+      },
+      timeToCall);
+      lastTime = currTime + timeToCall;
+      return id;
+  };
+  if(!window.cancelAnimationFrame)
+    window.cancelAnimationFrame = function (id) {
+      clearTimeout(id);
+  };
+}());**/
+    
+    checkRequestAnimationFrame();
+    
       //scrollIntervalID = setInterval(updatePage, 10);
        window.requestAnimationFrame(updatePage);
-      
+      //setInterval(updatePage, 10)
       setupValues();
      
     }
@@ -311,7 +492,7 @@ var startagain = false;
     	updateButtons(d3.select(document.getElementById('titlebutton')));
     }
     
-    var buttonIndexToPagePercent = {0:'1%', 1:'101%', 2:'301%', 3:'501%', 4:'601%'}
+    var buttonIndexToPagePercent = {0:'1%', 1:'125%', 2:'325%', 3:'450%', 4:'650%'}
     
     clickButton = function(index, element) {
     	
@@ -323,9 +504,9 @@ var startagain = false;
     	//console.log(index)
     	if (index==0) {
     		startagain = true;
-    		document.getElementById("ttipdiv").style("display", "none")
+    		document.getElementById("ttipdiv").style["display"]= "none"
     	} else {
-    	document.getElementById("ttipdiv").style("display", "block")
+    	document.getElementById("ttipdiv").style["display"]="block";
     	}
     	//console.log(convertPercentToPx(buttonIndexToPagePercent[index]))
     	$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[index], 'y'))
@@ -451,32 +632,36 @@ convertPercentToPx = function(value, axis) {
    // console.log("hello")
     	if (frogActive()&&(!(startagain))) {
     		//$(window).scrollTop(0)
+    		//checkRequestAnimationFrame();
     		 window.requestAnimationFrame(updatePage);
     		return;
     	}
- 
+ 	
       setScrollTops();
       if(scrollTop > 0 && scrollTop <= (bodyHeight - windowHeight)) {
         animateElements();
         setKeyframe();
         scrollpos = Math.max(0,$(window).scrollTop());
        // frog(scrollpos);
+     
         vis(scrollpos);
+        
       }
-         
+         //checkRequestAnimationFrame();
       window.requestAnimationFrame(updatePage);
      
     }
 
  
 
-var keyframeToAnimalClassIndex = {1:1, 3:2, 5:0, 7:3};
-var keyframeToButtonId = {1:'mammalsbutton', 3:'reptilesbutton', 5:'amphibiansbutton', 7:'birdsbutton'}; 
+var keyframeToAnimalClassIndex = {1:1, 2:1, 3:2, 4:2, 5:0, 6:0, 7:3, 8:3};
+var keyframeToButtonId = {1:'mammalsbutton',2:'mammalsbutton', 3:'reptilesbutton',4:'reptilesbutton', 5:'amphibiansbutton',6:'amphibiansbutton', 7:'birdsbutton', 8:'birdsbutton'}; 
 var vispos = 1000;
 //var vispos=0;
 var showingvis = false;
 var starting = true;
 vis = function(scrollpos) {
+	//console.log(currentKeyframe)
 	if (currentKeyframe==0) {
 		hideVis();
 		showingvis=false;
@@ -488,18 +673,24 @@ vis = function(scrollpos) {
 			updateButtons(d3.select(document.getElementById('mammalsbutton')));
 		}**/
 	} else {
-	if ((currentKeyframe==1)&&(!showingvis)) {
+		if (currentKeyframe==1) {
 		//console.log("SHOWING VIS")
-		showVis();
-		showingvis=true;
-	} else {
-		var classindex = keyframeToAnimalClassIndex[currentKeyframe];
-		if (classindex==undefined) {
-			return;
-		}
+			if (!showingvis) {
+				showVis();
+				showingvis=true;
+			}
+		} else {
+			var classindex = keyframeToAnimalClassIndex[currentKeyframe];
+			//console.log("Class index: "+classindex);
+			//if (classindex==undefined) {
+				//return;
+			//}
 		if (!(classindex==currclassindex)) {
 			changeClass(classindex);
+			
 		}
+		//
+		
 	}
 	updateButtons(d3.select(document.getElementById(keyframeToButtonId[currentKeyframe])));
 	}
@@ -606,6 +797,7 @@ function updateStatHighlights() {
           prevKeyframesDurations -= keyframes[currentKeyframe].duration;
           showCurrentWrappers();
       }
+      //console.log(currentKeyframe)
       
     }
 

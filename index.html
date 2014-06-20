@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/base.css">
 
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/switchy.css">
 <script>
 	function incrementProgress() {return;}
 </script>
@@ -72,16 +73,18 @@
    			<p class="group" id="stat3group">BIRDS</p>
    		</div>
    	  </div>-->
+   	  <script src="js/retina.min.js"></script> 
    	  	<script src="js/jquery-2.0.2.min.js"></script>
 <script src="//vjs.zencdn.net/4.5/video.js"></script>
 
    	  <div id="froggydiv">
-			<video id="frogvideo" class="video-js vjs-default-skin" preload="auto" width="1000" height="562" poster="images/frog-final-orangetext-preview.jpg">
+			<video id="frogvideo" class="video-js vjs-default-skin" preload="auto" poster="images/frog-final-orangetext-preview.jpg">
 			
 			
-			<source src="http://www.annaflagg.com/disappearingplanet-may27/images/frog-final-.6-blackstatictext.mp4" type='video/mp4' />
-    		<!--<source src="http://www.annaflagg.com/disappearingplanet-april29/images/frog-faster-1.mp4" type='video/mp4' />-->
-    	<!--	<source src="http://www.annaflagg.com/disappearingplanet-april29/images/frog-ilikethat.webmhd.webm" type='video/webm' />-->
+			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.mp4" type='video/mp4' />
+			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.webmsd.webm" type='video/webm' />
+    		<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.oggtheora.ogv" type='video/ogg' />
+    		
 			</video>
 	</div>
 
@@ -116,6 +119,8 @@
 				<video id="frogvideo2" class="video-js vjs-default-skin" preload="auto" width="178" height="100" poster="images/frog-.2-.5-preview.jpg">
 				
 				<source src="images/frog-may28-.2-.5-100px.mp4" type='video/mp4' />
+			<source src="images/frog-may28-.2-.5-100px.webmsd.webm" type='video/webm' />
+			<source src="images/frog-may28-.2-.5-100px.oggtheora.ogv" type='video/ogg' />
 				<!--<source src="images/frog-.2-.5.mp4" type='video/mp4' />
     			<source src="images/frog-.2-.5.webmhd.webm" type='video/webm' />-->
 			</div>
@@ -126,8 +131,9 @@
 			</div>-->
 			<div id="mammalsviddiv">
 			<video id="lionvideo" class="video-js vjs-default-skin" preload="auto" width="208" height="120" poster="images/lioness10-preview.jpg">
-				<source src="images/lioness10.mp4.mp4" type='video/mp4' />
-    			<source src="images/lioness10.webmhd.webm" type='video/webm' />
+				<source src="http://www.annaflagg.com/disappearingplanet-june15/images/lioness10.mp4.mp4" type='video/mp4' />
+    			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/lioness10.webmhd.webm" type='video/webm' />
+    			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/lioness10.mp4.oggtheora.ogv" type='video/ogg' />
 			
 			
 			</div>
@@ -144,6 +150,8 @@
 			
 			
 			<source src="images/turtle-may28-scurry-.2-.5-170px.mp4" type='video/mp4' />
+			<source src="images/turtle-may28-scurry-.2-.5-170px.webmsd.webm" type='video/webm' />
+			<source src="images/turtle-may28-scurry-.2-.5-170px.oggtheora.ogv" type='video/ogg' />
     		<!--<source src="images/turtle-.2-.5.mp4" type='video/mp4' />
     		<source src="images/turtle-.2-.5.webmhd.webm" type='video/webm' />-->
 			</div>	
@@ -155,6 +163,8 @@
 			<video id="owlvideo" class="video-js vjs-default-skin" preload="auto" width="82" height="120" poster="images/owl-may28-.2-.5-6s-120px-sharpened-preview.jpg">
 			
 			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.mp4" type='video/mp4' />
+			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.webmsd.webm" type='video/webm' />
+			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.oggtheora.ogv" type='video/ogg' />
 			<!--<source src="images/owl-.2-.5.mp4" type='video/mp4' />-->
     		<!--<source src="images/owl-.2-.5.webmhd.webm" type='video/webm' />-->
 		
@@ -163,10 +173,10 @@
 
       
 	
-	    <div id="header">
+	    <div id="headerbuttons">
 		<!--<img id="headerimg" src="images/header.png" alt="label" width="1004" height="22"</img>-->
 		
-		<div class="buttons">
+			<div class="buttons">
 			<!--<a class="sectionButton" href="http://www.propublica.org" target="_blank" id="propublicabutton"'>ProPublica</a>
 			<a class="sectionButton" id="titlebutton"'>A Disappearing Planet</a>-->
 			<a class="sectionButton" id="mammalsbutton"'>MAMMALS</a>
@@ -176,8 +186,72 @@
 			<!--<a class="sectionButton" id="donatebutton"'>DONATE</a>
 			<a class="socialButton" id="socialbuttonplaceholder"'>.</a>-->
 			
+			</div>
 		</div>
+		<div class="mobileflyer" id="flyer">
+		<p class="mobileflyertext">Interactive version available only on desktop</p>
+		</div>
+		<div class="mobile">
+	
+		<div class="mobilegroup">
+			<img class="mobilevisim" src="images/mobile-animals-01.png" alt="label" id="animalgroup0" </img>
+			<p class="mobilevistitle">MAMMALS</p>
+			<img class="mobilevisgraph" src="images/mobile-graphs_1.png" alt="label" </img>
+			<p class="mobilevisguff">According to the natural extinction rate, we should not see more than one mammal species go extinct per century. 
+			However, 1,469 are currently at risk for extinction. Primates are highly at risk, especially the lemur family. Rhinos, bears, and big cats are also in trouble.</p>
+		
+		</div>
+		<div class="mobilegroup">
+			<img class="mobilevisim" src="images/mobile-animals-03.png" alt="label" id="animalgroup1" </img>
+			<p class="mobilevistitle">REPTILES</p>
+			<img class="mobilevisgraph" src="images/mobile-graphs_2.png" alt="label" </img>
+			<p class="mobilevisguff">According to the natural extinction rate, we should not see more than one reptile extinction per century. 
+			However, 1,163 are currently at risk for extinction. Especially endangered groups include the order of turtles, as well as the chameleon
+			and iguana families.
+			</p>
+		</div>
+		<div class="mobilegroup">
+			<img class="mobilevisim" src="images/mobile-animals-05.png" alt="label" id="animalgroup2" </img>
+			<p class="mobilevistitle">AMPHIBIANS</p>
+			<img class="mobilevisgraph" src="images/mobile-graphs_3.png" alt="label" </img>
+			<p class="mobilevisguff">According to the natural extinction rate, we should not see 
+			more than one amphibian extinction per century. However, 2,341 are currently at risk 
+			for extinction. Frogs have been hit hard, with families like the water frog, 
+			shrub frog, and dancing frog in great danger.
+			</p>
+		</div>
+		<div class="mobilegroup">
+			<img class="mobilevisim" src="images/mobile-animals-07.png" alt="label" id="animalgroup3" </img>
+			<p class="mobilevistitle">BIRDS</p>
+			<img class="mobilevisgraph" src="images/mobile-graphs_4.png" alt="label" </img>
+			<p class="mobilevisguff">According to the natural extinction rate, we should not see 
+			more than one bird extinction per century. However, 2,200 are currently at risk for 
+			extinction. Albatrosses, penguins, hornbills and parrots are particularly at risk.
+			</p>
+		</div>
+		
+		<div class="mobilefooter">
+		 <p class="sourcetitle">SOURCES</p>
+		 <p class="source">Species data from the 
+		 <a href="http://www.iucnredlist.org/technical-documents/spatial-data" target="_blank">IUCN Red List of Threatened Species</a>, Version 2013, accessed on March 1, 2013</p>
+		 <p class="source"">Extinction projections from 
+		 <a href="http://www.conservation.cam.ac.uk/person/mike-hoffman" target="_blank">Michael Hoffman</a> et al., <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank">The Impact of Conservation on the 
+		 Status of the World’s Vertebrates</a>, Science (2010)</p>
+		 <p class="source">Background extinction estimates from 
+		 <a href="https://en.wikipedia.org/wiki/Stuart_Pimm" target="_blank">Stuart Pimm</a> et. al., 
+		 <a href="http://www.sciencemag.org/content/269/5222/347" target="_blank">The Future of Biodiversity</a>, 
+		 Science (1995)</p>
+		 
+		 
+		 
+		</div>
+		
+		
 	</div>
+		
+		<div id="header">
+		</div>
+		
 	
 	<script> 
 	/**
@@ -204,19 +278,26 @@
 <!--<script src="js/video.js"></script>-->
 <!--<script src="js/picasso.js"></script>-->
 
+<script>
+if (window.innerWidth > 480) {
+//if (screen && screen.width > 480) {
+//console.log(screen.width)
+  document.write('<script type="text/javascript" src="js/scrollhandler.js"><\/script>');
+document.write('<script type="text/javascript" src="js/bootstrap-typeahead-ext.js"><\/script>');
+document.write('<script type="text/javascript" src="js/queue.v1.min.js"><\/script>');
+    document.write('<script type="text/javascript" src="js/d3.min.js"><\/script>');
+    document.write('<script type="text/javascript" src="js/vis.js"><\/script>');
+    document.write('<script type="text/javascript" src="js/amphibians.min.js"><\/script>');
+    document.write('<script type="text/javascript" src="js/mammals.min.js"><\/script>');
+        document.write('<script type="text/javascript" src="js/birds.min.js"><\/script>');
+} else {
 
-<script src="js/scrollhandler.js"></script>
+document.write('<script type="text/javascript" src="js/mobile.js"><\/script>');
+
+}
 
 
-
-<script src="js/bootstrap-typeahead-ext.js"></script>
-<script src="js/queue.v1.min.js"></script>
-
-<script src="js/d3.min.js"></script>
-<script src="js/vis.js"></script>
-
-<script src="js/amphibians.min.js"></script>
-<script src="js/mammals.min.js"></script>
-<script src="js/birds.min.js"></script>
+</script>
 </body>
+
 </html>

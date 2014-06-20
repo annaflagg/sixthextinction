@@ -347,7 +347,7 @@ var contextfamilyy = y0+contextfamilyspace;
 var contextyspace;
 // Orders
 var contextorderlabely = focusy0+familyheight+(contextgraphheight/2)+7;
-var contextorderliney = focusy0+15;
+var contextorderliney = focusy0+familyheight;
 var contextorderliney0 = y0;
 // Label
 var contextlabelwidth;
@@ -416,17 +416,17 @@ var transitiondelaytime = 0;
 incrementProgress();
 
 var windowoffset = (window.innerWidth-1000)/2.0;
-document.getElementById("amphibiansviddiv").style.left= windowoffset+40+"px";//windowoffset+(divwidth/2)-120+"px"
-document.getElementById("reptilesviddiv").style.left= windowoffset-20+"px";//windowoffset+(divwidth/2)-175+"px"
-document.getElementById("mammalsviddiv").style.left= windowoffset+40+"px";//windowoffset+(divwidth/2)-104+"px"
-document.getElementById("birdsviddiv").style.left= windowoffset+125+"px";//windowoffset+(divwidth/2)-40+"px"
+document.getElementById("amphibiansviddiv").style["margin-left"]=40+"px";//windowoffset+(divwidth/2)-120+"px"
+document.getElementById("reptilesviddiv").style["margin-left"]=-20+"px";//windowoffset+(divwidth/2)-175+"px"
+document.getElementById("mammalsviddiv").style["margin-left"]= 40+"px";//windowoffset+(divwidth/2)-104+"px"
+document.getElementById("birdsviddiv").style["margin-left"]=125+"px";//windowoffset+(divwidth/2)-40+"px"
 //104
 // Render typeahead stuff
 var searchdiv;
 searchdiv = d3.select("#chart").append("div");
 searchdiv.attr("id", "searchid");
 searchdiv
-	.style("left", windowoffset+focusx0+focusgraphwidth-195+"px")
+	.style("margin-left", focusx0+focusgraphwidth-195+"px")
 	.style("top", typeaheady+"px")
 document.getElementById("searchid").innerHTML='<input type="text" id="search" autocomplete="off" data-provide="typeahead" >';
 
@@ -1905,6 +1905,12 @@ function contextOrders() {
 	// UPDATE
 	var contextorderlines = svg.selectAll(".contextorderline")
 		.data(classdata[currclassindex].orderdata)
+		.attr("x1", function(d) {
+			return getContextXFromGenus(d.firstgenus);
+		})
+		.attr("x2", function(d, i) {
+			return getContextXFromGenus(d.firstgenus);
+		})
 		
 	//EXIT
 	contextorderlines.exit().remove();
@@ -1929,7 +1935,7 @@ function contextOrders() {
 function renderStaticView() {
 	// Text for class view
 	classViewText();
-	console.log("rendering class view")
+
 	// Rect for line under title
 	//classViewLine();
 	// ORDER LEVEL and FAMILY LEVEL label
