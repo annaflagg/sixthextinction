@@ -114,7 +114,7 @@ progress.watch("p", function (id, oldval, newval) {
 	//console.log(document.getElementById("cliprect"))
 	//clip.setAttribute("width", w);
 
-	if ((playerready&&(!started))||(((progress.p>=total) && (!started)))) {
+	if ((((progress.p>=total) && (!started)))) {
 		console.log("Ok, done loading")
 		document.getElementById("loadingid").style.opacity=0;
 		//document.getElementById("loadingid").style.opacity=0;
