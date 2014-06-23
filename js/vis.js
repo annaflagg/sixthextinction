@@ -299,9 +299,10 @@ var focusp1, focusp1, initfocusp1=0, initfocusp2=90;
 var focusx0 = x0 - scrollbuttonspace;
 var focusgraphwidth = graphwidth+(2*scrollbuttonspace)
 //var focusgraphtopmargin = 34
-var focusgraphtopmargin = 75
+var focusgraphtopmargin = 100
 var focusxspace, focusmaxorders = 4, orderoffsetspace = 5, numfocus, focuswidth;
-var focusy0 = 610;
+var focusy0 = 600;
+//var focusy0 = 400;
 var focusgraphheight = focusy0-focusgraphtopmargin;
 var focusyspeciesspace = 0;
 var focusdata, focusorderdata, focusgenusdata, focusorderendpoints;
@@ -347,7 +348,7 @@ var contextfamilyy = y0+contextfamilyspace;
 var contextyspace;
 // Orders
 var contextorderlabely = focusy0+familyheight+(contextgraphheight/2)+7;
-var contextorderliney = focusy0+familyheight;
+var contextorderliney = focusy0+familyheight+1;
 var contextorderliney0 = y0;
 // Label
 var contextlabelwidth;
@@ -913,12 +914,12 @@ function initializeView() {
   	} else {
   	focusheight = .8*focusyspace;
   	}**/
-  	focusyspace = 1.83//focusgraphheight/classdata[currclassindex].maxspecies;
+  	focusyspace = 1.8//focusgraphheight/classdata[currclassindex].maxspecies;
   	if (currclassindex==0) {
   	focusheight = focusyspace;
-  	focusyspace = 1.83
+  	
   	} else {
-  	focusyspace = 1.83;
+
   	focusheight = .8*focusyspace;
   	}
 //  	console.log(data[currclassindex].class)
@@ -956,14 +957,21 @@ function renderHelpButton() {
 
 
 var img = document.createElement("img");
-img.src = "images/helpbutton.png";
+img.src = "images/helpbutton2.png";
+img.id="helpbuttonid";
+img["class"]="helpbuttonimg";
+
 
 var src = document.getElementById("helpbuttondivid");
 src.appendChild(img);
 
-
-
-
+/**
+src.onmouseover = mouseoverhelpbutton;
+src.onmouseout = mouseouthelpbutton;**/
+src.onmouseout = function (evt) {
+	//console.log("image mouseout: "+evt)
+	mouseouthelpbutton(evt)};
+src.onmouseover = mouseoverhelpbutton;
 
 	var helpbuttonx = x0;
 	var helpbuttony = 387;
@@ -973,7 +981,9 @@ src.appendChild(img);
 		.attr("cx", helpbuttonx-(2*helpbuttonr)).attr("cy", helpbuttony).attr("r", helpbuttonr)
 		.attr("class", "helpbutton")
 		.on("mouseover", mouseoverhelpbutton)
-		.on("mouseout", mouseouthelpbutton);
+		.on("mouseout", function(evt) {
+			//console.log("circle mouseout: "+evt)
+		 return mouseouthelpbutton(evt)});
 		
 		
 		
@@ -983,7 +993,9 @@ src.appendChild(img);
 		.attr("y", helpbuttony+9)
 		.text("?")
 		.on("mouseover", mouseoverhelpbutton)
-		.on("mouseout", mouseouthelpbutton);
+		.on("mouseout", function(evt) { 
+		//console.log("text mouseout: "+evt)
+		return mouseouthelpbutton(evt)});
 		
 		
 	
@@ -992,11 +1004,15 @@ src.appendChild(img);
 
 function mouseoverhelpbutton() {
 	d3.select('.helpbuttondiv').classed("visiblehelp", true)
+	d3.select('.helpbutton').classed("helpbuttonhover", true)
+	d3.select('.datasources').classed("visiblesource", true)
+	
 
 }
-function mouseouthelpbutton() {
+function mouseouthelpbutton(evt) {
 d3.select('.helpbuttondiv').classed("visiblehelp", false)
-
+	d3.select('.helpbutton').classed("helpbuttonhover", false)
+	d3.select('.datasources').classed("visiblesource", false)
 }
 
 function renderLegend() {
@@ -1094,7 +1110,7 @@ function focusSpecies() {
 			.attr("width", focuswidth+tallgenuspadding)
 			.attr("height", function(d, i) {
 			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
-			return focusy0-ypos;})
+			return focusy0-ypos;}).attr('fill', 'url(#tallgenus-gradient)');
 	} else {
 	focusgenusbackgroundrectsenter.attr("y", function(d, i) {
 			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
@@ -1103,7 +1119,7 @@ function focusSpecies() {
 		.attr("width", focuswidth+tallgenuspadding)
 		.attr("height", function(d, i) {
 			var ypos = getFocusYFromSpecies((d.lastspecies-d.firstspecies))-(tallgenustoppadding);
-			return focusy0-ypos;})
+			return focusy0-ypos;}).attr('fill', 'url(#tallgenus-gradient)');
 	}
 	
 	
@@ -1283,7 +1299,7 @@ function focusOrders() {
 		.attr("class", "focusorderlabel")
 		.text(function(d, i) {
 
-			return getOrderName(d);//+": "+parseInt(100*d.threatenedcount/(d.threatenedcount+d.healthycount))+"%";
+			return getOrderName(d).toUpperCase();//+": "+parseInt(100*d.threatenedcount/(d.threatenedcount+d.healthycount))+"%";
 			})
 		.attr("x", function(d, i) {
 			return Math.max(getFocusXFromGenus(d.firstgenus), focusx0)+orderlabeldx;
@@ -1893,12 +1909,15 @@ function contextOrders() {
 		.attr("x", function(d, i) {return getContextXFromGenus(d.firstgenus)+orderlabeldx})
 		.attr("y", contextorderlabely)
 		.attr("visibility", function(d, i) {
+			return 'hidden';
+		/**
 			//return "visible";
 			wordlen = d3.select(this).node().getBBox().width;
+			console.log(wordlen)
 			if (contextHasRoomForOrderLabel(d, getOrderName(d), wordlen)) {
 			return "visible"; 
 			} 
-			return "hidden"; 
+			return "hidden"; **/
 			});
 		
 	// Mark the orders with lines
@@ -1979,7 +1998,7 @@ function showClassChart() {
 
 function staticClassChart() {
 	var classdatabackgroundline = classsvg.append("line").attr("class", "classdatabackgroundline")
-		.attr("x1", classdatabarsx+2).attr("x2", classdatabarsx+2).attr("y1", classdatabary0)
+		.attr("x1", classdatabarsx).attr("x2", classdatabarsx).attr("y1", classdatabary0)
 		.attr("y2", classdatabary0);
 		
 		
@@ -2456,7 +2475,7 @@ var newlinespace = 12;
 	svg.append("text")
 		.attr("class", "focusstaticorderlabel")
 		.attr("x", focusx0-2*orderlabeldx)
-		.text("Order")
+		.text("ORDER")
 		.attr("y", function() {
 			//wordheight = d3.select(this).node().getBBox().height;
 			return orderlabely;//+wordheight;
@@ -2476,7 +2495,7 @@ var newlinespace = 12;
 	svg.append("text")
 		.attr("class", "focusstaticorderlabel")
 		.attr("x", focusx0-2*orderlabeldx)
-		.text("Family")
+		.text("FAMILY")
 		.attr("y", function() {
 			return familyy+familyheight;
 		})
@@ -2664,6 +2683,7 @@ function mouseoverbutton(d, i) {
 
 }
 function defineGradients() {
+
  var brushgradient = svg.append("svg:defs")
   .append("svg:linearGradient")
     .attr("id", "brush-gradient")
@@ -2768,10 +2788,8 @@ function brush() {
 	
 	svg.append("rect")
 		.attr("class", "brush")
-		.attr('id', 'brushElement')//.on("mouseover", function() {
-			//document.getElementById("brushElement").classed("brushhighlighted", true)
-		
-		
+		.attr('id', 'brushElement');
+			//.attr('fill', 'url(#brush-gradient)')
 		
 		//.attr("x", x0).attr("y", contextfamilyy+contextfamilyspace).attr("width", graphwidth).attr("height",brushheight)
 	
@@ -2842,8 +2860,7 @@ function updateBrush() {
 		//.on("click", function() {d3.event.stopPropagation();})
 		//.on("mouseover", clearAllHighlights)
 		.call(d3.behavior.drag()
-      		.on("drag", dragmove)
-      		)
+      		.on("drag", dragmove))
       	.attr("transform", function() {
  
       	//	if (!searchselect) {
@@ -2860,8 +2877,7 @@ function updateBrush() {
 			
 	svg.selectAll(".brushcontextwhitebackground")
 		.call(d3.behavior.drag()
-      		.on("drag", dragmove)
-      		)
+      		.on("drag", dragmove))
 		.attr("transform", function() {
 			return "translate("+brushdata.x+", "+0+")";
 			});
@@ -2933,8 +2949,9 @@ function getBrushedP1(brushx) {
 }
 
 // Call this function when the brush is dragged
-function dragmove(d) {
-	event.preventDefault();
+function dragmove() {
+	//evt.preventDefault();
+	d3.event.sourceEvent.preventDefault();
 	var move;
 	speciestext.style("display", "none");
 	d3.select(".brush").attr("transform", function() {

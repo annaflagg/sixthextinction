@@ -126,15 +126,18 @@ font-size: 18px;
     text-align: left;
     margin-left: 10px;
     width:290px;
+    -webkit-transform-style: preserve-3d;
 }
 .mobilevisim {
 width:300px;
 margin-left:0px;
+-webkit-transform-style: preserve-3d;
 }
 .mobilevisgraph {
 margin-top:7px;
 margin-bottom:12px;
 margin-left:10px;
+-webkit-transform-style: preserve-3d;
 
 }
 .mobilefooter {
@@ -152,6 +155,7 @@ padding-bottom:30px;
 .source {
 margin-top:-12px;
 font-size:12px;
+width:300px;
 }
 .mobileflyer {
 position:fixed;
@@ -160,11 +164,16 @@ bottom: 0;
 margin: 0% auto;
 left:0;
 right:0;
+-webkit-transform-style: preserve-3d;
 }
 .mobileflyertext {
 color:white;
 font-size:12px;
 margin-top: 3px;
+
+}
+.loadandscroll {
+display:none;
 }
 
 }

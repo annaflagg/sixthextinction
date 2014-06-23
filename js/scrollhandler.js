@@ -1,20 +1,25 @@
 var playerready = false;
+var speed=.033;
+var mousewheelevt = "mousewheel";
+setFirefoxSpecificParms();
 frogplayer = videojs("frogvideo");
-	frogplayer.on('loadeddata', function(){ 
+frogplayer.on('loadeddata', function(){ 
+		scrollToTop();
       	playerready=true;
-      	//player.play();
-      	//setTimeout(function() {frogplayer.pause()}, 100)
+      	
+      	frogplayer.play();
+      	setTimeout(function() {frogplayer.pause(); frogplayer.currentTime(0);}, 10)
       	frogplayer.currentTime(0);
-      	$(window).scrollTop(0);
+      		
+      	//$(window).scrollTop(0);
+      	//$('html,body').scrollTop(0);
+      	//$('html,body').animate({scrollTop:0}, 'slow');
+      	//console.log($(window))
       	//frogplayer.play()
       	console.log("frog loaded")
 		//frogplayer.play();
-		
-		
-		
-		
-		
-		var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel";
+		incrementProgress();
+
 		window.addEventListener(mousewheelevt, function(e) { 
       		mousewheel(e);
       	});
@@ -22,39 +27,108 @@ frogplayer = videojs("frogvideo");
       	
       });
       
-var speed=.029;
+//var speed=.029;
+//var speed=0.03336670003;
+//var speed=0.01;
+//var speed = 0.04;
+function scrollToTop() {
+
+if (isFirefox()) {
+      		$('html,body').animate({scrollTop:0}, 'slow');
+      	} else {
+      	$(window).scrollTop(0);
+      	}
+
+      	
+}
+function setFirefoxSpecificParms() {
+	if (isFirefox()) {
+		mousewheelevt = "DOMMouseScroll";
+	
+		speed = .04;
+		//$('html,body').animate({scrollTop:0}, 'slow');
+		
+	}// else {
+	//$(window).scrollTop(0);
+	//}
+}
+
+function safeStopPropogation(e)
+{
+   
+    e.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
+    if (e.preventDefault) e.preventDefault();
+}
 function mousewheel(e) {
+	if (!playerready) {
+		return;
+	}
+	
 	var evt=window.event || e //equalize event object
-   // var a=evt.detail? evt.detail*(-1) : evt.wheelDelta
-	//console.log(a)
+
 
     scrollpos = Math.max(0,$(window).scrollTop());
     var delta = Math.max(-1, Math.min(1, evt.detail? evt.detail*(-1) : evt.wheelDelta));
      if (frogActive(scrollpos)) {
+     	
      	//document.getElementById('statsid').style.opacity = 0;
      	//document.getElementById('bodyid').style.overflow = 'hidden';
       	//document.getElementById('froggydiv').style.opacity = 1;
-      	evt.preventDefault();
+      	//console.log(evt.stopPropagation())
+      	//safeStopPropogation(evt);
+     	evt.preventDefault();
       	//console.log(delta)
       	frogplayer.currentTime(frogplayer.currentTime()+(-delta*speed))
+      	//toggleScroll();
       } else {
       	//console.log("done with frog")
       }
     }
     
+
+    
 var frogscrollspan = 800;
 var froglength = 3.88
+var togglescrollpos =3.88;
 //var froglength = 3.648
 function frogActive(scrollpos) {
+
+//console.log($(window).scrollTop())
 //console.log(frogplayer.currentTime())
 //scrollpos = Math.max(0,$(window).scrollTop());
 	if (frogplayer.currentTime() < froglength) {
 		return true;
 	}
-	if ($(window).scrollTop()<0) {
+	
+	var scrthresh = -1;
+	if (isFirefox()) {
+	//console.log("is firefox")
+		//speed=.04;
+		scrthresh = 0;
+	}
+	
+	if ($(window).scrollTop()<=scrthresh) {
 		return true;
 	}
 	return false;
+}
+
+function isFirefox() {
+if (navigator.userAgent.indexOf('Firefox') != -1 && parseFloat(navigator.userAgent.substring(navigator.userAgent.indexOf('Firefox') + 8)) >= 3.6){//Firefox
+	return true;
+	}
+return false;
+}
+
+function toggleScroll() {
+/**
+	if (frogplayer.currentTime()<togglescrollpos) {
+	document.getElementById("scrollingid").style.opacity=1;
+	} else {
+	document.getElementById("scrollingid").style.opacity=0;
+	}**/
+
 }
 
 /**
@@ -81,6 +155,7 @@ $(window).scrollTop(0)}, 100)**/
  		scrollTop = 			   0,
         relativeScrollTop =        0,
         currentKeyframe =          0,
+        currentButtonIndex	=		0,
         froggy = document.getElementById("froggydiv"),
   		frogspeed = .005,
 		player = videojs("frogvideo"),
@@ -97,6 +172,12 @@ $(window).scrollTop(0)}, 100)**/
               },{
                'selector'    : '#mammalsviddiv',
                 'opacity'    : [0,0]
+              },{
+                'selector'    : '.scrolling',
+                'translateY'  : [0,310],
+                'opacity'    : [1,1],
+                'scale': 1.2
+               
               }]
              },{//1 – show the vis, with mammals data and LION
               'wrapper' : '#vis',
@@ -104,6 +185,12 @@ $(window).scrollTop(0)}, 100)**/
             'animations' :  [{
                 'selector'    : '.copy',
                 'opacity'    : [0,0]
+              },{
+                'selector'    : '.scrolling',
+                'translateY'  : [310,310],
+                'opacity'    : [1,1],
+                'scale': [1.2, 1.2]
+               
               },{
                'selector'    : '#froggydiv',
                 'opacity'    : [0, 0]
@@ -379,7 +466,7 @@ $(window).scrollTop(0)}, 100)**/
     /*  Construction
     -------------------------------------------------- */
     
-    
+    /**
     
     function checkRequestAnimationFrame() {
     var lastTime = 0;
@@ -403,7 +490,7 @@ $(window).scrollTop(0)}, 100)**/
     window.cancelAnimationFrame = function (id) {
       clearTimeout(id);
   };
-    }
+    }**/
     
     
     init = function() {
@@ -432,10 +519,10 @@ $(window).scrollTop(0)}, 100)**/
   };
 }());**/
     
-    checkRequestAnimationFrame();
+   // checkRequestAnimationFrame();
     
-      //scrollIntervalID = setInterval(updatePage, 10);
-       window.requestAnimationFrame(updatePage);
+      scrollIntervalID = setInterval(updatePage, 1);
+      // window.requestAnimationFrame(updatePage);
       //setInterval(updatePage, 10)
       setupValues();
      
@@ -480,7 +567,12 @@ function frogActive(scrollpos) {
       buildPage();
       setupButtons();
     }
-
+    
+    var buttonIndexToPagePercent = {0:'1%', 1:'125%', 2:'325%', 3:'450%', 4:'650%'}
+    var keyframeToAnimalClassIndex = {1:1, 2:1, 3:2, 4:2, 5:0, 6:0, 7:3, 8:3};
+var keyframeToButtonId = {1:'mammalsbutton',2:'mammalsbutton', 3:'reptilesbutton',4:'reptilesbutton', 5:'amphibiansbutton',6:'amphibiansbutton', 7:'birdsbutton', 8:'birdsbutton'}; 
+var keyframeToButtonIndex = {0:0,1:1,2:1, 3:2,4:2, 5:3,6:3, 7:4, 8:4}; 
+var scrollButtonClicked = false;
 var startagain = false;
     setupButtons = function() {
     	$('#titlebutton').on('click',function() {clickButton(0, d3.select(this))});
@@ -488,18 +580,27 @@ var startagain = false;
     	$('#reptilesbutton').on('click',function() {clickButton(2, d3.select(this))});
     	$('#amphibiansbutton').on('click',function() {clickButton(3, d3.select(this))});
     	$('#birdsbutton').on('click',function() {clickButton(4, d3.select(this))});
+    	$('#scrollbutton').on('click',function() {
+    		//console.log("hello")
+    		//init=true;
+    		//clickButton(1, d3.select('#mammalsbutton'))
+    		//frogplayer.play();
+    		scrollButtonClicked = true;
+    	});
     	
-    	updateButtons(d3.select(document.getElementById('titlebutton')));
+    	
+    	updateButtons(d3.select(document.getElementById('titlebutton'), 0));
     }
     
-    var buttonIndexToPagePercent = {0:'1%', 1:'125%', 2:'325%', 3:'450%', 4:'650%'}
+
+   // var keyframeToPagePercent = {1:buttonIndexToPagePercent[1],2:buttonIndexToPagePercent[1], 3:buttonIndexToPagePercent[2],4:buttonIndexToPagePercent[2], 5:buttonIndexToPagePercent[3],6:buttonIndexToPagePercent[3], 7:buttonIndexToPagePercent[4], 8:buttonIndexToPagePercent[4]}
     
     clickButton = function(index, element) {
     	
     	if (!playerready) {
-    		return
+    		return;
     	}
-    	
+    	//document.getElementById("scrollingid").style.opacity=0;
     	frogplayer.currentTime(froglength);
     	//console.log(index)
     	if (index==0) {
@@ -511,7 +612,8 @@ var startagain = false;
     	//console.log(convertPercentToPx(buttonIndexToPagePercent[index]))
     	$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[index], 'y'))
     	//document.getElementsByClassName('classButton').addClass("classButton .selectedbutton");//.classed(".classButton .selectedbutton", true);
-    	updateButtons(element);
+    	
+    	updateButtons(element, index);
     	updatePage();
     	if (index==0) {
     		frogplayer.currentTime(0);
@@ -526,9 +628,12 @@ convertPercentToPx = function(value, axis) {
       return value;
     }**/
     
-    updateButtons = function(element) {
+    updateButtons = function(element, buttonindexnum) {
+    	//console.log(buttonindexnum)
     	d3.selectAll(".sectionButton").classed("selectedSectionButton", false)
     	element.classed("selectedSectionButton", true)
+    	currentButtonIndex = buttonindexnum;
+    	
     }
 
     buildPage = function() {
@@ -629,15 +734,45 @@ convertPercentToPx = function(value, axis) {
     }**/
     
     updatePage = function() {
-   // console.log("hello")
+    	
     	if (frogActive()&&(!(startagain))) {
+    	
     		//$(window).scrollTop(0)
     		//checkRequestAnimationFrame();
-    		 window.requestAnimationFrame(updatePage);
+    		if (scrollButtonClicked) {
+    			scrollButtonClicked=false;
+    			frogplayer.play();
+    			
+    			currentButtonIndex=1;
+    		$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[currentButtonIndex], 'y'))
+    		//clickButton(1, d3.select('#mammalsbutton'));
+    			console.log("scroll button clicked")
+    		}
+    		
+    		
+    		
+    		// window.requestAnimationFrame(updatePage);
     		return;
     	}
+    	//console.log("updating")
+    	 setScrollTops();
+    	if (scrollButtonClicked) {
+    		scrollButtonClicked=false;
+    		console.log(currentButtonIndex)
+    		//buttonIndexToPagePercent = {0:'1%', 1:'125%', 2:'325%', 3:'450%', 4:'650%'
+    		currentButtonIndex=currentButtonIndex+1;
+    		$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[currentButtonIndex], 'y'))
+    		 
+    		//clickButton(1, d3.select('#mammalsbutton'));
+    		console.log("scroll button clicked outside")
+    		//window.requestAnimationFrame(updatePage);
+    		return;
+    		
+    	}
+/**
+ 	    **/
  	
-      setScrollTops();
+     
       if(scrollTop > 0 && scrollTop <= (bodyHeight - windowHeight)) {
         animateElements();
         setKeyframe();
@@ -647,15 +782,16 @@ convertPercentToPx = function(value, axis) {
         vis(scrollpos);
         
       }
+
          //checkRequestAnimationFrame();
-      window.requestAnimationFrame(updatePage);
+     // window.requestAnimationFrame(updatePage);
      
     }
 
  
 
-var keyframeToAnimalClassIndex = {1:1, 2:1, 3:2, 4:2, 5:0, 6:0, 7:3, 8:3};
-var keyframeToButtonId = {1:'mammalsbutton',2:'mammalsbutton', 3:'reptilesbutton',4:'reptilesbutton', 5:'amphibiansbutton',6:'amphibiansbutton', 7:'birdsbutton', 8:'birdsbutton'}; 
+
+
 var vispos = 1000;
 //var vispos=0;
 var showingvis = false;
@@ -665,7 +801,8 @@ vis = function(scrollpos) {
 	if (currentKeyframe==0) {
 		hideVis();
 		showingvis=false;
-		updateButtons(d3.select(document.getElementById('titlebutton')));
+		
+		updateButtons(d3.select(document.getElementById('titlebutton')), keyframeToButtonIndex[currentKeyframe]);
 		/**
 		if (currentKeyframe==0) {
 			updateButtons(d3.select(document.getElementById('titlebutton')));
@@ -692,7 +829,8 @@ vis = function(scrollpos) {
 		//
 		
 	}
-	updateButtons(d3.select(document.getElementById(keyframeToButtonId[currentKeyframe])));
+	//console.log(keyframeToButtonIndex[currentKeyframe])
+	updateButtons(d3.select(document.getElementById(keyframeToButtonId[currentKeyframe])), keyframeToButtonIndex[currentKeyframe]);
 	}
 	
 	

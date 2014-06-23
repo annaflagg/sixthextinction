@@ -10,10 +10,15 @@
 <link rel="stylesheet" href="css/base.css">
 
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/switchy-tablet.css">
 <link rel="stylesheet" href="css/switchy.css">
+<!--[if IE]><link rel="stylesheet" type="text/css" href="css/switchy-ie.css"/><![endif]-->
+
+
+<!--
 <script>
 	function incrementProgress() {return;}
-</script>
+</script>-->
 <!--<script type="text/javascript" src="//use.typekit.net/rws3een.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 
@@ -25,7 +30,7 @@
     <div id="content">
     
     		
-    
+   
      		
     
     
@@ -37,6 +42,18 @@
 	</div>	
 	
 	<div id="ttipdiv">
+	
+		<div class="datasources">
+		 	<p class="sourcetitle">SOURCES</p>
+		 	<p class="source">Species data from the 
+		 	<a href="http://www.iucnredlist.org/technical-documents/spatial-data" target="_blank" onmouseover="mouseoverhelpbutton()">IUCN Red List of Threatened Species</a>, Version 2013</p>
+		 	<p class="source"">Extinction projections from 
+		 	<a href="http://www.conservation.cam.ac.uk/person/mike-hoffman" target="_blank" onmouseover="mouseoverhelpbutton()">Michael Hoffman</a> et al., <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank" onmouseover="mouseoverhelpbutton()">The Impact of Conservation on the 
+		 	Status of the World’s Vertebrates</a> (2010)</p>
+		 	<p class="source">Natural extinction rates from 
+		 	<a href="https://en.wikipedia.org/wiki/Stuart_Pimm" target="_blank" onmouseover="mouseoverhelpbutton()">Stuart Pimm</a> et. al., 
+		 	<a href="http://www.sciencemag.org/content/269/5222/347" target="_blank" onmouseover="mouseoverhelpbutton()">The Future of Biodiversity</a> (1995)</p>
+		 </div>
     
 	</div>	
     
@@ -51,39 +68,114 @@
 		at rates anywhere from 100 to 1,000 times their natural extinction rates. A product of a variety of human effects including 
 		climate change, habitat destruction, and species displacement, these rates rival those that occurred 65 million 
 		years ago, during the dinosaur extinction.  </p>
+		<div class="loadandscroll">
+		<span>
+			<div class="loading" id="loadingid">
+			
+			
+			
+			<svg width="151" height="100" viewPort="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   				<defs>
+        			<clipPath id="clipPath">
+            			<rect x="0" y="0" width="0" height="60" id="cliprect"></rect>
+        			</clipPath>
+    			</defs>
+				<path id="loadinglizardbackground" d="M128.666,13.928c-3.731-1.45-7.792-0.724-11.632-1.534c-1.483,0.283-1.852-1.148-2.44-2.141
+	c0.275-0.065,0.856-0.201,1.131-0.266c0.564,0.61,1.096,1.229,1.69,1.832c-0.04-0.443-0.07-0.854-0.109-1.298
+	c1.014,0.473,2.006,0.982,3.044,1.417c-0.706-0.802-1.434-1.568-2.139-2.371c1.276-0.203,2.584-0.414,3.853-0.646
+	c-1.43-0.182-2.841-0.271-4.249-0.488c1.462-0.925,2.957-1.858,4.397-2.874c-1.872,0.698-3.676,1.541-5.516,2.231
+	c0.28-1.002,0.63-1.99,0.943-2.999c-0.845,0.94-1.546,1.944-2.277,2.956c-1.143-0.055-2.324-0.133-3.467-0.187
+	c0.236,1.56,0.496,3.082,0.732,4.64c-5.338,0.509-10.261,3.344-15.687,3.066c-2.295-0.009-4.638,0.058-6.941,0.015
+	c1.403-1.459,2.97-2.762,3.858-4.619c1.069-0.122,2.116-0.206,3.2-0.267c-0.407-0.357-0.783-0.721-1.166-1.114
+	c0.976-0.1,1.924-0.193,2.901-0.295c-0.972-0.288-1.959-0.508-2.909-0.835c1.648-0.547,3.265-1.089,4.913-1.637
+	c-1.787,0.225-3.545,0.444-5.34,0.64c-0.81-2.07,0.798-3.186,0.798-3.186s-2.325,0.668-2.018,2.536
+	c-0.692,0.484-0.124,0.096-0.847,0.588c-1.338-0.881-1.283-2.842-1.283-2.842s-0.75,2.575,0.404,3.5
+	c-0.538,1.291-2.03,3.803-3.368,4.569c-2.03,1.122-3.661,3.119-6.046,3.551c-1.856,0.127-2.152-0.053-3.173,0.031
+	c-4.071-0.407-8.046,0.565-11.996,1.157c-3.189,0.512-6.281,1.305-9.325,2.301c-5.498,1.681-10.613,4.485-16.261,5.841
+	C37.675,26.366,32.69,27.101,28,25.613c-3.608-1.138-7.235-2.894-9.588-5.932c-1.871-2.216-2.048-5.454-1.017-8.056
+	c0.902-2.468,1.893-5.175,0.947-7.754c0.135,1.905,0.202,3.954-0.902,5.634c-1.451,2.468-2.361,5.518-1.61,8.375
+	c1.151,3.629,4.053,6.41,7.246,8.353c4.966,3.2,11.107,3.866,16.846,3.082c6.132-0.531,11.934-2.819,17.789-4.643
+	c4.627-1.143,9.258-2.155,13.956-2.764c3.652-0.495,8.903-1.394,12.824,1.43c0.468,0.424,0.928,0.854,1.399,1.275
+	c-0.716,1.072-1.426,2.175-1.993,3.341c0.613,1.79,1.233,3.677,1.831,5.274c0.117-1.861-0.423-2.965-0.423-2.965l1.091,0.076
+	l2.386,4.229c0,0-0.757-2.271-1.119-3.783c1.834,0.248,3.409,1.461,5.252,1.739c-1.384-0.805-2.87-1.491-4.096-2.591
+	c1.121-0.038,2.219-0.038,3.341-0.073c-1.014-0.473-2.069-0.838-3.124-1.206c0.431-0.359,0.864-0.719,1.296-1.079
+	c0.266-0.935,0.727-4.58,2.293-4.237c5.77-1.837,11.491,0.485,17.402-0.611c0.579,1.641,1.425,3.187,2.574,4.5
+	c1.046,1.014,0.839,2.613,1.117,3.937c0.171-0.784,0.313-1.56,0.447-2.366c0.183-0.043,0.513-0.153,0.697-0.196
+	c1.463,1.142,2.963,2.309,4.457,3.444c-1.192-1.369-2.439-2.69-3.608-4.096c1.813,0.156,3.6,0.479,5.4,0.444
+	c-1.579-0.534-3.221-0.923-4.752-1.533c1.15-0.463,2.309-0.896,3.415-1.416c-1.207,0.092-2.375,0.204-3.589,0.263
+	c0.283-0.584,0.604-1.143,0.857-1.72c-0.769,0.44-1.531,0.909-2.286,1.409c-0.439-0.768-0.885-1.568-1.293-2.345
+	c1.326-0.958,2.592-2.029,4.067-2.762c1.894-0.605,3.72,0.71,5.578,0.918c3.428,0.843,6.973,0.399,10.438,0.167
+	c1.214-0.059,2.482-0.965,2.454-2.024C135.919,16.31,131.955,14.868,128.666,13.928z"/>
+
+    			<path id="loadinglizard" clip-path="url(#clipPath)" d="M128.666,13.928c-3.731-1.45-7.792-0.724-11.632-1.534c-1.483,0.283-1.852-1.148-2.44-2.141
+	c0.275-0.065,0.856-0.201,1.131-0.266c0.564,0.61,1.096,1.229,1.69,1.832c-0.04-0.443-0.07-0.854-0.109-1.298
+	c1.014,0.473,2.006,0.982,3.044,1.417c-0.706-0.802-1.434-1.568-2.139-2.371c1.276-0.203,2.584-0.414,3.853-0.646
+	c-1.43-0.182-2.841-0.271-4.249-0.488c1.462-0.925,2.957-1.858,4.397-2.874c-1.872,0.698-3.676,1.541-5.516,2.231
+	c0.28-1.002,0.63-1.99,0.943-2.999c-0.845,0.94-1.546,1.944-2.277,2.956c-1.143-0.055-2.324-0.133-3.467-0.187
+	c0.236,1.56,0.496,3.082,0.732,4.64c-5.338,0.509-10.261,3.344-15.687,3.066c-2.295-0.009-4.638,0.058-6.941,0.015
+	c1.403-1.459,2.97-2.762,3.858-4.619c1.069-0.122,2.116-0.206,3.2-0.267c-0.407-0.357-0.783-0.721-1.166-1.114
+	c0.976-0.1,1.924-0.193,2.901-0.295c-0.972-0.288-1.959-0.508-2.909-0.835c1.648-0.547,3.265-1.089,4.913-1.637
+	c-1.787,0.225-3.545,0.444-5.34,0.64c-0.81-2.07,0.798-3.186,0.798-3.186s-2.325,0.668-2.018,2.536
+	c-0.692,0.484-0.124,0.096-0.847,0.588c-1.338-0.881-1.283-2.842-1.283-2.842s-0.75,2.575,0.404,3.5
+	c-0.538,1.291-2.03,3.803-3.368,4.569c-2.03,1.122-3.661,3.119-6.046,3.551c-1.856,0.127-2.152-0.053-3.173,0.031
+	c-4.071-0.407-8.046,0.565-11.996,1.157c-3.189,0.512-6.281,1.305-9.325,2.301c-5.498,1.681-10.613,4.485-16.261,5.841
+	C37.675,26.366,32.69,27.101,28,25.613c-3.608-1.138-7.235-2.894-9.588-5.932c-1.871-2.216-2.048-5.454-1.017-8.056
+	c0.902-2.468,1.893-5.175,0.947-7.754c0.135,1.905,0.202,3.954-0.902,5.634c-1.451,2.468-2.361,5.518-1.61,8.375
+	c1.151,3.629,4.053,6.41,7.246,8.353c4.966,3.2,11.107,3.866,16.846,3.082c6.132-0.531,11.934-2.819,17.789-4.643
+	c4.627-1.143,9.258-2.155,13.956-2.764c3.652-0.495,8.903-1.394,12.824,1.43c0.468,0.424,0.928,0.854,1.399,1.275
+	c-0.716,1.072-1.426,2.175-1.993,3.341c0.613,1.79,1.233,3.677,1.831,5.274c0.117-1.861-0.423-2.965-0.423-2.965l1.091,0.076
+	l2.386,4.229c0,0-0.757-2.271-1.119-3.783c1.834,0.248,3.409,1.461,5.252,1.739c-1.384-0.805-2.87-1.491-4.096-2.591
+	c1.121-0.038,2.219-0.038,3.341-0.073c-1.014-0.473-2.069-0.838-3.124-1.206c0.431-0.359,0.864-0.719,1.296-1.079
+	c0.266-0.935,0.727-4.58,2.293-4.237c5.77-1.837,11.491,0.485,17.402-0.611c0.579,1.641,1.425,3.187,2.574,4.5
+	c1.046,1.014,0.839,2.613,1.117,3.937c0.171-0.784,0.313-1.56,0.447-2.366c0.183-0.043,0.513-0.153,0.697-0.196
+	c1.463,1.142,2.963,2.309,4.457,3.444c-1.192-1.369-2.439-2.69-3.608-4.096c1.813,0.156,3.6,0.479,5.4,0.444
+	c-1.579-0.534-3.221-0.923-4.752-1.533c1.15-0.463,2.309-0.896,3.415-1.416c-1.207,0.092-2.375,0.204-3.589,0.263
+	c0.283-0.584,0.604-1.143,0.857-1.72c-0.769,0.44-1.531,0.909-2.286,1.409c-0.439-0.768-0.885-1.568-1.293-2.345
+	c1.326-0.958,2.592-2.029,4.067-2.762c1.894-0.605,3.72,0.71,5.578,0.918c3.428,0.843,6.973,0.399,10.438,0.167
+	c1.214-0.059,2.482-0.965,2.454-2.024C135.919,16.31,131.955,14.868,128.666,13.928z"/>
+
+		</svg>
+		</div>
+		
+		</span>
 		</div>
 
-
-<!--
-      <div class="stats" id="statsid">
-   	  	<div id="statdiv0" class="statdiv">
-   			<p class="number" id="stat0number">41%</p>
-   			<p class="group" id="stat0group">AMPHIBIANS</p>
-   		</div>
-   		<div id="statdiv1" class="statdiv">
-			<p class="number" id="stat1number">25%</p>
-   			<p class="group" id="stat1group">MAMMALS</p>
 		</div>
-		<div id="statdiv2" class="statdiv">
-			<p class="number" id="stat2number">22%</p>
-   			<p class="group" id="stat2group">REPTILES</p>
-   		</div>
-   		<div id="statdiv3" class="statdiv">
-			<p class="number" id="stat3number">13%</p>
-   			<p class="group" id="stat3group">BIRDS</p>
-   		</div>
-   	  </div>-->
+		
+		
+		
+		
+		
+		
+		
+		
    	  <script src="js/retina.min.js"></script> 
    	  	<script src="js/jquery-2.0.2.min.js"></script>
+   	  	
 <script src="//vjs.zencdn.net/4.5/video.js"></script>
 
    	  <div id="froggydiv">
 			<video id="frogvideo" class="video-js vjs-default-skin" preload="auto" poster="images/frog-final-orangetext-preview.jpg">
+			<!--<source src="images/froggy3.webm" type='video/webm' />
+			<source src="images/froggy-june17-.6.mp4" type='video/mp4' />
+			<source src="images/froggy-june17-.6.oggtheora.ogv" type='video/ogg' />-->
+			<source src="http://www.annaflagg.com/disappearingplanet-june21/images/froggy.mp4" type='video/mp4' />
+			<source src="images/froggy.ogv" type='video/ogg' />
+			
+			<source src="images/froggy.webm" type='video/webm' />
 			
 			
-			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.mp4" type='video/mp4' />
+			<!--<source src="http://www.annaflagg.com/disappearingplanet-june21/images/froggy-june17-.6.oggtheora.ogv" type='video/ogg' />-->
+			<!--
 			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.webmsd.webm" type='video/webm' />
-    		<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.oggtheora.ogv" type='video/ogg' />
+			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.mp4" type='video/mp4' />
+			
+			
+			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/froggy-june17-.6.oggtheora.ogv" type='video/ogg' />-->
+			
+			
+			
+    		
     		
 			</video>
 	</div>
@@ -117,10 +209,11 @@
 
 			<div id="amphibiansviddiv">
 				<video id="frogvideo2" class="video-js vjs-default-skin" preload="auto" width="178" height="100" poster="images/frog-.2-.5-preview.jpg">
-				
-				<source src="images/frog-may28-.2-.5-100px.mp4" type='video/mp4' />
-			<source src="images/frog-may28-.2-.5-100px.webmsd.webm" type='video/webm' />
-			<source src="images/frog-may28-.2-.5-100px.oggtheora.ogv" type='video/ogg' />
+				<source src="images/frog.mp4" type='video/mp4' />
+				<source src="images/frog.webmhd.webm" type='video/webm' />
+				<source src="images/frog-quality10.ogv" type='video/ogg' />
+			<!--<source src="images/frog-may28-.2-.5-100px.webmsd.webm" type='video/webm' />-->
+			
 				<!--<source src="images/frog-.2-.5.mp4" type='video/mp4' />
     			<source src="images/frog-.2-.5.webmhd.webm" type='video/webm' />-->
 			</div>
@@ -131,9 +224,14 @@
 			</div>-->
 			<div id="mammalsviddiv">
 			<video id="lionvideo" class="video-js vjs-default-skin" preload="auto" width="208" height="120" poster="images/lioness10-preview.jpg">
-				<source src="http://www.annaflagg.com/disappearingplanet-june15/images/lioness10.mp4.mp4" type='video/mp4' />
-    			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/lioness10.webmhd.webm" type='video/webm' />
-    			<source src="http://www.annaflagg.com/disappearingplanet-june15/images/lioness10.mp4.oggtheora.ogv" type='video/ogg' />
+				
+				<source src="images/lioness.mp4" type='video/mp4' />
+				<source src="images/lioness-quality6.ogv" type='video/ogg' />
+				<source src="images/lioness.webmhd.webm" type='video/webm' />
+				
+				
+    			
+    			
 			
 			
 			</div>
@@ -147,11 +245,10 @@
 			<!--<img id="reptilesgif" rel:animated_src="images/turtle-170px.gif" rel:auto_play="0" auto_play="0" />-->
 			<video id="turtlevideo" class="video-js vjs-default-skin" preload="auto" width="302" height="170" poster="images/turtle-may28-scurry-.2-.5-170px-preview.jpg">
 			<!--<source src="http://www.annaflagg.com/disappearingplanet/images/turtle-.2-.5.mp4" type='video/mp4' />-->
+			<source src="images/turtle.mp4" type='video/mp4' />
+			<source src="images/turtle-quality7.ogv" type='video/ogg' />
+			<source src="images/turtle.webmhd.webm" type='video/webm' />
 			
-			
-			<source src="images/turtle-may28-scurry-.2-.5-170px.mp4" type='video/mp4' />
-			<source src="images/turtle-may28-scurry-.2-.5-170px.webmsd.webm" type='video/webm' />
-			<source src="images/turtle-may28-scurry-.2-.5-170px.oggtheora.ogv" type='video/ogg' />
     		<!--<source src="images/turtle-.2-.5.mp4" type='video/mp4' />
     		<source src="images/turtle-.2-.5.webmhd.webm" type='video/webm' />-->
 			</div>	
@@ -162,13 +259,10 @@
 			<div id="birdsviddiv">
 			<video id="owlvideo" class="video-js vjs-default-skin" preload="auto" width="82" height="120" poster="images/owl-may28-.2-.5-6s-120px-sharpened-preview.jpg">
 			
-			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.mp4" type='video/mp4' />
-			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.webmsd.webm" type='video/webm' />
-			<source src="images/owl-may28-.2-.5-6s-120px-sharpened.oggtheora.ogv" type='video/ogg' />
-			<!--<source src="images/owl-.2-.5.mp4" type='video/mp4' />-->
-    		<!--<source src="images/owl-.2-.5.webmhd.webm" type='video/webm' />-->
-		
-			<!--<img id="birdsgif" rel:animated_src="images/owl-170px.gif" rel:auto_play="0" auto_play="0" />-->
+			<source src="images/owl.mp4" type='video/mp4' />
+			<source src="images/owl-quality5.ogv" type='video/ogg' />
+			<source src="images/owl.webmhd.webm" type='video/webm' />
+			
 			</div>
 
       
@@ -233,7 +327,7 @@
 		<div class="mobilefooter">
 		 <p class="sourcetitle">SOURCES</p>
 		 <p class="source">Species data from the 
-		 <a href="http://www.iucnredlist.org/technical-documents/spatial-data" target="_blank">IUCN Red List of Threatened Species</a>, Version 2013, accessed on March 1, 2013</p>
+		 <a href="http://www.iucnredlist.org/technical-documents/spatial-data" target="_blank" >IUCN Red List of Threatened Species</a>, Version 2013, accessed on March 1, 2013</p>
 		 <p class="source"">Extinction projections from 
 		 <a href="http://www.conservation.cam.ac.uk/person/mike-hoffman" target="_blank">Michael Hoffman</a> et al., <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank">The Impact of Conservation on the 
 		 Status of the World’s Vertebrates</a>, Science (2010)</p>
@@ -241,15 +335,19 @@
 		 <a href="https://en.wikipedia.org/wiki/Stuart_Pimm" target="_blank">Stuart Pimm</a> et. al., 
 		 <a href="http://www.sciencemag.org/content/269/5222/347" target="_blank">The Future of Biodiversity</a>, 
 		 Science (1995)</p>
-		 
-		 
-		 
 		</div>
 		
 		
 	</div>
 		
 		<div id="header">
+		</div>
+		
+		<div class="scrolling" id="scrollingid">
+			<svg width="151" height="100">
+				<polygon id="scrollbutton" fill="#231F20" points="76,4 49,4 76,24 103,4 "/>
+				<!--<rect x="0" y="0" width="100" height="60"></rect>-->
+			</svg>
 		</div>
 		
 	
@@ -279,9 +377,27 @@
 <!--<script src="js/picasso.js"></script>-->
 
 <script>
-if (window.innerWidth > 480) {
+function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {      // If Internet Explorer, return version number
+            return true;
+        }
+            //alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+      //  else                 // If another browser, return 0
+        	//return false;
+            //alert('otherbrowser');
+
+   return false;
+}
+
+
+if ((window.innerWidth > 768)&&(!(msieversion()))) {
 //if (screen && screen.width > 480) {
 //console.log(screen.width)
+document.write('<script type="text/javascript" src="js/annasprogress.js"><\/script>');
   document.write('<script type="text/javascript" src="js/scrollhandler.js"><\/script>');
 document.write('<script type="text/javascript" src="js/bootstrap-typeahead-ext.js"><\/script>');
 document.write('<script type="text/javascript" src="js/queue.v1.min.js"><\/script>');

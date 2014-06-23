@@ -1,0 +1,175 @@
+  #chart {
+    width: 300px;
+    overflow: hidden;
+    height: 100%
+    display:none;
+  }
+
+  #content {
+    width: 600px;
+  }
+
+  #bodyid {
+    height: 2000px !important
+  }
+
+  .container, .container-inner {
+    background: #fff
+  }
+#header {
+height:0px
+
+}
+#headerbuttons {
+width: 100%;
+height:35px;
+background-color:black;
+}
+.buttons {
+margin-top:9px
+}
+.sectionButton {
+	padding: 25px;
+	font-size:12px;
+}
+
+.sectionButton:hover {
+color: red;
+}
+.sectionButton:active {
+color: red;
+}
+
+.selectedSectionButton {
+	color: red;
+	
+}
+.copy .h1 {
+font-size: 35px;
+line-height: 1.35em;
+}
+  #whitebackground, #froggydiv {
+    display: none;
+  }
+
+  #intro {
+    position: absolute;
+    
+    width: 600px;
+    margin: 0px auto;
+  }
+
+  .copy {
+  width: 100%;
+  margin-top: 100px;
+  }
+  .copy .guff {
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+  
+  }
+  .copy .byline {
+  font-size:14px;
+  width: 500px;
+  margin: 0px auto;
+  margin-top: -5px;
+  margin-bottom:25px;
+  }
+
+  .copy{
+    position: relative;
+  }
+  /*
+  #mammalsviddiv {
+  opacity:1;
+  position:absolute;
+  margin-top:600px
+
+  }*/
+
+  
+.mobile {
+margin-top: 400px;
+
+display: block;
+color:black;
+width:600px;
+height: 100%;
+z-index: -5;
+text-align: center;
+
+}
+.mobilegroup {
+padding-top: 50px;
+
+	position: relative;
+}
+.mobilevistitle {
+position:relative;
+font-size: 35px;
+line-height: 1.35em;
+font-family: Open Sans;
+letter-spacing: 3px;
+font-weight: 600;
+margin: 0 auto;
+left: 0;
+right: 0;
+margin-top:-10px;
+}
+.mobilevisguff {
+font-family: Georgia;
+font-size: 18px;
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+    width:590px;
+}
+.mobilevisim {
+width:300px;
+margin-left:0px;
+}
+.mobilevisgraph {
+margin-top:7px;
+margin-bottom:12px;
+margin-left:10px;
+
+}
+.mobilefooter {
+padding-top:50px;
+height:200px;
+text-align: left;
+margin-left:10px;
+padding-bottom:15px;
+}
+.sourcetitle {
+	font-weight:700;
+	font-size:11px;
+	letter-spacing:1.5px;
+}
+.source {
+margin-top:-17px;
+font-size:14px;
+width:580px;
+}
+.mobileflyer {
+position:fixed;
+background-color:#4787ED;
+bottom: 0;
+margin: 0% auto;
+left:0;
+right:0;
+-webkit-transform-style: preserve-3d;
+height: 30px;
+}
+.mobileflyertext {
+font-family: Open Sans;
+font-weight:500;
+color:white;
+font-size:16px;
+margin-top: 3px;
+letter-spacing:1px;
+}
+.loadandscroll {
+display:none;
+}
