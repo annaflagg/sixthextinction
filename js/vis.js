@@ -951,6 +951,7 @@ function renderHelpButton() {
 
 	helpbuttondiv = d3.select("#ttipdiv")
     .append("div");
+
     helpbuttondiv.attr("class", "helpbuttondiv")
     	.attr("id", "helpbuttondivid")
     	.style("margin-left", 110+"px")
@@ -978,7 +979,7 @@ src.onmouseover = mouseoverhelpbutton;
 	var helpbuttonr = 13;
 	
 	svg.append("svg:circle")
-		.attr("cx", helpbuttonx-(2*helpbuttonr)+ 30).attr("cy", helpbuttony).attr("r", helpbuttonr)
+		.attr("cx", helpbuttonx-(2*helpbuttonr)+ 30).attr("cy", helpbuttony - 4).attr("r", helpbuttonr)
 		.attr("class", "helpbutton")
 		.on("mouseover", mouseoverhelpbutton)
 		.on("mouseout", function(evt) {
@@ -990,13 +991,18 @@ src.onmouseover = mouseoverhelpbutton;
 	svg.append("svg:text")
 	.attr("class", "helpbuttonquestionmark")
 		.attr("x", helpbuttonx-(2*helpbuttonr)+24)
-		.attr("y", helpbuttony+6)
+		.attr("y", helpbuttony+2)
 		.text("?")
 		.on("mouseover", mouseoverhelpbutton)
 		.on("mouseout", function(evt) { 
 		//console.log("text mouseout: "+evt)
 		return mouseouthelpbutton(evt)});
-		
+
+	svg.append("svg:text")
+	.attr("class", "helpbuttonlabel")
+		.attr("x", helpbuttonx-(2*helpbuttonr)+50)
+		.attr("y", helpbuttony)
+		.text("How do I read this graphic?")
 		
 	
 
@@ -1028,7 +1034,7 @@ img.src = "images/legend.png";
 img.id="legendimageid";
 
 var src = document.getElementById("legendimgid");
-src.appendChild(img);
+	src.appendChild(img);
 }
 
 // Update the focus view and its corresponding highlights on the context view when the brush is dragged
