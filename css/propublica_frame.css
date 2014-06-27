@@ -1,0 +1,55 @@
+#header {
+	background: #FFF url(//s3.amazonaws.com/cdn.propublica.net/deploy/images/common/bg-banner-nav.png) 0 100% repeat-x;
+}
+
+#banner {
+	background: #f9f9f9;
+	height: 60px;
+}
+
+#banner .wrapper {
+	margin: 0 auto;
+	width: 960px;
+}
+
+#banner-identity {
+	float: left;
+	padding-left: 25px;
+	width: 515px;
+	margin-top: 2px;
+}
+
+#banner-identity h1, #banner-identity p {
+	text-indent: -9999px;
+	float: left;
+}
+
+#banner-tagline {
+	display: none;
+}
+
+#banner-identity h1, #banner-identity p {
+	text-indent: -9999px;
+	float: left;
+}
+
+#banner-logo a {
+	background: url('//s3.amazonaws.com/propublica/images/logo_134x75.png') no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 98px;
+	padding-right: 15px;
+	width: 183px;
+}
+
+#banner-identity #app-tagline {
+	font-family: "ff-meta-serif-web-1","ff-meta-serif-web-2","Georgia",serif;
+	font-size: 16px;
+	text-indent: 0;
+	position: absolute;
+	top: 37px;
+	left: 179px;
+}
+
+#banner-identity #app-tagline a {
+	color: #000;
+}
