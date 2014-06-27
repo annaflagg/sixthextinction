@@ -9,6 +9,9 @@ body {
 
 .mobile-only {
 	display: none; 
+	margin: -10px 10px 0;
+	background-color: #EEE;
+	padding: 10px;
 }
 /*
 #bodyid {
