@@ -10,6 +10,7 @@
 #banner .wrapper {
 	margin: 0 auto;
 	width: 960px;
+	position: relative;
 }
 
 #banner-identity {
@@ -48,6 +49,7 @@
 	position: absolute;
 	top: 37px;
 	left: 179px;
+	color: black;
 }
 
 #banner-identity #app-tagline a {
