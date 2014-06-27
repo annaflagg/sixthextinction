@@ -428,7 +428,7 @@ searchdiv = d3.select("#chart").append("div");
 searchdiv.attr("id", "searchid");
 searchdiv
 	.style("margin-left", focusx0+focusgraphwidth-195+"px")
-	.style("top", typeaheady+"px")
+	.style("top", (typeaheady-30)+"px")
 document.getElementById("searchid").innerHTML='<input type="text" id="search" autocomplete="off" data-provide="typeahead" >';
 
 var searchselect=false; 
@@ -953,7 +953,7 @@ function renderHelpButton() {
     .append("div");
     helpbuttondiv.attr("class", "helpbuttondiv")
     	.attr("id", "helpbuttondivid")
-    	.style("margin-left", 76+"px")
+    	.style("margin-left", 110+"px")
 
 
 var img = document.createElement("img");
@@ -974,11 +974,11 @@ src.onmouseout = function (evt) {
 src.onmouseover = mouseoverhelpbutton;
 
 	var helpbuttonx = x0;
-	var helpbuttony = 387;
-	var helpbuttonr = 15;
+	var helpbuttony = 400;
+	var helpbuttonr = 13;
 	
 	svg.append("svg:circle")
-		.attr("cx", helpbuttonx-(2*helpbuttonr)).attr("cy", helpbuttony).attr("r", helpbuttonr)
+		.attr("cx", helpbuttonx-(2*helpbuttonr)+ 30).attr("cy", helpbuttony).attr("r", helpbuttonr)
 		.attr("class", "helpbutton")
 		.on("mouseover", mouseoverhelpbutton)
 		.on("mouseout", function(evt) {
@@ -989,8 +989,8 @@ src.onmouseover = mouseoverhelpbutton;
 		
 	svg.append("svg:text")
 	.attr("class", "helpbuttonquestionmark")
-		.attr("x", helpbuttonx-(2*helpbuttonr)-7)
-		.attr("y", helpbuttony+9)
+		.attr("x", helpbuttonx-(2*helpbuttonr)+24)
+		.attr("y", helpbuttony+6)
 		.text("?")
 		.on("mouseover", mouseoverhelpbutton)
 		.on("mouseout", function(evt) { 
