@@ -1,3 +1,5 @@
+
+
 body {
   background: white;
   font-weight: 300;
@@ -6,12 +8,30 @@ body {
  font-family: Open Sans, Helvetica;
  
 }
+a:link {color: #2262cc; }
+a:active {color: #2262cc; text-decoration: underline; }
+a:visited {color: #2262cc; text-decoration: underline; }
+a:hover {color: #2262cc; text-decoration: underline; }
 
 .mobile-only {
 	display: none; 
 	margin: -10px 10px 0;
 	background-color: #EEE;
 	padding: 10px;
+	margin-top:40px;
+	margin-bottom:5px;
+}
+.ie-only {
+display: none; 
+	margin: -10px 10px 0;
+	background-color: #EEE;
+	padding: 10px;
+	margin-top:40px;
+	margin-bottom:5px;
+}
+
+#banner-identity {
+	height:20px;
 }
 /*
 #bodyid {
@@ -23,29 +43,29 @@ body {
 	z-index: 7;
 }
 
-
 .wrapper {
   background: grey;
 }
 .container, .container-inner {
 	height: 100%;
+	background:none;
 }
 #content {
 width:1000px;
 height: 100%;
-
-
+background:none;
+z-index:-25;
 background-color: white;
-opacity:.99;
 margin: 0% auto;  
 text-align: center;
+
 }
 #whitebackground {
 position: fixed;
 width:1000;
 height: 900px;
-background-color: white;
-opacity:.99;
+background-color: none;
+opacity:.01;
 margin: 0% auto;  
 text-align: center;
 z-index: -3;
@@ -85,7 +105,7 @@ height: 25px;
 }
 
 .buttons {
-	margin-top: 110px;
+	margin-top: 100px;
 	height:20px;
 	width: 100%;
 -webkit-transform: translateZ(0);
@@ -187,7 +207,7 @@ text-align: center;
 	margin: 0% auto;
 	left:0;
 	right:0;
-	margin-top: 400px;
+	margin-top: 415px;
 	-webkit-transition: opacity 0.2s ease;
        -moz-transition: opacity 0.2s ease;
         -ms-transition: opacity 0.2s ease;
@@ -199,11 +219,33 @@ text-align: center;
 	fill: #D1D2D4;
 	z-index:25;
 	-webkit-transform-style: preserve-3d;
+
 }
 #scrollbutton:hover {
 	fill:#6FD03D;
 	cursor: pointer;
 	cursor: hand;
+}
+
+
+
+.contributorbox {
+text-align: left;
+margin-left: 770px;
+margin-top: 270px;
+}
+.contributortitle {
+font-size:11px;
+letter-spacing:.5px;
+color:#808080;
+font-weight:600;
+font-family:Open Sans;
+}
+.contributor {
+margin-top:-20px;
+font-style:oblique;
+font-family:Georgia;
+font-weight:550;
 }
 
 .howto {
@@ -248,6 +290,7 @@ margin-top: 165px;
 color:black;
 opacity:0;
 pointer-events: all;
+display:none;
 }
 .viscopy .vistitle {
 font-family: Open Sans;
@@ -273,7 +316,6 @@ width:690px;
 z-index: 5;
 pointer-events: all;
 line-height: 1.65em;
-
 }
 .showmetext {
 	color: red;
@@ -337,7 +379,10 @@ pointer-events:none;
 #helpbuttonid {
 
 }
-
+.helpbuttonlabel {
+	fill:#939598;
+	font-weight:500;
+}
 
 .helpbuttondiv {
 	pointer-events:all;	
@@ -419,17 +464,20 @@ pointer-events: all;
 
 .copy .byline {
 font-family: Georgia;
-font-size: 15px;
+font-size: 16px;
 
 font-style:oblique;
-letter-spacing: 1.6px;
+
 position: relative;
-margin-top: -20px;
+margin-top: -25px;
 pointer-events: all;
 /*
 margin-top:-15px;
 letter-spacing:.3px;
  font-size: 15px;*/
+}
+.copy .authorname {
+	font-weight:600;
 }
 
 .copy .date {
@@ -444,22 +492,40 @@ font-family: Georgia;
 font-size: 18px;
 
 position: relative;
-width:777px;
+/*width:965px;*/
+width:810px;
 margin-left:auto;
 margin-right:auto;
 pointer-events: all;
-margin-top:-5px;
+margin-top:0px;
 z-index:11;
-/*
-margin-top:20px;
-margin-left:auto;
-margin-right:auto;
+}
+.italic {
+font-style: oblique;
+}
 
- font-size: 17px;
- width:810px;
- text-align: left;
-   line-height: 1.9em;
-   letter-spacing:.3px;*/
+.researchers {
+	cursor:pointer;
+	cursor: hand;
+	pointer-events: all;
+}
+.sup {
+vertical-align: super;
+font-size: small; 
+cursor: pointer;
+cursor: hand;
+}
+.scrollcommand {
+margin-top:-6px;
+
+opacity:0;
+font-weight: 600;
+	font-family: Open Sans;
+	color: #999999;
+	font-size: 13px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	-webkit-transform: translateZ(0);
 }
 
 .stats {
@@ -547,7 +613,7 @@ height:100%;
   left: 0;
   right: 0;
 	
-	margin-top:280px;
+	margin-top:285px;
 	opacity:1;
 	/*
 	-webkit-transition: opacity .2s ease-in;
@@ -1208,7 +1274,7 @@ opacity: 0;
 	fill: #FF0000;
 }
 .classdatabackgroundlabel {
-	fill: black;
+	fill: #999999;
 	margin: 0;
 	position: absolute;
 	font-size: 11px;
@@ -1508,9 +1574,9 @@ font-weight: 600;
 	font-weight: 600;
 	font-family: Open Sans;
 	font-size: 12px;
-	letter-spacing: 1px;
 	
 	
+
 	
 	
 	
@@ -1632,7 +1698,6 @@ opacity:1;
 
 
 
-
 a {
   color: #0088cc;
   text-decoration: none;
@@ -1640,9 +1705,7 @@ a {
  
 }
 a:hover {
-  color: #005580;
-  text-decoration: underline;
-  
+ 
 }
 
 input,

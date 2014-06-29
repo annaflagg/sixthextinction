@@ -1,12 +1,26 @@
+
+  .mobile-only { display: none; }
+  .ie-only {display:block;margin-top:90px;}
+
   #chart {
     width: 300px;
     overflow: hidden;
     height: 100%
     display:none;
   }
-
+ .contributorbox {
+  margin-left:10px;
+  margin-top: -120px;
+  }
+  .contributortitle {
+  color:black;
+ font-weight:800;
+	font-size:9px;
+	letter-spacing:1.5px;
+}
   #content {
     width: 600px;
+    background: none;
   }
 
   #bodyid {
@@ -14,11 +28,9 @@
   }
 
   .container, .container-inner {
-    background: #fff
+    background: none;
   }
 #header {
-height:0px
-
 }
 #headerbuttons {
 width: 100%;
@@ -90,7 +102,7 @@ line-height: 1.35em;
 
   
 .mobile {
-margin-top: 400px;
+margin-top: 500px;
 
 display: block;
 color:black;
@@ -173,3 +185,4 @@ letter-spacing:1px;
 .loadandscroll {
 display:none;
 }
+

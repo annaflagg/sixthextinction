@@ -8,7 +8,8 @@ frogplayer.on('loadeddata', function(){
       	playerready=true;
       	
       	frogplayer.play();
-      	setTimeout(function() {frogplayer.pause(); frogplayer.currentTime(0);}, 10)
+      	frogplayer.pause();
+      	//setTimeout(function() {frogplayer.pause(); frogplayer.currentTime(0);}, 10)
       	frogplayer.currentTime(0);
       		
       	//$(window).scrollTop(0);
@@ -174,7 +175,7 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               },{
                 'selector'    : '.scrolling',
-                'translateY'  : [0,310],
+                'translateY'  : [0,295],
                 'opacity'    : [1,1],
                 'scale': 1.2
                
@@ -187,7 +188,7 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               },{
                 'selector'    : '.scrolling',
-                'translateY'  : [310,310],
+                'translateY'  : [295,295],
                 'opacity'    : [1,1],
                 'scale': [1.2, 1.2]
                
@@ -200,7 +201,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [1,1]
               },{
                'selector'    : '#mammalsviddiv',
-               'translateY'  : -6,
                 'opacity'    : [1,1]
               }]
             },{//2 – continuing to show the vis w MAMMALS
@@ -208,7 +208,6 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '50%',
             'animations' :  [{
                'selector'    : '#mammalsviddiv',
-               'translateY'  : [-6,-6],
                 'opacity'    : [1,1]
               }, {
                'selector'    : '#reptilesviddiv',
@@ -222,7 +221,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }, {
                'selector'    : '#reptilesviddiv',
-               'translateY'  : -3,
                 'opacity'    : [1,1]
               }]
              },{// 4 – continuing to show the vis w REPTILES
@@ -230,7 +228,6 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '50%',
             'animations' :  [{
                'selector'    : '#reptilesviddiv',
-               'translateY'  : [-3,-3],
                 'opacity'    : [1,1]
               }, {
                'selector'    : '#amphibiansviddiv',
@@ -244,7 +241,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }, {
                'selector'    : '#amphibiansviddiv',
-               'translateY'  : -8,
                 'opacity'    : [1,1]
               }]
             },{// 6 – continuing to show the vis w AMPHIBIANS
@@ -252,7 +248,6 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '50%',
             'animations' :  [{
                'selector'    : '#amphibiansviddiv',
-               'translateY'  : [-8,-8],
                 'opacity'    : [1,1]
               }, {
                'selector'    : '#birdsviddiv',
@@ -266,7 +261,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }, {
                'selector'    : '#birdsviddiv',
-               'translateY'  : -10,
                 'opacity'    : [1,1]
               }]
             } ,{
@@ -746,7 +740,7 @@ convertPercentToPx = function(value, axis) {
     			currentButtonIndex=1;
     		$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[currentButtonIndex], 'y'))
     		//clickButton(1, d3.select('#mammalsbutton'));
-    			console.log("scroll button clicked")
+    			//console.log("scroll button clicked")
     		}
     		
     		
@@ -754,6 +748,17 @@ convertPercentToPx = function(value, axis) {
     		// window.requestAnimationFrame(updatePage);
     		return;
     	}
+    	if (currentButtonIndex==4) {
+    		document.getElementById("scrollingid").style["display"]= "none"
+    	} else {
+    		document.getElementById("scrollingid").style["display"]= "block"
+    	}
+    	if (currentButtonIndex==0) {
+    		document.getElementById("viscopyid").style["display"]= "none"
+    	} else {
+    		document.getElementById("viscopyid").style["display"]= "block"
+    	}
+    	
     	//console.log("updating")
     	 setScrollTops();
     	if (scrollButtonClicked) {
@@ -764,7 +769,7 @@ convertPercentToPx = function(value, axis) {
     		$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[currentButtonIndex], 'y'))
     		 
     		//clickButton(1, d3.select('#mammalsbutton'));
-    		console.log("scroll button clicked outside")
+    		//console.log("scroll button clicked outside")
     		//window.requestAnimationFrame(updatePage);
     		return;
     		

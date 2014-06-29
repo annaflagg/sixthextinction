@@ -1,5 +1,7 @@
 @media screen and (min-width:481px) and (max-width:768px) {
   .mobile-only { display: block; }
+  .ie-only {display:none;}
+
   #chart {
     width: 300px;
     overflow: hidden;
@@ -90,11 +92,11 @@ line-height: 1.35em;
 
   
 .mobile {
-margin-top: 400px;
+margin-top: 750px;
 
 display: block;
 color:black;
-width:600px;
+width:300px;
 height: 100%;
 z-index: -5;
 text-align: center;

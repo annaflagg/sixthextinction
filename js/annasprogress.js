@@ -117,6 +117,7 @@ progress.watch("p", function (id, oldval, newval) {
 	if ((((progress.p>=total) && (!started)))) {
 		console.log("Ok, done loading")
 		document.getElementById("loadingid").style.opacity=0;
+		document.getElementById("scrollcommandid").style.opacity=1;
 		//document.getElementById("loadingid").style.opacity=0;
 		document.getElementById("scrollingid").style.opacity=1;
 		started = true;

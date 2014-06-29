@@ -15,8 +15,9 @@
 <link rel="stylesheet" href="css/switchy.css">
 <!--[if IE]><link rel="stylesheet" type="text/css" href="css/switchy-ie.css"/><![endif]-->
 
-
 <!--
+
+
 <script>
 	function incrementProgress() {return;}
 </script>-->
@@ -58,16 +59,57 @@
 		<div class="copy" id="copyid">
 		<!--<p class="date">June 15, 2014</p>-->
 		<p class="h1">A DISAPPEARING PLANET</p>
-		<p class="byline">by <strong>Anna Flagg</strong>, Special to ProPublica</p>
-	
-		<p class="guff">A long time ago, before humans became the primary contributor to animal extinctions, 
+		<p class="byline">by <span class="authorname"><a href="http://www.annaflagg.com" target="_blank">Anna Flagg</a></span>, Special to ProPublica</p>
+		
+		
+		
+		<!--
+		<p class="guff">
+		Animal species are going extinct at rates anywhere from 100 to 1,000 times the rates that would be expected under 
+		normal natural conditions. According to researchers<span class="sup">[<a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank">1</a>][<a href="http://www.sciencemag.org/content/269/5222/347" target="_blank">2</a>][<a href="https://en.wikipedia.org/wiki/The_Sixth_Extinction:_An_Unnatural_History" target="_blank">3</a>]</span>, 
+		the increase is a product of a variety of human effects including 
+		climate change, habitat destruction, and species displacement. 
+		
+		These extinction rates rival those during the mass extinction event that 
+		wiped out the dinosaurs, 65 million years ago.
+		</p>-->
+		
+		
+		<p class="guff">
+		Animal species are going extinct at rates anywhere from 100 to 1,000 times the rates that would be expected under 
+		normal natural conditions. According to Elizabeth Kolbert's <span class=italic>The Sixth Extinction</span> 
+		and other recent studies<span class="sup"><a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank"> 1</a>,<a href="http://www.sciencemag.org/content/269/5222/347" target="_blank"> 2</a>,<a href="https://en.wikipedia.org/wiki/The_Sixth_Extinction:_An_Unnatural_History" target="_blank"> 3</a></span>, 
+		the increase is a product of a variety of human effects including 
+		climate change, habitat destruction, and species displacement.
+		 
+		Today's extinction rates rival those during the mass extinction event that 
+		wiped out the dinosaurs, 65 million years ago.
+		</p>
+		
+		
+		
+		
+		
+		
+		<!--<p class="guff">
+		Animal species are going extinct at rates anywhere from 100 to 1,000 times the rates that would be expected under 
+		normal natural conditions. According to <a class="researchers" onmouseover="mouseoverresearchers()" onmouseout="mouseoutresearchers()">researchers</a>, the increase is a product of a variety of human effects including 
+		climate change, habitat destruction, and species displacement. These rates rival those during the extinction event that 
+		wiped out the dinosaurs 65 million years ago.
+		</p>-->
+		<!--<p class="guff">A long time ago, before humans became the primary contributor to animal extinctions, 
 		no more than a handful of species would go extinct per century. Today, Earth’s species are dying out en masse, 
 		at rates anywhere from 100 to 1,000 times their natural extinction rates. A product of a variety of human effects including 
 		climate change, habitat destruction, and species displacement, these rates rival those that occurred 65 million 
-		years ago, during the dinosaur extinction.  </p>
+		years ago, during the dinosaur extinction.  </p>-->
 
 		<p class="mobile-only">
 			See the full interactive on your desktop.
+		</p>
+		<p class="ie-only">
+			See the full interactive with <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>, 
+			<a href="https://www.apple.com/safari/" target="_blank">Safari</a>, 
+			or <a href="https://www.google.com/intl/en-US/chrome/browser/" target="_blank">Chrome</a>
 		</p>
 		<div class="loadandscroll">
 		<span>
@@ -139,6 +181,12 @@
 		</div>
 		
 		</span>
+		<p class="scrollcommand" id="scrollcommandid">SCROLL</p>
+		</div>
+
+		<div class=contributorbox>
+		<p class="contributortitle">ADDITIONAL DESIGN & DEVELOPMENT</p>
+		<p class="contributor"><a href="http://www.propublica.org/site/author/lena_groeger" target="_blank">Lena Groeger</a> and <a href="http://www.propublica.org/site/author/sisi_wei" target="_blank">Sisi Wei</a></p>
 		</div>
 
 		</div>
@@ -399,6 +447,7 @@ function msieversion() {
 
 
 if ((window.innerWidth > 768)&&(!(msieversion()))) {
+console.log("NOT IE")
 //if (screen && screen.width > 480) {
 //console.log(screen.width)
 document.write('<script type="text/javascript" src="js/annasprogress.js"><\/script>');
