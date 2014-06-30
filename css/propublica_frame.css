@@ -35,11 +35,17 @@
 }
 
 #banner-logo a {
-	background: url('//s3.amazonaws.com/propublica/images/logo_134x75.png') no-repeat scroll 0 0 transparent;
+/*	background: url('//s3.amazonaws.com/propublica/images/logo_134x75.png') no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 98px;
+	padding-right: 15px;
+	width: 183px;*/
+	background: url('//s3.amazonaws.com/propublica/images/logo_134x75.png') no-repeat scroll 32px 10px rgba(0, 0, 0, 0);
 	display: block;
 	height: 98px;
 	padding-right: 15px;
 	width: 183px;
+	background-size: 100px;
 }
 
 #banner-identity #app-tagline {
@@ -47,7 +53,7 @@
 	font-size: 16px;
 	text-indent: 0;
 	position: absolute;
-	top: 36px;
+	top: 34px;
 	left: 179px;
 	color: black;
 	text-align: left;
