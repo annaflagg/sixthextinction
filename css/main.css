@@ -529,17 +529,11 @@ z-index:11;
 }
 
 .copy .h1 {
-font-family: Open Sans;
-font-size: 40px;
-letter-spacing: 3px;
+font-family: "ff-meta-serif-web-1","ff-meta-serif-web-2","Georgia",serif;
+font-size: 46px;
 font-weight: 600;
--webkit-transform-style: preserve-3d;
-
-/*
-font-size: 48px;
-font-weight: 500;
-margin-top:55px;*/
 pointer-events: all;
+margin: -5px 0 15px 0;
 }
 
 .copy .byline {
