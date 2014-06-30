@@ -411,12 +411,12 @@
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"chapini"	"Chapin's Chameleon, Gray Chameleon"	"LC"	94	4
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"cristatus"	"Sail Backed Chameleon, Crested Chameleon"	"LC"	94	5
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"feae"	"Bioko Montane Chameleon"	"NT"	94	2
-"SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"hoehnelii"	"Kenyan High-casqued Chameleon, Von Höhnel's Chameleon, Helmeted Chameleon, High-casqued Chameleon"	"LC"	94	6
+"SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"hoehnelii"	"Kenyan High-casqued Chameleon, Von Hohnel's Chameleon, Helmeted Chameleon, High-casqued Chameleon"	"LC"	94	6
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"incornutus"	"Ukinga Hornless Chameleon, Poroto Mountain Chameleon"	"VU"	94	0
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"ituriensis"	"Ituri Forest Chameleon"	"LC"	94	7
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"laterispinis"	"Spiny-sided Chameleon, Spiny-flanked Chameleon"	"VU"	94	1
 "SQUAMATA"	"CHAMAELEONIDAE"	"Trioceros"	"montium"	"Cameroon Two-horned Mountain Chameleo, Cameroon Sailfin Chameleon"	"NT"	94	3
-"SQUAMATA"	"COLUBRIDAE"	"Ahaetulla"	"dispar"	"Günther's Vine Snake"	"NT"	95	1
+"SQUAMATA"	"COLUBRIDAE"	"Ahaetulla"	"dispar"	"Gunther's Vine Snake"	"NT"	95	1
 "SQUAMATA"	"COLUBRIDAE"	"Ahaetulla"	"fasciolata"	"Speckle-headed Vine Snake"	"LC"	95	2
 "SQUAMATA"	"COLUBRIDAE"	"Ahaetulla"	"fronticincta"	"River Vine Snake"	"LC"	95	3
 "SQUAMATA"	"COLUBRIDAE"	"Ahaetulla"	"mycterizans"	"Malayan Vine Snake"	"LC"	95	4
@@ -604,7 +604,7 @@
 "SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"booliati"	"Boo-Liat's Kukri Snake"	"CR"	146	0
 "SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"brevicauda"	"Short-tailed Kukri Snake"	"VU"	146	2
 "SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"chinensis"	"Chinese Kukri Snake"	"LC"	146	14
-"SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"cinereus"	"Ashy Kukri Snake, Black Cross-barred Kukri Snake, Golden Kukri Snake, Gönther's Kukri Snake"	"LC"	146	15
+"SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"cinereus"	"Ashy Kukri Snake, Black Cross-barred Kukri Snake, Golden Kukri Snake"	"LC"	146	15
 "SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"cruentatus"	"Pegu Kukri Snake"	"LC"	146	16
 "SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"cyclurus"	"Cantor's Kukri Snake, North-east Indian Kukri Snake"	"LC"	146	17
 "SQUAMATA"	"COLUBRIDAE"	"Oligodon"	"deuvei"		"LC"	146	18
@@ -908,7 +908,7 @@
 "SQUAMATA"	"DIPSADIDAE"	"Amastridium"	"veliferum"	"Rustyhead Snake"	"LC"	208	1
 "SQUAMATA"	"DIPSADIDAE"	"Apostolepis"	"multicincta"		"NT"	209	0
 "SQUAMATA"	"DIPSADIDAE"	"Apostolepis"	"phillipsae"		"LC"	209	1
-"SQUAMATA"	"DIPSADIDAE"	"Arrhyton"	"taeniatum"	"Günther's Island Racer"	"LC"	210	0
+"SQUAMATA"	"DIPSADIDAE"	"Arrhyton"	"taeniatum"	"Gunther's Island Racer"	"LC"	210	0
 "SQUAMATA"	"DIPSADIDAE"	"Atractus"	"albuquerquei"	"Albuquerque Ground Snake"	"LC"	211	3
 "SQUAMATA"	"DIPSADIDAE"	"Atractus"	"bocourti"	"Bocourt's Ground Snake"	"LC"	211	4
 "SQUAMATA"	"DIPSADIDAE"	"Atractus"	"crassicaudatus"	"Thickhead Ground Snake"	"LC"	211	5
@@ -1030,14 +1030,14 @@
 "SQUAMATA"	"DIPSADIDAE"	"Phalotris"	"tricolor"		"LC"	247	1
 "SQUAMATA"	"DIPSADIDAE"	"Philodryas"	"argenteus"	"Diurnal Vine Snake, Lance-headed Vine Snake"	"LC"	248	1
 "SQUAMATA"	"DIPSADIDAE"	"Philodryas"	"livida"		"VU"	248	0
-"SQUAMATA"	"DIPSADIDAE"	"Philodryas"	"psammophidea"	"Günther's Green Racer"	"LC"	248	2
+"SQUAMATA"	"DIPSADIDAE"	"Philodryas"	"psammophidea"	"Gunther's Green Racer"	"LC"	248	2
 "SQUAMATA"	"DIPSADIDAE"	"Philodryas"	"tachymenoides"	"Schmidt's Green Racer"	"LC"	248	3
 "SQUAMATA"	"DIPSADIDAE"	"Philodryas"	"varia"	"Jan's Green Racer"	"LC"	248	4
 "SQUAMATA"	"DIPSADIDAE"	"Pliocercus"	"bicolor"		"LC"	249	0
 "SQUAMATA"	"DIPSADIDAE"	"Pliocercus"	"elapoides"		"LC"	249	1
 "SQUAMATA"	"DIPSADIDAE"	"Pliocercus"	"euryzonus"	"Black Halloween Snake, Cope's False Coral Snake"	"LC"	249	2
 "SQUAMATA"	"DIPSADIDAE"	"Pseudalsophis"	"elegans"		"LC"	250	0
-"SQUAMATA"	"DIPSADIDAE"	"Pseudoboa"	"haasi"	"Paraná False Boa"	"LC"	251	0
+"SQUAMATA"	"DIPSADIDAE"	"Pseudoboa"	"haasi"	"Parana False Boa"	"LC"	251	0
 "SQUAMATA"	"DIPSADIDAE"	"Pseudoeryx"	"plicatilis"	"South American Pond Snake"	"LC"	252	0
 "SQUAMATA"	"DIPSADIDAE"	"Pseudoleptodeira"	"latifasciata"	"False Cat-eyed Snake"	"LC"	253	0
 "SQUAMATA"	"DIPSADIDAE"	"Psomophis"	"obtusus"	"Wide Ground Snake"	"LC"	254	0
@@ -1078,7 +1078,7 @@
 "SQUAMATA"	"DIPSADIDAE"	"Thamnodynastes"	"pallidus"	"Amazon Coastal House Snake"	"LC"	264	2
 "SQUAMATA"	"DIPSADIDAE"	"Thamnodynastes"	"strigatus"	"Coastal House Snake"	"LC"	264	3
 "SQUAMATA"	"DIPSADIDAE"	"Thermophis"	"baileyi"		"VU"	265	0
-"SQUAMATA"	"DIPSADIDAE"	"Trimetopon"	"gracile"	"Günther's Tropical Ground Snake"	"LC"	266	3
+"SQUAMATA"	"DIPSADIDAE"	"Trimetopon"	"gracile"	"Gunther's Tropical Ground Snake"	"LC"	266	3
 "SQUAMATA"	"DIPSADIDAE"	"Trimetopon"	"pliolepis"	"Cope's Tropical Ground Snake"	"LC"	266	4
 "SQUAMATA"	"DIPSADIDAE"	"Trimetopon"	"simile"	"Dunn's Tropical Ground Snake"	"EN"	266	1
 "SQUAMATA"	"DIPSADIDAE"	"Trimetopon"	"slevini"	"Slevin's Tropical Ground Snake"	"NT"	266	2
@@ -1099,7 +1099,7 @@
 "SQUAMATA"	"ELAPIDAE"	"Aipysurus"	"foliosquama"	"Leaf-scaled Sea Snake"	"CR"	274	1
 "SQUAMATA"	"ELAPIDAE"	"Aipysurus"	"fuscus"	"Dusky Sea Snake, Timor Reef Snake"	"EN"	274	2
 "SQUAMATA"	"ELAPIDAE"	"Aipysurus"	"laevis"	"Olive-brown Sea Snake, Olive Sea Snake"	"LC"	274	5
-"SQUAMATA"	"ELAPIDAE"	"Aspidomorphus"	"muelleri"	"Müller's Crowned Snake, Müller's Crown Snake"	"LC"	275	0
+"SQUAMATA"	"ELAPIDAE"	"Aspidomorphus"	"muelleri"	"Muller's Crowned Snake, Muller's Crown Snake"	"LC"	275	0
 "SQUAMATA"	"ELAPIDAE"	"Astrotia"	"stokesii"	"Stokes' Sea Snake"	"LC"	276	0
 "SQUAMATA"	"ELAPIDAE"	"Austrelaps"	"labialis"	"Pygmy Copperhead"	"VU"	277	0
 "SQUAMATA"	"ELAPIDAE"	"Bungarus"	"andamanensis"	"Andaman's Krait, South Andaman Krait"	"VU"	278	0
@@ -1185,7 +1185,7 @@
 "SQUAMATA"	"ELAPIDAE"	"Micrurus"	"limbatus"		"LC"	301	15
 "SQUAMATA"	"ELAPIDAE"	"Micrurus"	"mosquitensis"		"LC"	301	16
 "SQUAMATA"	"ELAPIDAE"	"Micrurus"	"multifasciatus"	"Many-banded Coral Snake"	"LC"	301	17
-"SQUAMATA"	"ELAPIDAE"	"Micrurus"	"paraensis"	"Pará Coral Snake"	"LC"	301	18
+"SQUAMATA"	"ELAPIDAE"	"Micrurus"	"paraensis"	"Para Coral Snake"	"LC"	301	18
 "SQUAMATA"	"ELAPIDAE"	"Micrurus"	"proximans"		"LC"	301	19
 "SQUAMATA"	"ELAPIDAE"	"Micrurus"	"pyrrhocryptus"	"Argentinian Coral Snake"	"LC"	301	20
 "SQUAMATA"	"ELAPIDAE"	"Micrurus"	"ruatanus"	"Roatan Coral Snake"	"CR"	301	0
@@ -1460,7 +1460,7 @@
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"dorsivittata"		"NT"	358	16
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"flavigularis"	"Yellow-throated Day Gecko"	"EN"	358	3
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"grandis"	"Giant Madagascar Day Gecko"	"LC"	358	25
-"SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"guentheri"	"Round Island Day Gecko, Günther's Gecko"	"EN"	358	4
+"SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"guentheri"	"Round Island Day Gecko, Gunther's Gecko"	"EN"	358	4
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"guttata"		"LC"	358	26
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"hielscheri"		"VU"	358	12
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"klemmeri"		"EN"	358	5
@@ -1480,7 +1480,7 @@
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"quadriocellata"	"Peacock Day Gecko"	"LC"	358	35
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"ravenala"		"LC"	358	36
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"robertmertensi"	"Mertens' Day Gecko"	"EN"	358	6
-"SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"roesleri"	"Rösler's Day Gecko"	"EN"	358	7
+"SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"roesleri"	"Rosler's Day Gecko"	"EN"	358	7
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"seippi"		"EN"	358	8
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"serraticauda"		"EN"	358	9
 "SQUAMATA"	"GEKKONIDAE"	"Phelsuma"	"standingi"	"Standing's Day Gecko, Banded Day Gecko"	"VU"	358	14
@@ -1560,7 +1560,7 @@
 "SQUAMATA"	"GYMNOPHTHALMIDAE"	"Cercosaura"	"argulus"	"Elegant Eyed Lizard"	"LC"	380	0
 "SQUAMATA"	"GYMNOPHTHALMIDAE"	"Cercosaura"	"schreibersii"	"Schreibers' Many-fingered Teiid"	"LC"	380	1
 "SQUAMATA"	"GYMNOPHTHALMIDAE"	"Echinosaura"	"panamensis"		"LC"	381	0
-"SQUAMATA"	"GYMNOPHTHALMIDAE"	"Euspondylus"	"guentheri"	"Günther's Sun Tegus"	"LC"	382	0
+"SQUAMATA"	"GYMNOPHTHALMIDAE"	"Euspondylus"	"guentheri"	"Gunther's Sun Tegus"	"LC"	382	0
 "SQUAMATA"	"GYMNOPHTHALMIDAE"	"Gymnophthalmus"	"lineatus"		"LC"	383	1
 "SQUAMATA"	"GYMNOPHTHALMIDAE"	"Gymnophthalmus"	"pleii"	"Rough-scaled Worm Lizard "	"EN"	383	0
 "SQUAMATA"	"GYMNOPHTHALMIDAE"	"Gymnophthalmus"	"underwoodi"	"Underwood's Spectacled Tegu"	"LC"	383	2
@@ -1605,22 +1605,22 @@
 "SQUAMATA"	"HOMALOPSIDAE"	"Homalopsis"	"buccata"	"Banded Swamp Snake, Dog-face Water Snake, Linne's Water Snake, Masked Water Snake, Puff-faced Water Snake, Puff-face Water Snake"	"LC"	400	0
 "SQUAMATA"	"HOMALOPSIDAE"	"Homalopsis"	"nigroventralis"	"Deuve's Water Snake"	"LC"	400	1
 "SQUAMATA"	"HOMALOPSIDAE"	"Myron"	"richardsonii"	"Gray's Water Snake, Richardson's Freshwater Snake, Richardson's Grey Mangrove Snake, Richardson's Mangrove Snake, The Australian Myron, The Tree-striped Myron"	"LC"	401	0
-"SQUAMATA"	"IGUANIDAE"	"Amblyrhynchus"	"cristatus"	"Fernandina Marine Iguana, Sea Iguana, Galápagos Marine Iguana, Marine Iguana, Galapagos Marine Iguana"	"VU"	402	0
+"SQUAMATA"	"IGUANIDAE"	"Amblyrhynchus"	"cristatus"	"Fernandina Marine Iguana, Sea Iguana, Galapagos Marine Iguana, Marine Iguana, Galapagos Marine Iguana"	"VU"	402	0
 "SQUAMATA"	"IGUANIDAE"	"Brachylophus"	"bulabula"	"Fiji Banded Iguana, Fijian Banded Iguana, Central Fijian Banded Iguana"	"EN"	403	1
 "SQUAMATA"	"IGUANIDAE"	"Brachylophus"	"fasciatus"	"Lau Banded Iguana, South Pacific Banded Iguana, Fiji Banded Iguana, Tongan Banded Iguana"	"EN"	403	2
 "SQUAMATA"	"IGUANIDAE"	"Brachylophus"	"vitiensis"	"Fiji Crested Iguana, Fijian Crested Iguana"	"CR"	403	0
-"SQUAMATA"	"IGUANIDAE"	"Conolophus"	"marthae"	"Galápagos Pink Land Iguana, Pink Iguana"	"CR"	404	0
+"SQUAMATA"	"IGUANIDAE"	"Conolophus"	"marthae"	"Galapagos Pink Land Iguana, Pink Iguana"	"CR"	404	0
 "SQUAMATA"	"IGUANIDAE"	"Conolophus"	"pallidus"	"Santa Fe Land Iguana, Barrington Land Iguana"	"VU"	404	1
-"SQUAMATA"	"IGUANIDAE"	"Conolophus"	"subcristatus"	"Common Land Iguana, Galápagos Land Iguana, Galapagos Land Iguana"	"VU"	404	2
+"SQUAMATA"	"IGUANIDAE"	"Conolophus"	"subcristatus"	"Common Land Iguana, Galapagos Land Iguana, Galapagos Land Iguana"	"VU"	404	2
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"alfredschmidti"	"Campeche Spiny-tailed Iguana"	"NT"	405	10
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"bakeri"	"Utila Spiny-tailed Iguana, Baker's Spinytail Iguana, Swamper"	"CR"	405	0
-"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"clarki"	"Balsas Spiny-tailed Iguana, Balsas Armed Lizard, Michoacán Dwarf Spiny-tailed Iguana"	"VU"	405	7
-"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"defensor"	"Yucatán Spiny-tailed Iguana"	"VU"	405	8
+"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"clarki"	"Balsas Spiny-tailed Iguana, Balsas Armed Lizard, Michoacan Dwarf Spiny-tailed Iguana"	"VU"	405	7
+"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"defensor"	"Yucatan Spiny-tailed Iguana"	"VU"	405	8
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"flavidorsalis"	"Yellow-backed Spiny-tailed Iguana"	"EN"	405	2
-"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"melanosterna"	"Black-chested Spiny-tailed Iguana, Rio Aguán Iguana, Cayos Cochinos Iguana, Aguán Valley Iguana"	"EN"	405	3
+"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"melanosterna"	"Black-chested Spiny-tailed Iguana, Rio Aguan Iguana, Cayos Cochinos Iguana, Aguan Valley Iguana"	"EN"	405	3
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"nolascensis"	"Nolasco Spiny-tailed Iguana, San Pedro Nolasco Spiny-tailed Iguana"	"VU"	405	9
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"oaxacana"	"Oaxaca Spiny-tailed Iguana"	"CR"	405	1
-"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"oedirhina"	"Roatán Spiny-tailed Iguana, Wishywilly, De Queiroz's Spiny-tailed Iguana"	"EN"	405	4
+"SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"oedirhina"	"Roatan Spiny-tailed Iguana, Wishywilly, De Queiroz's Spiny-tailed Iguana"	"EN"	405	4
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"palearis"	"Motagua Spiny-tailed Iguana, Guatemalan Black Iguana, Guatemalan Spiny-tailed Iguana"	"EN"	405	5
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"quinquecariniata"	"Five-keeled Spiny-tailed Iguana, Oaxacan Spinytail Iguana, Oaxacan Spiny-tailed Iguana"	"EN"	405	6
 "SQUAMATA"	"IGUANIDAE"	"Ctenosaura"	"similis"	"Common Spiny-tailed Iguana, Black Iguana, Black Spiny-tailed Iguana"	"LC"	405	11
@@ -1853,7 +1853,7 @@
 "SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"leucomystax"	"White-lipped Keelback"	"LC"	463	9
 "SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"metusia"	"Wa Shan Keelback"	"EN"	463	0
 "SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"miyajimae"	"Maki's Keelback"	"VU"	463	1
-"SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"modestum"	"Günther's Keelback"	"LC"	463	10
+"SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"modestum"	"Gunther's Keelback"	"LC"	463	10
 "SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"monticola"	"Hill Keelback, Montane Keelback, Wynad Keelback"	"LC"	463	11
 "SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"petersii"	"Peters's Keelback"	"LC"	463	12
 "SQUAMATA"	"NATRICIDAE"	"Amphiesma"	"popei"	"Pope's Keelback"	"LC"	463	13
@@ -2143,9 +2143,9 @@
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"angustimentalis"	"East Canary Gecko"	"LC"	506	5
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"boavistensis"	"Boavista Wall Gecko"	"VU"	506	1
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"bocagei"	"Bocage's Wall Gecko"	"LC"	506	6
-"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"boehmei"	"Böhme's Gecko"	"LC"	506	7
+"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"boehmei"	"Bohme's Gecko"	"LC"	506	7
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"boettgeri"	"Boettger's Wall Gecko, Gran Canaria Gecko"	"LC"	506	8
-"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"caboverdiana"	"Santo Antão Wall Gecko, Cape Verde Wall Gecko"	"LC"	506	9
+"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"caboverdiana"	"Santo Antao Wall Gecko, Cape Verde Wall Gecko"	"LC"	506	9
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"chazaliae"	"Helmethead Gecko"	"VU"	506	2
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"darwini"	"Darwin's Wall Gecko"	"LC"	506	10
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"delalandii"	"Tenerife Gecko, Tenerife Wall Gecko"	"LC"	506	11
@@ -2157,12 +2157,12 @@
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"mauritanica"	"Common Wall Gecko, Moorish Gecko"	"LC"	506	16
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"mindiae"	"Qattara Gecko"	"LC"	506	17
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"neglecta"	"Algerian Wall Gecko"	"LC"	506	18
-"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"nicolauensis"	"São Nicolau Wall Gecko"	"LC"	506	19
+"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"nicolauensis"	"Sao Nicolau Wall Gecko"	"LC"	506	19
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"pastoria"		"LC"	506	20
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"protogigas"		"LC"	506	21
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"raziana"		"NT"	506	3
 "SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"senegambiae"		"LC"	506	22
-"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"substituta"	"São Vicente Wall Gecko"	"LC"	506	23
+"SQUAMATA"	"PHYLLODACTYLIDAE"	"Tarentola"	"substituta"	"Sao Vicente Wall Gecko"	"LC"	506	23
 "SQUAMATA"	"PROSYMNIDAE"	"Prosymna"	"ambigua"	"Angolan Shovel-snout, East African Shovel-snout"	"LC"	507	1
 "SQUAMATA"	"PROSYMNIDAE"	"Prosymna"	"angolensis"	"Angola Shovel-snout"	"LC"	507	2
 "SQUAMATA"	"PROSYMNIDAE"	"Prosymna"	"janii"	"Jan's Shoval-snout, Mozambique Shovel-snout"	"LC"	507	3
@@ -2192,7 +2192,7 @@
 "SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Compsophis"	"laphystius"		"LC"	517	6
 "SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Compsophis"	"vinckei"		"CR"	517	0
 "SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Compsophis"	"zeny"		"VU"	517	1
-"SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Ditypophis"	"vivax"	"Günther's Racer"	"LC"	518	0
+"SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Ditypophis"	"vivax"	"Gunther's Racer"	"LC"	518	0
 "SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Dromicodryas"	"bernieri"		"LC"	519	0
 "SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Dromicodryas"	"quadrilineatus"		"LC"	519	1
 "SQUAMATA"	"PSEUDOXYRHOPHIIDAE"	"Duberria"	"lutrix"	"Common Slug Eater, Slug-eater"	"LC"	520	0
@@ -2358,7 +2358,7 @@
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"colosii"	"Riffian Skink"	"LC"	559	13
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"delislei"	"De l'Isle's Wedge-snouted Skink"	"LC"	559	14
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"ebneri"	"Ebner's Skink"	"CR"	559	0
-"SQUAMATA"	"SCINCIDAE"	"Chalcides"	"guentheri"	"Günther's Cylindrical Skink"	"VU"	559	4
+"SQUAMATA"	"SCINCIDAE"	"Chalcides"	"guentheri"	"Gunther's Cylindrical Skink"	"VU"	559	4
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"lanzai"		"NT"	559	9
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"manueli"	"Manuel's Skink"	"VU"	559	5
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"mauritanicus"	"Two-fingered Skink"	"EN"	559	1
@@ -2378,8 +2378,8 @@
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"thierryi"	"Thierry's Cylindrical Skink"	"LC"	559	23
 "SQUAMATA"	"SCINCIDAE"	"Chalcides"	"viridanus"	"West Canary Skink"	"LC"	559	24
 "SQUAMATA"	"SCINCIDAE"	"Chioninia"	"delalandii"	"Delalande's Skink"	"LC"	560	2
-"SQUAMATA"	"SCINCIDAE"	"Chioninia"	"fogoensis"	"Santo Antão Skink, Fogo's Mabuya, Fogo's Skink"	"LC"	560	3
-"SQUAMATA"	"SCINCIDAE"	"Chioninia"	"nicolauensis"	"São Nicolau Skink"	"LC"	560	4
+"SQUAMATA"	"SCINCIDAE"	"Chioninia"	"fogoensis"	"Santo Antao Skink, Fogo's Mabuya, Fogo's Skink"	"LC"	560	3
+"SQUAMATA"	"SCINCIDAE"	"Chioninia"	"nicolauensis"	"Sao Nicolau Skink"	"LC"	560	4
 "SQUAMATA"	"SCINCIDAE"	"Chioninia"	"spinalis"		"LC"	560	5
 "SQUAMATA"	"SCINCIDAE"	"Chioninia"	"stangeri"	"Stanger's Skink"	"NT"	560	1
 "SQUAMATA"	"SCINCIDAE"	"Chioninia"	"vaillantii"	"Vaillant's Mabuya"	"EN"	560	0
@@ -2421,7 +2421,7 @@
 "SQUAMATA"	"SCINCIDAE"	"Emoia"	"flavigularis"	"Yellow-throated Skink, Yellow-throated Emo Skink"	"LC"	568	20
 "SQUAMATA"	"SCINCIDAE"	"Emoia"	"impar"	"Dark-bellied Copper-striped Skink, Azure-tailed Skink"	"LC"	568	21
 "SQUAMATA"	"SCINCIDAE"	"Emoia"	"isolata"	"Bellona Skink, Isolated Emo Skink"	"LC"	568	22
-"SQUAMATA"	"SCINCIDAE"	"Emoia"	"lawesi"	"Olive Small-scaled Skink, Günther's Emo Skink"	"EN"	568	6
+"SQUAMATA"	"SCINCIDAE"	"Emoia"	"lawesi"	"Olive Small-scaled Skink, Gunther's Emo Skink"	"EN"	568	6
 "SQUAMATA"	"SCINCIDAE"	"Emoia"	"loveridgei"	"Loveridge's Skink"	"LC"	568	23
 "SQUAMATA"	"SCINCIDAE"	"Emoia"	"loyaltiensis"	"Loyalty Islands Emoia, Roux's Emo Skink"	"VU"	568	12
 "SQUAMATA"	"SCINCIDAE"	"Emoia"	"maculata"	"Spotted Blue-tailed Skink, Spotted Emo Skink"	"LC"	568	24
@@ -2514,7 +2514,7 @@
 "SQUAMATA"	"SCINCIDAE"	"Lipinia"	"rouxi"	"Roux's Lipinia"	"LC"	594	4
 "SQUAMATA"	"SCINCIDAE"	"Lygisaurus"	"sesbrauna"	"Eastern Cape Litter-skink"	"LC"	595	0
 "SQUAMATA"	"SCINCIDAE"	"Lygosoma"	"ashwamedhi"	"Ashwamedh Writhing Skink"	"VU"	596	0
-"SQUAMATA"	"SCINCIDAE"	"Lygosoma"	"guentheri"	"Günther's Writhing Snake"	"LC"	596	1
+"SQUAMATA"	"SCINCIDAE"	"Lygosoma"	"guentheri"	"Gunther's Writhing Snake"	"LC"	596	1
 "SQUAMATA"	"SCINCIDAE"	"Lygosoma"	"haroldyoungi"	"Banded Supple Skink, Harold's Writhing Skink"	"LC"	596	2
 "SQUAMATA"	"SCINCIDAE"	"Lygosoma"	"koratense"	"Korat Supple Skink, Korat Writhing Skink"	"LC"	596	3
 "SQUAMATA"	"SCINCIDAE"	"Lygosoma"	"lineata"	"Lined Supple Skink"	"LC"	596	4
@@ -2529,7 +2529,7 @@
 "SQUAMATA"	"SCINCIDAE"	"Madascincus"	"stumpffi"	"Stumpff's Skink"	"NT"	597	3
 "SQUAMATA"	"SCINCIDAE"	"Marisora"	"alliacea"		"LC"	598	1
 "SQUAMATA"	"SCINCIDAE"	"Marisora"	"brachypoda"		"LC"	598	2
-"SQUAMATA"	"SCINCIDAE"	"Marisora"	"roatanae"	"Roatán Skink"	"CR"	598	0
+"SQUAMATA"	"SCINCIDAE"	"Marisora"	"roatanae"	"Roatan Skink"	"CR"	598	0
 "SQUAMATA"	"SCINCIDAE"	"Marmorosphax"	"boulinda"		"VU"	599	2
 "SQUAMATA"	"SCINCIDAE"	"Marmorosphax"	"kaala"		"CR"	599	0
 "SQUAMATA"	"SCINCIDAE"	"Marmorosphax"	"montana"	"Montane Marble-throated Skink"	"VU"	599	3
@@ -2628,7 +2628,7 @@
 "SQUAMATA"	"SCINCIDAE"	"Ristella"	"beddomii"	"Beddome's Cat Skink, Beddome's Ristella"	"LC"	622	0
 "SQUAMATA"	"SCINCIDAE"	"Saproscincus"	"czechurai"	"Czechuras Litter-skink, Northern Shade Skink, Wedge-snouted Shadeskink"	"LC"	623	0
 "SQUAMATA"	"SCINCIDAE"	"Scelotes"	"gronovii"	"Gronovi's Dwarf Burrowing Skink"	"LR/nt"	624	3
-"SQUAMATA"	"SCINCIDAE"	"Scelotes"	"guentheri"	"Günther's Burrowing Skink, Günther's Dwarf Burrowing Skink"	"VU"	624	1
+"SQUAMATA"	"SCINCIDAE"	"Scelotes"	"guentheri"	"Gunther's Burrowing Skink, Gunther's Dwarf Burrowing Skink"	"VU"	624	1
 "SQUAMATA"	"SCINCIDAE"	"Scelotes"	"inornatus"	"Legless Burrowing Skink, Smith's Dwarf Burrowing Skink"	"EN"	624	0
 "SQUAMATA"	"SCINCIDAE"	"Scelotes"	"kasneri"	"Kasner's Dwarf Burrowing Skink"	"VU"	624	2
 "SQUAMATA"	"SCINCIDAE"	"Scelotes"	"mossambicus"	"Mozambique Dwarf Burrowing Skink"	"LC"	624	4
@@ -2731,7 +2731,7 @@
 "SQUAMATA"	"SCINCIDAE"	"Voeltzkowia"	"petiti"		"NT"	641	1
 "SQUAMATA"	"SCINCIDAE"	"Voeltzkowia"	"rubrocaudata"		"LC"	641	4
 "SQUAMATA"	"SPHAERODACTYLIDAE"	"Aristelliger"	"lar"	"Hispaniolan Giant Gecko, Spotted Caribbean Gecko"	"NT"	642	0
-"SQUAMATA"	"SPHAERODACTYLIDAE"	"Coleodactylus"	"septentrionalis"	"Ilha Maracá Gecko"	"LC"	643	0
+"SQUAMATA"	"SPHAERODACTYLIDAE"	"Coleodactylus"	"septentrionalis"	"Ilha Maraca Gecko"	"LC"	643	0
 "SQUAMATA"	"SPHAERODACTYLIDAE"	"Euleptes"	"europaea"	"European Leaf-toed Gecko"	"NT"	644	0
 "SQUAMATA"	"SPHAERODACTYLIDAE"	"Gonatodes"	"caudiscutatus"	"Shieldhead Gecko"	"LC"	645	1
 "SQUAMATA"	"SPHAERODACTYLIDAE"	"Gonatodes"	"daudini"	"Grenadines Clawed Gecko, Union Island Gecko"	"CR"	645	0
@@ -2939,7 +2939,7 @@
 "SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"lazelli"		"CR"	678	0
 "SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"microstomus"		"LC"	678	18
 "SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"monensis"	"Mona Blind Snake"	"EN"	678	3
-"SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"muelleri"	"Müller's Blind Snake"	"LC"	678	19
+"SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"muelleri"	"Muller's Blind Snake"	"LC"	678	19
 "SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"pammeces"	"South India Worm Snake, South Indian Blind Snake"	"LC"	678	20
 "SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"reticulatus"	"Reticulate Worm Snake"	"LC"	678	21
 "SQUAMATA"	"TYPHLOPIDAE"	"Typhlops"	"ruber"	"Samar Blind Snake"	"LC"	678	22
@@ -3108,7 +3108,7 @@
 "SQUAMATA"	"VIPERIDAE"	"Popeia"	"sabahi"	"Sabah Pit Viper"	"LC"	716	5
 "SQUAMATA"	"VIPERIDAE"	"Porthidium"	"dunni"	"Dunn's Hognose Viper"	"LC"	717	0
 "SQUAMATA"	"VIPERIDAE"	"Porthidium"	"nasutum"	"Hognosed Pit Viper, Víbora de Hoja Nasal"	"LC"	717	1
-"SQUAMATA"	"VIPERIDAE"	"Porthidium"	"yucatanicum"	"Yucatán Hognose Viper"	"LC"	717	2
+"SQUAMATA"	"VIPERIDAE"	"Porthidium"	"yucatanicum"	"Yucatan Hognose Viper"	"LC"	717	2
 "SQUAMATA"	"VIPERIDAE"	"Protobothrops"	"cornutus"	"Horned Pit Viper"	"NT"	718	3
 "SQUAMATA"	"VIPERIDAE"	"Protobothrops"	"jerdonii"	"Jerdon's Pitviper, Oriental pitviper, Yellow Speckled Lancehead"	"LC"	718	4
 "SQUAMATA"	"VIPERIDAE"	"Protobothrops"	"mangshanensis"	"Mangshan Pit Viper, Mang Mountain Pit Viper, Mt. Mang Pit Viper"	"EN"	718	0
@@ -3260,7 +3260,7 @@
 "TESTUDINES"	"EMYDIDAE"	"Terrapene"	"carolina"	"Eastern Box Turtle, Mexican Box Turtle, American Box Turtle, Common Box Turtle, Yucatan Box Turtle"	"VU"	763	1
 "TESTUDINES"	"EMYDIDAE"	"Terrapene"	"coahuila"	"Coahuila Box Turtle, Water Box Turtle, Coahuila Box Terrapin, Aquatic Box Terrapin, Coahuila Box Turtle, Aquatic Box Turtle"	"EN"	763	0
 "TESTUDINES"	"EMYDIDAE"	"Terrapene"	"ornata"	"Ornate Box Turtle, Western Box Turtle"	"NT"	763	2
-"TESTUDINES"	"EMYDIDAE"	"Trachemys"	"adiutrix"	"Carvalho's Slider, Maranhão Slider"	"EN"	764	0
+"TESTUDINES"	"EMYDIDAE"	"Trachemys"	"adiutrix"	"Carvalho's Slider, Maranhao Slider"	"EN"	764	0
 "TESTUDINES"	"EMYDIDAE"	"Trachemys"	"decorata"	"Haitian Slider, Hispaniolan Elegant Slider, Hispaniolan Slider, Jicotea"	"VU"	764	2
 "TESTUDINES"	"EMYDIDAE"	"Trachemys"	"gaigeae"	"Big Bend Slider, Mexican Plateau Slider"	"VU"	764	3
 "TESTUDINES"	"EMYDIDAE"	"Trachemys"	"ornata"	"Ornate Slider"	"VU"	764	4

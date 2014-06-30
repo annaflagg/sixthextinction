@@ -421,7 +421,7 @@
 "ANURA"	"BUFONIDAE"	"Atelopus"	"spumarius"		"VU"	39	82
 "ANURA"	"BUFONIDAE"	"Atelopus"	"spurrelli"		"VU"	39	83
 "ANURA"	"BUFONIDAE"	"Atelopus"	"subornatus"		"CR"	39	69
-"ANURA"	"BUFONIDAE"	"Atelopus"	"tamaense"	"Tamá Harlequin Frog"	"CR"	39	70
+"ANURA"	"BUFONIDAE"	"Atelopus"	"tamaense"	"Tama Harlequin Frog"	"CR"	39	70
 "ANURA"	"BUFONIDAE"	"Atelopus"	"tricolor"	"Three-coloured Harlequin Toad"	"VU"	39	84
 "ANURA"	"BUFONIDAE"	"Atelopus"	"varius"	"Harlequin Frog"	"CR"	39	71
 "ANURA"	"BUFONIDAE"	"Atelopus"	"walkeri"		"CR"	39	72
@@ -2693,7 +2693,7 @@
 "ANURA"	"LEPTODACTYLIDAE"	"Engystomops"	"montubio"		"LC"	232	1
 "ANURA"	"LEPTODACTYLIDAE"	"Engystomops"	"petersi"	"Peters' Dwarf Frog"	"LC"	232	2
 "ANURA"	"LEPTODACTYLIDAE"	"Engystomops"	"pustulatus"	"Guayaquil Dwarf Frog"	"LC"	232	3
-"ANURA"	"LEPTODACTYLIDAE"	"Engystomops"	"pustulosus"	"Tungara Frog, Túngara Frog"	"LC"	232	4
+"ANURA"	"LEPTODACTYLIDAE"	"Engystomops"	"pustulosus"	"Tungara Frog, Tungara Frog"	"LC"	232	4
 "ANURA"	"LEPTODACTYLIDAE"	"Engystomops"	"randi"		"LC"	232	5
 "ANURA"	"LEPTODACTYLIDAE"	"Eupemphix"	"nattereri"	"Cuyaba Dwarf Frog"	"LC"	233	0
 "ANURA"	"LEPTODACTYLIDAE"	"Hydrolaetare"	"dantasi"		"LC"	234	0
@@ -2736,7 +2736,7 @@
 "ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"nesiotus"		"VU"	235	3
 "ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"notoaktites"		"LC"	235	40
 "ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"pallidirostris"		"LC"	235	41
-"ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"paraensis"	"Pará Thin-toed Frog"	"LC"	235	42
+"ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"paraensis"	"Para Thin-toed Frog"	"LC"	235	42
 "ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"pascoensis"		"VU"	235	4
 "ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"pentadactylus"		"LC"	235	43
 "ANURA"	"LEPTODACTYLIDAE"	"Leptodactylus"	"peritoaktites"	"Coastal Ecuador Smoky Jungle Frog"	"VU"	235	5
@@ -2998,7 +2998,7 @@
 "ANURA"	"MEGOPHRYIDAE"	"Brachytarsophrys"	"platyparietus"		"LC"	260	3
 "ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"baluensis"		"VU"	261	1
 "ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"brevicrus"		"VU"	261	2
-"ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"mjobergi"	"Mount Gadin Borneo Frog, Mjöberg's Dwarf Litter Frog"	"LC"	261	5
+"ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"mjobergi"	"Mount Gadin Borneo Frog, Mjoberg's Dwarf Litter Frog"	"LC"	261	5
 "ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"palmata"		"CR"	261	0
 "ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"parva"		"VU"	261	3
 "ANURA"	"MEGOPHRYIDAE"	"Leptobrachella"	"serasanae"		"VU"	261	4
@@ -3397,7 +3397,7 @@
 "ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"covacevichae"	"Magnificent Broodfrog"	"EN"	339	1
 "ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"dendyi"	"Dendy's Toadlet, Southern Toadlet"	"LC"	339	6
 "ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"douglasi"	"Douglas' Toad"	"LC"	339	7
-"ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"guentheri"	"Günther's Toadlet"	"LC"	339	8
+"ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"guentheri"	"Gunther's Toadlet"	"LC"	339	8
 "ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"major"	"Great Brown Brood-frog, Large Toadlet, Major Brood-frog"	"LC"	339	9
 "ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"occidentalis"	"Orange-crowned Toadlet, Western Toadlet"	"LC"	339	10
 "ANURA"	"MYOBATRACHIDAE"	"Pseudophryne"	"pengilleyi"	"Northern Corroboree Frog"	"EN"	339	2
@@ -3449,7 +3449,7 @@
 "ANURA"	"ODONTOPHRYNIDAE"	"Odontophrynus"	"cultripes"	"Rio Grande Escuerzo"	"LC"	347	4
 "ANURA"	"ODONTOPHRYNIDAE"	"Odontophrynus"	"lavillai"	"Cei's Escuerzo"	"LC"	347	5
 "ANURA"	"ODONTOPHRYNIDAE"	"Odontophrynus"	"occidentalis"		"LC"	347	6
-"ANURA"	"ODONTOPHRYNIDAE"	"Proceratophrys"	"appendiculata"	"Guenther's Horned Frog, Günther's Horned Frog, Gunther's Smooth Horned Frog"	"LC"	348	2
+"ANURA"	"ODONTOPHRYNIDAE"	"Proceratophrys"	"appendiculata"	"Guenther's Horned Frog, Gunther's Horned Frog, Gunther's Smooth Horned Frog"	"LC"	348	2
 "ANURA"	"ODONTOPHRYNIDAE"	"Proceratophrys"	"avelinoi"		"LC"	348	3
 "ANURA"	"ODONTOPHRYNIDAE"	"Proceratophrys"	"bigibbosa"		"NT"	348	1
 "ANURA"	"ODONTOPHRYNIDAE"	"Proceratophrys"	"boiei"		"LC"	348	4
@@ -3719,7 +3719,7 @@
 "ANURA"	"RANIDAE"	"Hylarana"	"glandulosa"		"LC"	379	34
 "ANURA"	"RANIDAE"	"Hylarana"	"gracilis"		"LC"	379	35
 "ANURA"	"RANIDAE"	"Hylarana"	"grandocula"		"LC"	379	36
-"ANURA"	"RANIDAE"	"Hylarana"	"guentheri"	"Gunther's Amoy Frog, Guenther's Amoy Frog, Guenther's Frog, Günther's Frog"	"LC"	379	37
+"ANURA"	"RANIDAE"	"Hylarana"	"guentheri"	"Gunther's Amoy Frog, Guenther's Amoy Frog, Guenther's Frog, Gunther's Frog"	"LC"	379	37
 "ANURA"	"RANIDAE"	"Hylarana"	"igorota"		"VU"	379	5
 "ANURA"	"RANIDAE"	"Hylarana"	"jimiensis"		"LC"	379	38
 "ANURA"	"RANIDAE"	"Hylarana"	"kampeni"		"LC"	379	39

@@ -1,31 +1,27 @@
-var playerready = false;
 var speed=.033;
 var mousewheelevt = "mousewheel";
 setFirefoxSpecificParms();
+window.addEventListener(mousewheelevt, function(e) { 
+      		mousewheel(e);
+});
+console.log("Adding mousewheel listener")
+
+
 frogplayer = videojs("frogvideo");
 frogplayer.on('loadeddata', function(){ 
-		scrollToTop();
+	incrementProgress();
       	playerready=true;
       	
-      	frogplayer.play();
-      	setTimeout(function() {frogplayer.pause(); frogplayer.currentTime(0);}, 10)
-      	frogplayer.currentTime(0);
-      		
-      	//$(window).scrollTop(0);
-      	//$('html,body').scrollTop(0);
-      	//$('html,body').animate({scrollTop:0}, 'slow');
-      	//console.log($(window))
-      	//frogplayer.play()
-      	console.log("frog loaded")
-		//frogplayer.play();
-		incrementProgress();
+      	resetFrog();
+});
 
-		window.addEventListener(mousewheelevt, function(e) { 
-      		mousewheel(e);
-      	});
-      	
-      	
-      });
+function resetFrog() {
+	scrollToTop();
+	frogplayer.play();
+    frogplayer.pause();
+   	frogplayer.currentTime(0);
+   	
+}
       
 //var speed=.029;
 //var speed=0.03336670003;
@@ -61,7 +57,7 @@ function safeStopPropogation(e)
     if (e.preventDefault) e.preventDefault();
 }
 function mousewheel(e) {
-	if (!playerready) {
+	if ((!playerready)||(!startedeverything)) {
 		return;
 	}
 	
@@ -174,7 +170,7 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               },{
                 'selector'    : '.scrolling',
-                'translateY'  : [0,310],
+                'translateY'  : [0,295],
                 'opacity'    : [1,1],
                 'scale': 1.2
                
@@ -187,7 +183,7 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               },{
                 'selector'    : '.scrolling',
-                'translateY'  : [310,310],
+                'translateY'  : [295,295],
                 'opacity'    : [1,1],
                 'scale': [1.2, 1.2]
                
@@ -200,7 +196,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [1,1]
               },{
                'selector'    : '#mammalsviddiv',
-               'translateY'  : -6,
                 'opacity'    : [1,1]
               }]
             },{//2 – continuing to show the vis w MAMMALS
@@ -208,7 +203,6 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '50%',
             'animations' :  [{
                'selector'    : '#mammalsviddiv',
-               'translateY'  : [-6,-6],
                 'opacity'    : [1,1]
               }, {
                'selector'    : '#reptilesviddiv',
@@ -222,7 +216,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }, {
                'selector'    : '#reptilesviddiv',
-               'translateY'  : -3,
                 'opacity'    : [1,1]
               }]
              },{// 4 – continuing to show the vis w REPTILES
@@ -230,7 +223,6 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '50%',
             'animations' :  [{
                'selector'    : '#reptilesviddiv',
-               'translateY'  : [-3,-3],
                 'opacity'    : [1,1]
               }, {
                'selector'    : '#amphibiansviddiv',
@@ -244,7 +236,6 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }, {
                'selector'    : '#amphibiansviddiv',
-               'translateY'  : -8,
                 'opacity'    : [1,1]
               }]
             },{// 6 – continuing to show the vis w AMPHIBIANS
@@ -252,11 +243,13 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '50%',
             'animations' :  [{
                'selector'    : '#amphibiansviddiv',
-               'translateY'  : [-8,-8],
                 'opacity'    : [1,1]
               }, {
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
+              }, {
+              'selector'	:'.endingfooter',
+              'opacity'	:[0, 0],
               }]
              },{// 7 – switching to BIRDS and showing the OWL
             'wrapper' : '#vis',
@@ -266,8 +259,10 @@ $(window).scrollTop(0)}, 100)**/
                 'opacity'    : [0,0]
               }, {
                'selector'    : '#birdsviddiv',
-               'translateY'  : -10,
                 'opacity'    : [1,1]
+              }, {
+              'selector'	:'.endingfooter',
+              'opacity'	:[1, 1],
               }]
             } ,{
             'duration' : '100%',
@@ -275,193 +270,7 @@ $(window).scrollTop(0)}, 100)**/
           }
         ]
             
-            
-            
-            
-             
-             
-            
-            
-		/**
-        keyframes = [{// 0
-            'wrapper' : '#intro',
-            'duration' : '100%',
-            'animations' :  [{
-                'selector'    : '.copy',
-                'translateY'  : -25,
-                'opacity'    : [1, 0]
-              },{
-               'selector'    : '#froggydiv',
-                'opacity'    : [1, 1]
-              },{
-               'selector'    : '#mammalsviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#reptilesviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }
-            ]
-          } ,{//1 – show the vis, with mammals data and LION
-            'wrapper' : '#vis',
-            'duration' : '100%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-               'translateY'  : [-10,-10],
-                'opacity'    : [1,1]
-              }, {
-               'selector'    : '#reptilesviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }]
-          },{//2 – continuing to show the vis w MAMMALS
-            'wrapper' : '#vis',
-            'duration' : '50%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-               'translateY'  : [-10,-10],
-                'opacity'    : [1,1]
-              }, {
-               'selector'    : '#reptilesviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }]
-          },{//3 – switching to REPTILES and showing the TURTLE
-            'wrapper' : '#vis',
-            'duration' : '100%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#reptilesviddiv',
-               'translateY'  : -3,
-                'opacity'    : [1,1]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }]
-          },{// 4 – continuing to show the vis w REPTILES
-            'wrapper' : '#vis',
-            'duration' : '50%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#reptilesviddiv',
-               'translateY'  : [-3,-3],
-                'opacity'    : [1,1]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-                'opacity'    : [0,0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }]
-          },{// 5 – switching to AMPHIBIANS and showing the FROG
-            'wrapper' : '#vis',
-            'duration' : '100%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#reptilesviddiv',
-               'translateY'  : [-3, -3],
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-               'translateY'  : -8,
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }]
-          },{// 6 – continuing to show the vis w AMPHIBIANS
-            'wrapper' : '#vis',
-            'duration' : '50%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#reptilesviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#amphibiansviddiv',
-               'translateY'  : [-8,-8],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#birdsviddiv',
-                'opacity'    : [0,0]
-              }]
-          },{// 7 – switching to BIRDS and showing the OWL
-            'wrapper' : '#vis',
-            'duration' : '100%',
-            'animations' :  [{
-                'selector'    : '.viscopy',
-                'translateY'  : [-25,-25],
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#amphibiansviddiv',
-               'translateY'  : [-8, -8],
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#birdsviddiv',
-               'translateY'  : -10,
-                'opacity'    : [1,1]
-              },{
-               'selector'    : '#mammalsviddiv',
-                'opacity'    : [0, 0]
-              }, {
-               'selector'    : '#reptilesviddiv',
-                'opacity'    : [0,0]
-              }]
-          } ,{
-          
-            'duration' : '100%',
-            'animations' :  []
-          }
-        ]**/
+     
 
     /*  Construction
     -------------------------------------------------- */
@@ -525,7 +334,7 @@ $(window).scrollTop(0)}, 100)**/
       // window.requestAnimationFrame(updatePage);
       //setInterval(updatePage, 10)
       setupValues();
-     
+     incrementProgress();
     }
     
 
@@ -597,7 +406,7 @@ var startagain = false;
     
     clickButton = function(index, element) {
     	
-    	if (!playerready) {
+    	if ((!playerready)||(!startedeverything)) {
     		return;
     	}
     	//document.getElementById("scrollingid").style.opacity=0;
@@ -746,7 +555,7 @@ convertPercentToPx = function(value, axis) {
     			currentButtonIndex=1;
     		$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[currentButtonIndex], 'y'))
     		//clickButton(1, d3.select('#mammalsbutton'));
-    			console.log("scroll button clicked")
+    			//console.log("scroll button clicked")
     		}
     		
     		
@@ -754,6 +563,19 @@ convertPercentToPx = function(value, axis) {
     		// window.requestAnimationFrame(updatePage);
     		return;
     	}
+    	if (currentButtonIndex==4) {
+    		document.getElementById("scrollingid").style["display"]= "none"
+    	} else {
+    		document.getElementById("scrollingid").style["display"]= "block"
+    	}
+    	if (currentButtonIndex==0) {
+    		document.getElementById("viscopyid").style["display"]= "none"
+    		document.getElementById("dragtooltipid").style["opacity"]= 0;
+    	} else {
+    		document.getElementById("viscopyid").style["display"]= "block"
+    		document.getElementById("dragtooltipid").style["opacity"]= 1;
+    	}
+    	
     	//console.log("updating")
     	 setScrollTops();
     	if (scrollButtonClicked) {
@@ -764,7 +586,7 @@ convertPercentToPx = function(value, axis) {
     		$window.scrollTop(convertPercentToPx(buttonIndexToPagePercent[currentButtonIndex], 'y'))
     		 
     		//clickButton(1, d3.select('#mammalsbutton'));
-    		console.log("scroll button clicked outside")
+    		//console.log("scroll button clicked outside")
     		//window.requestAnimationFrame(updatePage);
     		return;
     		
@@ -833,57 +655,7 @@ vis = function(scrollpos) {
 	updateButtons(d3.select(document.getElementById(keyframeToButtonId[currentKeyframe])), keyframeToButtonIndex[currentKeyframe]);
 	}
 	
-	
-	/**if (currentKeyframe==2) {
-		if (!(currclassindex==1)) {
-			changeClass(1);
-			//console.log("CHANGING CLASS TO MAMMALS")	
-		}
-	} else if (currentKeyframe==4) {
-		if (!(currclassindex==2)) {
-			changeClass(2);
-			console.log("CHANGING CLASS TO REPTILES")	
-		}
-	} else if (currentKeyframe==6) {
-		//console.log("CURRENTKEYFRAME = 3")
-		if (!(currclassindex==0)) {
-			changeClass(0);
-			console.log("CHANGING CLASS TO AMPHIBIANS")	
-		}
-	} else if (currentKeyframe==8) {
-		if (!(currclassindex==3)) {
-			changeClass(3);
-			console.log("CHANGING CLASS TO BIRDS")	
-		}
-	}**/
-/**
-	if (scrollpos>vispos) {
-		if (starting) {
-			//updateStatHighlights();
-			//d3.selectAll(".number").classed("visnumber", true);
-			//console.log("SHOW")
-			//showVis();
-			starting=false;
-		}
-	} else {
-		if (!starting) {
-			//d3.selectAll(".number").classed("visnumber", false);
-			//clearStatHighlights();
-			//hideVis();
-			//console.log("HIDE")
-			starting=true;
-		}
-	//console.log("hidevis")
-	}**/
 }
-/**
-function updateStatHighlights() {
-	d3.selectAll(".number").classed("visnumber", true);
-	d3.selectAll(".number").classed("deselectednumber", function(d, i) {return !(i==currclassindex)});
-	d3.selectAll(".group").classed("deselectedgroup", function(d, i) {return !(i==currclassindex)});
-	
-}**/
-
 
     setScrollTops = function() {
       scrollTop = $window.scrollTop();
@@ -971,4 +743,7 @@ function updateStatHighlights() {
     init();
 
   })
+  
+  
+  incrementProgress();
 }).call(this);

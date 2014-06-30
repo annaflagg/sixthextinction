@@ -1,6 +1,32 @@
 @media screen and (max-width: 480px) {
-  .mobile-only { display: block; }
+  .mobile-only { display: block;margin-top:120px;}
+  .ie-only {display:none}
 
+ #scrollingid {
+display:none;
+}
+.loadandscroll {
+display:none;
+}
+#ttipdiv {
+display:none;
+}
+.endingfooter {
+display:none;
+}
+.legendimg {
+display:none;
+}
+.dragtooltip {
+display:none;
+}
+
+#birdsviddiv, #reptilesviddiv, #amphibiansviddiv, #mammalsviddiv {
+display: none;
+}
+body {
+overflow:visible;
+}
   #chart {
     width: 300px;
     overflow: hidden;
@@ -10,15 +36,28 @@
 
   #content {
     width: 300px;
+    background: none;
   }
 
   #bodyid {
     height: 2000px !important
+     
   }
 
   .container, .container-inner {
-    background: #fff
+   background: none;
   }
+
+  .contributorbox {
+  margin-left:10px;
+  margin-top: -150px;
+  }
+  .contributortitle {
+  color:black;
+ font-weight:800;
+	font-size:9px;
+	letter-spacing:1.5px;
+}
 #header {
 }
 #headerbuttons {
@@ -62,19 +101,23 @@ line-height: 1.35em;
   .copy {
   width: 100%;
   margin-top: 85px;
+  pointer-events:none;
   }
   .copy .guff {
     width: 100%;
     text-align: left;
     margin-left: 10px;
+    pointer-events:all;
   
   }
   .copy .byline {
-  font-size:12px;
+  font-size:14px;
   width: 250px;
   margin: 0px auto;
   margin-top: -10px;
   margin-bottom:20px;
+  pointer-events:all;
+  z-index:35;
   }
 
   .copy{
@@ -88,9 +131,15 @@ line-height: 1.35em;
 
   }*/
 
+.sup {
+font-size:18px;
+vertical-align: baseline;
+padding-left:5px;
+
+}
   
 .mobile {
-margin-top: 700px;
+margin-top: 810px;
 
 display: block;
 color:black;

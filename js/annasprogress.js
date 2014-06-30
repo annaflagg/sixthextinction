@@ -1,14 +1,9 @@
 var clip = document.getElementById("cliprect");
-var maxwidth = document.getElementById("loadinglizardbackground").getBBox().width;
+var maxloadingwidth = document.getElementById("loadinglizardbackground").getBBox().width;
+var minloadingwidth = 40;
 //clip.setAttribute("x", (window.innerWidth-maxwidth)/2.0);
 var progress = { p:0}; 
-var total = 36; 
-var started = false;
-//var total = 2; 
-
-
-
-
+var totalprogress = 39; 
 
 function incrementProgress() {
 	progress.p=progress.p+1;
@@ -23,15 +18,8 @@ function getProgress() {
 function fractionProgress(val) {
 	//console.log(progress.p)
 	//return (progress.p/total)*100;
-	return (val)/total;
+	return (val)/totalprogress;
 }
-
-/**
-progress.watch("p", function (id, oldval, newval) {
-    //console.log( "o." + id + " changed from " + oldval + " to " + newval );
-    console.log("hello")
-    return newval;
-});**/
 
 /*
  * object.watch polyfill
@@ -88,49 +76,29 @@ if (!Object.prototype.unwatch) {
 	});
 }
 
-
-
-
-
-
-
-
-
-
-
-
-//var frogicon = document.getElementById("frogicon");
- //   console.log(frogicon)
-
-
-//maxwidth = 112;
 progress.watch("p", function (id, oldval, newval) {
+	//console.log(progress.p)
+	document.getElementById("cliprect").setAttribute("width", Math.max(minloadingwidth,fractionProgress(newval)*maxloadingwidth));
 
-	var w =  fractionProgress(newval)*maxwidth;
-	//console.log(fractionProgress(newval))
-	document.getElementById("cliprect").setAttribute("width", w);
-	
-	//document.getElementById("clipsvg").setAttribute("width", w);
-	//console.log(document.getElementById("cliprect"))
-	//clip.setAttribute("width", w);
-
-	if ((((progress.p>=total) && (!started)))) {
-		console.log("Ok, done loading")
+	if ((((progress.p>=totalprogress) && (!startedeverything)))) {
+		startedeverything = true;
+		console.log("OK EVERYTHING HAS LOADED")
 		document.getElementById("loadingid").style.opacity=0;
+		document.getElementById("scrollcommandid").style.opacity=1;
 		//document.getElementById("loadingid").style.opacity=0;
 		document.getElementById("scrollingid").style.opacity=1;
-		started = true;
+		
+		//document.getElementById("froggydiv").style.opacity=1;
+		document.getElementById("froggydiv").style.display="block";
+		document.getElementById("bodyid").style.overflow="visible";
+		if (playerready) {
+		resetFrog();
+			
+		} 
+		//document.getElementById("froggydiv").style.display="block";
 	}
-	
-	
-	return newval;
-	
-	
-   //console.log( "o." + id + " changed from " + oldval + " to " + newval );
-    
-    
-    
-    
+
+	return newval;  
 });
 
 

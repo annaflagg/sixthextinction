@@ -1,14 +1,45 @@
 @media screen and (min-width:481px) and (max-width:768px) {
-  .mobile-only { display: block; }
+  .mobile-only { display: block; margin-top:120px;}
+  .ie-only {display:none;}
+
+ #scrollingid {
+display:none;
+}
+.loadandscroll {
+display:none;
+}
+#birdsviddiv, #reptilesviddiv, #amphibiansviddiv, #mammalsviddiv {
+display: none;
+}
+
   #chart {
     width: 300px;
     overflow: hidden;
     height: 100%
     display:none;
   }
-
+ .contributorbox {
+  margin-left:10px;
+  margin-top: -150px;
+  }
+  .contributortitle {
+  color:black;
+ font-weight:800;
+	font-size:9px;
+	letter-spacing:1.5px;
+}
+.contributor {
+margin-top:-20px;
+font-style:oblique;
+font-family:Georgia;
+font-weight:550;
+font-size:15px;
+z-index: 31;
+pointer-events:all;
+}
   #content {
     width: 600px;
+    background: none;
   }
 
   #bodyid {
@@ -16,7 +47,7 @@
   }
 
   .container, .container-inner {
-    background: #fff
+    background: none;
   }
 #header {
 }
@@ -70,7 +101,7 @@ line-height: 1.35em;
   
   }
   .copy .byline {
-  font-size:14px;
+  font-size:16px;
   width: 500px;
   margin: 0px auto;
   margin-top: -5px;
@@ -90,7 +121,7 @@ line-height: 1.35em;
 
   
 .mobile {
-margin-top: 400px;
+margin-top: 550px;
 
 display: block;
 color:black;

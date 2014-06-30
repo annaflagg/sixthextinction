@@ -307,5 +307,7 @@
       $this.typeahead($this.data())
     })
   })
+  
+  incrementProgress();
  
 }( window.jQuery );

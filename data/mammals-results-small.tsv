@@ -81,7 +81,7 @@
 "CARNIVORA"	"CANIDAE"	"Vulpes"	"ferrilata"	"Tibetan Fox, Tibetan Sand Fox, Sand Fox"	"LC"	32	4
 "CARNIVORA"	"CANIDAE"	"Vulpes"	"macrotis"	"Kit Fox, Desert Fox"	"LC"	32	5
 "CARNIVORA"	"CANIDAE"	"Vulpes"	"pallida"	"Pale Fox, Pallid Fox, African Sand Fox"	"LC"	32	6
-"CARNIVORA"	"CANIDAE"	"Vulpes"	"rueppellii"	"Rüppel's Fox, Rüppell's Sand Fox, Rüppell's Fox, Rüppell's Sand Fox, Rüeppell's Fox, Rueppell's Fox, Sand Fox"	"LC"	32	7
+"CARNIVORA"	"CANIDAE"	"Vulpes"	"rueppellii"	"Ruppel's Fox, Ruppell's Sand Fox, Ruppell's Fox, Ruppell's Sand Fox, Rueppell's Fox, Rueppell's Fox, Sand Fox"	"LC"	32	7
 "CARNIVORA"	"CANIDAE"	"Vulpes"	"velox"	"Swift Fox"	"LC"	32	8
 "CARNIVORA"	"CANIDAE"	"Vulpes"	"vulpes"	"Red Fox, Silver Fox, Cross Fox"	"LC"	32	9
 "CARNIVORA"	"CANIDAE"	"Vulpes"	"zerda"	"Fennec Fox"	"LC"	32	10
@@ -231,9 +231,9 @@
 "CARNIVORA"	"NANDINIIDAE"	"Nandinia"	"binotata"	"African Palm Civet, Two-spotted Palm Civet"	"LC"	91	0
 "CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"australis"	"South American Fur Seal, Southern Fur Seal"	"LC"	92	3
 "CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"forsteri"	"New Zealand Fur Seal, Black Fur Seal, Australasian Fur Seal, Antipodean Fur Seal, South Australian Fur Seal"	"LC"	92	4
-"CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"galapagoensis"	"Galápagos Fur Seal, Galapagos Islands Fur Seal"	"EN"	92	0
+"CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"galapagoensis"	"Galapagos Fur Seal, Galapagos Islands Fur Seal"	"EN"	92	0
 "CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"gazella"	"Antarctic Fur Seal, Kerguelen Fur Seal"	"LC"	92	5
-"CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"philippii"	"Juan Fernández Fur Seal"	"NT"	92	1
+"CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"philippii"	"Juan Fernandez Fur Seal"	"NT"	92	1
 "CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"pusillus"	"Afro-Australian Fur Seal, Cape Fur Seal, Brown Fur Seal, South African Fur Seal"	"LC"	92	6
 "CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"townsendi"	"Guadalupe Fur Seal, Lower Californian Fur Seal"	"NT"	92	2
 "CARNIVORA"	"OTARIIDAE"	"Arctocephalus"	"tropicalis"	"Subantarctic Fur Seal, Amsterdam Island Fur Seal"	"LC"	92	7
@@ -243,7 +243,7 @@
 "CARNIVORA"	"OTARIIDAE"	"Otaria"	"flavescens"	"South American Sea Lion, Southern Sea Lion"	"LC"	96	0
 "CARNIVORA"	"OTARIIDAE"	"Phocarctos"	"hookeri"	"New Zealand Sea Lion, New Zealand Sealion, Hooker's Sea Lion, Hooker's Sealion"	"VU"	97	0
 "CARNIVORA"	"OTARIIDAE"	"Zalophus"	"californianus"	"Californian Sea Lion"	"LC"	98	1
-"CARNIVORA"	"OTARIIDAE"	"Zalophus"	"wollebaeki"	"Galápagos Sea Lion"	"EN"	98	0
+"CARNIVORA"	"OTARIIDAE"	"Zalophus"	"wollebaeki"	"Galapagos Sea Lion"	"EN"	98	0
 "CARNIVORA"	"PHOCIDAE"	"Cystophora"	"cristata"	"Hooded Seal"	"VU"	99	0
 "CARNIVORA"	"PHOCIDAE"	"Erignathus"	"barbatus"	"Bearded Seal"	"LC"	100	0
 "CARNIVORA"	"PHOCIDAE"	"Halichoerus"	"grypus"	"Grey Seal, Gray Seal"	"LC"	101	0
@@ -396,7 +396,7 @@
 "CETARTIODACTYLA"	"BOVIDAE"	"Kobus"	"megaceros"	"Nile Lechwe"	"EN"	165	0
 "CETARTIODACTYLA"	"BOVIDAE"	"Kobus"	"vardonii"	"Puku"	"NT"	165	1
 "CETARTIODACTYLA"	"BOVIDAE"	"Litocranius"	"walleri"	"Gerenuk"	"NT"	166	0
-"CETARTIODACTYLA"	"BOVIDAE"	"Madoqua"	"guentheri"	"Guenther's Dik-dik, Guenther's Dikdik, Günther's Dik-dik"	"LC"	167	0
+"CETARTIODACTYLA"	"BOVIDAE"	"Madoqua"	"guentheri"	"Guenther's Dik-dik, Guenther's Dikdik, Gunther's Dik-dik"	"LC"	167	0
 "CETARTIODACTYLA"	"BOVIDAE"	"Madoqua"	"kirkii"	"Kirk's Dik-dik"	"LC"	167	1
 "CETARTIODACTYLA"	"BOVIDAE"	"Madoqua"	"saltiana"	"Salt's Dik-dik"	"LC"	167	2
 "CETARTIODACTYLA"	"BOVIDAE"	"Naemorhedus"	"baileyi"	"Red Goral"	"VU"	168	0
@@ -768,7 +768,7 @@
 "CHIROPTERA"	"MOLOSSIDAE"	"Tadarida"	"spurrelli"	"Spurrell's Free-tailed Bat"	"LC"	295	31
 "CHIROPTERA"	"MOLOSSIDAE"	"Tadarida"	"teniotis"	"European Free-tailed Bat"	"LC"	295	32
 "CHIROPTERA"	"MOLOSSIDAE"	"Tadarida"	"thersites"	"Railer Bat"	"LC"	295	33
-"CHIROPTERA"	"MOLOSSIDAE"	"Tadarida"	"tomensis"	"São Tomé Free-tailed Bat., São Tomé Free-tailed Bat"	"EN"	295	1
+"CHIROPTERA"	"MOLOSSIDAE"	"Tadarida"	"tomensis"	"Sao Tome Free-tailed Bat., Sao Tome Free-tailed Bat"	"EN"	295	1
 "CHIROPTERA"	"MOLOSSIDAE"	"Tomopeas"	"ravus"	"Blunt-eared Bat"	"VU"	296	0
 "CHIROPTERA"	"MORMOOPIDAE"	"Mormoops"	"blainvillei"	"Antillean Ghost-faced Bat"	"LC"	297	0
 "CHIROPTERA"	"MORMOOPIDAE"	"Mormoops"	"megalophylla"	"Ghost-faced Bat, Peters's Ghost-faced Bat"	"LC"	297	1
@@ -1144,7 +1144,7 @@
 "CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"euryotis"	"New Guinea Horseshoe Bat, Broad-eared Horseshoe Bat"	"LC"	402	32
 "CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"ferrumequinum"	"Greater Horseshoe Bat"	"LC"	402	33
 "CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"formosae"	"Formosan Woolly Horseshoe Bat"	"NT"	402	11
-"CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"fumigatus"	"Rüppell's Horseshoe Bat"	"LC"	402	34
+"CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"fumigatus"	"Ruppell's Horseshoe Bat"	"LC"	402	34
 "CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"guineensis"	"Guinean Horseshoe Bat"	"VU"	402	6
 "CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"hildebrandti"	"Hildebrandt's Horseshoe Bat"	"LC"	402	35
 "CHIROPTERA"	"RHINOLOPHIDAE"	"Rhinolophus"	"hilli"	"Hill's Horseshoe Bat"	"CR"	402	0
@@ -1453,7 +1453,7 @@
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"pulveratus"	"Chinese Pipistrelle"	"LC"	438	28
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"pygmaeus"	"Pygmy Pipistrelle, Soprano Pipistrelle"	"LC"	438	29
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"rendalli"	"Rendall's Serotine"	"LC"	438	30
-"CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"rueppellii"	"Rüppel's Pipistrelle"	"LC"	438	31
+"CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"rueppellii"	"Ruppel's Pipistrelle"	"LC"	438	31
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"rusticus"	"Rusty Pipistrelle"	"LC"	438	32
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"savii"	"Savi's Pipistrelle"	"LC"	438	33
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Pipistrellus"	"somalicus"	"Somali Serotine"	"LC"	438	34
@@ -1482,7 +1482,7 @@
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Rhogeessa"	"mira"	"Least Yellow Bat"	"VU"	440	2
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Rhogeessa"	"parvula"	"Little Yellow Bat"	"LC"	440	7
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Rhogeessa"	"tumida"	"Black-winged Little Yellow Bat"	"LC"	440	8
-"CHIROPTERA"	"VESPERTILIONIDAE"	"Scoteanax"	"rueppellii"	"Greater Broad-nosed Bat, Rüppell's Broad-nosed Bat"	"LC"	441	0
+"CHIROPTERA"	"VESPERTILIONIDAE"	"Scoteanax"	"rueppellii"	"Greater Broad-nosed Bat, Ruppell's Broad-nosed Bat"	"LC"	441	0
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Scotoecus"	"hirundo"	"Dark-winged Lesser House Bat"	"LC"	442	0
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Scotoecus"	"pallidus"	"Desert Yellow Lesser House Bat., Desert Yellow Bat"	"LC"	442	1
 "CHIROPTERA"	"VESPERTILIONIDAE"	"Scotomanes"	"ornatus"	"Harlequin Bat"	"LC"	443	0
@@ -1557,7 +1557,7 @@
 "DASYUROMORPHIA"	"DASYURIDAE"	"Murexia"	"melanurus"	"Black-tailed Dasyure, Black-tailed Antechinus"	"LC"	463	3
 "DASYUROMORPHIA"	"DASYURIDAE"	"Murexia"	"naso"	"Long-nosed Dasyure, Long-nosed Antechinus"	"LC"	463	4
 "DASYUROMORPHIA"	"DASYURIDAE"	"Murexia"	"rothschildi"	"Broad-striped Dasyure"	"VU"	463	0
-"DASYUROMORPHIA"	"DASYURIDAE"	"Myoictis"	"melas"	"Müller's Three-striped Dasyure, Three-striped Dasyure"	"LC"	464	0
+"DASYUROMORPHIA"	"DASYURIDAE"	"Myoictis"	"melas"	"Muller's Three-striped Dasyure, Three-striped Dasyure"	"LC"	464	0
 "DASYUROMORPHIA"	"DASYURIDAE"	"Myoictis"	"wallacei"	"Wallace's Three-striped Dasyure"	"LC"	464	1
 "DASYUROMORPHIA"	"DASYURIDAE"	"Neophascogale"	"lorentzii"	"Speckled Dasyure"	"LC"	465	0
 "DASYUROMORPHIA"	"DASYURIDAE"	"Ningaui"	"ridei"	"Wongai Ningaui"	"LC"	466	0
@@ -1988,7 +1988,7 @@
 "EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"telfordi"	"Telford's Shrew"	"EN"	550	21
 "EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"thalia"	"Thalia Shrew, Thalia's Shrew"	"LC"	550	126
 "EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"theresae"	"Therese's Shrew"	"LC"	550	127
-"EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"thomensis"	"Sao Tomé Shrew, São Tomé Shrew"	"EN"	550	22
+"EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"thomensis"	"Sao Tomé Shrew, Sao Tome Shrew"	"EN"	550	22
 "EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"trichura"	"Christmas Island Shrew"	"CR"	550	4
 "EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"turba"	"Tumultuous Shrew, Turbo Shrew"	"LC"	550	128
 "EULIPOTYPHLA"	"SORICIDAE"	"Crocidura"	"usambarae"	"Usambara Shrew"	"EN"	550	23
@@ -2023,7 +2023,7 @@
 "EULIPOTYPHLA"	"SORICIDAE"	"Cryptotis"	"parva"	"Least Shrew, North American Least Shrew"	"LC"	551	19
 "EULIPOTYPHLA"	"SORICIDAE"	"Cryptotis"	"phillipsii"	"Phillip's Small-eared Shrew"	"VU"	551	7
 "EULIPOTYPHLA"	"SORICIDAE"	"Cryptotis"	"squamipes"	"Scaly-footed Small-eared Shrew, Western Colombian Small-eared Shrew"	"LC"	551	20
-"EULIPOTYPHLA"	"SORICIDAE"	"Cryptotis"	"tamensis"	"Tamá Small-eared Shrew"	"LC"	551	21
+"EULIPOTYPHLA"	"SORICIDAE"	"Cryptotis"	"tamensis"	"Tama Small-eared Shrew"	"LC"	551	21
 "EULIPOTYPHLA"	"SORICIDAE"	"Cryptotis"	"thomasi"	"Thomas' Small-eared Shrew, Thomas's Small-eared Shrew"	"LC"	551	22
 "EULIPOTYPHLA"	"SORICIDAE"	"Diplomesodon"	"pulchellum"	"Piebald Shrew"	"LC"	552	0
 "EULIPOTYPHLA"	"SORICIDAE"	"Episoriculus"	"caudatus"	"Hodgson's Brown-toothed Shrew"	"LC"	553	0
@@ -2364,15 +2364,15 @@
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"caraya"	"Black-and-gold Howler Monkey, Black Howling Monkey, Black Howler Monkey"	"LC"	635	5
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"discolor"	"Spix's Red-handed Howler Monkey, Red-handed Howling Monkey"	"VU"	635	3
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"guariba"	"Brown Howler Monkey, Brown Howling Monkey, Southern Brown Howling Monkey"	"LC"	635	6
-"PRIMATES"	"ATELIDAE"	"Alouatta"	"juara"	"Juruá Red Howler Monkey, Juruá Red Howling Monkey"	"LC"	635	7
+"PRIMATES"	"ATELIDAE"	"Alouatta"	"juara"	"Jurua Red Howler Monkey, Jurua Red Howling Monkey"	"LC"	635	7
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"macconnelli"	"Guianan Red Howler Monkey, Trinidad Howling Monkey"	"LC"	635	8
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"nigerrima"	"Black Howler Monkey"	"LC"	635	9
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"palliata"	"Mantled Howler Monkey, South Pacific Blackish Howling Monkey, Ecuadorian Mantled Howling Monkey"	"LC"	635	10
-"PRIMATES"	"ATELIDAE"	"Alouatta"	"pigra"	"Yucatán Black Howler Monkey, Black Howling Monkey, Guatemalan Howler, Guatemalan Howling Monkey, Lawrence's Howler Monkey, Mexican Black Howler Monkey, Guatemalan Black Howler Monkey"	"EN"	635	0
-"PRIMATES"	"ATELIDAE"	"Alouatta"	"puruensis"	"Purús Red Howler Monkey"	"LC"	635	11
+"PRIMATES"	"ATELIDAE"	"Alouatta"	"pigra"	"Yucatan Black Howler Monkey, Black Howling Monkey, Guatemalan Howler, Guatemalan Howling Monkey, Lawrence's Howler Monkey, Mexican Black Howler Monkey, Guatemalan Black Howler Monkey"	"EN"	635	0
+"PRIMATES"	"ATELIDAE"	"Alouatta"	"puruensis"	"Purus Red Howler Monkey"	"LC"	635	11
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"sara"	"Bolivian Red Howler Monkey, Bolivian Red Howling Monkey, Bolivian Red Howler"	"LC"	635	12
 "PRIMATES"	"ATELIDAE"	"Alouatta"	"seniculus"	"Colombian Red Howler Monkey, Colombian Red Howling Monkey"	"LC"	635	13
-"PRIMATES"	"ATELIDAE"	"Alouatta"	"ululata"	"Maranhão Red-handed Howler Monkey, Red-handed Howling Monkey"	"EN"	635	1
+"PRIMATES"	"ATELIDAE"	"Alouatta"	"ululata"	"Maranhao Red-handed Howler Monkey, Red-handed Howling Monkey"	"EN"	635	1
 "PRIMATES"	"ATELIDAE"	"Ateles"	"belzebuth"	"Long-haired Spider Monkey, White-bellied Spider Monkey"	"EN"	636	2
 "PRIMATES"	"ATELIDAE"	"Ateles"	"chamek"	"Black-faced Black Spider Monkey, Chamek Spider Monkey, Peruvian Black Spider Monkey"	"EN"	636	3
 "PRIMATES"	"ATELIDAE"	"Ateles"	"fusciceps"	"Brown-headed Spider Monkey, Black-headed Spider Monkey"	"CR"	636	0
@@ -2401,7 +2401,7 @@
 "PRIMATES"	"CALLITRICHIDAE"	"Leontopithecus"	"chrysopygus"	"Black Lion Tamarin, Golden-rumped Lion Tamarin"	"EN"	644	2
 "PRIMATES"	"CALLITRICHIDAE"	"Leontopithecus"	"rosalia"	"Golden Lion Tamarin"	"EN"	644	3
 "PRIMATES"	"CALLITRICHIDAE"	"Mico"	"argentatus"	"Silvery Marmoset"	"LC"	645	2
-"PRIMATES"	"CALLITRICHIDAE"	"Mico"	"intermedius"	"Aripuanã Marmoset"	"LC"	645	3
+"PRIMATES"	"CALLITRICHIDAE"	"Mico"	"intermedius"	"Aripuana Marmoset"	"LC"	645	3
 "PRIMATES"	"CALLITRICHIDAE"	"Mico"	"leucippe"	"Golden-white Bare-ear Marmoset"	"VU"	645	0
 "PRIMATES"	"CALLITRICHIDAE"	"Mico"	"manicorensis"	"Manicoré Marmoset"	"LC"	645	4
 "PRIMATES"	"CALLITRICHIDAE"	"Mico"	"mauesi"	"Maués Marmoset"	"LC"	645	5
@@ -2420,7 +2420,7 @@
 "PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"midas"	"Golden-handed Tamarin, Midas Tamarin, Red-handed Tamarin, Yellow-handed Tamarin"	"LC"	646	12
 "PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"mystax"	"Moustached Tamarin, Spix's Moustached Tamarin, Black-chested Mustached Tamarin"	"LC"	646	13
 "PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"niger"	"Black-handed Tamarin"	"VU"	646	3
-"PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"nigricollis"	"Black Mantle Tamarin, Hernández-camacho's Black Mantle Tamarin"	"LC"	646	14
+"PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"nigricollis"	"Black Mantle Tamarin, Hernandez-camacho's Black Mantle Tamarin"	"LC"	646	14
 "PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"oedipus"	"Cotton-headed Tamarin, Cotton-top Tamarin"	"CR"	646	0
 "PRIMATES"	"CALLITRICHIDAE"	"Saguinus"	"tripartitus"	"Golden-mantle Saddleback Tamarin, Golden-mantled Saddle-back Tamarin, Golden-mantled Tamarin"	"NT"	646	4
 "PRIMATES"	"CEBIDAE"	"Cebus"	"albifrons"	"White-fronted Capuchin, Shock-headed Capuchin"	"LC"	647	5
@@ -2608,7 +2608,7 @@
 "PRIMATES"	"HYLOBATIDAE"	"Hylobates"	"klossii"	"Kloss's Gibbon, Mentawai Gibbon, Dwarf Gibbon, Kloss's Gibbon"	"EN"	685	2
 "PRIMATES"	"HYLOBATIDAE"	"Hylobates"	"lar"	"Lar Gibbon, White-handed Gibbon, Common Gibbon"	"EN"	685	3
 "PRIMATES"	"HYLOBATIDAE"	"Hylobates"	"moloch"	"Silvery Javan Gibbon, Silvery Gibbon, Owa Jawa, Moloch Gibbon, Javan Gibbon"	"EN"	685	4
-"PRIMATES"	"HYLOBATIDAE"	"Hylobates"	"muelleri"	"Müller's Bornean Gibbon, Bornean Gibbon, Borneo Gibbon, Grey Gibbon, Bornean Grey Gibbon, Müller's Gibbon"	"EN"	685	5
+"PRIMATES"	"HYLOBATIDAE"	"Hylobates"	"muelleri"	"Muller's Bornean Gibbon, Bornean Gibbon, Borneo Gibbon, Grey Gibbon, Bornean Grey Gibbon, Muller's Gibbon"	"EN"	685	5
 "PRIMATES"	"HYLOBATIDAE"	"Hylobates"	"pileatus"	"Pileated Gibbon, Capped Gibbon, Crowned Gibbon"	"EN"	685	6
 "PRIMATES"	"HYLOBATIDAE"	"Nomascus"	"concolor"	"Black Crested Gibbon, Indochinese Gibbon, Crested Gibbon, Black Gibbon"	"CR"	686	0
 "PRIMATES"	"HYLOBATIDAE"	"Nomascus"	"gabriellae"	"Red-cheeked Gibbon, Buff-cheeked Gibbon, Buffy-cheeked Gibbon, Yellow-cheeked Crested Gibbon"	"EN"	686	4
@@ -2673,7 +2673,7 @@
 "PRIMATES"	"PITHECIIDAE"	"Callicebus"	"bernhardi"	"Prince Bernhard's Titi Monkey, Prince Bernhard's Titi Monkey"	"LC"	702	13
 "PRIMATES"	"PITHECIIDAE"	"Callicebus"	"brunneus"	"Brown Titi Monkey"	"LC"	702	14
 "PRIMATES"	"PITHECIIDAE"	"Callicebus"	"caligatus"	"Titi Monkey, Chestnut-bellied Titi, Booted Titi"	"LC"	702	15
-"PRIMATES"	"PITHECIIDAE"	"Callicebus"	"caquetensis"	"Caquetá Tití Monkey"	"CR"	702	1
+"PRIMATES"	"PITHECIIDAE"	"Callicebus"	"caquetensis"	"Caqueta Tití Monkey"	"CR"	702	1
 "PRIMATES"	"PITHECIIDAE"	"Callicebus"	"cinerascens"	"Ashy Black Titi Monkey, Ashy Titi, Ashy-grey Titi, Ashy Black Titi, Titi Monkey"	"LC"	702	16
 "PRIMATES"	"PITHECIIDAE"	"Callicebus"	"coimbrai"	"Coimbra-filho's Titi Monkey, Coimbra Filho's Titi Monkey, Coimbra's Titi"	"EN"	702	3
 "PRIMATES"	"PITHECIIDAE"	"Callicebus"	"cupreus"	"Coppery Titi Monkey, Red Titi Monkey"	"LC"	702	17
@@ -2814,7 +2814,7 @@
 "RODENTIA"	"CRICETIDAE"	"Akodon"	"mollis"	"Soft Grass Mouse"	"LC"	739	20
 "RODENTIA"	"CRICETIDAE"	"Akodon"	"montensis"	"Montane Akodont"	"LC"	739	21
 "RODENTIA"	"CRICETIDAE"	"Akodon"	"orophilus"	"El Dorado Grass Mouse"	"LC"	739	22
-"RODENTIA"	"CRICETIDAE"	"Akodon"	"paranaensis"	"Paraná Akodont"	"LC"	739	23
+"RODENTIA"	"CRICETIDAE"	"Akodon"	"paranaensis"	"Parana Akodont"	"LC"	739	23
 "RODENTIA"	"CRICETIDAE"	"Akodon"	"reigi"	"Reig's Akodont"	"LC"	739	24
 "RODENTIA"	"CRICETIDAE"	"Akodon"	"serrensis"	"Serrado Do Mar Grass Mouse, Serrado Mar Grass Mouse"	"LC"	739	25
 "RODENTIA"	"CRICETIDAE"	"Akodon"	"siberiae"	"Cochabamba Grass Mouse"	"NT"	739	2
@@ -2935,7 +2935,7 @@
 "RODENTIA"	"CRICETIDAE"	"Graomys"	"griseoflavus"	"Gray Leaf-eared Mouse"	"LC"	774	1
 "RODENTIA"	"CRICETIDAE"	"Habromys"	"chinanteco"	"Chinanteco Deer Mouse"	"CR"	775	0
 "RODENTIA"	"CRICETIDAE"	"Habromys"	"delicatulus"	"Delicate Deer Mouse"	"CR"	775	1
-"RODENTIA"	"CRICETIDAE"	"Habromys"	"ixtlani"	"Ixtlán Deer Mouse"	"CR"	775	2
+"RODENTIA"	"CRICETIDAE"	"Habromys"	"ixtlani"	"Ixtlan Deer Mouse"	"CR"	775	2
 "RODENTIA"	"CRICETIDAE"	"Habromys"	"lepturus"	"Slender-tailed Deer Mouse, Slender Tailed Deer Mouse"	"CR"	775	3
 "RODENTIA"	"CRICETIDAE"	"Habromys"	"lophurus"	"Crested-tailed Deer Mouse, Crested Tailed Deer Mouse"	"NT"	775	6
 "RODENTIA"	"CRICETIDAE"	"Habromys"	"schmidlyi"	"Schmidly's Deer Mouse"	"CR"	775	4
@@ -2993,7 +2993,7 @@
 "RODENTIA"	"CRICETIDAE"	"Mesocricetus"	"newtoni"	"Romanian Hamster"	"NT"	796	2
 "RODENTIA"	"CRICETIDAE"	"Mesocricetus"	"raddei"	"Ciscaucasian Hamster"	"LC"	796	3
 "RODENTIA"	"CRICETIDAE"	"Microakodontomys"	"transitorius"	"Transitional Colilargo"	"EN"	797	0
-"RODENTIA"	"CRICETIDAE"	"Microryzomys"	"altissimus"	"Highland Small Rice Rat, Páramo Colilargo"	"LC"	798	0
+"RODENTIA"	"CRICETIDAE"	"Microryzomys"	"altissimus"	"Highland Small Rice Rat, Paramo Colilargo"	"LC"	798	0
 "RODENTIA"	"CRICETIDAE"	"Microryzomys"	"minutus"	"Forest Small Rice Rat, Montane Colilargo"	"LC"	798	1
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"abbreviatus"	"Insular Vole"	"LC"	799	10
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"agrestis"	"Field Vole"	"LC"	799	11
@@ -3013,7 +3013,7 @@
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"gerbei"	"Gerbe's Vole, Pyrenean Pine Vole"	"LC"	799	22
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"gregalis"	"Narrow-headed Vole"	"LC"	799	23
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"guatemalensis"	"Guatemalan Vole"	"NT"	799	5
-"RODENTIA"	"CRICETIDAE"	"Microtus"	"guentheri"	"Günther's Vole"	"LC"	799	24
+"RODENTIA"	"CRICETIDAE"	"Microtus"	"guentheri"	"Gunther's Vole"	"LC"	799	24
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"hyperboreus"	"North Siberian Vole"	"LC"	799	25
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"ilaeus"	"Kazakhstan Vole, Tien Shan Vole"	"LC"	799	26
 "RODENTIA"	"CRICETIDAE"	"Microtus"	"kikuchii"	"Taiwan Vole, Kikuchi's Field Vole"	"NT"	799	6
@@ -3324,7 +3324,7 @@
 "RODENTIA"	"CRICETIDAE"	"Sigmodon"	"mascotensis"	"Jaliscan Cotton Rat, West Mexican Cotton Rat"	"LC"	849	9
 "RODENTIA"	"CRICETIDAE"	"Sigmodon"	"ochrognathus"	"Yellow-nosed Cotton Rat"	"LC"	849	10
 "RODENTIA"	"CRICETIDAE"	"Sigmodon"	"peruanus"	"Peruvian Cotton Rat"	"LC"	849	11
-"RODENTIA"	"CRICETIDAE"	"Sigmodon"	"planifrons"	"Miahuatlán Cotton Rat"	"EN"	849	0
+"RODENTIA"	"CRICETIDAE"	"Sigmodon"	"planifrons"	"Miahuatlan Cotton Rat"	"EN"	849	0
 "RODENTIA"	"CRICETIDAE"	"Sigmodon"	"toltecus"	"Toltec Cotton Rat"	"LC"	849	12
 "RODENTIA"	"CRICETIDAE"	"Sigmodontomys"	"alfari"	"Alfaro's Rice Water Rat, Short-tailed Sigmodontomys"	"LC"	850	0
 "RODENTIA"	"CRICETIDAE"	"Sooretamys"	"angouya"		"LC"	851	0
@@ -3370,7 +3370,7 @@
 "RODENTIA"	"CRICETIDAE"	"Tylomys"	"bullaris"	"Chiapan Climbing Rat"	"CR"	859	0
 "RODENTIA"	"CRICETIDAE"	"Tylomys"	"mirae"	"Mira Climbing Rat"	"LC"	859	2
 "RODENTIA"	"CRICETIDAE"	"Tylomys"	"nudicaudus"	"Peter's Climbing Rat, Peters's Climbing Rat"	"LC"	859	3
-"RODENTIA"	"CRICETIDAE"	"Tylomys"	"tumbalensis"	"Tumbalá Climbing Rat, Tumbala Climbing Rat"	"CR"	859	1
+"RODENTIA"	"CRICETIDAE"	"Tylomys"	"tumbalensis"	"Tumbala Climbing Rat, Tumbala Climbing Rat"	"CR"	859	1
 "RODENTIA"	"CRICETIDAE"	"Tylomys"	"watsoni"	"Watson's Climbing Rat"	"LC"	859	4
 "RODENTIA"	"CRICETIDAE"	"Wiedomys"	"pyrrhorhinos"	"Red-nosed Mouse"	"LC"	860	0
 "RODENTIA"	"CRICETIDAE"	"Wilfredomys"	"oenax"	"Greater Wilfred's Mouse"	"EN"	861	0
@@ -3551,7 +3551,7 @@
 "RODENTIA"	"GEOMYIDAE"	"Cratogeomys"	"goldmani"		"LC"	911	3
 "RODENTIA"	"GEOMYIDAE"	"Cratogeomys"	"merriami"	"Merriam's Pocket Gopher, Merriam's Pocket Gopher"	"LC"	911	4
 "RODENTIA"	"GEOMYIDAE"	"Cratogeomys"	"perotensis"	"Cofre De Perote Pocket Gopher"	"LC"	911	5
-"RODENTIA"	"GEOMYIDAE"	"Cratogeomys"	"planiceps"	"Volcán De Toluca Pocket Gopher"	"LC"	911	6
+"RODENTIA"	"GEOMYIDAE"	"Cratogeomys"	"planiceps"	"Volcan De Toluca Pocket Gopher"	"LC"	911	6
 "RODENTIA"	"GEOMYIDAE"	"Geomys"	"arenarius"	"Desert Pocket Gopher"	"NT"	912	1
 "RODENTIA"	"GEOMYIDAE"	"Geomys"	"attwateri"	"Attwater's Pocket Gopher"	"LC"	912	2
 "RODENTIA"	"GEOMYIDAE"	"Geomys"	"breviceps"	"Baird's Pocket Gopher"	"LC"	912	3
@@ -3763,7 +3763,7 @@
 "RODENTIA"	"MURIDAE"	"Chrotomys"	"mindorensis"	"Lowland Chrotomys, Lowland Striped Shrew-rat, Mindoro Striped Rat"	"NT"	952	1
 "RODENTIA"	"MURIDAE"	"Chrotomys"	"silaceus"	"Blazed Luzon Chrotomys, Blazed Luzon Shrew-rat, Blazed Luzon Shrew Rat"	"LC"	952	2
 "RODENTIA"	"MURIDAE"	"Chrotomys"	"whiteheadi"	"Montane Chrotomys, Luzon Striped Rat, Luzon Montane Striped Shrew-rat"	"LC"	952	3
-"RODENTIA"	"MURIDAE"	"Coccymys"	"ruemmleri"	"Rümmler's Mouse, Rümmler's Coccymys, Rümmler's Brush Mouse"	"LC"	953	0
+"RODENTIA"	"MURIDAE"	"Coccymys"	"ruemmleri"	"Rummler's Mouse, Rummler's Coccymys, Rummler's Brush Mouse"	"LC"	953	0
 "RODENTIA"	"MURIDAE"	"Colomys"	"goslingi"	"African Wading Rat, African Water Rat"	"LC"	954	0
 "RODENTIA"	"MURIDAE"	"Conilurus"	"penicillatus"	"Brush-tailed Rabbit Rat, Brush-tailed Tree-rat"	"NT"	955	0
 "RODENTIA"	"MURIDAE"	"Crateromys"	"australis"	"Dinagat Crateromys, Dinagat Hairy-tailed Cloud Rat, Dinagat Bushy-tailed Cloud Rat, Dinagat Island Cloud Rat"	"CR"	956	0
@@ -4200,7 +4200,7 @@
 "RODENTIA"	"MURIDAE"	"Stochomys"	"longicaudatus"	"Target Rat"	"LC"	1048	0
 "RODENTIA"	"MURIDAE"	"Sundamys"	"infraluteus"	"Mountain Sundamys, Mountain Giant Rat"	"LC"	1049	1
 "RODENTIA"	"MURIDAE"	"Sundamys"	"maxi"	"Javan Sundamys, Bartels's Rat"	"EN"	1049	0
-"RODENTIA"	"MURIDAE"	"Sundamys"	"muelleri"	"Müller's Sundamys, Müller's Giant Sunda Rat"	"LC"	1049	2
+"RODENTIA"	"MURIDAE"	"Sundamys"	"muelleri"	"Muller's Sundamys, Muller's Giant Sunda Rat"	"LC"	1049	2
 "RODENTIA"	"MURIDAE"	"Taeromys"	"celebensis"	"Long-tailed Taeromys, Celebes Rat"	"LC"	1050	0
 "RODENTIA"	"MURIDAE"	"Tarsomys"	"apoensis"	"Dusky Tarsomys, Long-footed Rat"	"LC"	1051	1
 "RODENTIA"	"MURIDAE"	"Tarsomys"	"echinatus"	"Spiny Tarsomys, Spiny Long-footed Rat, Mindanao Spiny Rat"	"VU"	1051	0
