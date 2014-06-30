@@ -1511,7 +1511,7 @@ pointer-events: none;
 }
 
 .focusstaticorderlabel {
-	fill: #B3B3B3;
+	fill: black;
 	margin: 0;
 	position: absolute;
 	

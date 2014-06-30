@@ -1741,7 +1741,8 @@ function updateContext() {
 	contextOrders();
 	
 	// Update context label
-	d3.select(".contextlabel").text("BROWSE ALL "+getSingularFormClassname().toUpperCase()+" SPECIES")	
+	// d3.select(".contextlabel").text("BROWSE ALL "+getSingularFormClassname().toUpperCase()+" SPECIES")	
+	d3.select(".contextlabel").text("BROWSE NEXT ANIMAL CLASS")
 	.attr("x", function(d, i) {
 		contextlabelwidth = d3.select(this).node().getBBox().width
 		
