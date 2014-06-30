@@ -50,6 +50,7 @@
 	top: 36px;
 	left: 179px;
 	color: black;
+	text-align: left;
 }
 
 #banner-identity #app-tagline a {
@@ -57,9 +58,11 @@
 }
 
 #banner .social-section {
-	width: 358px;
+	width: 206px;
 	text-align: right;
-	padding-top: 37px;
+	position: relative;
+	top: -22px;
+	font-size: 13px;
 }
 
 .ss-icon, .ss-icon.ss-social {
