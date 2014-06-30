@@ -4,7 +4,7 @@ setFirefoxSpecificParms();
 window.addEventListener(mousewheelevt, function(e) { 
       		mousewheel(e);
 });
-console.log("Adding mousewheel listener")
+// console.log("Adding mousewheel listener")
 
 
 frogplayer = videojs("frogvideo");
@@ -405,7 +405,7 @@ var startagain = false;
    // var keyframeToPagePercent = {1:buttonIndexToPagePercent[1],2:buttonIndexToPagePercent[1], 3:buttonIndexToPagePercent[2],4:buttonIndexToPagePercent[2], 5:buttonIndexToPagePercent[3],6:buttonIndexToPagePercent[3], 7:buttonIndexToPagePercent[4], 8:buttonIndexToPagePercent[4]}
     
     clickButton = function(index, element) {
-    	
+
     	if ((!playerready)||(!startedeverything)) {
     		return;
     	}
