@@ -13,6 +13,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="//www.propublica.org/js/public/assets/typekit.js?1349797800"></script>
+<!-- <link rel="stylesheet" type="text/css" href="http://www.propublica.org/css/headfoot2011.css?1403015273"> -->
 <link rel="stylesheet" href="css/base.css">
 
 <link rel="stylesheet" href="css/propublica_frame.css">
@@ -20,7 +21,7 @@
 <!-- <link rel="stylesheet" href="css/main.min.css"> -->
 
 <script type="text/javascript" src="//www.propublica.org/js/public/assets/all.js"></script>
- 
+
 <script>
 var startedeverything = false;
 var playerready = false;
@@ -363,7 +364,48 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 		      <div id="banner-identity">
 		        <p id="banner-logo"><a href="http://www.propublica.org/" class="pngfix">ProPublica</a></p>
 		        <p id="app-tagline"><a href="TKTKTK">A Disappearing Planet</a></p>
-		      </div>
+		      
+		      	<script type="text/javascript" src="//propublica.s3.amazonaws.com/assets/social/socialsnippet.js"></script>
+					  <link type="text/css" rel="stylesheet" href="//www.propublica.org/css/get-involved.css?20130301" type="text/css" media="all" charset="utf-8" />
+					  <link rel="stylesheet" href="//propublica.s3.amazonaws.com/assets/social/socialsnippet.css">
+			      <div class="social-section">
+					    <!--   TWITTER STUFF
+					    data-txt: actual tweet
+					    data-url: url that the tweet will link to, add the campaign stuff at the end if needed
+					    data-hastag: don't include the actual # symbol, just the phrase  -->
+					    <span class="ss-icon ss-social ss-tw"
+					    data-txt="The current animal extinction rate rivals that of the dinosaur era. @ProPublica catalogued the species at risk"
+					    data-url="http://projects.propublica.org/treatment/doctors/1598731770"
+					    data-hashtag="">
+					    Twitter
+					    </span>
+
+					    <!--   FACEBOOOK STUFF
+					    data-img = this will get resized to an image about 90px wide, no need to upload a huge image size
+					    data-title = this will be the headline on the facebook box
+					    data-txt = this will be a short description underneath the headline
+					    data-desc = this will be a longer description
+					    data-url = the url the facebook post will link to, can also add campaign stuff here. -->
+					    <script src="//connect.facebook.net/en_US/all.js"></script>
+					    <script>
+					      FB.init({
+					        appId      : '229862657130557', // App ID
+					        status     : true, // check login status
+					        cookie     : true, // enable cookies to allow the server to access the session
+					        xfbml      : true  // parse XFBML
+					      });
+					    </script>
+					    <span class="ss-icon ss-social ss-fb"
+					    data-img="http://projects.propublica.org/treatment/assets/radial-ae063ead84493d9c092b913d4492ea69.png"
+					    data-title="A Disappearing Planet"
+					    data-txt="The current animal extinction rate rivals that of the dinosaur era. @ProPublica catalogued the species at risk"
+					    data-desc="The Doctors and Services in Medicare Part B"
+					    data-url="http://projects.propublica.org/treatment/doctors/1598731770">
+					    Facebook
+					    </span>
+					  </div>
+					</div>
+
 		    </div>
 		  </div>
 		</div>
@@ -395,7 +437,6 @@ if ((window.innerWidth > 768)&&(!(msieversion()))) {
 	document.write('<script type="text/javascript" src="js/amphibians.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/mammals.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/birds.min.js"><\/script>');
-	document.write('<script type="text/javascript" src="js/lazyload.js"><\/script>');
 } else {
 
 document.write('<script type="text/javascript" src="js/mobile.min.js"><\/script>');
