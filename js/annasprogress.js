@@ -82,7 +82,7 @@ progress.watch("p", function (id, oldval, newval) {
 
 	if ((((progress.p>=totalprogress) && (!startedeverything)))) {
 		startedeverything = true;
-		console.log("OK EVERYTHING HAS LOADED")
+		// console.log("OK EVERYTHING HAS LOADED")
 		document.getElementById("loadingid").style.opacity=0;
 		document.getElementById("scrollcommandid").style.opacity=1;
 		//document.getElementById("loadingid").style.opacity=0;
