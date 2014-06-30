@@ -88,18 +88,6 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 		<div class="dragtooltip" id="dragtooltipid">
 		<img src="images/dragtooltip.png" onclick="document.getElementById('dragtooltipimageid').style.display='none'" alt="legend" id="dragtooltipimageid" >
 		</div>
-	
-		<div class="datasources">
-		 	<p class="sourcetitle">SOURCES</p>
-		 	<p class="source">Species data from the 
-		 	<a href="http://www.iucnredlist.org/technical-documents/spatial-data" target="_blank" onmouseover="mouseoverhelpbutton()">IUCN Red List of Threatened Species</a>, Version 2013</p>
-		 	<p class="source">Extinction projections from 
-		 	<a href="http://www.conservation.cam.ac.uk/person/mike-hoffman" target="_blank" onmouseover="mouseoverhelpbutton()">Michael Hoffman</a> et al., <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank" onmouseover="mouseoverhelpbutton()">The Impact of Conservation on the 
-		 	Status of the World’s Vertebrates</a> (2010)</p>
-		 	<p class="source">Natural extinction rates from 
-		 	<a href="https://en.wikipedia.org/wiki/Stuart_Pimm" target="_blank" onmouseover="mouseoverhelpbutton()">Stuart Pimm</a> et. al., 
-		 	<a href="http://www.sciencemag.org/content/269/5222/347" target="_blank" onmouseover="mouseoverhelpbutton()">The Future of Biodiversity</a> (1995)</p>
-		 </div>
     
 	</div>
 	<div class="bottom-sources desktop-only">
@@ -203,8 +191,8 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 
 		<div class=contributorbox>
 		<p class="contributortitle">ADDITIONAL DESIGN & DEVELOPMENT</p>
-		<p class="contributor"><a href="http://www.propublica.org/site/author/lena_groeger" target="_blank">Lena Groeger</a>, 
-		<a href="http://www.propublica.org/site/author/sisi_wei" target="_blank">Sisi Wei</a> and <a href="http://moiz.ca/" target="_blank">Moiz Syed</a></p>
+		<p class="contributor"><a href="http://www.propublica.org/site/author/lena_groeger" target="_blank">Lena Groeger</a> and 
+		<a href="http://www.propublica.org/site/author/sisi_wei" target="_blank">Sisi Wei</a></p>
 		</div>
 
 		</div>
@@ -407,6 +395,7 @@ if ((window.innerWidth > 768)&&(!(msieversion()))) {
 	document.write('<script type="text/javascript" src="js/amphibians.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/mammals.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/birds.min.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/lazyload.js"><\/script>');
 } else {
 
 document.write('<script type="text/javascript" src="js/mobile.min.js"><\/script>');

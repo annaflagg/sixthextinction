@@ -1,9 +1,5 @@
 incrementProgress();
 
-
-
-
-
 var threatdict = {"LC": "Least Concern", "EN": "Endangered", "CR":"Critically endangered", "CR (PE)": "Critically endangered", "LR/lc": "Least Concern", "DD":"Data Deficient", "LR/cd":"Near Threatened", "VU": "Vulnerable","EW":"Extinct in the Wild", "NT": "Near Threatened", "LR/nt":"Near Threatened"}
 incrementProgress();
  
@@ -22,22 +18,14 @@ var buttondata = [{"class":"amphibians", "type": "healthy", "value": 2405, "clas
 ]
 
 var buttonx = {"amphibians": 742, "mammals": 546, "reptiles": 353, "birds": 165};
-
 var buttoncolors = {"healthy":"#E7E8E9", "threatened":"#EDC3C2", "background":"#BCBEC0"};
-//var classdatacolors = {"healthy":"#D1D2D4", "threatened":"#FF0000", "background":"#3A3A3C", "threatenedunhighlight":"#6D6E71", "threatenedunhighlight":"#D1D2D4"};
 var classdatacolors = {"healthy":"#CCCCCC", "threatened":"#FF0000", "dd":"white", "background":"#3A3A3C", "threatenedunhighlight":"#6D6E71", "threatenedunhighlight":"#D1D2D4"};
-
-
-
-
 var bodycopytext = [{"class":"amphibians", "copy":
 "Given the natural extinction rate, we would not expect more than one amphibian extinction per century. However according to scientists, 2,341 are currently at risk for extinction. Frogs have been hit hard, with families like the <a onClick='showMe(\"waterfrogs\");' class='showmetext'><span class='showmebox'>water frog</span></a>, <a onClick='showMe(\"shrubfrogs\");' class='showmetext'><span class='showmebox'>shrub frog</span></a>, and <a onClick='showMe(\"dancingfrogs\");' class='showmetext'><span class='showmebox'>dancing frog</span></a> in great danger."},
 {"class":"mammals", "copy":"Given the natural extinction rate, we would not expect more than one mammal species go extinct per century. However according to scientists, 1,469 are currently in danger of extinction. Note the red cluster at <a onClick='showMe(\"primates\");' class='showmetext'><span class='showmebox'>primates</span></a>, especially <a onClick='showMe(\"lemurs\");' class='showmetext'><span class='showmebox'>lemurs</span></a>. <a onClick='showMe(\"rhinos\");' class='showmetext'><span class='showmebox'>Rhinos</span></a>, <a onClick='showMe(\"bears\");' class='showmetext'><span class='showmebox'>bears</span></a> & <a onClick='showMe(\"cats\");' class='showmetext'><span class='showmebox'>big cats</span></a> are also at risk."},
 {"class":"reptiles", "copy": "Given the natural extinction rate, we would not expect more than one reptile extinction per century. However according to scientists, 1,163 are currently at risk for extinction. There is a striking red cluster around the order of <a onClick='showMe(\"turtles\");' class='showmetext'><span class='showmebox'>turtles</span></a>, as well as the <a onClick='showMe(\"chameleons\");' class='showmetext'><span class='showmebox'>chameleon</span></a> and <a onClick='showMe(\"iguanas\");' class='showmetext'><span class='showmebox'>iguana</span></a> families."},
 {"class":"birds", "copy":"Given the natural extinction rate, we would not expect more than one bird extinction per century. However according to the IUCN, 2,200 are currently in danger of extinction. <a onClick='showMe(\"albatrosses\");' class='showmetext'><span class='showmebox'>Albatrosses</span></a>, <a onClick='showMe(\"penguins\");' class='showmetext'><span class='showmebox'>penguins</span></a>, <a onClick='showMe(\"hornbills\");' class='showmetext'><span class='showmebox'>hornbills</span></a> and <a onClick='showMe(\"parrots\");' class='showmetext'><span class='showmebox'>parrots</span></a> are particularly at risk."}
 ]
-
-// <a onClick='showMe(\"giantsalamanders\");' style='cursor: pointer; cursor: hand; top: 100px'>Giant salamanders</a>, <a onClick='showMe(\"asiaticsalamanders\");' style='cursor: pointer; cursor: hand; top: 100px'>Asiatic salamanders</a>, and <a onClick='showMe(\"lunglesssalamanders\");' style='cursor: pointer; cursor: hand; top: 100px'>lungless salamanders</a> are also in serious danger."
 
 var showMeExamples = {"turtles": [3300, false], "chameleons":[351, true], 
 "iguanas":[1630, true], "primates":[2595, false], "lemurs":[2650, true], "hippos":[525, true], 
@@ -1742,13 +1730,14 @@ function updateContext() {
 	
 	// Update context label
 	// d3.select(".contextlabel").text("BROWSE ALL "+getSingularFormClassname().toUpperCase()+" SPECIES")	
-	d3.select(".contextlabel").text("BROWSE NEXT ANIMAL CLASS")
-	.attr("x", function(d, i) {
-		contextlabelwidth = d3.select(this).node().getBBox().width
-		
-		return (divwidth/2)-(contextlabelwidth/2)})
-	d3.select(".contextlabelhelperrect").attr("x", function () {return ((divwidth/2)-(contextlabelwidth/2))-contextlabelhelperrectspace;})
-	.attr("width", function() {return contextlabelwidth+(2*contextlabelhelperrectspace);}).attr("fill", "white")
+		d3.select(".contextlabel").text("BROWSE NEXT ANIMAL CLASS")
+		.attr("x", function(d, i) {
+			contextlabelwidth = d3.select(this).node().getBBox().width
+			return (divwidth/2)-(contextlabelwidth/2)})
+		d3.select(".contextlabelhelperrect").attr("x", function () {return ((divwidth/2)-(contextlabelwidth/2))-contextlabelhelperrectspace;})
+		.attr("width", function() {return contextlabelwidth+(2*contextlabelhelperrectspace);}).attr("fill", "white")
+
+	
 
 }
 
