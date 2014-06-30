@@ -113,24 +113,7 @@ var vids = [{"class":"amphibians", "vid": aplayer, "vidloaded":false, "firstload
 var currclassindex = 1;
 //loadInitVid();
 loadAllVideos();
-/**function loadInitVid() {
-//document.getElementById(vids[currclassindex].class+"staticdiv").style.opacity=1;
-	vids[currclassindex].vid.on('loadeddata', function() {
-	console.log("loaded turtle video")
-	vids[currclassindex].vidloaded=true;
-	
-	// MIGHT NEED THIS LINE?
-	//document.getElementById(vids[currclassindex].class+"viddiv").style.opacity=0;
-	
-	//vids[currclassindex].firstload=false;
-	vids[currclassindex].vid.play();
-	
 
-	incrementProgress();
-	
-	})
-
-}**/
 
 function loadAllVideos() {
 	vids[0].vid.on('loadeddata', function() {
@@ -417,10 +400,7 @@ var transitiondelaytime = 0;
 incrementProgress();
 
 var windowoffset = (window.innerWidth-1000)/2.0;
-document.getElementById("amphibiansviddiv").style["margin-left"]=40+"px";//windowoffset+(divwidth/2)-120+"px"
-document.getElementById("reptilesviddiv").style["margin-left"]=-20+"px";//windowoffset+(divwidth/2)-175+"px"
-document.getElementById("mammalsviddiv").style["margin-left"]= 40+"px";//windowoffset+(divwidth/2)-104+"px"
-document.getElementById("birdsviddiv").style["margin-left"]=125+"px";//windowoffset+(divwidth/2)-40+"px"
+
 //104
 // Render typeahead stuff
 var searchdiv;
@@ -519,7 +499,7 @@ function showVis() {
 data = alldata[currclassindex];
 if (init) {
 render();
-
+document.getElementById('dragtooltipid').style.display="block";
 }
 	//
 	//initializeView();
@@ -934,7 +914,7 @@ function initializeView() {
 // Render the structure of the page
 // these usually only get called on load – they are then just updated, not re–rendered
 function render() {
-	renderLegend();
+	//renderLegend();
 	renderStaticView();
 renderClassChart();
 	//renderSpeciesText();
@@ -948,31 +928,6 @@ renderClassChart();
 }
 var helpbuttondiv;
 function renderHelpButton() {
-
-	helpbuttondiv = d3.select("#ttipdiv")
-    .append("div");
-
-    helpbuttondiv.attr("class", "helpbuttondiv")
-    	.attr("id", "helpbuttondivid")
-    	.style("margin-left", 110+"px")
-
-
-var img = document.createElement("img");
-img.src = "images/helpbutton2.png";
-img.id="helpbuttonid";
-img["class"]="helpbuttonimg";
-
-
-var src = document.getElementById("helpbuttondivid");
-src.appendChild(img);
-
-/**
-src.onmouseover = mouseoverhelpbutton;
-src.onmouseout = mouseouthelpbutton;**/
-src.onmouseout = function (evt) {
-	//console.log("image mouseout: "+evt)
-	mouseouthelpbutton(evt)};
-src.onmouseover = mouseoverhelpbutton;
 
 	var helpbuttonx = x0;
 	var helpbuttony = 400;
@@ -1000,9 +955,11 @@ src.onmouseover = mouseoverhelpbutton;
 
 	svg.append("svg:text")
 	.attr("class", "helpbuttonlabel")
-		.attr("x", helpbuttonx-(2*helpbuttonr)+50)
-		.attr("y", helpbuttony)
+		.attr("x", helpbuttonx-helpbuttonr)
+		.attr("y", helpbuttony-helpbuttonr-10)
 		.text("How do I read this graphic?")
+		.on("mouseover", mouseoverhelpbutton)
+		.on("mouseout", mouseouthelpbutton);
 		
 	
 
@@ -1030,6 +987,7 @@ function mouseoutresearchers() {
 }
 
 function renderLegend() {
+/**
 	var legenddiv = d3.select("#ttipdiv")
     .append("div");
     legenddiv.attr("class", "legendimg")
@@ -1042,7 +1000,7 @@ img.src = "images/legend.png";
 img.id="legendimageid";
 
 var src = document.getElementById("legendimgid");
-	src.appendChild(img);
+	src.appendChild(img);**/
 }
 
 // Update the focus view and its corresponding highlights on the context view when the brush is dragged
@@ -3014,6 +2972,7 @@ function getBrushedP1(brushx) {
 // Call this function when the brush is dragged
 function dragmove() {
 	//evt.preventDefault();
+	document.getElementById('dragtooltipid').style.display="none";
 	d3.event.sourceEvent.preventDefault();
 	var move;
 	speciestext.style("display", "none");

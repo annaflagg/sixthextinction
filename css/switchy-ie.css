@@ -2,6 +2,19 @@
   .mobile-only { display: none; }
   .ie-only {display:block;margin-top:90px;}
 
+#scrollingid {
+display:none;
+}
+.loadandscroll {
+display:none;
+}
+#birdsviddiv, #reptilesviddiv, #amphibiansviddiv, #mammalsviddiv {
+display: none;
+}
+body {
+overflow:visible;
+}
+
   #chart {
     width: 300px;
     overflow: hidden;
