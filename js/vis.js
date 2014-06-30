@@ -233,7 +233,8 @@ var svg = d3.select("#chart").append("svg")
 	.attr("class", "svgclass")
 	
 	.attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+		.attr("height", 770)
+    // .attr("height", height + margin.top + margin.bottom)
     //.attr("class", "bigsvg")
     //.on("mousedofwn")
     .on("mousedown", function() { 

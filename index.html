@@ -58,9 +58,8 @@ document.write('<link rel="stylesheet" href="css/switchy.min.css">');
   <div class="container-inner">
     <div id="content">
     		<div id="whitebackground"></div>
-        <div id="chart">
-		</div>
-	<div id="ttipdiv">
+        <div id="chart"></div>
+		<div id="ttipdiv">
 
 		<div class="legendimg" id="legendimgid">
 		<img src="images/legend.png" alt="legend" id="legendimageid" >
@@ -100,7 +99,14 @@ document.write('<link rel="stylesheet" href="css/switchy.min.css">');
 		 	<a href="http://www.sciencemag.org/content/269/5222/347" target="_blank" onmouseover="mouseoverhelpbutton()">The Future of Biodiversity</a> (1995)</p>
 		 </div>
     
-	</div>	
+	</div>
+	<div class="bottom-sources desktop-only">
+		<p class="sourcetitle">SOURCES</p>
+		 <p class="source">Species data from the <a href="http://www.iucnredlist.org/technical-documents/spatial-data" target="_blank" >IUCN Red List of Threatened Species</a>, Version 2013, accessed on March 1, 2013</p>
+		 <p class="source">Extinction projections from <a href="http://www.conservation.cam.ac.uk/person/mike-hoffman" target="_blank">Michael Hoffman</a> et al., <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank">The Impact of Conservation on the 
+		 Status of the World’s Vertebrates</a>, Science (2010)</p>
+		 <p class="source">Background extinction estimates from <a href="https://en.wikipedia.org/wiki/Stuart_Pimm" target="_blank">Stuart Pimm</a> et. al., <a href="http://www.sciencemag.org/content/269/5222/347" target="_blank">The Future of Biodiversity</a>, Science (1995)</p>
+	</div>
     
     <section id="intro" class="wrapper">
 		<div class="copy" id="copyid">
@@ -394,7 +400,8 @@ if ((window.innerWidth > 768)&&(!(msieversion()))) {
 	document.write('<script type="text/javascript" src="js/bootstrap-typeahead-ext.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/queue.v1.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/d3.min.js"><\/script>');
-	document.write('<script type="text/javascript" src="js/vis.min.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/vis.js"><\/script>');
+	// document.write('<script type="text/javascript" src="js/vis.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/amphibians.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/mammals.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/birds.min.js"><\/script>');

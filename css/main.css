@@ -400,12 +400,6 @@ border-right: none;
 }
 
 
-/*a:link {color: #2262cc; }
-a:active {color: #2262cc; text-decoration: underline; }
-a:visited {color: #2262cc; text-decoration: underline; }
-a:hover {color: #2262cc; text-decoration: underline; }*/
-
-
 .datasources {
 position:fixed;
 top:545px;
@@ -417,6 +411,20 @@ z-index:26;
 color:#58585A;
 display:none;
 }
+
+.bottom-sources {
+	color: #000;
+	text-align: left;
+	position: fixed;
+	top: 800px;
+	z-index: 100;
+	margin: 0 80px;
+}
+
+.bottom-sources .source {
+	width: 100%;
+}
+
 .visiblesource {
 display:block;
 }

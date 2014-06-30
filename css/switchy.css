@@ -1,6 +1,7 @@
 @media screen and (max-width: 480px) {
   .mobile-only { display: block;margin-top:120px;}
   .ie-only {display:none}
+  .desktop-only { display: none;}
 
  #scrollingid {
 display:none;
