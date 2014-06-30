@@ -51,6 +51,7 @@ var showMeExamples = {"turtles": [3300, false], "chameleons":[351, true],
 "parrots":[9422, false]}
 
 function showMe(str) {
+document.getElementById('dragtooltipid').style.display="none";
 //console.log("SHOWME example: "+str)
 speciestext
   	.style("display", "none")
