@@ -115,19 +115,73 @@ display:none;
 position:fixed;
 height: 25px;
 }
+#sourcesbutton {
+padding-left:3px;
+font-size:10px;
+font-weight:600;
+vertical-align:text-top;
 
+/*color:blue;*/
+}
+.sourcesiconi {
+color: white;
+margin-left:-11px;
+font-family:Georgia;
+font-weight:bold;
+font-style:oblique;
+font-size:10px;
+pointer-events:none;
+vertical-align:text-top;
+}
+
+.sourceSectionButton {
+pointer-events:none;
+}
+
+/*
+#mammalsbutton {
+padding-left:100px;
+}*/
 .buttons {
+position:fixed;
 	margin-top: 100px;
+
 	height:20px;
 	width: 100%;
+
 -webkit-transform: translateZ(0);
 
 }
+.sourcesbuttondiv {
+position:fixed;
+	margin-top: 86px;
+	margin-left:825px;
+	height:50px;
+	width: 100px;
+display:none;
+-webkit-transform: translateZ(0);
+}
+.sourcebuttonspan {
+color:#878787;
+fill:#878787;
+width:150px;
+cursor:pointer;
+cursor:hand;
+background-color:white;
+pointer-events:all;
+
+}
+.sourcebuttonspan:hover {
+color:black;
+fill:black;
+}
+
 .sectionButton {
 	font-weight: 600;
 	font-family: Open Sans;
 	color: #B3B3B3;
-	padding: 22px;
+	fill: #B3B3B3;
+	padding: 39px;
 	font-size: 13px;
 	letter-spacing: 1px;
 	cursor: pointer;
@@ -140,6 +194,7 @@ height: 25px;
 }
 .selectedSectionButton {
 	color: black;
+	fill:black;
 }
 #titlebutton {
 	padding-right: 100px;
@@ -464,13 +519,14 @@ display:none;
 .visiblesource {
 display:block;
 }
+
 .sourcetitle {
 margin-top:50px;
 	font-weight:700;
 	font-size:13px;
 	letter-spacing:1.5px;
 	pointer-events:none;
-	-webkit-transform-style: preserve-3d;
+
 		-webkit-transform: translateZ(0);
 }
 .source {
@@ -480,7 +536,7 @@ width:690px;
 line-height: 1.5em;
 pointer-events:none;
 	font-weight:500;
-	-webkit-transform-style: preserve-3d;
+	
 		-webkit-transform: translateZ(0);
 }
 #helpbuttonid {
