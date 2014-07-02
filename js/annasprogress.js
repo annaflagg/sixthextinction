@@ -88,7 +88,7 @@ progress.watch("p", function (id, oldval, newval) {
 
 	if ((((progress.p>=totalprogress) && (!startedeverything)))) {
 		startedeverything = true;
-		console.log("OK EVERYTHING HAS LOADED")
+		// console.log("OK EVERYTHING HAS LOADED")
 		document.getElementById("froggydiv").style.display="block";
 		document.getElementById("bodyid").style.overflow="visible";
 		document.getElementById("loadingid").style.opacity=0;
