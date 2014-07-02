@@ -9,9 +9,9 @@ body {
  overflow:hidden;
  
 }
-a:link {color: #2262cc; }
+a:link {color: #2262cc;text-decoration: none;}
 a:active {color: #2262cc; text-decoration: underline; }
-a:visited {color: #2262cc; text-decoration: underline; }
+a:visited {color: #2262cc; text-decoration: none;}
 a:hover {color: #2262cc; text-decoration: underline; }
 
 .mobile-only {
@@ -627,6 +627,21 @@ font-size: small;
 cursor: pointer;
 cursor: hand;
 }
+
+
+.loadindicator {
+margin-top:15px;
+margin-bottom:0px;
+opacity:1;
+font-weight: 600;
+	font-family: Open Sans;
+	color: #999999;
+	font-size: 13px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	-webkit-transform: translateZ(0);
+}
+
 .scrollcommand {
 margin-top:-6px;
 
@@ -1816,7 +1831,7 @@ opacity:1;
 
 a {
   color: #0088cc;
-  text-decoration: none;
+ text-decoration: none;
   pointer-events: all;
  
 }
