@@ -302,7 +302,7 @@ $(window).scrollTop(0)}, 100)**/
             'animations' :  [{
                'selector'    : '.credits',
                'translateY'  : -15,
-                'opacity'    : [0,10]
+                'opacity'    : [.2,10]
               }, {
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
@@ -384,7 +384,7 @@ var startagain = false;
     	$('#reptilesbutton').on('click',function() {clickButton(2, d3.select(this))});
     	$('#amphibiansbutton').on('click',function() {clickButton(3, d3.select(this))});
     	$('#birdsbutton').on('click',function() {clickButton(4, d3.select(this))});
-    	$('#sourcesbutton').on('click',function() {clickButton(5, d3.select(this))});
+    	$('#sourcebuttonspanid').on('click',function() {clickButton(5, d3.select(this))});
     	$('#scrollbutton').on('click',function() {
     		//console.log("hello")
     		//init=true;
@@ -436,9 +436,31 @@ convertPercentToPx = function(value, axis) {
     
     updateButtons = function(element, buttonindexnum) {
     	//console.log(buttonindexnum)
-    	d3.selectAll(".sectionButton").classed("selectedSectionButton", false)
+    	d3.selectAll(".sectionButton").classed("selectedSectionButton", false);
+    	d3.selectAll(".sourcebuttonspan").classed("selectedSectionButton", false);
     	element.classed("selectedSectionButton", true)
     	currentButtonIndex = buttonindexnum;
+    	
+    	
+    	if (currentKeyframe==0) {
+    	document.getElementById("sourcesbuttondivid").style["display"]="none";
+    	} else {
+     	document.getElementById("sourcesbuttondivid").style["display"]="block";	
+    	}
+    	
+    	//if (currentButtonIndex==5) {
+    	//var sb = document.getElementById('sourcesbutton');
+    	//sb.className = "selectedSourceButtons "+sb.className;
+    	//}
+    	/**
+    	if (currentButtonIndex==5) {
+    	console.log("sources button")
+    	var sb = document.getElementById('sourcesbutton');
+    	sb.className = sb.className + " selectedSourceButtons";
+    	//d3.select("#sourcesbutton").classed("selectedSourceButtons", true)
+    	} else {
+    	//document.getElementById('sourcesbutton').style.color="#9A9A9A";
+    	}**/
     	
     }
 
@@ -623,7 +645,7 @@ vis = function(scrollpos) {
 		if (currentKeyframe==0) {
 		updateButtons(d3.select(document.getElementById('titlebutton')), keyframeToButtonIndex[currentKeyframe]);
 		} else {
-		updateButtons(d3.select(document.getElementById('sourcesbutton')), keyframeToButtonIndex[currentKeyframe]);
+		updateButtons(d3.select(document.getElementById('sourcebuttonspanid')), keyframeToButtonIndex[currentKeyframe]);
 		}
 		document.getElementById('helpbuttonid').style.display="none";
 		/**
