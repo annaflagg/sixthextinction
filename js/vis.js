@@ -1025,7 +1025,7 @@ function updateAll() {
 }
 
 function updateScrollCommand() {
-var nextUps = {2:"REPTILES", 1:"AMPHIBIANS", 0:"BIRDS", 3:"DATA SOURCES"}
+var nextUps = {2:"AMPHIBIANS", 1:"REPTILES", 0:"BIRDS", 3:"DATA SOURCES"}
 
 var elem = document.getElementById('scrollcommandid');
 elem.style.display='none';
