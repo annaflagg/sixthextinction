@@ -31,7 +31,7 @@ overflow:visible;
   #chart {
     width: 300px;
     overflow: hidden;
-    height: 100%
+    height: 100%;
     display:none;
   }
 
@@ -41,7 +41,7 @@ overflow:visible;
   }
 
   #bodyid {
-    height: 2000px !important
+    height: 2000px !important;
      
   }
 
@@ -67,7 +67,7 @@ height:35px;
 background-color:black;
 }
 .buttons {
-margin-top:7px
+margin-top:7px;
 }
 .sectionButton {
 	padding: 11px;
@@ -191,10 +191,11 @@ margin-left:10px;
 }
 .mobilefooter {
 padding-top:65px;
-height:200px;
+height:240px;
 text-align: left;
 margin-left:10px;
 padding-bottom:30px;
+margin-bottom: 30px;
 }
 .sourcetitle {
 	font-weight:800;
