@@ -71,7 +71,7 @@ function mousewheel(e) {
 	
 	var evt=window.event || e //equalize event object
 
-document.getElementById('scrollcommandid').style.opacity=0;
+//document.getElementById('scrollcommandid').style.opacity=0;
     scrollpos = Math.max(0,$(window).scrollTop());
     var delta = Math.max(-1, Math.min(1, evt.detail? evt.detail*(-1) : evt.wheelDelta));
      if (frogActive(scrollpos)) {
@@ -444,6 +444,7 @@ convertPercentToPx = function(value, axis) {
     	
     	if (currentKeyframe==0) {
     	document.getElementById("sourcesbuttondivid").style["display"]="none";
+    	document.getElementById('scrollcommandid').innerHTML="SCROLL";
     	} else {
      	document.getElementById("sourcesbuttondivid").style["display"]="block";	
     	}

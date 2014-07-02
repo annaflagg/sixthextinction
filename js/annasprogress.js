@@ -104,7 +104,7 @@ progress.watch("p", function (id, oldval, newval) {
 		}
 		
 		
-		$('.scrolling').animate({'margin-top':'680px'}, 'slow');
+		$('.scrolling').animate({'margin-top':'700px'}, 'slow');
 		
 		
 		 

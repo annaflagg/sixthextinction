@@ -21,7 +21,7 @@ var buttonx = {"amphibians": 742, "mammals": 546, "reptiles": 353, "birds": 165}
 var buttoncolors = {"healthy":"#E7E8E9", "threatened":"#EDC3C2", "background":"#BCBEC0"};
 var classdatacolors = {"healthy":"#CCCCCC", "threatened":"#FF0000", "dd":"white", "background":"#3A3A3C", "threatenedunhighlight":"#6D6E71", "threatenedunhighlight":"#D1D2D4"};
 var bodycopytext = [{"class":"amphibians", "copy":
-"Given the historical extinction rate, we would not expect more than one amphibian extinction each century. According to scientists, however, 2,341 are currently in danger of becoming extinct over the next 100 years. Frogs have been hit hard, with families like the <a onClick='showMe(\"waterfrogs\");' class='showmetext'><span class='showmebox'>water frog</span></a>, <a onClick='showMe(\"shrubfrogs\");' class='showmetext'><span class='showmebox'>shrub frog</span></a>, and <a onClick='showMe(\"dancingfrogs\");' class='showmetext'><span class='showmebox'>dancing frog</span></a> in great danger."},
+"Given the historical extinction rate, we would not expect more than one amphibian extinction each century. According to scientists, however, 2,341 are currently in danger of becoming extinct over the next 100 years. Frogs have been hit hard, with families like the <a onClick='showMe(\"waterfrogs\");' class='showmetext'><span class='showmebox'>water frog</span></a> and <a onClick='showMe(\"shrubfrogs\");' class='showmetext'><span class='showmebox'>shrub frog</span></a> in great danger."},
 {"class":"mammals", "copy":"Given the historical extinction rate, we would not expect more than one mammal species go extinct each century. According to scientists, however, 1,469 are currently in danger of becoming extinct over the next 100 years. Note the red cluster at <a onClick='showMe(\"primates\");' class='showmetext'><span class='showmebox'>primates</span></a>, especially <a onClick='showMe(\"lemurs\");' class='showmetext'><span class='showmebox'>lemurs</span></a>. <a onClick='showMe(\"rhinos\");' class='showmetext'><span class='showmebox'>Rhinos</span></a>, <a onClick='showMe(\"bears\");' class='showmetext'><span class='showmebox'>bears</span></a> & <a onClick='showMe(\"cats\");' class='showmetext'><span class='showmebox'>big cats</span></a> are also at risk."},
 {"class":"reptiles", "copy": "Given the historical extinction rate, we would not expect more than one reptile extinction each century. According to scientists, however, 1,163 are currently in danger of becoming extinct over the next 100 years. There is a striking red cluster around the order of <a onClick='showMe(\"turtles\");' class='showmetext'><span class='showmebox'>turtles</span></a>, as well as the <a onClick='showMe(\"chameleons\");' class='showmetext'><span class='showmebox'>chameleon</span></a> and <a onClick='showMe(\"iguanas\");' class='showmetext'><span class='showmebox'>iguana</span></a> families."},
 {"class":"birds", "copy":"Given the historical extinction rate, we would not expect more than one bird extinction each century. According to the IUCN, 2,200 are currently in danger of becoming extinct over the next 100 years. <a onClick='showMe(\"albatrosses\");' class='showmetext'><span class='showmebox'>Albatrosses</span></a>, <a onClick='showMe(\"penguins\");' class='showmetext'><span class='showmebox'>penguins</span></a>, <a onClick='showMe(\"hornbills\");' class='showmetext'><span class='showmebox'>hornbills</span></a> and <a onClick='showMe(\"parrots\");' class='showmetext'><span class='showmebox'>parrots</span></a> are particularly at risk."}
@@ -259,7 +259,7 @@ var switchingclass = true;
 var selectedfamily;
 var selectedorder;
 var selectedspecies;
-var scrollbuttonspace = 10;
+var scrollbuttonspace = 25;
 var typeaheady = 404;
 var instructionsy = typeaheady+67;
 var divwidth=1000;
@@ -325,7 +325,7 @@ var contextorderliney = focusy0+familyheight+1;
 var contextorderliney0 = y0;
 // Label
 var contextlabelwidth;
-var contextlabely = y0+40;
+var contextlabely = y0+36;
 var contextlabelliney = contextlabely-5;
 var contextlabelhelperrectspace = 4;
 // Brush
@@ -919,7 +919,7 @@ renderClassChart();
 var helpbuttondiv;
 function renderHelpButton() {
 
-	var helpbuttonx = x0;
+	var helpbuttonx = focusx0-40;
 	var helpbuttony = 400;
 	var helpbuttonr = 13;
 	
@@ -1013,6 +1013,7 @@ function updateAll() {
 	updateText();
 	updateButtonHighlights();
 	
+	updateScrollCommand();
 	// Focus view
 	//focusp1=initfocusp1;
 	//focusp2=initfocusp2;
@@ -1020,6 +1021,18 @@ function updateAll() {
 	
 	// Context view
 	updateContext();
+
+}
+
+function updateScrollCommand() {
+var nextUps = {2:"REPTILES", 1:"AMPHIBIANS", 0:"BIRDS", 3:"DATA SOURCES"}
+
+var elem = document.getElementById('scrollcommandid');
+elem.style.display='none';
+elem.offsetHeight; 
+elem.innerHTML="NEXT UP: "+nextUps[currclassindex];
+elem.style.display='block';
+	
 
 }
 
@@ -1732,8 +1745,13 @@ function updateContext() {
 	d3.select(".contextlabel").text("BROWSE ALL "+getSingularFormClassname().toUpperCase()+" SPECIES")	
 		.attr("x", function(d, i) {
 			contextlabelwidth = d3.select(this).node().getBBox().width
-			return (divwidth/2)-(contextlabelwidth/2)})
-		d3.select(".contextlabelhelperrect").attr("x", function () {return ((divwidth/2)-(contextlabelwidth/2))-contextlabelhelperrectspace;})
+			return x0;
+			//return (divwidth/2)-(contextlabelwidth/2)
+			})
+		d3.select(".contextlabelhelperrect").attr("x", function () {
+		return x0-3;
+		//return ((divwidth/2)-(contextlabelwidth/2))-contextlabelhelperrectspace;
+		})
 		.attr("width", function() {return contextlabelwidth+(2*contextlabelhelperrectspace);}).attr("fill", "white")
 
 	

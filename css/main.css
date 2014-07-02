@@ -147,9 +147,8 @@ position:fixed;
 	margin-top: 100px;
 
 	height:20px;
-	width: 100%;
+	width: 1000px;
 
--webkit-transform: translateZ(0);
 
 }
 .sourcesbuttondiv {
@@ -283,6 +282,7 @@ text-align: center;
 
 .scrollbuttonsvg {
 	margin-top:-20px;
+	-webkit-transform: translateZ(0);
 /*	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateZ(0);*/
 }
@@ -300,15 +300,13 @@ text-align: center;
          -o-transition: 0.5s ease;
             transition: 0.5s ease;
     
-       /*-webkit-transform-style: preserve-3d;     */
+       -webkit-transform-style: preserve-3d;     
     
-	
+	-webkit-transform: translateZ(0);
+	-webkit-transform: translate3d(0,0,0);
 }
 
-.scrollbuttonsvg {
-	margin-top:-20px;
-	/*-webkit-transform-style: preserve-3d;*/
-}
+
 #scrollbutton {
 	fill: #D1D2D4;
 	z-index:25;
@@ -411,7 +409,7 @@ font-family: Georgia;
 font-size: 15px;
 margin-top:41px;
 position: relative;
-width:690px;
+width:710px;
 z-index: 5;
 pointer-events: all;
 line-height: 1.65em;
@@ -553,7 +551,7 @@ width:586px;
 	pointer-events:all;	
 	position: fixed;
 	margin-top: 236px;
-	margin-left:105px;
+	margin-left:40px;
 	-webkit-transition: opacity 0.2s ease;
        -moz-transition: opacity 0.2s ease;
         -ms-transition: opacity 0.2s ease;
@@ -739,7 +737,6 @@ font-weight: 600;
 
 .scrollcommand {
 margin-top:-6px;
-
 opacity:0;
 font-weight: 600;
 	font-family: Open Sans;
@@ -748,6 +745,9 @@ font-weight: 600;
 	letter-spacing: 1px;
 	cursor: pointer;
 	-webkit-transform: translateZ(0);
+	-webkit-transform: translate3d(0,0,0);
+
+
 }
 
 .stats {
@@ -1928,7 +1928,7 @@ input,
 .uneditable-input {
   display: inline-block;
   width: 172px;
-  height: 12px;
+  height: 20px;
   padding: 12px;
   margin-bottom: 9px;
   
