@@ -64,11 +64,12 @@
 }
 
 #banner .social-section {
-	width: 206px;
+	width: 36px;
 	text-align: right;
 	position: relative;
 	top: -22px;
 	font-size: 13px;
+	left: 170px;
 }
 
 .ss-icon, .ss-icon.ss-social {
