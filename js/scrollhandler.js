@@ -1,14 +1,16 @@
-var speed=.033;
+var speed=.015;
 var mousewheelevt = "mousewheel";
-setFirefoxSpecificParms();
+setBrowserSpecificParms();
+
 window.addEventListener(mousewheelevt, function(e) { 
       		mousewheel(e);
 });
-// console.log("Adding mousewheel listener")
+//console.log("Adding mousewheel listener")
 
 
 frogplayer = videojs("frogvideo");
 frogplayer.on('loadeddata', function(){ 
+	scrollToTop();
 	incrementProgress();
       	playerready=true;
       	
@@ -16,37 +18,43 @@ frogplayer.on('loadeddata', function(){
 });
 
 function resetFrog() {
-	scrollToTop();
+	
+		//jQuery('html,body').animate({scrollTop:0},0);
+		//$(window).scrollTop(0);
 	frogplayer.play();
     frogplayer.pause();
    	frogplayer.currentTime(0);
    	
+   
+   	
 }
-      
-//var speed=.029;
-//var speed=0.03336670003;
-//var speed=0.01;
-//var speed = 0.04;
+
 function scrollToTop() {
-
-if (isFirefox()) {
-      		$('html,body').animate({scrollTop:0}, 'slow');
-      	} else {
-      	$(window).scrollTop(0);
-      	}
-
-      	
-}
-function setFirefoxSpecificParms() {
 	if (isFirefox()) {
+	$('html,body').animate({scrollTop:0},'slow');
+	} else {
+	$(window).scrollTop(0);
+	
+	}
+}
+  
+function setBrowserSpecificParms() {
+	if (isFirefox()) {
+		//console.log("FIREFOX")
 		mousewheelevt = "DOMMouseScroll";
 	
-		speed = .04;
+		speed = .033;
 		//$('html,body').animate({scrollTop:0}, 'slow');
 		
 	}// else {
 	//$(window).scrollTop(0);
 	//}
+	
+	
+	if (isSafari()) {
+		//console.log("SAFARI")
+		speed=.015;
+	}
 }
 
 function safeStopPropogation(e)
@@ -63,7 +71,7 @@ function mousewheel(e) {
 	
 	var evt=window.event || e //equalize event object
 
-
+document.getElementById('scrollcommandid').style.opacity=0;
     scrollpos = Math.max(0,$(window).scrollTop());
     var delta = Math.max(-1, Math.min(1, evt.detail? evt.detail*(-1) : evt.wheelDelta));
      if (frogActive(scrollpos)) {
@@ -112,9 +120,20 @@ function frogActive(scrollpos) {
 
 function isFirefox() {
 if (navigator.userAgent.indexOf('Firefox') != -1 && parseFloat(navigator.userAgent.substring(navigator.userAgent.indexOf('Firefox') + 8)) >= 3.6){//Firefox
+	
 	return true;
 	}
 return false;
+}
+
+function isSafari() {
+var ua = navigator.userAgent.toLowerCase(); 
+  if (ua.indexOf('safari') != -1) { 
+    if (ua.indexOf('chrome') == -1) {
+      return true
+    } 
+  }
+  return false;
 }
 
 function toggleScroll() {
@@ -168,26 +187,26 @@ $(window).scrollTop(0)}, 100)**/
               },{
                'selector'    : '#mammalsviddiv',
                 'opacity'    : [0,0]
-              },{
+              }/**,{
                 'selector'    : '.scrolling',
                 'translateY'  : [0,295],
                 'opacity'    : [1,1],
                 'scale': 1.2
                
-              }]
+              }**/]
              },{//1 – show the vis, with mammals data and LION
               'wrapper' : '#vis',
             'duration' : '100%',
             'animations' :  [{
                 'selector'    : '.copy',
                 'opacity'    : [0,0]
-              },{
+              },/**{
                 'selector'    : '.scrolling',
                 'translateY'  : [295,295],
                 'opacity'    : [1,1],
                 'scale': [1.2, 1.2]
                
-              },{
+              },**/{
                'selector'    : '#froggydiv',
                 'opacity'    : [0, 0]
               },{
@@ -329,7 +348,7 @@ $(window).scrollTop(0)}, 100)**/
 }());**/
     
    // checkRequestAnimationFrame();
-    
+    	$window.scrollTop(0);
       scrollIntervalID = setInterval(updatePage, 1);
       // window.requestAnimationFrame(updatePage);
       //setInterval(updatePage, 10)
@@ -395,6 +414,7 @@ var startagain = false;
     		//clickButton(1, d3.select('#mammalsbutton'))
     		//frogplayer.play();
     		scrollButtonClicked = true;
+    		//document.getElementById('scrollcommandid').style.opacity=0;
     	});
     	
     	
@@ -405,7 +425,7 @@ var startagain = false;
    // var keyframeToPagePercent = {1:buttonIndexToPagePercent[1],2:buttonIndexToPagePercent[1], 3:buttonIndexToPagePercent[2],4:buttonIndexToPagePercent[2], 5:buttonIndexToPagePercent[3],6:buttonIndexToPagePercent[3], 7:buttonIndexToPagePercent[4], 8:buttonIndexToPagePercent[4]}
     
     clickButton = function(index, element) {
-
+    	
     	if ((!playerready)||(!startedeverything)) {
     		return;
     	}

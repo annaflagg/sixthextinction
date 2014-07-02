@@ -1,5 +1,5 @@
 @media screen and (min-width:481px) and (max-width:1024px) {
-  .mobile-only { display: block; margin-top:120px;}
+  .mobile-only { display: block; margin-top:50px;}
   .ie-only {display:none;}
   .desktop-only { display: none;}
 
@@ -11,6 +11,9 @@ display:none;
 }
 #birdsviddiv, #reptilesviddiv, #amphibiansviddiv, #mammalsviddiv {
 display: none;
+}
+body {
+overflow:visible;
 }
 
   #chart {
@@ -122,7 +125,7 @@ line-height: 1.35em;
 
   
 .mobile {
-margin-top: 550px;
+margin-top: 480px;
 
 display: block;
 color:black;
@@ -133,7 +136,7 @@ text-align: center;
 
 }
 .mobilegroup {
-padding-top: 50px;
+padding-top: 20px;
 
 	position: relative;
 }

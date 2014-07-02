@@ -5,6 +5,12 @@ var minloadingwidth = 40;
 var progress = { p:0}; 
 var totalprogress = 39; 
 
+//var total = 2; 
+
+
+
+
+
 function incrementProgress() {
 	progress.p=progress.p+1;
 	//console.log(progress.p);
@@ -82,19 +88,26 @@ progress.watch("p", function (id, oldval, newval) {
 
 	if ((((progress.p>=totalprogress) && (!startedeverything)))) {
 		startedeverything = true;
-		// console.log("OK EVERYTHING HAS LOADED")
+		console.log("OK EVERYTHING HAS LOADED")
+		document.getElementById("froggydiv").style.display="block";
+		document.getElementById("bodyid").style.overflow="visible";
 		document.getElementById("loadingid").style.opacity=0;
 		document.getElementById("scrollcommandid").style.opacity=1;
 		//document.getElementById("loadingid").style.opacity=0;
 		document.getElementById("scrollingid").style.opacity=1;
 		
 		//document.getElementById("froggydiv").style.opacity=1;
-		document.getElementById("froggydiv").style.display="block";
-		document.getElementById("bodyid").style.overflow="visible";
+		
 		if (playerready) {
 		resetFrog();
 			
-		} 
+		}
+		
+		
+		$('.scrolling').animate({'margin-top':'680px'}, 'slow');
+		
+		
+		 
 		//document.getElementById("froggydiv").style.display="block";
 	}
 

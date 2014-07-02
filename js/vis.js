@@ -947,9 +947,9 @@ function renderHelpButton() {
 	.attr("class", "helpbuttonlabel")
 		.attr("x", helpbuttonx-helpbuttonr)
 		.attr("y", helpbuttony-helpbuttonr-10)
-		.text("How do I read this graphic?")
-		.on("mouseover", mouseoverhelpbutton)
-		.on("mouseout", mouseouthelpbutton);
+		.text("How do I read this graphic?");
+		//.on("mouseover", mouseoverhelpbutton)
+		//.on("mouseout", mouseouthelpbutton);
 		
 	
 
@@ -2027,7 +2027,7 @@ function staticClassChart() {
 }
 
 function updateClassDataBackgroundLabel() {
-	d3.select(".classdatabackgroundlabel").text("COMPARED TO ONE OR LESS NATURAL EXTINCTIONS")
+	d3.select(".classdatabackgroundlabel").text("COMPARED TO ONE OR LESS NATURAL EXTINCTIONS PER CENTURY")
 }
 
 function hideClassChart() {

@@ -82,7 +82,7 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 	
 	
 		<div class="helpbuttondiv" id="helpbuttondivid">
-		<img src="images/helpbutton2.png" onmouseover="mouseoverhelpbutton()" onmouseout="mouseouthelpbutton()" alt="help" id="helpbuttonid" >
+		<img src="images/helpbutton.png" onmouseover="mouseoverhelpbutton()" onmouseout="mouseouthelpbutton()" alt="help" id="helpbuttonid" >
 		
 		
 		</div>
@@ -111,7 +111,8 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 		<p class="byline">by <span class="authorname"><a href="http://www.annaflagg.com" target="_blank">Anna Flagg</a></span>, Special to ProPublica</p>
 		
 		<p class="guff">
-		Animal species are going extinct anywhere from 100 to 1,000 times the rates that would be expected under natural conditions. According to Elizabeth Kolbert's <span class="italic">The Sixth Extinction</span> and <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank">three</a> <a href="http://www.sciencemag.org/content/269/5222/347" target="_blank">recent</a> <a href="https://en.wikipedia.org/wiki/The_Sixth_Extinction:_An_Unnatural_History" target="_blank">studies</a>, the increase results from a variety of human effects including climate change, habitat destruction, and species displacement. Today's extinction rates rival those during the mass extinction event that wiped out the dinosaurs 65 million years ago.
+		Animal species are going extinct anywhere from 100 to 1,000 times the rates that would be expected under natural conditions. According to Elizabeth Kolbert's 
+		<span class="italic"><a href="https://en.wikipedia.org/wiki/The_Sixth_Extinction:_An_Unnatural_History" target="_blank">The Sixth Extinction</a></span> and other <a href="http://www.sciencemag.org/content/330/6010/1503.full.html#ref-list-1" target="_blank">recent</a> <a href="http://www.sciencemag.org/content/269/5222/347" target="_blank">studies</a>, the increase results from a variety of human effects including climate change, habitat destruction, and species displacement. Today's extinction rates rival those during the mass extinction event that wiped out the dinosaurs 65 million years ago.
 		</p>
 		
 		<p class="mobile-only">
@@ -192,7 +193,7 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 		</div>
 		
 		</span>
-		<p class="scrollcommand" id="scrollcommandid">SCROLL</p>
+		
 		</div>
 
 		</div>
@@ -209,11 +210,14 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
    	  	
 <script src="js/video.js"></script>
 
-   	  <div id="froggydiv">
-			<video opacity="0" display="none" id="frogvideo" class="video-js vjs-default-skin" preload="auto" poster="images/frog-final-orangetext-preview.jpg">
-			<source src="images/froggy.mp4" type="video/mp4" />
-			<source src="images/froggy.ogv" type="video/ogg" />
-			<source src="images/froggy.webm" type="video/webm" />
+   	   <div id="froggydiv">
+			<video opacity="0" display="none" id="frogvideo" class="video-js vjs-default-skin" preload="auto" poster="images/boxturtlepreview.png">
+			<!--<source src="http://www.annaflagg.com/disappearingplanet-final/images/boxturtle.mp4" type="video/mp4" />-->
+			<source src="http://www.annaflagg.com/disappearingplanet-final/images/boxturtle-sharpenedmore.9.mp4" type="video/mp4" />
+	
+			<source src="images/boxturtle2.ogv" type="video/ogg" />
+			<source src="images/boxturtle.webm" type="video/webm" />
+			
 			</video>
 	</div>
 
@@ -242,22 +246,20 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 
 
 			<div id="amphibiansviddiv">
-				<video id="frogvideo2" class="video-js vjs-default-skin" preload="auto" width="178" height="100" poster="images/frog-.2-.5-preview.jpg">
-				<source src="images/frog.mp4" type="video/mp4" />
-				<source src="images/frog.webmhd.webm" type="video/webm" />
-				<source src="images/frog-quality10.ogv" type="video/ogg" />
+				<video id="frogvideo2" class="video-js vjs-default-skin" preload="auto" width="178" height="100" poster="images/endangeredfrogpreview.jpg">
+				<source src="images/endangeredfrog.mp4" type="video/mp4" />
+				<source src="images/endangeredfrog5.webm" type="video/webm" />
+				<source src="images/endangeredfrog.ogv" type="video/ogg" />
 				</video>
 			</div>
 			
 			<div id="mammalsviddiv">
 			<video id="lionvideo" class="video-js vjs-default-skin" preload="auto" width="208" height="120" poster="images/lioness10-preview.jpg">
-				
 				<source src="images/lioness.mp4" type="video/mp4" />
 				<source src="images/lioness-quality6.ogv" type="video/ogg" />
 				<source src="images/lioness.webmhd.webm" type="video/webm" />
 				</video>
 			</div>
-
 			
 			<div id="reptilesviddiv">
 			<video id="turtlevideo" class="video-js vjs-default-skin" preload="auto" width="302" height="170" poster="images/turtle-may28-scurry-.2-.5-170px-preview.jpg">
@@ -268,11 +270,10 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 			</div>	
 
 			<div id="birdsviddiv">
-			<video id="owlvideo" class="video-js vjs-default-skin" preload="auto" width="82" height="120" poster="images/owl-may28-.2-.5-6s-120px-sharpened-preview.jpg">
-			
-			<source src="images/owl.mp4" type="video/mp4" />
-			<source src="images/owl-quality5.ogv" type="video/ogg" />
-			<source src="images/owl.webmhd.webm" type="video/webm" />
+			<video id="owlvideo" class="video-js vjs-default-skin" preload="auto" width="82" height="120" poster="images/lovebirdspreview.jpg">
+			<source src="images/lovebirds.mp4" type="video/mp4" />
+			<source src="images/lovebirds.webm" type="video/webm" />
+			<source src="images/lovebirds.ogv" type="video/ogg" />
 			</video>
 			</div>
 
@@ -411,7 +412,8 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 		</div>
 		
 		<div class="scrolling" id="scrollingid">
-			<svg width="151" height="100">
+			<p class="scrollcommand" id="scrollcommandid">SCROLL</p>
+			<svg width="151" height="100" class='scrollbuttonsvg'>
 				<polygon id="scrollbutton" fill="#231F20" points="76,4 49,4 76,24 103,4 "/>
 			</svg>
 		</div>
@@ -427,7 +429,7 @@ if ((window.innerWidth > 1024)&&(!(msieversion()))) {
 //if (screen && screen.width > 480) {
 //console.log(screen.width)
 	// document.write('<script type="text/javascript" src="js/annasprogress.js"><\/script>');
-	document.write('<script type="text/javascript" src="js/annasprogress.min.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/annasprogress.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/scrollhandler.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/bootstrap-typeahead-ext.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/queue.v1.min.js"><\/script>');

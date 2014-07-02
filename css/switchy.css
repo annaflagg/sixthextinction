@@ -1,5 +1,5 @@
 @media screen and (max-width: 480px) {
-  .mobile-only { display: block;margin-top:120px;}
+  .mobile-only { display: block;margin-top:40px;}
   .ie-only {display:none}
   .desktop-only { display: none;}
 
@@ -88,6 +88,7 @@ color: red;
 .copy .h1 {
 font-size: 35px;
 line-height: 1.35em;
+margin-top:100px;
 }
   #whitebackground, #froggydiv {
     display: none;
@@ -140,7 +141,7 @@ padding-left:5px;
 }
   
 .mobile {
-margin-top: 810px;
+margin-top: 680px;
 
 display: block;
 color:black;
@@ -151,7 +152,7 @@ text-align: center;
 
 }
 .mobilegroup {
-padding-top: 50px;
+padding-top: 10px;
 
 	position: relative;
 }
