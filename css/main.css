@@ -228,8 +228,8 @@ text-align: center;
 
 .scrollbuttonsvg {
 	margin-top:-20px;
-	-webkit-transform-style: preserve-3d;
-	-webkit-transform: translateZ(0);
+/*	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);*/
 }
 
 .scrolling {
@@ -245,20 +245,20 @@ text-align: center;
          -o-transition: 0.5s ease;
             transition: 0.5s ease;
     
-       -webkit-transform-style: preserve-3d;     
+       /*-webkit-transform-style: preserve-3d;     */
     
 	
 }
 
 .scrollbuttonsvg {
 	margin-top:-20px;
-	-webkit-transform-style: preserve-3d;
+	/*-webkit-transform-style: preserve-3d;*/
 }
 #scrollbutton {
 	fill: #D1D2D4;
 	z-index:25;
 	
-	-webkit-transform-style: preserve-3d;
+	/*-webkit-transform-style: preserve-3d;*/
 
 }
 
@@ -442,8 +442,8 @@ pointer-events:none;
 z-index:26;
 color:#58585A;
 display:none;
--webkit-transform-style: preserve-3d;
-		-webkit-transform: translateZ(0);
+/*-webkit-transform-style: preserve-3d;
+		-webkit-transform: translateZ(0);*/
 }
 
 .bottom-sources {
@@ -453,8 +453,8 @@ display:none;
 	top: 800px;
 	z-index: 100;
 	margin: 0 80px;
-	-webkit-transform-style: preserve-3d;
-		-webkit-transform: translateZ(0);
+/*	-webkit-transform-style: preserve-3d;
+		-webkit-transform: translateZ(0);*/
 }
 
 .bottom-sources .source {
@@ -470,8 +470,8 @@ margin-top:50px;
 	font-size:13px;
 	letter-spacing:1.5px;
 	pointer-events:none;
-	-webkit-transform-style: preserve-3d;
-		-webkit-transform: translateZ(0);
+/*	-webkit-transform-style: preserve-3d;
+		-webkit-transform: translateZ(0);*/
 }
 .source {
 margin-top:-15px;
@@ -480,8 +480,8 @@ width:690px;
 line-height: 1.5em;
 pointer-events:none;
 	font-weight:500;
-	-webkit-transform-style: preserve-3d;
-		-webkit-transform: translateZ(0);
+/*	-webkit-transform-style: preserve-3d;
+		-webkit-transform: translateZ(0);*/
 }
 #helpbuttonid {
 width:586px;
@@ -611,8 +611,8 @@ font-size: 46px;
 font-weight: 600;
 pointer-events: all;
 margin: -5px 0 15px 0;
-	-webkit-transform-style: preserve-3d;
-		-webkit-transform: translateZ(0);
+/*	-webkit-transform-style: preserve-3d;
+		-webkit-transform: translateZ(0);*/
 }
 
 .copy .byline {
