@@ -301,7 +301,7 @@ $(window).scrollTop(0)}, 100)**/
             'duration' : '100%',
             'animations' :  [{
                'selector'    : '.credits',
-               'translateY'  : -25,
+               'translateY'  : -15,
                 'opacity'    : [0,10]
               }, {
                'selector'    : '#birdsviddiv',
