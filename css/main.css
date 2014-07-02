@@ -217,6 +217,7 @@ text-align: center;
 .scrollbuttonsvg {
 	margin-top:-20px;
 	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);
 }
 
 .scrolling {
