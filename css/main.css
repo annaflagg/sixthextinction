@@ -1951,13 +1951,18 @@ input,
   
  /* line-height: 18px;*/
   
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
   pointer-events: all;
  
 }
+
+input::-webkit-input-placeholder, .uneditable-input::-webkit-input-placeholder {
+	color: black;
+}
+
 .dropdown {
  pointer-events: all;
   position: relative;
