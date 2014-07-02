@@ -958,23 +958,23 @@ function renderHelpButton() {
 function mouseoverhelpbutton() {
 	d3.select('.helpbuttondiv').classed("visiblehelp", true)
 	d3.select('.helpbutton').classed("helpbuttonhover", true)
-	d3.select('.datasources').classed("visiblesource", true)
+//	d3.select('.datasources').classed("visiblesource", true)
 	
 
 }
 function mouseouthelpbutton(evt) {
 d3.select('.helpbuttondiv').classed("visiblehelp", false)
 	d3.select('.helpbutton').classed("helpbuttonhover", false)
-	d3.select('.datasources').classed("visiblesource", false)
+	//d3.select('.datasources').classed("visiblesource", false)
 }
-
+/**
 function mouseoverresearchers() {
 	console.log("mouseover researchers")
 }
 function mouseoutresearchers() {
 	console.log("mouseout")
 	
-}
+}**/
 
 function renderLegend() {
 /**

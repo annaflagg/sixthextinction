@@ -127,7 +127,7 @@ height: 25px;
 	font-weight: 600;
 	font-family: Open Sans;
 	color: #B3B3B3;
-	padding: 39px;
+	padding: 22px;
 	font-size: 13px;
 	letter-spacing: 1px;
 	cursor: pointer;
@@ -176,6 +176,18 @@ right: 0;
 
 /* 1. Intro Keyframe
 --------------------------------------- */
+
+#creditsid {
+width:1000px;
+
+background-color: grey;
+opacity:.99;
+ margin: 0% auto;
+  z-index:-20;
+text-align: left;
+}
+
+
 #intro {
 
 width:1000px;
@@ -453,18 +465,18 @@ display:none;
 display:block;
 }
 .sourcetitle {
-
+margin-top:50px;
 	font-weight:700;
-	font-size:11px;
+	font-size:13px;
 	letter-spacing:1.5px;
 	pointer-events:none;
 	-webkit-transform-style: preserve-3d;
 		-webkit-transform: translateZ(0);
 }
 .source {
-margin-top:-18px;
-font-size:12px;
-width:470px;
+margin-top:-15px;
+font-size:14px;
+width:530px;
 line-height: 1.5em;
 pointer-events:none;
 	font-weight:500;
@@ -560,6 +572,36 @@ opacity:1;
 height:300px;
 pointer-events: all;
 z-index:11;
+
+}
+.credits {
+position: fixed;
+margin-top: 240px;
+width:1000px;
+margin-left:240px;
+color: black;
+
+-webkit-user-select: all;
+-khtml-user-select: all;
+-moz-user-select: all;
+-o-user-select: all;
+user-select: all;
+
+
+opacity:0;
+/*
+-webkit-transition: opacity 0.2s ease;
+       -moz-transition: opacity 0.2s ease;
+        -ms-transition: opacity 0.2s ease;
+         -o-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
+
+-webkit-transform: translateZ(0);*/
+
+
+height:300px;
+pointer-events: all;
+z-index:-11;
 
 }
 

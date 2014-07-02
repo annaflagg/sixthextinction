@@ -180,7 +180,7 @@ $(window).scrollTop(0)}, 100)**/
             'animations' :  [{
                 'selector'    : '.copy',
                 'translateY'  : -25,
-                'opacity'    : [1, .2]
+                'opacity'    : [10, .2]
               },{
                'selector'    : '#froggydiv',
                 'opacity'    : [1, .2]
@@ -266,9 +266,6 @@ $(window).scrollTop(0)}, 100)**/
               }, {
                'selector'    : '#birdsviddiv',
                 'opacity'    : [0,0]
-              }, {
-              'selector'	:'.endingfooter',
-              'opacity'	:[0, 0],
               }]
              },{// 7 – switching to BIRDS and showing the OWL
             'wrapper' : '#vis',
@@ -279,11 +276,41 @@ $(window).scrollTop(0)}, 100)**/
               }, {
                'selector'    : '#birdsviddiv',
                 'opacity'    : [1,1]
+              }]
+            },{// 8 – continuing to show the vis w BIRDS
+            'wrapper' : '#vis',
+            'duration' : '50%',
+            'animations' :  [{
+               'selector'    : '#amphibiansviddiv',
+                'opacity'    : [0,0]
+              }, {
+               'selector'    : '#birdsviddiv',
+                'opacity'    : [1,1]
+              }, {
+              'selector'	:'.endingfooter',
+              'opacity'	:[0, 0],
+              },{
+                'selector'    : '.credits',
+                'opacity'    : [0,0]
+              }, {
+              'selector'	:'.endingfooter',
+              'opacity'	:[0, 0],
+              }]
+              } ,{// 9 – end of app, hide the vis, and show ending credits
+            'wrapper' : '#creditsid',
+            'duration' : '100%',
+            'animations' :  [{
+               'selector'    : '.credits',
+               'translateY'  : -25,
+                'opacity'    : [0,10]
+              }, {
+               'selector'    : '#birdsviddiv',
+                'opacity'    : [0,0]
               }, {
               'selector'	:'.endingfooter',
               'opacity'	:[1, 1],
               }]
-            } ,{
+          },{
             'duration' : '100%',
             'animations' :  []
           }
@@ -322,30 +349,7 @@ $(window).scrollTop(0)}, 100)**/
     
     
     init = function() {
-    /**
-    	(function () {
-  var lastTime = 0;
-  var vendors = ['ms', 'moz', 'webkit', 'o'];
-  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
-  }
-  if(!window.requestAnimationFrame)
-    window.requestAnimationFrame = function (callback, element) {
-      var currTime = new Date().getTime();
-      var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-      var id = window.setTimeout(function () {
-        callback(currTime + timeToCall);
-      },
-      timeToCall);
-      lastTime = currTime + timeToCall;
-      return id;
-  };
-  if(!window.cancelAnimationFrame)
-    window.cancelAnimationFrame = function (id) {
-      clearTimeout(id);
-  };
-}());**/
+
     
    // checkRequestAnimationFrame();
     	$window.scrollTop(0);
@@ -355,40 +359,12 @@ $(window).scrollTop(0)}, 100)**/
       setupValues();
      incrementProgress();
     }
-    
 
-//var frogscrollspan = 800;
-//var froglength = 3.88
-/**
-function frogActive(scrollpos) {
-//scrollpos = Math.max(0,$(window).scrollTop());
-	if (frogplayer.currentTime() < froglength) {
-		return true;
-	}
-	if ($(window).scrollTop()<0) {
-		return true;
-	}
-	return false;
-}**/
     setupValues = function() {
     	
-    /**
-      player.on('loadeddata', function(){ 
-      	playerready=true;
-      	//player.play();
-      	//setTimeout(function() {player.pause()}, 100)
-      	player.currentTime(0)
-      	//player.play()
-      	console.log("frog loaded")
-      	//window.addEventListener("scroll", function(e) {moveFrog(e)})
-      	
-      	window.addEventListener("mousewheel", function(e) { 
-      		mousewheel(e);
-      });
-      	
-      	
-      	});**/
-      scrollTop = 0; //$window.scrollTop();
+ 
+      scrollTop = 0; //
+      $window.scrollTop();
       windowHeight = $window.height();
       windowWidth = $window.width();
       convertAllPropsToPx();
@@ -396,10 +372,10 @@ function frogActive(scrollpos) {
       setupButtons();
     }
     
-    var buttonIndexToPagePercent = {0:'1%', 1:'125%', 2:'325%', 3:'450%', 4:'650%'}
+    var buttonIndexToPagePercent = {0:'1%', 1:'125%', 2:'325%', 3:'450%', 4:'650%', 5:'800%'}
     var keyframeToAnimalClassIndex = {1:1, 2:1, 3:2, 4:2, 5:0, 6:0, 7:3, 8:3};
-var keyframeToButtonId = {1:'mammalsbutton',2:'mammalsbutton', 3:'reptilesbutton',4:'reptilesbutton', 5:'amphibiansbutton',6:'amphibiansbutton', 7:'birdsbutton', 8:'birdsbutton'}; 
-var keyframeToButtonIndex = {0:0,1:1,2:1, 3:2,4:2, 5:3,6:3, 7:4, 8:4}; 
+var keyframeToButtonId = {1:'mammalsbutton',2:'mammalsbutton', 3:'reptilesbutton',4:'reptilesbutton', 5:'amphibiansbutton',6:'amphibiansbutton', 7:'birdsbutton', 8:'birdsbutton', 9:'sourcesbutton'}; 
+var keyframeToButtonIndex = {0:0,1:1,2:1, 3:2,4:2, 5:3,6:3, 7:4, 8:4, 9:5}; 
 var scrollButtonClicked = false;
 var startagain = false;
     setupButtons = function() {
@@ -408,6 +384,7 @@ var startagain = false;
     	$('#reptilesbutton').on('click',function() {clickButton(2, d3.select(this))});
     	$('#amphibiansbutton').on('click',function() {clickButton(3, d3.select(this))});
     	$('#birdsbutton').on('click',function() {clickButton(4, d3.select(this))});
+    	$('#sourcesbutton').on('click',function() {clickButton(5, d3.select(this))});
     	$('#scrollbutton').on('click',function() {
     		//console.log("hello")
     		//init=true;
@@ -583,12 +560,12 @@ convertPercentToPx = function(value, axis) {
     		// window.requestAnimationFrame(updatePage);
     		return;
     	}
-    	if (currentButtonIndex==4) {
+    	if (currentButtonIndex==5) {
     		document.getElementById("scrollingid").style["display"]= "none"
     	} else {
     		document.getElementById("scrollingid").style["display"]= "block"
     	}
-    	if (currentButtonIndex==0) {
+    	if ((currentButtonIndex==0)||(currentButtonIndex==5)) {
     		document.getElementById("viscopyid").style["display"]= "none"
     		document.getElementById("dragtooltipid").style["opacity"]= 0;
     	} else {
@@ -640,11 +617,15 @@ var showingvis = false;
 var starting = true;
 vis = function(scrollpos) {
 	//console.log(currentKeyframe)
-	if (currentKeyframe==0) {
+	if ((currentKeyframe==0)||(currentKeyframe==9)) {
 		hideVis();
 		showingvis=false;
-		
+		if (currentKeyframe==0) {
 		updateButtons(d3.select(document.getElementById('titlebutton')), keyframeToButtonIndex[currentKeyframe]);
+		} else {
+		updateButtons(d3.select(document.getElementById('sourcesbutton')), keyframeToButtonIndex[currentKeyframe]);
+		}
+		document.getElementById('helpbuttonid').style.display="none";
 		/**
 		if (currentKeyframe==0) {
 			updateButtons(d3.select(document.getElementById('titlebutton')));
@@ -652,13 +633,11 @@ vis = function(scrollpos) {
 			updateButtons(d3.select(document.getElementById('mammalsbutton')));
 		}**/
 	} else {
-		if (currentKeyframe==1) {
-		//console.log("SHOWING VIS")
-			if (!showingvis) {
+		if (!showingvis) {
 				showVis();
 				showingvis=true;
 			}
-		} else {
+		
 			var classindex = keyframeToAnimalClassIndex[currentKeyframe];
 			//console.log("Class index: "+classindex);
 			//if (classindex==undefined) {
@@ -670,7 +649,7 @@ vis = function(scrollpos) {
 		}
 		//
 		
-	}
+	document.getElementById('helpbuttonid').style.display="block";
 	//console.log(keyframeToButtonIndex[currentKeyframe])
 	updateButtons(d3.select(document.getElementById(keyframeToButtonId[currentKeyframe])), keyframeToButtonIndex[currentKeyframe]);
 	}
