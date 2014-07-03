@@ -116,7 +116,7 @@ position:fixed;
 height: 25px;
 }
 #sourcesbutton {
-padding-left:3px;
+padding-left:5px;
 font-size:10px;
 font-weight:600;
 vertical-align:text-top;
@@ -161,8 +161,8 @@ display:none;
 -webkit-transform: translateZ(0);
 }
 .sourcebuttonspan {
-color:#878787;
-fill:#878787;
+color:#B3B3B3;
+fill:#B3B3B3;
 width:150px;
 cursor:pointer;
 cursor:hand;

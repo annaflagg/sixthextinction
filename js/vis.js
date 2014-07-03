@@ -884,7 +884,7 @@ function initializeView() {
   	} else {
   	focusheight = .8*focusyspace;
   	}**/
-  	focusyspace = 1.8//focusgraphheight/classdata[currclassindex].maxspecies;
+  	focusyspace = 1.7//focusgraphheight/classdata[currclassindex].maxspecies;
   	if (currclassindex==0) {
   	focusheight = focusyspace;
   	
