@@ -18,8 +18,7 @@
 <link rel="stylesheet" href="css/base.css">
 
 <link rel="stylesheet" href="css/propublica_frame.css">
-<link rel="stylesheet" href="css/main.css">
-<!-- <link rel="stylesheet" href="css/main.min.css"> -->
+<link rel="stylesheet" href="css/main.min.css">
 
 <script type="text/javascript" src="//www.propublica.org/js/public/assets/all.js"></script>
 
@@ -46,10 +45,8 @@ if (msieversion()) {
 document.write('<link rel="stylesheet" type="text/css" href="css/switchy-ie.min.css"/>');
 
 } else {
-// document.write('<link rel="stylesheet" href="css/switchy-tablet.min.css">');
-// document.write('<link rel="stylesheet" href="css/switchy.min.css">');
-document.write('<link rel="stylesheet" href="css/switchy-tablet.css">');
-document.write('<link rel="stylesheet" href="css/switchy.css">');
+document.write('<link rel="stylesheet" href="css/switchy-tablet.min.css">');
+document.write('<link rel="stylesheet" href="css/switchy.min.css">');
 }
 </script>
 
@@ -451,16 +448,12 @@ document.write('<link rel="stylesheet" href="css/switchy.css">');
 
 
 if ((window.innerWidth > 1024)&&(!(msieversion()))) {
-//if (screen && screen.width > 480) {
-//console.log(screen.width)
-	// document.write('<script type="text/javascript" src="js/annasprogress.js"><\/script>');
-	document.write('<script type="text/javascript" src="js/annasprogress.js"><\/script>');
-	document.write('<script type="text/javascript" src="js/scrollhandler.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/annasprogress.min.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/scrollhandler.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/bootstrap-typeahead-ext.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/queue.v1.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/d3.min.js"><\/script>');
-	document.write('<script type="text/javascript" src="js/vis.js"><\/script>');
-	// document.write('<script type="text/javascript" src="js/vis.min.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/vis.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/amphibians.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/mammals.min.js"><\/script>');
 	document.write('<script type="text/javascript" src="js/birds.min.js"><\/script>');
