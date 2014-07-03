@@ -1597,8 +1597,9 @@ function mouseoverspecies(d, i) {
 function updateSpeciesText() {
 
   	if ((!(clickedspecies==undefined))&&(!firstloadtooltip)) {
+  	
   		var commonname = toTitleCase(clickedspecies['Common names (Eng)'].split(',')[0]);
-		var sciname = toTitleCase(clickedspecies.Genus+ " " +clickedspecies.Species);
+		var sciname = toTitleCase(clickedspecies.Genus)+ " " +(clickedspecies.Species.toLowerCase());
 		if (commonname=='') {
   		typeahead[0].value =sciname;
   		} else {
@@ -1638,7 +1639,7 @@ function updateSpeciesText() {
 function updateSpeciesTextContent(species) {
 
 	var commonname = toTitleCase(species['Common names (Eng)'].split(',')[0]);
-	var sciname = toTitleCase(species.Genus+ " " +species.Species);
+	var sciname = toTitleCase(species.Genus)+ " " +(species.Species.toLowerCase());
 
 	specieslabelsciname.text(sciname);
 	specieslabelname.text(commonname);
